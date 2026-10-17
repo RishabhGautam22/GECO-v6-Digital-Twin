@@ -138,6 +138,11 @@ class GecoOmniverseWardExtension(BaseExt):
                     frame_viewport_selection(vp)
             except Exception:
                 pass
+        elif self._frame_count == 45:
+            try:
+                omni.usd.get_context().get_selection().clear_selected_prim_paths()
+            except Exception:
+                pass
         latest: Optional[Dict[str, Any]] = None
         while not self._incoming_queue.empty():
             try:
@@ -145,14 +150,21 @@ class GecoOmniverseWardExtension(BaseExt):
             except queue.Empty:
                 break
 
-        if latest is None:
-            # Generate smooth standalone fallback frame merged with any local operator overrides
-            latest = self._synthesize_fallback_frame()
+        if latest is not None:
+            self._last_ws_frame = latest
+        elif getattr(self, "_last_ws_frame", None) is not None:
+            if self._frame_count % 15 != 0:
+                return
+            latest = self._last_ws_frame
         else:
-            rooms_dict = latest.get("rooms", {})
-            for r_key, ov in self._local_overrides.items():
-                if r_key in rooms_dict and isinstance(rooms_dict[r_key], dict):
-                    rooms_dict[r_key].update(ov)
+            if self._frame_count % 15 != 0:
+                return
+            latest = self._synthesize_fallback_frame()
+
+        rooms_dict = latest.get("rooms", {})
+        for r_key, ov in self._local_overrides.items():
+            if r_key in rooms_dict and isinstance(rooms_dict[r_key], dict):
+                rooms_dict[r_key].update(ov)
 
         self.controller.apply_ward_telemetry(latest)
         if self.ui_panel is not None:

@@ -93,14 +93,14 @@ class WardControlPanelUI:
     def _build_window(self) -> None:
         self._window = ui.Window(
             self.WINDOW_TITLE,
-            width=680,
-            height=1120,
-            position_x=1960,
-            position_y=65,
+            width=690,
+            height=1180,
+            position_x=2035,
+            position_y=60,
         )
         try:
-            self._window.position_x = 1960
-            self._window.position_y = 65
+            self._window.position_x = 2035
+            self._window.position_y = 60
         except Exception:
             pass
         with self._window.frame:
@@ -198,6 +198,21 @@ class WardControlPanelUI:
                                 "Exports ready in: results/paper_exports/ (CSV, LaTeX, Markdown, 300-DPI PNG/PDF)",
                                 style={"font_size": 11, "color": 0xFF94A3B8},
                             )
+
+                    # All 12 Cubicles Scenario Matrix & Live Telemetry Readout (Prominent at Top)
+                    with ui.CollapsableFrame(
+                        "12-Cubicle Scenario Matrix - Active Scenario, Fault Tested & Live Telemetry",
+                        collapsed=False,
+                    ):
+                        with ui.VStack(spacing=2):
+                            for r_key in (
+                                "ROOM_01", "ROOM_02", "ROOM_03", "ROOM_04", "ROOM_05", "ROOM_06",
+                                "ROOM_07", "ROOM_08", "ROOM_09", "ROOM_10", "ROOM_11", "ROOM_12",
+                            ):
+                                self._room_labels[r_key] = ui.Label(
+                                    f"{r_key}: Waiting for telemetry...",
+                                    style={"font_size": 11, "color": 0xFFE2E8F0},
+                                )
 
                     # Section 2: 6 Live Oscilloscopes (omni.ui.Plot)
                     with ui.CollapsableFrame(
@@ -601,18 +616,6 @@ class WardControlPanelUI:
                             "S01: 3014.78 uL | Luer: 222.20 uL | F01: 68.05 uL | S03/M07: 11.6 mm | V01: OPEN | PTP: LOCKED",
                             style={"font_size": 11, "color": 0xFFCBD5E1},
                         )
-
-                    # Section 10: All 12 Cubicles Scenario Matrix & Live Telemetry Readout
-                    with ui.CollapsableFrame("10. All 12 Cubicles - Active Scenario, Scenarios Tested & Live Telemetry", collapsed=False):
-                        with ui.VStack(spacing=2):
-                            for r_key in (
-                                "ROOM_01", "ROOM_02", "ROOM_03", "ROOM_04", "ROOM_05", "ROOM_06",
-                                "ROOM_07", "ROOM_08", "ROOM_09", "ROOM_10", "ROOM_11", "ROOM_12",
-                            ):
-                                self._room_labels[r_key] = ui.Label(
-                                    f"{r_key}: Waiting for telemetry...",
-                                    style={"font_size": 11, "color": 0xFFE2E8F0},
-                                )
 
     def _on_export_paper_report(self) -> None:
         self._on_command_send({"type": "EXPORT_REPORT", "command": "EXPORT_REPORT"})

@@ -380,50 +380,50 @@ def Xform "World" (
         }
         def Camera "Cam_Room01_Nominal"
         {
-            float focalLength = 22.0
-            double3 xformOp:translate = (-4.0, -4.75, 2.05)
-            float3 xformOp:rotateXYZ = (64.0, 0.0, 42.0)
+            float focalLength = 15.0
+            double3 xformOp:translate = (-3.2, -5.25, 1.85)
+            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room02_PipeDebris"
         {
-            float focalLength = 24.0
-            double3 xformOp:translate = (2.0, -4.75, 2.05)
-            float3 xformOp:rotateXYZ = (64.0, 0.0, 42.0)
+            float focalLength = 15.0
+            double3 xformOp:translate = (2.8, -5.25, 1.85)
+            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room03_BatteryBrownout"
         {
-            float focalLength = 24.0
-            double3 xformOp:translate = (8.0, -4.75, 2.05)
-            float3 xformOp:rotateXYZ = (64.0, 0.0, 42.0)
+            float focalLength = 15.0
+            double3 xformOp:translate = (8.8, -5.25, 1.85)
+            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room04_CyberMITM"
         {
-            float focalLength = 22.0
-            double3 xformOp:translate = (-4.0, 1.25, 2.05)
-            float3 xformOp:rotateXYZ = (64.0, 0.0, 42.0)
+            float focalLength = 15.0
+            double3 xformOp:translate = (-3.2, 0.75, 1.85)
+            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room05_MetrologyRig"
         {
-            float focalLength = 24.0
-            double3 xformOp:translate = (1.8, 1.25, 2.0)
-            float3 xformOp:rotateXYZ = (65.0, 0.0, 42.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (2.6, 0.75, 1.85)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 36.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room06_SOC"
         {
-            float focalLength = 24.0
-            double3 xformOp:translate = (7.8, 1.25, 2.0)
-            float3 xformOp:rotateXYZ = (65.0, 0.0, 42.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (8.4, 0.75, 1.85)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 36.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_LargeDashboardWall"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (6.0, 1.15, 1.60)
+            float focalLength = 14.0
+            double3 xformOp:translate = (7.6, 0.55, 1.55)
             float3 xformOp:rotateXYZ = (88.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
@@ -450,7 +450,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_01"
                 custom string geco:patient_cohort = "P01: Adult T1D (75 kg, ISF=42 mg/dL/U)"
@@ -1069,7 +1069,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_02"
                 custom string geco:patient_cohort = "P02: Adolescent T1D (58 kg, ISF=52 mg/dL/U)"
@@ -1849,7 +1849,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_03"
                 custom string geco:patient_cohort = "P03: Insulin-Resistant T1D (92 kg, ISF=28 mg/dL/U)"
@@ -2449,7 +2449,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_04"
                 custom string geco:patient_cohort = "P04: Elderly Cardiac T1D (84 kg, ISF=35 mg/dL/U)"
@@ -3202,7 +3202,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_05"
                 custom string geco:patient_cohort = "BENCH-05: 130-Part Gravimetric Saline Calibration Rig"
@@ -3447,7 +3447,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_06"
                 custom string geco:patient_cohort = "SOC-06: Central Nursing & Cyber-Physical Command Center"
@@ -3925,7 +3925,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_07"
                 custom string geco:patient_cohort = "P05: Adult T1D (68 kg, ISF=45 mg/dL/U)"
@@ -4534,7 +4534,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_08"
                 custom string geco:patient_cohort = "P06: Adult T1D (71 kg, ISF=44 mg/dL/U)"
@@ -5143,7 +5143,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_09"
                 custom string geco:patient_cohort = "P07: Dawn-Phenomenon T1D (79 kg, ISF=36 mg/dL/U)"
@@ -5762,7 +5762,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_10"
                 custom string geco:patient_cohort = "P08: Insulin-Sensitive T1D (62 kg, ISF=55 mg/dL/U)"
@@ -6371,7 +6371,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_11"
                 custom string geco:patient_cohort = "P09: Brittle T1D (55 kg, ISF=60 mg/dL/U)"
@@ -6990,7 +6990,7 @@ def Xform "World" (
                 doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
             )
             {
-                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                double3 xformOp:translate = (-0.35, 1.65, 1.58)
                 uniform token[] xformOpOrder = ["xformOp:translate"]
                 custom string geco:cubicle_id = "ROOM_12"
                 custom string geco:patient_cohort = "P10: Adult T1D (73 kg, ISF=40 mg/dL/U)"

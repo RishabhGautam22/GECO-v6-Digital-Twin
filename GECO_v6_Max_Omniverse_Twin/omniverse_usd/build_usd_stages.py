@@ -1010,7 +1010,7 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
 {indent}    doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
 {indent})
 {indent}{{
-{indent}    double3 xformOp:translate = (0.0, 2.16, 2.22)
+{indent}    double3 xformOp:translate = (-0.35, 1.65, 1.58)
 {indent}    uniform token[] xformOpOrder = ["xformOp:translate"]
 {indent}    custom string geco:cubicle_id = "{room_id}"
 {indent}    custom string geco:patient_cohort = "{meta['patient']}"
@@ -1200,50 +1200,50 @@ def Xform "World" (
         }
         def Camera "Cam_Room01_Nominal"
         {
-            float focalLength = 22.0
-            double3 xformOp:translate = (-4.0, -4.75, 2.05)
-            float3 xformOp:rotateXYZ = (64.0, 0.0, 42.0)
+            float focalLength = 15.0
+            double3 xformOp:translate = (-3.2, -5.25, 1.85)
+            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room02_PipeDebris"
         {
-            float focalLength = 24.0
-            double3 xformOp:translate = (2.0, -4.75, 2.05)
-            float3 xformOp:rotateXYZ = (64.0, 0.0, 42.0)
+            float focalLength = 15.0
+            double3 xformOp:translate = (2.8, -5.25, 1.85)
+            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room03_BatteryBrownout"
         {
-            float focalLength = 24.0
-            double3 xformOp:translate = (8.0, -4.75, 2.05)
-            float3 xformOp:rotateXYZ = (64.0, 0.0, 42.0)
+            float focalLength = 15.0
+            double3 xformOp:translate = (8.8, -5.25, 1.85)
+            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room04_CyberMITM"
         {
-            float focalLength = 22.0
-            double3 xformOp:translate = (-4.0, 1.25, 2.05)
-            float3 xformOp:rotateXYZ = (64.0, 0.0, 42.0)
+            float focalLength = 15.0
+            double3 xformOp:translate = (-3.2, 0.75, 1.85)
+            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room05_MetrologyRig"
         {
-            float focalLength = 24.0
-            double3 xformOp:translate = (1.8, 1.25, 2.0)
-            float3 xformOp:rotateXYZ = (65.0, 0.0, 42.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (2.6, 0.75, 1.85)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 36.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room06_SOC"
         {
-            float focalLength = 24.0
-            double3 xformOp:translate = (7.8, 1.25, 2.0)
-            float3 xformOp:rotateXYZ = (65.0, 0.0, 42.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (8.4, 0.75, 1.85)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 36.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_LargeDashboardWall"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (6.0, 1.15, 1.60)
+            float focalLength = 14.0
+            double3 xformOp:translate = (7.6, 0.55, 1.55)
             float3 xformOp:rotateXYZ = (88.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
