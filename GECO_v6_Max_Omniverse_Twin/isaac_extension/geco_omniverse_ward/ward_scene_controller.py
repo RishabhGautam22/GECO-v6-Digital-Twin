@@ -24,20 +24,30 @@ except ImportError:
 
 CAMERA_PRIM_PATHS: Dict[str, str] = {
     "OVERVIEW": "/World/Cameras/Cam_Ward_Overview",
+    "WARD_TOP": "/World/Cameras/Cam_Ward_Top",
+    "WARD_ORTHO_TOP": "/World/Cameras/Cam_Ward_Ortho_Top",
+    "WARD_SIDE": "/World/Cameras/Cam_Ward_Side",
+    "WARD_FRONT": "/World/Cameras/Cam_Ward_Front",
     "DASHBOARD": "/World/Cameras/Cam_LargeDashboardWall",
-    "ROOM_01": "/World/Cameras/Cam_Room01_Nominal",
-    "ROOM_02": "/World/Cameras/Cam_Room02_PipeDebris",
-    "ROOM_03": "/World/Cameras/Cam_Room03_BatteryBrownout",
-    "ROOM_04": "/World/Cameras/Cam_Room04_CyberMITM",
-    "ROOM_05": "/World/Cameras/Cam_Room05_MetrologyRig",
-    "ROOM_06": "/World/Cameras/Cam_Room06_SOC",
-    "ROOM_07": "/World/Cameras/Cam_Room07_WetSite",
-    "ROOM_08": "/World/Cameras/Cam_Room08_PISA",
-    "ROOM_09": "/World/Cameras/Cam_Room09_ClockSkew",
-    "ROOM_10": "/World/Cameras/Cam_Room10_StealthCUSUM",
-    "ROOM_11": "/World/Cameras/Cam_Room11_BrittleReplay",
-    "ROOM_12": "/World/Cameras/Cam_Room12_Unprimed",
+    "ROOM_01": "/World/Cameras/Cam_ROOM_01_PERSP",
+    "ROOM_02": "/World/Cameras/Cam_ROOM_02_PERSP",
+    "ROOM_03": "/World/Cameras/Cam_ROOM_03_PERSP",
+    "ROOM_04": "/World/Cameras/Cam_ROOM_04_PERSP",
+    "ROOM_05": "/World/Cameras/Cam_ROOM_05_PERSP",
+    "ROOM_06": "/World/Cameras/Cam_ROOM_06_PERSP",
+    "ROOM_07": "/World/Cameras/Cam_ROOM_07_PERSP",
+    "ROOM_08": "/World/Cameras/Cam_ROOM_08_PERSP",
+    "ROOM_09": "/World/Cameras/Cam_ROOM_09_PERSP",
+    "ROOM_10": "/World/Cameras/Cam_ROOM_10_PERSP",
+    "ROOM_11": "/World/Cameras/Cam_ROOM_11_PERSP",
+    "ROOM_12": "/World/Cameras/Cam_ROOM_12_PERSP",
 }
+
+for _idx in range(1, 13):
+    _r_id = f"ROOM_{_idx:02d}"
+    for _mode in ("PERSP", "TOP", "SIDE", "FRONT", "ORTHO_TOP", "ORTHO_SIDE", "MACRO"):
+        CAMERA_PRIM_PATHS[f"{_r_id}_{_mode}"] = f"/World/Cameras/Cam_{_r_id}_{_mode}"
+    CAMERA_PRIM_PATHS[f"{_r_id}_ORTHO"] = f"/World/Cameras/Cam_{_r_id}_ORTHO_TOP"
 
 PATIENT_BAY_PATHS: Dict[str, tuple[str, str, str]] = {
     "ROOM_01": ("Room_01_Nominal_Adult", "Patient_01_Adult_75kg", "Pump_01"),
@@ -88,9 +98,13 @@ class WardSceneController:
         return False
 
     def switch_camera(self, room_key: str) -> str:
-        """Switch the active Omniverse viewport camera to any of the 12 bays or ward overview."""
-        cam_path = CAMERA_PRIM_PATHS.get(room_key.upper(), CAMERA_PRIM_PATHS["OVERVIEW"])
-        self._active_camera_key = room_key.upper()
+        """Switch the active Omniverse viewport camera to any of the 12 bays, per-room angles (TOP/SIDE/FRONT/ORTHO/MACRO), or ward overview."""
+        key_u = room_key.strip().upper()
+        if key_u.startswith("/WORLD/CAMERAS/"):
+            cam_path = room_key.strip()
+        else:
+            cam_path = CAMERA_PRIM_PATHS.get(key_u, CAMERA_PRIM_PATHS["OVERVIEW"])
+        self._active_camera_key = key_u
         if HAS_OMNI_USD:
             try:
                 stage = self.stage

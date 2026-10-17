@@ -124,6 +124,9 @@ def emit_pbr_materials(indent: str = "    ", root_prim: str = "/World") -> str:
         ("Mat_CyberRed", (0.92, 0.12, 0.16), 0.20, 0.22, 0.88, (0.35, 0.02, 0.04), 1.5),
         ("Mat_SimplexShield", (0.06, 0.82, 0.64), 0.15, 0.15, 0.38, (0.02, 0.30, 0.22), 1.45),
         ("Mat_ScreenTelemetry", (0.04, 0.12, 0.20), 0.10, 0.12, 1.0, (0.04, 0.26, 0.38), 1.5),
+        ("Mat_NeonWhiteText", (0.98, 0.99, 1.00), 0.10, 0.14, 1.0, (0.72, 0.80, 0.90), 1.5),
+        ("Mat_NeonCyanText", (0.18, 0.94, 1.00), 0.10, 0.14, 1.0, (0.12, 0.82, 0.98), 1.5),
+        ("Mat_NeonGoldText", (1.00, 0.86, 0.24), 0.15, 0.16, 1.0, (0.82, 0.58, 0.08), 1.5),
     ]
     lines = [f'{indent}def Scope "Looks" (', f'{indent}    doc = "PBR UsdPreviewSurface Material Library for GECO v6 Max"', f'{indent}) {{']
     for name, diff, met, rough, op, em, ior in mats:
@@ -873,6 +876,138 @@ def emit_patient_and_bed(
 {indent}}}{pump_block}"""
 
 
+_FONT_5X7: Dict[str, Tuple[str, ...]] = {
+    "A": (" ### ", "#   #", "#   #", "#####", "#   #", "#   #", "#   #"),
+    "B": ("#### ", "#   #", "#   #", "#### ", "#   #", "#   #", "#### "),
+    "C": (" ####", "#    ", "#    ", "#    ", "#    ", "#    ", " ####"),
+    "D": ("#### ", "#   #", "#   #", "#   #", "#   #", "#   #", "#### "),
+    "E": ("#####", "#    ", "#    ", "#### ", "#    ", "#    ", "#####"),
+    "F": ("#####", "#    ", "#    ", "#### ", "#    ", "#    ", "#    "),
+    "G": (" ####", "#    ", "#    ", "# ###", "#   #", "#   #", " ####"),
+    "H": ("#   #", "#   #", "#   #", "#####", "#   #", "#   #", "#   #"),
+    "I": ("#####", "  #  ", "  #  ", "  #  ", "  #  ", "  #  ", "#####"),
+    "J": ("  ###", "   # ", "   # ", "   # ", "#  # ", "#  # ", " ##  "),
+    "K": ("#   #", "#  # ", "# #  ", "##   ", "# #  ", "#  # ", "#   #"),
+    "L": ("#    ", "#    ", "#    ", "#    ", "#    ", "#    ", "#####"),
+    "M": ("#   #", "## ##", "# # #", "# # #", "#   #", "#   #", "#   #"),
+    "N": ("#   #", "##  #", "# # #", "#  ##", "#   #", "#   #", "#   #"),
+    "O": (" ### ", "#   #", "#   #", "#   #", "#   #", "#   #", " ### "),
+    "P": ("#### ", "#   #", "#   #", "#### ", "#    ", "#    ", "#    "),
+    "Q": (" ### ", "#   #", "#   #", "#   #", "# # #", "#  # ", " ## #"),
+    "R": ("#### ", "#   #", "#   #", "#### ", "# #  ", "#  # ", "#   #"),
+    "S": (" ####", "#    ", "#    ", " ### ", "    #", "    #", "#### "),
+    "T": ("#####", "  #  ", "  #  ", "  #  ", "  #  ", "  #  ", "  #  "),
+    "U": ("#   #", "#   #", "#   #", "#   #", "#   #", "#   #", " ### "),
+    "V": ("#   #", "#   #", "#   #", "#   #", "#   #", " # # ", "  #  "),
+    "W": ("#   #", "#   #", "#   #", "# # #", "# # #", "## ##", "#   #"),
+    "X": ("#   #", "#   #", " # # ", "  #  ", " # # ", "#   #", "#   #"),
+    "Y": ("#   #", "#   #", " # # ", "  #  ", "  #  ", "  #  ", "  #  "),
+    "Z": ("#####", "    #", "   # ", "  #  ", " #   ", "#    ", "#####"),
+    "0": (" ### ", "#  ##", "# # #", "# # #", "# # #", "##  #", " ### "),
+    "1": ("  #  ", " ##  ", "  #  ", "  #  ", "  #  ", "  #  ", "#####"),
+    "2": (" ### ", "#   #", "    #", "  ## ", " #   ", "#    ", "#####"),
+    "3": ("#### ", "    #", "    #", " ### ", "    #", "    #", "#### "),
+    "4": ("#   #", "#   #", "#   #", "#####", "    #", "    #", "    #"),
+    "5": ("#####", "#    ", "#### ", "    #", "    #", "#   #", " ### "),
+    "6": (" ### ", "#    ", "#    ", "#### ", "#   #", "#   #", " ### "),
+    "7": ("#####", "    #", "   # ", "  #  ", "  #  ", "  #  ", "  #  "),
+    "8": (" ### ", "#   #", "#   #", " ### ", "#   #", "#   #", " ### "),
+    "9": (" ### ", "#   #", "#   #", " ####", "    #", "    #", " ### "),
+    ":": ("     ", "  #  ", "  #  ", "     ", "  #  ", "  #  ", "     "),
+    "-": ("     ", "     ", "     ", "#####", "     ", "     ", "     "),
+    "+": ("     ", "  #  ", "  #  ", "#####", "  #  ", "  #  ", "     "),
+    "%": ("##  #", "## # ", "   # ", "  #  ", " #   ", " # ##", "#  ##"),
+    ".": ("     ", "     ", "     ", "     ", "     ", " ##  ", " ##  "),
+    "/": ("    #", "   # ", "   # ", "  #  ", " #   ", " #   ", "#    "),
+    " ": ("     ", "     ", "     ", "     ", "     ", "     ", "     "),
+}
+
+
+def emit_3d_text_mesh(
+    indent: str,
+    prim_name: str,
+    text: str,
+    center_xyz: Tuple[float, float, float],
+    voxel_w: float,
+    voxel_h: float,
+    depth: float,
+    mat_name: str,
+) -> str:
+    """Emit a consolidated 3D extruded block-letter UsdGeom.Mesh for `text`."""
+    clean = text.upper()
+    n_chars = len(clean)
+    step_cols = 6.0  # 5 cols + 1 col spacing
+    total_w = (n_chars * step_cols - 1.0) * voxel_w
+    total_h = 7.0 * voxel_h
+    cx, cy, cz = center_xyz
+    start_x = cx - total_w / 2.0
+    start_z = cz - total_h / 2.0
+    y0 = cy - depth / 2.0
+    y1 = cy + depth / 2.0
+
+    pts: List[str] = []
+    counts: List[str] = []
+    indices: List[str] = []
+    v_offset = 0
+
+    for c_idx, ch in enumerate(clean):
+        glyph = _FONT_5X7.get(ch, _FONT_5X7[" "])
+        char_x0 = start_x + c_idx * step_cols * voxel_w
+        for r_idx, row_str in enumerate(glyph):
+            col = 0
+            while col < 5:
+                if row_str[col] == "#":
+                    c_end = col
+                    while c_end + 1 < 5 and row_str[c_end + 1] == "#":
+                        c_end += 1
+                    x0 = char_x0 + col * voxel_w
+                    x1 = char_x0 + (c_end + 1) * voxel_w
+                    z0 = start_z + (6 - r_idx) * voxel_h
+                    z1 = start_z + (7 - r_idx) * voxel_h
+                    box_pts = [
+                        (x0, y0, z0),
+                        (x1, y0, z0),
+                        (x1, y0, z1),
+                        (x0, y0, z1),
+                        (x0, y1, z0),
+                        (x1, y1, z0),
+                        (x1, y1, z1),
+                        (x0, y1, z1),
+                    ]
+                    for px, py, pz in box_pts:
+                        pts.append(f"({px:.4f}, {py:.4f}, {pz:.4f})")
+                    b = v_offset
+                    faces = [
+                        (b + 0, b + 1, b + 2, b + 3),
+                        (b + 5, b + 4, b + 7, b + 6),
+                        (b + 3, b + 2, b + 6, b + 7),
+                        (b + 4, b + 5, b + 1, b + 0),
+                        (b + 4, b + 0, b + 3, b + 7),
+                        (b + 1, b + 5, b + 6, b + 2),
+                    ]
+                    for f0, f1, f2, f3 in faces:
+                        counts.append("4")
+                        indices.append(f"{f0}, {f1}, {f2}, {f3}")
+                    v_offset += 8
+                    col = c_end + 1
+                else:
+                    col += 1
+
+    pts_str = ", ".join(pts)
+    cnt_str = ", ".join(counts)
+    idx_str = ", ".join(indices)
+    return f"""{indent}def Mesh "{prim_name}" (
+{indent}    prepend apiSchemas = ["MaterialBindingAPI"]
+{indent})
+{indent}{{
+{indent}    uniform bool doubleSided = 1
+{indent}    int[] faceVertexCounts = [{cnt_str}]
+{indent}    int[] faceVertexIndices = [{idx_str}]
+{indent}    point3f[] points = [{pts_str}]
+{indent}    rel material:binding = </World/Looks/{mat_name}>
+{indent}}}"""
+
+
 CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
     "ROOM_01": {
         "patient": "P01: Adult T1D (75 kg, ISF=42 mg/dL/U)",
@@ -882,6 +1017,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "NOMINAL_CLOSED_LOOP | MEAL_75G_DISTURBANCE | EKF_30MIN_FORECAST | HOVORKA_RK4_INTEGRITY",
         "response": "EKF 30-min forecast tracks meal peak within 16.82 mg/dL RMSE; zero alarms",
         "mat": "Mat_BatteryHealthy",
+        "short_title": "R01: NOMINAL T1D",
+        "short_sub": "100% TIR CLOSED-LOOP",
     },
     "ROOM_02": {
         "patient": "P02: Adolescent T1D (58 kg, ISF=52 mg/dL/U)",
@@ -891,6 +1028,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "A1_UNPRIMED_LINE | A3_FIBRIL_DEBRIS_OCCLUSION | A3_AIR_BUBBLE_COMPLIANCE | A3_CANNULA_KINK_RELIEF",
         "response": "Inline pressure >65 kPa triggers physical occlusion alarm; zero false cyber lockouts",
         "mat": "Mat_DebrisAmber",
+        "short_title": "R02: PIPE DEBRIS",
+        "short_sub": "B2: 72% FIBRIL OCCL",
     },
     "ROOM_03": {
         "patient": "P03: Insulin-Resistant T1D (92 kg, ISF=28 mg/dL/U)",
@@ -900,6 +1039,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "B1_LEAD_SCREW_BACKLASH | B1_O_RING_STICTION | B2_LIPO_ESR_BROWNOUT | B3_THERMAL_INSULIN_DEGRADATION",
         "response": "Undervoltage lockout at V_term < 3.25V; tactile alert and telemetry hold",
         "mat": "Mat_SafetyOrange",
+        "short_title": "R03: BATT BROWNOUT",
+        "short_sub": "B5: 3.05V SUPERCAP",
     },
     "ROOM_04": {
         "patient": "P04: Elderly Cardiac T1D (84 kg, ISF=35 mg/dL/U)",
@@ -909,6 +1050,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "C1_UNAUTH_10U_BOLUS_REPLAY | C2_FAKE_HYPO_CGM_SPOOF | C3_STEALTH_CUSUM_DRIP | SIMPLEX_PINCH_VALVE_CLAMP",
         "response": "EKF innovation residual >4.5 sigma triggers hardware pinch-valve V01 in <50 ms",
         "mat": "Mat_CyberRed",
+        "short_title": "R04: CYBER MITM +40",
+        "short_sub": "C2: SIMPLEX CLAMP",
     },
     "ROOM_05": {
         "patient": "BENCH-05: 130-Part Gravimetric Saline Calibration Rig",
@@ -918,6 +1061,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "BREP_3014UL_SYRINGE_BORE | LUER_222UL_DEADSPACE | GRAVIMETRIC_0_01MG_DRIFT | OPTICAL_LVDT_CROSSCHECK",
         "response": "Verifies 130-part CAD tolerances and cross-checks plunger travel against mass balance",
         "mat": "Mat_AnodizedBlue",
+        "short_title": "R05: 138-PART RIG",
+        "short_sub": "IITP METROLOGY LAB",
     },
     "ROOM_06": {
         "patient": "SOC-06: Central Nursing & Cyber-Physical Command Center",
@@ -927,6 +1072,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "IEEE1588_PTP_SYNC | MULTI_PATIENT_RISK_RANKING | PHYSICAL_VS_CYBER_SEPARATION | PAPER_REPORT_EXPORT",
         "response": "100% separation between mechanical occlusions (A/B) and cyber-attacks (C)",
         "mat": "Mat_SimplexShield",
+        "short_title": "R06: SOC + PTP GM",
+        "short_sub": "IEEE-1588 + WALL",
     },
     "ROOM_07": {
         "patient": "P05: Adult T1D (68 kg, ISF=45 mg/dL/U)",
@@ -936,6 +1083,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "A2_DISLODGED_WET_CANNULA | SUBCUTANEOUS_LEAKAGE_70PCT | EKF_POSITIVE_INNOVATION_DRIFT",
         "response": "Normal line pressure + rising EKF BG residual flags wet infusion site (A2)",
         "mat": "Mat_DebrisAmber",
+        "short_title": "R07: WET SITE LEAK",
+        "short_sub": "A2: 0.14KPA CANNULA",
     },
     "ROOM_08": {
         "patient": "P06: Adult T1D (71 kg, ISF=44 mg/dL/U)",
@@ -945,6 +1094,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "A4_PISA_SLEEP_COMPRESSION | FALSE_LOW_CGM_DROPOUT | STEP_RATE_GATE_REJECTION",
         "response": "Physiological rate-of-change gate rejects non-physiological -28 mg/dL/5min step drop",
         "mat": "Mat_DebrisAmber",
+        "short_title": "R08: PISA SLEEP LOW",
+        "short_sub": "A4: COMP ARTIFACT",
     },
     "ROOM_09": {
         "patient": "P07: Dawn-Phenomenon T1D (79 kg, ISF=36 mg/dL/U)",
@@ -954,6 +1105,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "C4_RTC_CLOCK_SKEW_PLUS_3H | DAWN_BASAL_MISMATCH | PTP_GRANDMASTER_DRIFT_ALARM",
         "response": "MasterClock PTP Hub detects >10 ms clock offset and restores circadian basal schedule",
         "mat": "Mat_CyberRed",
+        "short_title": "R09: CLOCK SKEW +3H",
+        "short_sub": "C4: PTP DRIFT BLOCK",
     },
     "ROOM_10": {
         "patient": "P08: Insulin-Sensitive T1D (62 kg, ISF=55 mg/dL/U)",
@@ -963,6 +1116,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "C3_STEALTHY_MICRO_BOLUS_DRIP | SUB_SINGLE_STEP_THRESHOLD | TWO_SIDED_CUSUM_DETECTION",
         "response": "Two-sided CUSUM accumulator crosses h=4.5 threshold before BG drops below 70 mg/dL",
         "mat": "Mat_CyberRed",
+        "short_title": "R10: CUSUM DRIP",
+        "short_sub": "C3: STEALTH ATTACK",
     },
     "ROOM_11": {
         "patient": "P09: Brittle T1D (55 kg, ISF=60 mg/dL/U)",
@@ -972,6 +1127,8 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "C1_RF_PACKET_REPLAY | CRYPTO_NONCE_REJECTION | IOB_CEILING_CLAMP",
         "response": "Duplicate sequence nonce rejected; Simplex kernel clamps delivery to safe basal",
         "mat": "Mat_CyberRed",
+        "short_title": "R11: 2X RF REPLAY",
+        "short_sub": "C1: NONCE REJECTED",
     },
     "ROOM_12": {
         "patient": "P10: Adult T1D (73 kg, ISF=40 mg/dL/U)",
@@ -981,12 +1138,30 @@ CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
         "tested": "A1_UNPRIMED_68UL_DEADSPACE | ZERO_TISSUE_DELIVERY_LAG | AUTOMATED_PRIME_PROMPT",
         "response": "Tracks 68.05 uL F01 hold-up volume until meniscus reaches subcutaneous tip",
         "mat": "Mat_DebrisAmber",
+        "short_title": "R12: UNPRIMED 68UL",
+        "short_sub": "A1: DEADSPACE LAG",
     },
 }
 
 
+ROOM_ORIGINS: Dict[str, Tuple[float, float, float]] = {
+    "ROOM_01": (-6.0, -3.0, 0.0),
+    "ROOM_02": (0.0, -3.0, 0.0),
+    "ROOM_03": (6.0, -3.0, 0.0),
+    "ROOM_04": (-6.0, 3.0, 0.0),
+    "ROOM_05": (0.0, 3.0, 0.0),
+    "ROOM_06": (6.0, 3.0, 0.0),
+    "ROOM_07": (-6.0, 9.0, 0.0),
+    "ROOM_08": (0.0, 9.0, 0.0),
+    "ROOM_09": (6.0, 9.0, 0.0),
+    "ROOM_10": (-6.0, 15.0, 0.0),
+    "ROOM_11": (0.0, 15.0, 0.0),
+    "ROOM_12": (6.0, 15.0, 0.0),
+}
+
+
 def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[float, float, float]) -> str:
-    """Emit architectural floor slab, walls, glass observation partition, door frame, ceiling RectLight, and 3D CubicleScenarioBoard."""
+    """Emit architectural floor slab, walls, glass observation partition, door frame, ceiling RectLight, 3D CubicleScenarioBoard, and 3D Rooftop FloatingRoomSign_3D."""
     ox, oy, oz = origin
     meta = CUBICLE_USD_SCENARIOS.get(room_id, {
         "patient": room_title,
@@ -996,7 +1171,39 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
         "tested": "NOMINAL",
         "response": "Nominal monitoring",
         "mat": "Mat_BatteryHealthy",
+        "short_title": room_id,
+        "short_sub": "NOMINAL",
     })
+    roof_title_mesh = emit_3d_text_mesh(
+        f"{indent}    ",
+        "FloatingText_Title",
+        meta["short_title"],
+        (0.0, -0.055, 0.16),
+        0.040,
+        0.048,
+        0.045,
+        "Mat_NeonWhiteText",
+    )
+    roof_sub_mesh = emit_3d_text_mesh(
+        f"{indent}    ",
+        "FloatingText_Subtitle",
+        meta["short_sub"],
+        (0.0, -0.055, -0.28),
+        0.034,
+        0.038,
+        0.040,
+        "Mat_NeonGoldText",
+    )
+    inner_title_mesh = emit_3d_text_mesh(
+        f"{indent}    ",
+        "InnerBoardText_Title",
+        meta["short_title"],
+        (0.0, -0.042, 0.18),
+        0.015,
+        0.016,
+        0.018,
+        "Mat_NeonWhiteText",
+    )
     return f"""{indent}double3 xformOp:translate = ({ox:.3f}, {oy:.3f}, {oz:.3f})
 {indent}uniform token[] xformOpOrder = ["xformOp:translate"]
 {indent}custom string geco:room_id = "{room_id}"
@@ -1005,6 +1212,39 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
 {indent}custom string geco:active_scenario_name = "{meta['name']}"
 {indent}custom string geco:scenario_category = "{meta['category']}"
 {indent}custom string geco:scenarios_tested = "{meta['tested']}"
+
+{indent}def Xform "FloatingRoomSign_3D" (
+{indent}    doc = "3D Rooftop Floating Room & Scenario Identification Sign Above {room_id}"
+{indent})
+{indent}{{
+{indent}    double3 xformOp:translate = (0.0, 1.55, 3.38)
+{indent}    float3 xformOp:rotateXYZ = (-34.0, 0.0, 0.0)
+{indent}    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    custom string geco:sign_title = "{meta['short_title']}"
+{indent}    custom string geco:sign_subtitle = "{meta['short_sub']}"
+
+{indent}    def Cube "SignBackingBoard" (
+{indent}        prepend apiSchemas = ["MaterialBindingAPI"]
+{indent}    )
+{indent}    {{
+{indent}        double size = 1.0
+{indent}        float3 xformOp:scale = (4.95, 0.07, 1.15)
+{indent}        uniform token[] xformOpOrder = ["xformOp:scale"]
+{indent}        rel material:binding = </World/Looks/Mat_MatteDark>
+{indent}    }}
+{indent}    def Cube "SignCategoryStripe" (
+{indent}        prepend apiSchemas = ["MaterialBindingAPI"]
+{indent}    )
+{indent}    {{
+{indent}        double size = 1.0
+{indent}        double3 xformOp:translate = (0.0, -0.042, 0.50)
+{indent}        float3 xformOp:scale = (4.88, 0.02, 0.11)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+{indent}        rel material:binding = </World/Looks/{meta['mat']}>
+{indent}    }}
+{roof_title_mesh}
+{roof_sub_mesh}
+{indent}}}
 
 {indent}def Xform "CubicleScenarioBoard" (
 {indent}    doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
@@ -1044,11 +1284,12 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
 {indent}    )
 {indent}    {{
 {indent}        double size = 1.0
-{indent}        double3 xformOp:translate = (0.0, -0.036, 0.18)
-{indent}        float3 xformOp:scale = (1.96, 0.012, 0.09)
+{indent}        double3 xformOp:translate = (0.0, -0.034, 0.18)
+{indent}        float3 xformOp:scale = (1.96, 0.010, 0.14)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
 {indent}        rel material:binding = </World/Looks/{meta['mat']}>
 {indent}    }}
+{inner_title_mesh}
 {indent}    def Cube "Bar_BG" (
 {indent}        prepend apiSchemas = ["MaterialBindingAPI"]
 {indent}    )
@@ -1145,6 +1386,138 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
 {indent}}}"""
 
 
+def emit_all_ward_cameras(indent: str = "    ") -> str:
+    """Emit ward-wide and per-room multi-angle (PERSP, TOP, SIDE, FRONT, ORTHO_TOP, ORTHO_SIDE, MACRO) cameras."""
+    cam_lines = [
+        f'{indent}def Scope "Cameras"',
+        f"{indent}{{",
+        f"""{indent}    def Camera "Cam_Ward_Overview"
+{indent}    {{
+{indent}        float focalLength = 17.5
+{indent}        double3 xformOp:translate = (8.2, -13.8, 12.6)
+{indent}        float3 xformOp:rotateXYZ = (52.0, 0.0, 18.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_Ward_Top"
+{indent}    {{
+{indent}        float focalLength = 16.0
+{indent}        double3 xformOp:translate = (3.8, 5.8, 26.5)
+{indent}        float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_Ward_Ortho_Top"
+{indent}    {{
+{indent}        uniform token projection = "orthographic"
+{indent}        float horizontalAperture = 330.0
+{indent}        float verticalAperture = 240.0
+{indent}        double3 xformOp:translate = (3.8, 5.8, 25.0)
+{indent}        float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_Ward_Side"
+{indent}    {{
+{indent}        float focalLength = 18.0
+{indent}        double3 xformOp:translate = (19.5, 4.2, 7.8)
+{indent}        float3 xformOp:rotateXYZ = (68.0, 0.0, 90.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_Ward_Front"
+{indent}    {{
+{indent}        float focalLength = 17.0
+{indent}        double3 xformOp:translate = (3.2, -13.5, 6.4)
+{indent}        float3 xformOp:rotateXYZ = (70.0, 0.0, 6.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_LargeDashboardWall"
+{indent}    {{
+{indent}        float focalLength = 14.0
+{indent}        double3 xformOp:translate = (7.6, 0.55, 1.55)
+{indent}        float3 xformOp:rotateXYZ = (88.0, 0.0, 0.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}""",
+    ]
+
+    legacy_names = {
+        "ROOM_01": "Cam_Room01_Nominal",
+        "ROOM_02": "Cam_Room02_PipeDebris",
+        "ROOM_03": "Cam_Room03_BatteryBrownout",
+        "ROOM_04": "Cam_Room04_CyberMITM",
+        "ROOM_05": "Cam_Room05_MetrologyRig",
+        "ROOM_06": "Cam_Room06_SOC",
+        "ROOM_07": "Cam_Room07_WetSite",
+        "ROOM_08": "Cam_Room08_PISA",
+        "ROOM_09": "Cam_Room09_ClockSkew",
+        "ROOM_10": "Cam_Room10_StealthCUSUM",
+        "ROOM_11": "Cam_Room11_BrittleReplay",
+        "ROOM_12": "Cam_Room12_Unprimed",
+    }
+
+    for r_id, (ox, oy, oz) in ROOM_ORIGINS.items():
+        leg_name = legacy_names[r_id]
+        cam_lines.append(f"""{indent}    def Camera "{leg_name}"
+{indent}    {{
+{indent}        float focalLength = 15.0
+{indent}        double3 xformOp:translate = ({ox + 2.65:.2f}, {oy - 2.25:.2f}, 1.92)
+{indent}        float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_{r_id}_PERSP"
+{indent}    {{
+{indent}        float focalLength = 15.0
+{indent}        double3 xformOp:translate = ({ox + 2.65:.2f}, {oy - 2.25:.2f}, 1.92)
+{indent}        float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_{r_id}_TOP"
+{indent}    {{
+{indent}        float focalLength = 18.0
+{indent}        double3 xformOp:translate = ({ox + 0.85:.2f}, {oy + 0.15:.2f}, 6.60)
+{indent}        float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_{r_id}_SIDE"
+{indent}    {{
+{indent}        float focalLength = 17.0
+{indent}        double3 xformOp:translate = ({ox + 3.25:.2f}, {oy - 0.35:.2f}, 1.48)
+{indent}        float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_{r_id}_FRONT"
+{indent}    {{
+{indent}        float focalLength = 15.5
+{indent}        double3 xformOp:translate = ({ox + 0.65:.2f}, {oy - 3.10:.2f}, 1.68)
+{indent}        float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_{r_id}_ORTHO_TOP"
+{indent}    {{
+{indent}        uniform token projection = "orthographic"
+{indent}        float horizontalAperture = 82.0
+{indent}        float verticalAperture = 54.0
+{indent}        double3 xformOp:translate = ({ox + 0.95:.2f}, {oy + 0.15:.2f}, 8.00)
+{indent}        float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_{r_id}_ORTHO_SIDE"
+{indent}    {{
+{indent}        uniform token projection = "orthographic"
+{indent}        float horizontalAperture = 68.0
+{indent}        float verticalAperture = 42.0
+{indent}        double3 xformOp:translate = ({ox + 3.80:.2f}, {oy - 0.25:.2f}, 1.65)
+{indent}        float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}
+{indent}    def Camera "Cam_{r_id}_MACRO"
+{indent}    {{
+{indent}        float focalLength = 26.0
+{indent}        double3 xformOp:translate = ({ox + 1.15:.2f}, {oy - 0.95:.2f}, 1.30)
+{indent}        float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+{indent}    }}""")
+    cam_lines.append(f"{indent}}}")
+    return "\n".join(cam_lines)
+
+
 def generate_smart_hospital_ward_usda() -> Path:
     lines: List[str] = []
     lines.append("""#usda 1.0
@@ -1188,67 +1561,9 @@ def Xform "World" (
     lines.append(emit_pbr_materials(indent="    "))
     lines.append("")
 
-    # Emit Ward Cameras for 1-click switching in Omniverse & Isaac Sim
-    lines.append("""    def Scope "Cameras"
-    {
-        def Camera "Cam_Ward_Overview"
-        {
-            float focalLength = 22.0
-            double3 xformOp:translate = (5.5, -14.5, 11.2)
-            float3 xformOp:rotateXYZ = (54.0, 0.0, 18.0)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
-        }
-        def Camera "Cam_Room01_Nominal"
-        {
-            float focalLength = 15.0
-            double3 xformOp:translate = (-3.2, -5.25, 1.85)
-            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
-        }
-        def Camera "Cam_Room02_PipeDebris"
-        {
-            float focalLength = 15.0
-            double3 xformOp:translate = (2.8, -5.25, 1.85)
-            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
-        }
-        def Camera "Cam_Room03_BatteryBrownout"
-        {
-            float focalLength = 15.0
-            double3 xformOp:translate = (8.8, -5.25, 1.85)
-            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
-        }
-        def Camera "Cam_Room04_CyberMITM"
-        {
-            float focalLength = 15.0
-            double3 xformOp:translate = (-3.2, 0.75, 1.85)
-            float3 xformOp:rotateXYZ = (74.0, 0.0, 34.0)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
-        }
-        def Camera "Cam_Room05_MetrologyRig"
-        {
-            float focalLength = 16.0
-            double3 xformOp:translate = (2.6, 0.75, 1.85)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 36.0)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
-        }
-        def Camera "Cam_Room06_SOC"
-        {
-            float focalLength = 16.0
-            double3 xformOp:translate = (8.4, 0.75, 1.85)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 36.0)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
-        }
-        def Camera "Cam_LargeDashboardWall"
-        {
-            float focalLength = 14.0
-            double3 xformOp:translate = (7.6, 0.55, 1.55)
-            float3 xformOp:rotateXYZ = (88.0, 0.0, 0.0)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
-        }
-    }
-""")
+    # Emit Ward & Per-Room Multi-Angle / Orthographic Cameras
+    lines.append(emit_all_ward_cameras(indent="    "))
+    lines.append("")
 
     # Start /World/Ward
     lines.append('    def Xform "Ward" (')

@@ -68,6 +68,8 @@ class WardControlPanelUI:
         self._room_labels: Dict[str, Any] = {}
         self._selected_prim_path: str = "/World/Ward/Room_04_Cyber_MITM_And_Simplex_Clamp/Pump_04"
         self._selected_room_key: str = "ROOM_04"
+        self._selected_view_mode: str = "PERSP"
+        self._active_viewport_label: Optional[Any] = None
 
         # 6 Live Oscilloscope Series (48-sample rolling windows)
         self._hist_bg: list[float] = [118.0] * 48
@@ -129,26 +131,40 @@ class WardControlPanelUI:
                         style={"font_size": 12, "color": 0xFF34D399},
                     )
 
-                    # Section 1: 12-Bay Camera & Patient Focus Presets
-                    with ui.CollapsableFrame("1. 12-Bay Viewport Camera & Telemetry Focus Selector", collapsed=False):
+                    # Section 1: 12-Bay Camera & Per-Room Multi-Angle / Orthographic Presets
+                    with ui.CollapsableFrame("1. 12-Bay Viewport Camera & Per-Room Multi-Angle / Orthographic Selector", collapsed=False):
                         with ui.VStack(spacing=4):
                             with ui.HStack(spacing=4, height=24):
                                 ui.Button("Ward Overview", clicked_fn=lambda: self._select_bay("OVERVIEW"))
-                                ui.Button("R01: P01 Nominal", clicked_fn=lambda: self._select_bay("ROOM_01"))
-                                ui.Button("R02: P02 Debris", clicked_fn=lambda: self._select_bay("ROOM_02"))
-                                ui.Button("R03: P03 Battery", clicked_fn=lambda: self._select_bay("ROOM_03"))
+                                ui.Button("Ward Top", clicked_fn=lambda: self._select_bay("WARD_TOP"))
+                                ui.Button("Ward Ortho Top", clicked_fn=lambda: self._select_bay("WARD_ORTHO_TOP"))
+                                ui.Button("Ward Side", clicked_fn=lambda: self._select_bay("WARD_SIDE"))
+                                ui.Button("Ward Front", clicked_fn=lambda: self._select_bay("WARD_FRONT"))
                             with ui.HStack(spacing=4, height=24):
-                                ui.Button("R04: P04 Cyber MITM", clicked_fn=lambda: self._select_bay("ROOM_04"))
-                                ui.Button("R05: 138-Part Rig", clicked_fn=lambda: self._select_bay("ROOM_05"))
-                                ui.Button("R06: PTP Clock & SOC", clicked_fn=lambda: self._select_bay("ROOM_06"))
-                                ui.Button("R07: P05 Wet Site", clicked_fn=lambda: self._select_bay("ROOM_07"))
+                                ui.Button("R01: P01 Nominal", clicked_fn=lambda: self._select_room_with_mode("ROOM_01"))
+                                ui.Button("R02: P02 Debris", clicked_fn=lambda: self._select_room_with_mode("ROOM_02"))
+                                ui.Button("R03: P03 Battery", clicked_fn=lambda: self._select_room_with_mode("ROOM_03"))
+                                ui.Button("R04: P04 Cyber MITM", clicked_fn=lambda: self._select_room_with_mode("ROOM_04"))
                             with ui.HStack(spacing=4, height=24):
-                                ui.Button("R08: P06 PISA Low", clicked_fn=lambda: self._select_bay("ROOM_08"))
-                                ui.Button("R09: P07 Clock Skew", clicked_fn=lambda: self._select_bay("ROOM_09"))
-                                ui.Button("R10: P08 CUSUM Drip", clicked_fn=lambda: self._select_bay("ROOM_10"))
-                                ui.Button("R11: P09 RF Replay", clicked_fn=lambda: self._select_bay("ROOM_11"))
+                                ui.Button("R05: 138-Part Rig", clicked_fn=lambda: self._select_room_with_mode("ROOM_05"))
+                                ui.Button("R06: PTP Clock & SOC", clicked_fn=lambda: self._select_room_with_mode("ROOM_06"))
+                                ui.Button("R07: P05 Wet Site", clicked_fn=lambda: self._select_room_with_mode("ROOM_07"))
+                                ui.Button("R08: P06 PISA Low", clicked_fn=lambda: self._select_room_with_mode("ROOM_08"))
                             with ui.HStack(spacing=4, height=24):
-                                ui.Button("R12: P10 Unprimed", clicked_fn=lambda: self._select_bay("ROOM_12"))
+                                ui.Button("R09: P07 Clock Skew", clicked_fn=lambda: self._select_room_with_mode("ROOM_09"))
+                                ui.Button("R10: P08 CUSUM Drip", clicked_fn=lambda: self._select_room_with_mode("ROOM_10"))
+                                ui.Button("R11: P09 RF Replay", clicked_fn=lambda: self._select_room_with_mode("ROOM_11"))
+                                ui.Button("R12: P10 Unprimed", clicked_fn=lambda: self._select_room_with_mode("ROOM_12"))
+                            with ui.HStack(spacing=4, height=24):
+                                ui.Label("Room View Angle:", width=108, style={"font_size": 11, "color": 0xFF38BDF8})
+                                ui.Button("Persp", clicked_fn=lambda: self._select_view_mode("PERSP"), style={"background_color": 0xFF1E3A8A})
+                                ui.Button("Top", clicked_fn=lambda: self._select_view_mode("TOP"), style={"background_color": 0xFF1E3A8A})
+                                ui.Button("Side", clicked_fn=lambda: self._select_view_mode("SIDE"), style={"background_color": 0xFF1E3A8A})
+                                ui.Button("Front", clicked_fn=lambda: self._select_view_mode("FRONT"), style={"background_color": 0xFF1E3A8A})
+                                ui.Button("Ortho Top", clicked_fn=lambda: self._select_view_mode("ORTHO_TOP"), style={"background_color": 0xFF4C1D95})
+                                ui.Button("Ortho Side", clicked_fn=lambda: self._select_view_mode("ORTHO_SIDE"), style={"background_color": 0xFF4C1D95})
+                                ui.Button("Macro", clicked_fn=lambda: self._select_view_mode("MACRO"), style={"background_color": 0xFF065F46})
+                            with ui.HStack(spacing=4, height=24):
                                 ui.Button(
                                     "Large Dashboard Wall",
                                     clicked_fn=lambda: self._select_bay("DASHBOARD"),
@@ -165,6 +181,10 @@ class WardControlPanelUI:
                                     ),
                                     style={"background_color": 0xFF065F46},
                                 )
+                            self._active_viewport_label = ui.Label(
+                                "Active Viewport: OVERVIEW (/World/Cameras/Cam_Ward_Overview) | Selected Room: ROOM_04 [PERSP]",
+                                style={"font_size": 11, "color": 0xFFA78BFA},
+                            )
 
                     # Highlighted Simulation Results & Paper Export
                     with ui.CollapsableFrame(
@@ -199,20 +219,57 @@ class WardControlPanelUI:
                                 style={"font_size": 11, "color": 0xFF94A3B8},
                             )
 
-                    # All 12 Cubicles Scenario Matrix & Live Telemetry Readout (Prominent at Top)
+                    # All 12 Cubicles Scenario Matrix & Per-Room Multi-Angle Quick-Jump Viewports
                     with ui.CollapsableFrame(
-                        "12-Cubicle Scenario Matrix - Active Scenario, Fault Tested & Live Telemetry",
+                        "12-Cubicle Scenario Matrix & Per-Room Quick-Jump Viewports (Persp / Top / Side / Front / Ortho / Macro)",
                         collapsed=False,
                     ):
-                        with ui.VStack(spacing=2):
+                        with ui.VStack(spacing=3):
                             for r_key in (
                                 "ROOM_01", "ROOM_02", "ROOM_03", "ROOM_04", "ROOM_05", "ROOM_06",
                                 "ROOM_07", "ROOM_08", "ROOM_09", "ROOM_10", "ROOM_11", "ROOM_12",
                             ):
-                                self._room_labels[r_key] = ui.Label(
-                                    f"{r_key}: Waiting for telemetry...",
-                                    style={"font_size": 11, "color": 0xFFE2E8F0},
-                                )
+                                with ui.HStack(height=20, spacing=2):
+                                    ui.Button(
+                                        "Persp",
+                                        width=38,
+                                        clicked_fn=lambda rk=r_key: self._jump_room_viewport(rk, "PERSP"),
+                                        style={"font_size": 10, "background_color": 0xFF1E3A8A},
+                                    )
+                                    ui.Button(
+                                        "Top",
+                                        width=30,
+                                        clicked_fn=lambda rk=r_key: self._jump_room_viewport(rk, "TOP"),
+                                        style={"font_size": 10, "background_color": 0xFF1E3A8A},
+                                    )
+                                    ui.Button(
+                                        "Side",
+                                        width=32,
+                                        clicked_fn=lambda rk=r_key: self._jump_room_viewport(rk, "SIDE"),
+                                        style={"font_size": 10, "background_color": 0xFF1E3A8A},
+                                    )
+                                    ui.Button(
+                                        "Front",
+                                        width=36,
+                                        clicked_fn=lambda rk=r_key: self._jump_room_viewport(rk, "FRONT"),
+                                        style={"font_size": 10, "background_color": 0xFF1E3A8A},
+                                    )
+                                    ui.Button(
+                                        "Ortho",
+                                        width=38,
+                                        clicked_fn=lambda rk=r_key: self._jump_room_viewport(rk, "ORTHO_TOP"),
+                                        style={"font_size": 10, "background_color": 0xFF4C1D95},
+                                    )
+                                    ui.Button(
+                                        "Macro",
+                                        width=38,
+                                        clicked_fn=lambda rk=r_key: self._jump_room_viewport(rk, "MACRO"),
+                                        style={"font_size": 10, "background_color": 0xFF065F46},
+                                    )
+                                    self._room_labels[r_key] = ui.Label(
+                                        f"{r_key}: Waiting for telemetry...",
+                                        style={"font_size": 11, "color": 0xFFE2E8F0},
+                                    )
 
                     # Section 2: 6 Live Oscilloscopes (omni.ui.Plot)
                     with ui.CollapsableFrame(
@@ -635,9 +692,35 @@ class WardControlPanelUI:
         return default_room
 
     def _select_bay(self, room_key: str) -> None:
-        if room_key not in ("OVERVIEW", "DASHBOARD", "ROOM_06"):
+        if room_key in ROOM_FULL_MAP and room_key != "ROOM_06":
             self._selected_room_key = room_key
         self._on_camera_select(room_key)
+        if getattr(self, "_active_viewport_label", None) is not None:
+            self._active_viewport_label.text = (
+                f"Active Viewport: {room_key} | Selected Room: {self._selected_room_key} [{self._selected_view_mode}]"
+            )
+
+    def _select_room_with_mode(self, room_key: str) -> None:
+        self._selected_room_key = room_key
+        mode = getattr(self, "_selected_view_mode", "PERSP") or "PERSP"
+        target_cam = f"{room_key}_{mode}"
+        self._on_camera_select(target_cam)
+        if getattr(self, "_active_viewport_label", None) is not None:
+            self._active_viewport_label.text = (
+                f"Active Viewport: {target_cam} (/World/Cameras/Cam_{target_cam}) | Focused Room: {room_key} [{mode}]"
+            )
+
+    def _select_view_mode(self, mode: str) -> None:
+        self._selected_view_mode = mode.upper()
+        room_key = getattr(self, "_selected_room_key", "ROOM_04") or "ROOM_04"
+        if room_key not in ROOM_FULL_MAP:
+            room_key = "ROOM_04"
+        self._select_room_with_mode(room_key)
+
+    def _jump_room_viewport(self, room_key: str, mode: str) -> None:
+        self._selected_room_key = room_key
+        self._selected_view_mode = mode.upper()
+        self._select_room_with_mode(room_key)
 
     def _on_apply_physics_sliders(self) -> None:
         debris = float(self._slider_debris.model.as_float) if self._slider_debris else 0.0
