@@ -1,0 +1,11 @@
+{
+  "reviewed_utc": "2026-09-07T12:38:45.764652+00:00",
+  "png_sha256": "c80451ba4f564a9a6a1ee0f0e5297f584946be891f2a08415755bfc2ba5cfa24",
+  "dimensions": [
+    2340,
+    1728
+  ],
+  "visual_inspection": "All four panels, eight condition labels, both plants and confidence intervals inspected; legend moved to unused upper-left space after first view and final image reinspected",
+  "status": "PASS",
+  "scope": "Static scientific figure; no claim that PDF/SVG were independently raster-rendered"
+}

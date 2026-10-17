@@ -1,0 +1,18 @@
+{
+  "runtime": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 08:22:19) [Clang 14.0.6 ]",
+    "executable": "/opt/anaconda3/bin/python",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "3.0.2",
+    "numba": "0.60.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "argv": [
+      "GECOv6/03_EXPERIMENTS/filter_calibration/run_calibration.py",
+      "test"
+    ],
+    "model_identity": "unknown",
+    "utc": "2026-09-07T12:11:51.048608+00:00"
+  },
+  "fit_freeze_sha256": "5a60eaebb34f4950f426da319ff5c52d73b09f2cf2d71e739f77ba176ab44fb6"
+}

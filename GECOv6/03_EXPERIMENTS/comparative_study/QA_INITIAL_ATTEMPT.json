@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "command": "python3 -m unittest tests/test_v6_study.py -v",
+  "tests_run": 13,
+  "failures": 1,
+  "failed_test": "test_zero_command_noise_does_not_emit_mass",
+  "failure": "AssertionError: False is not true at assertion any(v != 0 for v in local_measured_delta_g)",
+  "explanation": "The selected60-sample random balance-noise realization quantized to zero throughout, so the test did not create the intended nonzero measurement perturbation. Actual emission and plant-input zero assertions passed.",
+  "repair": "Test fixture now injects alternating±0.008g balance-only observation noise. No production study code or random noise distribution changed.",
+  "source": "Recorded terminal output from first ordinary unit-test execution; not a reconstructed campaign result"
+}

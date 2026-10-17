@@ -1,0 +1,32 @@
+{
+  "recorded_utc": "2026-09-07T12:09:16.514251+00:00",
+  "reviewer_task": "/root/software_audit",
+  "implementer_filter_task": "/root/science_audit",
+  "shared_host": true,
+  "exact_model_id": null,
+  "provider_request_id": null,
+  "tests": {
+    "new_v6_numerical_and_integration": 38,
+    "software_authored_study": 14,
+    "software_authored_cross_review_and_integration": 10,
+    "all_passed": true
+  },
+  "commands": [
+    "/opt/anaconda3/bin/python -m unittest discover -s tests -p test_v6_production_integration.py -v",
+    "/opt/anaconda3/bin/python -m unittest discover -s tests -p test_v6*.py -v"
+  ],
+  "logs": [
+    "QA_PRODUCTION_INDEPENDENT_REVIEW.log",
+    "QA_PRODUCTION_INDEPENDENT_REVIEW_attempt02.log",
+    "QA_ALL_V6_NUMERICAL_INTEGRATION.log"
+  ],
+  "initial_failure_note": "Initial named-module test command failed due to installed tests namespace collision; unittest discovery passed; original failure log preserved.",
+  "source_hashes": {
+    "02_IMPLEMENTATION/geco_v4/physiology.py": "c15a86a970ce7b71d307fad39fcc3a431d5cd81602698292134b990cd1dea659",
+    "02_IMPLEMENTATION/geco_v4/calibrate.py": "fc1740efb3b26cd4775707076d30f25f586b9aafe3afd51008d0eeae07102f7c",
+    "02_IMPLEMENTATION/geco_v4/bench.py": "8f391e9c5e99258250b429f44c53e667690721b436794fae390939f5c5e90a9a",
+    "02_IMPLEMENTATION/geco_v4/campaign.py": "2a09edc7ebd16c82cf9b3d4945358a2a7d1c8ac04fcf719d39f3cdc50773b758",
+    "02_IMPLEMENTATION/tests/test_v6_production_integration.py": "9079b01e627310eda9275ee8e736a2a5ca58d2ff6c7bb7abdfc42623afcf47a3",
+    "02_IMPLEMENTATION/tests/test_v6_study.py": "2c66433264e680478b8bb212bd21d6d32a49c4b9b32d9ac89893aecb3cff587f"
+  }
+}

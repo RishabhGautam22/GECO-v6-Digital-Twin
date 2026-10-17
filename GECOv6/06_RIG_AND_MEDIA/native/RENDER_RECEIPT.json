@@ -1,0 +1,200 @@
+{
+  "blender": "5.1.1",
+  "engine": "Cycles",
+  "samples": 40,
+  "denoising": true,
+  "backend": "METAL",
+  "views": [
+    {
+      "view": "rig_overview",
+      "file": "06_RIG_AND_MEDIA/stills/rig_overview.png",
+      "camera_m": [
+        1.15,
+        -0.84,
+        0.93
+      ],
+      "target_m": [
+        0.4,
+        0.27,
+        0.065
+      ],
+      "orthographic_scale_m": 1.09,
+      "resolution": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "view": "pump_mechanism",
+      "file": "06_RIG_AND_MEDIA/stills/pump_mechanism.png",
+      "camera_m": [
+        0.47,
+        -0.35,
+        0.4
+      ],
+      "target_m": [
+        0.192,
+        0.144,
+        0.076
+      ],
+      "orthographic_scale_m": 0.39,
+      "resolution": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "view": "syringe_path",
+      "file": "06_RIG_AND_MEDIA/stills/syringe_path.png",
+      "camera_m": [
+        0.49,
+        -0.32,
+        0.45
+      ],
+      "target_m": [
+        0.275,
+        0.145,
+        0.1
+      ],
+      "orthographic_scale_m": 0.4,
+      "resolution": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "view": "mass_measurement",
+      "file": "06_RIG_AND_MEDIA/stills/mass_measurement.png",
+      "camera_m": [
+        0.87,
+        -0.17,
+        0.48
+      ],
+      "target_m": [
+        0.492,
+        0.155,
+        0.092
+      ],
+      "orthographic_scale_m": 0.36,
+      "resolution": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "view": "local_trip",
+      "file": "06_RIG_AND_MEDIA/stills/local_trip.png",
+      "camera_m": [
+        0.79,
+        0.73,
+        0.51
+      ],
+      "target_m": [
+        0.44,
+        0.251,
+        0.063
+      ],
+      "orthographic_scale_m": 0.52,
+      "resolution": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "view": "gateway_endpoint",
+      "file": "06_RIG_AND_MEDIA/stills/gateway_endpoint.png",
+      "camera_m": [
+        0.32,
+        0.64,
+        0.57
+      ],
+      "target_m": [
+        0.215,
+        0.319,
+        0.045
+      ],
+      "orthographic_scale_m": 0.41,
+      "resolution": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "view": "reference_recording",
+      "file": "06_RIG_AND_MEDIA/stills/reference_recording.png",
+      "camera_m": [
+        1.09,
+        0.01,
+        0.65
+      ],
+      "target_m": [
+        0.667,
+        0.257,
+        0.08
+      ],
+      "orthographic_scale_m": 0.51,
+      "resolution": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "view": "calibration_temperature",
+      "file": "06_RIG_AND_MEDIA/stills/calibration_temperature.png",
+      "camera_m": [
+        0.68,
+        0.94,
+        0.72
+      ],
+      "target_m": [
+        0.389,
+        0.438,
+        0.045
+      ],
+      "orthographic_scale_m": 0.72,
+      "resolution": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "view": "rig_overhead",
+      "file": "06_RIG_AND_MEDIA/stills/rig_overhead.png",
+      "camera_m": [
+        0.4,
+        0.27,
+        1.6
+      ],
+      "target_m": [
+        0.4,
+        0.27,
+        0
+      ],
+      "orthographic_scale_m": 0.92,
+      "resolution": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "view": "rig_exploded",
+      "file": "06_RIG_AND_MEDIA/stills/rig_exploded.png",
+      "camera_m": [
+        1.14,
+        -0.86,
+        1.02
+      ],
+      "target_m": [
+        0.4,
+        0.27,
+        0.1
+      ],
+      "orthographic_scale_m": 1.15,
+      "resolution": [
+        2560,
+        1440
+      ]
+    }
+  ],
+  "status": "Conceptual geometry, not physical evidence"
+}

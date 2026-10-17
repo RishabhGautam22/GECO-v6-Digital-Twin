@@ -1,0 +1,33 @@
+{
+  "runtime": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 08:22:19) [Clang 14.0.6 ]",
+    "executable": "/opt/anaconda3/bin/python",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "3.0.2",
+    "numba": "0.60.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "argv": [
+      "GECOv6/03_EXPERIMENTS/filter_calibration/run_calibration.py",
+      "fit",
+      "--workers",
+      "4",
+      "--max-iter",
+      "80"
+    ],
+    "model_identity": "unknown",
+    "utc": "2026-09-07T12:08:45.073394+00:00"
+  },
+  "source_hashes": {
+    "02_IMPLEMENTATION/geco_v4/physiology.py": "c15a86a970ce7b71d307fad39fcc3a431d5cd81602698292134b990cd1dea659",
+    "02_IMPLEMENTATION/geco_v4/calibrate.py": "fc1740efb3b26cd4775707076d30f25f586b9aafe3afd51008d0eeae07102f7c",
+    "02_IMPLEMENTATION/geco_v4/datasets.py": "9ee20292833c54972211b2fd7d2e16e18ca5c939116a8d4268518c0e92bc0518",
+    "02_IMPLEMENTATION/geco_v4/detectors.py": "e6ac96568bd8cd1dd8510ebee6ae910b1cda54bca3b744d085fb3b6f8489ac9d",
+    "02_IMPLEMENTATION/geco_v4/numerics.py": "35debd4693723817c3d3cf350df3d32486fed4c52443d2bd8eb1184316484ed5",
+    "03_EXPERIMENTS/filter_calibration/run_calibration.py": "0ccef3c930bedb5460ea82e21b36d0b530ec5916685dd89f7f111e27e5c76776",
+    "03_EXPERIMENTS/filter_calibration/PREREGISTRATION.md": "5ea51f6aa130bb09cd6ca1ea2001d9ff2451c2e756dc115f0be1aad5b23e3f55",
+    "03_EXPERIMENTS/filter_calibration/PREREGISTRATION_RECEIPT.json": "986812c2310b8c4cc9e3188a8f0c634914143ed51dec930258b83ac14b073bb1"
+  },
+  "max_nfev_per_start": 80,
+  "workers": 4
+}

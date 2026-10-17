@@ -1,0 +1,4 @@
+# Exact packages used for unmodified v4 reproduction and v5 validation.
+# Interpreter: CPython 3.12.14, macOS arm64. No network/device adapter is included.
+numpy==2.3.5
+pandas==2.2.3

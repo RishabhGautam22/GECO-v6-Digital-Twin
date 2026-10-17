@@ -1,0 +1,94 @@
+{
+  "created_utc": "2026-09-06T19:52:18.003421+00:00",
+  "baseline": "GECO v4 immutable manifest",
+  "fork": "GECO v5 numerical and causal compatibility fork",
+  "scope": [
+    "finite numerical values and configuration domains",
+    "dataset missing-value policy and replay schema",
+    "physical emission versus local/reported measurement and plant input",
+    "missing-sample alarm-event state"
+  ],
+  "finding_mapping": {
+    "SW-003": "missing network truth no longer replaced by private local mass; budget-channel abstraction remains unchanged",
+    "SW-006": "numerical schema/finite checks",
+    "SW-007": "last_alarm cleared on missing sample",
+    "SW-010": "plant driven by actual emitted mass; explicit measurement fields"
+  },
+  "unaddressed_ids": [
+    "SW-001",
+    "SW-002",
+    "SW-004",
+    "SW-005 (except invalid numerical K13 stop)",
+    "SW-008",
+    "SW-009"
+  ],
+  "firmware_modified": false,
+  "attack_catalogue_modified": false,
+  "baseline_modified": false,
+  "new_clinical_thresholds": false,
+  "tests": {
+    "passed": 53,
+    "original_tests": 40,
+    "new_ordinary_regressions": 13,
+    "duration_s": 2.938,
+    "log": "../04_EXPERIMENTS/reproduction/v5_all_tests.log"
+  },
+  "files": [
+    {
+      "path": "geco_v4/__init__.py",
+      "baseline_sha256": "f12ae94fa7bb2f274912976ca51c757c63bbeda5e0285649150dcdb93da78088",
+      "v5_sha256": "095e97934ea95f2d2a31af4171e0fc6634dabc1e5b12cad9b93bb8f7c0f25687"
+    },
+    {
+      "path": "geco_v4/bench.py",
+      "baseline_sha256": "c898b108f70b9837bfddde4dada9bb3797c0f048c5d09042365e7cda72c38748",
+      "v5_sha256": "429215cec28ec908fbf24246533fa7be509b10b3fac3385b7a1443c7ecab5bcc"
+    },
+    {
+      "path": "geco_v4/datasets.py",
+      "baseline_sha256": "e545e5db02cd3cd6b39f17f0a24ffc6a9e845a0f25df88eda04c02e05a2e5116",
+      "v5_sha256": "9ee20292833c54972211b2fd7d2e16e18ca5c939116a8d4268518c0e92bc0518"
+    },
+    {
+      "path": "geco_v4/delivery.py",
+      "baseline_sha256": "7d537a72490a1d2db634fd40dc38d326450d995faa046a1ef04f74a333ac222f",
+      "v5_sha256": "81709e2912e0274d60d782662f67b119f2ffe6920c99dced8a30ac10c3a87fce"
+    },
+    {
+      "path": "geco_v4/detectors.py",
+      "baseline_sha256": "435baf53fcee514607ea757687b4465e2c60363024cc3c0299ef2e15c6707267",
+      "v5_sha256": "e6ac96568bd8cd1dd8510ebee6ae910b1cda54bca3b744d085fb3b6f8489ac9d"
+    },
+    {
+      "path": "geco_v4/kernel.py",
+      "baseline_sha256": "c9b724f704623e30fbcdb670903fe6dabd7dd40781483c1e314b7e9eee5e7b7e",
+      "v5_sha256": "b368d0d30f4bdf7b5981a3497b6be7f14c9d3732310e92892b97ebc9772777a3"
+    },
+    {
+      "path": "geco_v4/numerics.py",
+      "baseline_sha256": null,
+      "v5_sha256": "35debd4693723817c3d3cf350df3d32486fed4c52443d2bd8eb1184316484ed5"
+    },
+    {
+      "path": "geco_v4/physiology.py",
+      "baseline_sha256": "42c35bc525402e91a47a3938d3c3deb5117c2e443de791d7364d280d86cf9eba",
+      "v5_sha256": "f74188d4d2456237e8fc4312faf24f10b5a7a0f1b8f95db51503c045c4b4c0a2"
+    },
+    {
+      "path": "geco_v4/protocol.py",
+      "baseline_sha256": "2a41d261fe64394f5893a6509adbd9e5e062596ac98d54051fec68f4f70f69aa",
+      "v5_sha256": "29feffddd42b59906ea9cb0720d46aa7da5f2bb1afa7e33883ceac19ff2e98ad"
+    },
+    {
+      "path": "geco_v4/wire.py",
+      "baseline_sha256": "36491ab289061644b0456407fe84a9941f3aba33ef618157683211adf6a0b09c",
+      "v5_sha256": "ff6e32db10ba938e9780f8ef9ea8cd39780cb4d5ffafd58dab228986eb15f4e9"
+    },
+    {
+      "path": "tests/test_v5_numerical_causality.py",
+      "baseline_sha256": null,
+      "v5_sha256": "63769b9c638da1772df4d70e80af7cc8e6426e7d9af94aa05cc35a8b4a89907a"
+    }
+  ],
+  "patch_sha256": "565a88a418bb22b1a63a6d09f12a56a719f0cb0bfee4b8bd182583c99f511e74"
+}

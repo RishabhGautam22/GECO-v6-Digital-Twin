@@ -1,0 +1,24 @@
+digraph GECO {
+graph [rankdir=LR, bgcolor="white", pad="0.12", nodesep="0.30", ranksep="0.44", fontname="Arial", fontsize=12];
+node [shape=box, style="filled", fillcolor="white", color="#334E61", fontname="Arial", fontsize=11, margin="0.13,0.09"];
+edge [color="#38596A", fontname="Arial", fontsize=9, arrowsize=0.65];
+
+request [label="Requested amount\nr_k (research U / interval)"];
+auth [label="Authorization + recovery\na_k (research U / interval)"];
+act [label="Virtual actuator\nemitted mass m_k (g)"];
+plant [label="Physiological plant\noriginal family or Hovorka"];
+sensor [label="Reported CGM\nobservation y_k"];
+balance [label="Local balance indication\nsigned increment (g)"];
+report [label="Received mass report\nmay differ from local indication"];
+monitor [label="Monitoring policy\nfull / simple / sham", fillcolor="#E8F3F3"];
+metric [label="Evaluator only\nexcess, deficit, glucose",fillcolor="#F4F4F4"];
+request -> auth; auth -> act; act -> plant [label="latent emission / conversion\nsimulation only"];
+plant -> sensor; sensor -> monitor [label="causal observation"];
+act -> balance [label="measurement model"];
+balance -> report; report -> monitor;
+balance -> auth [label="common local budget",color="#AF642F"];
+monitor -> auth [label="trip / verification",color="#AF642F"];
+act -> metric [style=dashed]; plant -> metric [style=dashed];
+{rank=same; balance; plant;} {rank=same; report; sensor;}
+
+}

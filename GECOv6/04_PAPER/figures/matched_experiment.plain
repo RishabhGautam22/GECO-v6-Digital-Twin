@@ -1,0 +1,22 @@
+graph 1 14.109 3.1383
+node unit 1.1092 1.9997 2.2183 0.555 "Synthetic parameter unit\n2 plants, 24 locked units each" filled box #334E61 white
+node exo 1.1092 1.1386 1.9579 0.555 "Matched meals and noise\n2 repeated seeds per unit" filled box #334E61 white
+node clean 3.8761 1.5692 2.4267 0.555 "Clean feedback reference\nfreeze requested-command tape" filled box #334E61 white
+node full 6.7003 2.8608 2.2079 0.555 "Full detector\nmanual / supervised recovery" filled box #334E61 #E8F3F3
+node simple 6.7003 1.9997 2.2079 0.555 "Simple mass residual\nmanual / supervised recovery" filled box #334E61 #E8F3F3
+node sham 6.7003 1.1386 2.3329 0.555 "Sham statistical detector\ncommon local and quality stops" filled box #334E61 white
+node oracle 6.7003 0.2775 2.2496 0.555 "Privileged fault-window oracle\nevaluator reference" filled box #334E61 #F4F4F4
+node paired 9.7225 1.5692 2.8225 0.555 "Same cap, local stop and observations\nfull 48 h; 8 conditions" filled box #334E61 white
+node out 12.844 1.5692 2.5308 0.7425 "Matched-clean excess AND deficit\ninterruption, recovery, glucose\nbootstrap parameter units" filled box #334E61 white
+edge unit clean 4 2.2214 1.8271 2.3297 1.8101 2.4403 1.7927 2.5505 1.7754 solid #38596A
+edge exo clean 4 2.0926 1.291 2.2414 1.3144 2.3971 1.3389 2.5518 1.3632 solid #38596A
+edge clean full 7 4.3928 1.8535 4.7142 2.0299 5.1426 2.2555 5.5339 2.4303 5.6152 2.4666 5.7006 2.5025 5.7866 2.5372 solid #38596A
+edge clean simple 4 5.0962 1.7549 5.2244 1.7746 5.3548 1.7947 5.483 1.8144 solid #38596A
+edge clean sham 4 5.0962 1.3834 5.2038 1.3669 5.3129 1.3501 5.4209 1.3335 solid #38596A
+edge clean oracle 7 4.3928 1.2848 4.7142 1.1084 5.1426 0.88279 5.5339 0.70806 5.6152 0.67174 5.7006 0.63584 5.7866 0.60118 solid #38596A
+edge full paired 7 7.4987 2.5774 7.6225 2.5299 7.7486 2.4799 7.8668 2.4303 8.2578 2.2661 8.6875 2.0664 9.0334 1.9006 solid #38596A
+edge simple paired 4 7.808 1.8425 7.9346 1.8242 8.0654 1.8054 8.1963 1.7866 solid #38596A
+edge sham paired 4 7.8719 1.3051 7.9793 1.3205 8.0892 1.3363 8.1991 1.3521 solid #38596A
+edge oracle paired 7 7.4987 0.56096 7.6225 0.60845 7.7486 0.65845 7.8668 0.70806 8.2578 0.87219 8.6875 1.0719 9.0334 1.2377 solid #38596A
+edge paired out 4 11.138 1.5692 11.247 1.5692 11.357 1.5692 11.466 1.5692 solid #38596A
+stop

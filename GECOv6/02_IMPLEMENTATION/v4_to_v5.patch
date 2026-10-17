@@ -1,0 +1,723 @@
+--- v4/geco_v4/__init__.py
++++ v5/geco_v4/__init__.py
+@@ -21,5 +21,6 @@
+ campaign    : replay and closed-loop campaigns, ablations, metrics, figures
+ """
+ 
+-__version__ = "4.0.0"
++__version__ = "5.0.0-research-numerical-causal"
++BASELINE_VERSION = "4.0.0"
+ RESEARCH_ONLY = True
+--- v4/geco_v4/bench.py
++++ v5/geco_v4/bench.py
+@@ -31,6 +31,7 @@
+ from .kernel import KernelContext, SafetyKernel
+ from .physiology import GlucoseModel, PhysiologyTwin, TwinParams
+ from .wire import ACK, ASSOC, BUDGET, CGM, CMD, CONFIG, TRUTH, Envelope, Signer
++from .numerics import finite_number, positive_number, payload_numeric_issue
+ 
+ GW, CGM_ID, PUMP_ID, TRUTH_ID = "gw-01", "cgm-01", "pump-01", "truth-01"
+ 
+@@ -56,6 +57,25 @@
+     meal_announcement_rate: float = 0.6        # closed loop: fraction of meals the gateway is told about
+     seed: int = 0
+     time_compression: float = 20.0             # bench seconds per physiological minute^-1 (documentation only in virtual mode)
++
++    def __post_init__(self):
++        for name in ("dt_min", "grams_per_unit", "cusum_threshold", "r_std", "max_age_s",
++                     "max_cgm_age_s", "sigma6_mgdl", "cusum6_threshold", "innovation_inflation", "time_compression"):
++            positive_number(getattr(self, name), name)
++        finite_number(self.cusum_drift, "cusum_drift", minimum=0)
++        finite_number(self.max_user_bolus_u, "max_user_bolus_u", minimum=0)
++        finite_number(self.ar1_rho, "ar1_rho", minimum=0)
++        if self.ar1_rho >= 1:
++            raise ValueError("ar1_rho must be less than 1")
++        finite_number(self.meal_announcement_rate, "meal_announcement_rate", minimum=0, maximum=1)
++        if isinstance(self.seed, bool) or not isinstance(self.seed, int) or self.seed < 0:
++            raise ValueError("seed must be a nonnegative integer")
++        if isinstance(self.min_reliable_groups, bool) or not isinstance(self.min_reliable_groups, int) or not 1 <= self.min_reliable_groups <= 4:
++            raise ValueError("min_reliable_groups must be an integer from 1 through 4")
++        if self.profile not in ("legacy", "protected") or self.mode not in ("replay", "closed_loop"):
++            raise ValueError("unrecognized profile or mode")
++        if self.ablation not in ("geco_full", "geco_no_delivery", "kernel_only", "no_geco"):
++            raise ValueError("unrecognized ablation")
+ 
+ 
+ @dataclass
+@@ -92,6 +112,14 @@
+     rejected_attack_msgs: int
+     accepted_attack_msgs: int
+     pump_enabled: bool
++    # v5: distinct causal domains. Legacy measured fields remain for compatibility.
++    pump_emitted_mass_g: float
++    local_measured_mass_g: float
++    local_measured_delta_g: float
++    network_reported_mass_g: float | None
++    network_reported_delta_g: float | None
++    network_truth_accepted: bool
++    virtual_plant_input_u: float
+ 
+ 
+ class GatewayRuntime:
+@@ -143,6 +171,9 @@
+     # ------------------------------------------------------------ ingress
+     def ingest(self, env: Envelope, now: float) -> tuple[bool, str]:
+         """Protocol-twin verification of an inbound envelope. Returns (accepted, detail)."""
++        issue = payload_numeric_issue(env.type, env.payload)
++        if issue:
++            return False, "invalid numeric payload: " + issue
+         if not self.use_protocol:
+             # Ablations without the protocol twin accept everything (legacy behaviour).
+             verdict_ok, detail = True, "unverified"
+@@ -217,7 +248,7 @@
+         # User-initiated bolus: bounded separately; blocked only by hard stops.
+         bolus_allowed = 0.0
+         if user_bolus_u > 0:
+-            hard_block = any(r.startswith(("K01", "K02", "K12")) for r in reasons) if self.use_kernel else False
++            hard_block = any(r.startswith(("K01", "K02", "K12", "K13")) for r in reasons) if self.use_kernel else False
+             bolus_allowed = 0.0 if hard_block else min(user_bolus_u, self.cfg.max_user_bolus_u)
+         total_allowed = allowed + bolus_allowed
+         self.reactive_window = (self.reactive_window + [min(requested, allowed) if cgm_value is not None else 0.0])[-36:]
+@@ -233,7 +264,13 @@
+         budget = self.signer.make(TRUTH_ID, BUDGET, now, {"units": round(units, 4), "window_s": self.cfg.dt_min * 60})
+         return cmd, budget
+ 
+-    def reconcile(self, authorised_u: float, delta_mass_g: float, now: float) -> tuple[Evidence, Any]:
++    def reconcile(self, authorised_u: float, delta_mass_g: float | None, now: float) -> tuple[Evidence, Any]:
++        if delta_mass_g is None:
++            ev = Evidence("delivery_reconciliation", "actuation", 0.0, reliable=False,
++                          detail="no accepted numerical truth measurement")
++            self.last_actuation = ev
++            self.last_ack_units = None
++            return ev, None
+         ev, obs = self.delivery.reconcile(authorised_u, self.last_ack_units, delta_mass_g)
+         self.last_actuation = ev if self.use_delivery else self.last_actuation
+         self.last_ack_units = None
+@@ -295,6 +332,15 @@
+     """
+     from .attacks import catalogue
+ 
++    if steps is not None and (isinstance(steps, bool) or not isinstance(steps, int) or steps < 1):
++        raise ValueError("steps must be a positive integer")
++    if not np.isclose(cfg.dt_min, twin_params.dt_min):
++        raise ValueError("bench and twin sample durations must agree")
++    if plant_params is not None and not np.isclose(cfg.dt_min, plant_params.dt_min):
++        raise ValueError("bench and plant sample durations must agree")
++    if not np.isclose(cfg.grams_per_unit, delivery_cal.grams_per_unit):
++        raise ValueError("bench and delivery calibration mass-unit mappings must agree")
++
+     rng = np.random.default_rng(cfg.seed)
+     keys = _make_keys(rng)
+     if attack is None:
+@@ -316,6 +362,19 @@
+     use_kernel = cfg.ablation != "no_geco"
+ 
+     if replay is not None:
++        required = ("cgm", "insulin", "bolus", "carbs")
++        if any(name not in replay for name in required):
++            raise ValueError("replay requires cgm, insulin, bolus, and carbs arrays")
++        replay = {name: np.asarray(replay[name], dtype=float) for name in required}
++        if any(array.ndim != 1 for array in replay.values()) or len({len(a) for a in replay.values()}) != 1:
++            raise ValueError("replay arrays must be one-dimensional and have equal length")
++        if np.isinf(replay["cgm"]).any():
++            raise ValueError("CGM may contain NaN for missing samples, but not infinity")
++        for name in ("insulin", "bolus", "carbs"):
++            if not np.isfinite(replay[name]).all() or (replay[name] < 0).any():
++                raise ValueError(f"replay {name} must contain finite nonnegative values")
++        if np.any(replay["bolus"] > replay["insulin"] + 1e-9):
++            raise ValueError("replay total insulin cannot be less than its bolus component")
+         n = len(replay["cgm"]) if steps is None else min(steps, len(replay["cgm"]))
+         plant = None
+         x = None
+@@ -332,6 +391,7 @@
+     excess_prior_to_cutoff = None
+ 
+     for step in range(n):
++        emitted_before_g = pump_dev.dispensed_g
+         now = step * dt_s
+         active = attack.active(step)
+         pump_dev.fault = attacker.actuator_fault(step)
+@@ -421,17 +481,24 @@
+ 
+         # ---- 5. physical world advances; truth node reads the balance
+         pump_dev.tick(now, dt_s)
++        emitted_mass_g = pump_dev.dispensed_g - emitted_before_g
+         reading = truth_dev.read(now + dt_s * 0.9)
+         truth_env = truth_signer.make(GW, TRUTH, now + dt_s * 0.9, {"mass_g": reading["mass_g"], "delta_g": round(reading["delta_g"], 4), "cutoff": reading["cutoff"], "budget_g": reading["budget_g"]})
+-        delta_g = reading["delta_g"]
++        network_mass_g = None
++        network_delta_g = None
++        network_truth_accepted = False
++        delivery_label = "n/a"
+         if use_truth:
+             for env in attacker.intercept(truth_env, step, now + dt_s * 0.9):
+                 ok, _ = gateway.ingest(env, now + dt_s * 0.9)
+                 if ok:
+-                    delta_g = float(env.payload["delta_g"])
+-            gateway.reconcile(allowed, delta_g, now)
++                    network_mass_g = float(env.payload["mass_g"])
++                    network_delta_g = float(env.payload["delta_g"])
++                    network_truth_accepted = True
++            _, delivery_obs = gateway.reconcile(allowed, network_delta_g, now)
++            delivery_label = delivery_obs.label if delivery_obs is not None else "missing"
+         measured_u = reading["delta_g"] / cfg.grams_per_unit      # signed: balance flicker cancels in sums
+-        physical_u = max(0.0, measured_u)
++        physical_u = emitted_mass_g / cfg.grams_per_unit
+         expected_u = delivery_cal.expected_mass(allowed) / cfg.grams_per_unit if allowed > 0 else 0.0
+         if active:
+             delivered_units_attack += measured_u
+@@ -475,18 +542,28 @@
+                 pump_executed_physical_u=physical_u,
+                 delta_mass_g=reading["delta_g"],
+                 measured_u=measured_u,
+-                delivery_label=gateway.delivery.history[-1].label if gateway.delivery.history else "n/a",
++                delivery_label=delivery_label,
+                 cutoff=reading["cutoff"],
+                 attack_active=active,
+                 attack_actions="|".join(actions),
+                 rejected_attack_msgs=rejected_attack,
+                 accepted_attack_msgs=accepted_attack,
+                 pump_enabled=pump_dev.enabled,
++                pump_emitted_mass_g=emitted_mass_g,
++                local_measured_mass_g=reading["mass_g"],
++                local_measured_delta_g=reading["delta_g"],
++                network_reported_mass_g=network_mass_g,
++                network_reported_delta_g=network_delta_g,
++                network_truth_accepted=network_truth_accepted,
++                virtual_plant_input_u=physical_u,
+             )
+         )
+ 
+     summary = summarise(records, attack, cfg, gateway, truth_dev, delivered_units_attack, authorised_units_attack, excess_prior_to_cutoff)
+     manifest = {
++        "implementation": "GECO v5 numerical and causal fork of v4 (compatibility package geco_v4)",
++        "plant_input_semantics": "actual pump dispensed_g increment divided by grams_per_unit; independent of balance measurement noise",
++        "truth_input_semantics": "network-reported mass and delta are None unless an accepted numerical TRUTH envelope exists",
+         "config": asdict(cfg),
+         "attack": {"id": attack.id, "name": attack.name, "channel": attack.channel, "start": attack.start_step, "end": attack.end_step, "params": attack.params, "precondition": attack.precondition, "expected_control": attack.expected_control, "keys_granted": sorted(attack.keys.keys())},
+         "twin_params": asdict(twin_params),
+@@ -574,6 +651,9 @@
+         "unmet_automated_units_benign_security": round(unmet, 3),
+         "protocol_counters": dict(gateway.protocol.counters),
+         "audit_chain_valid": gateway.audit.verify()[0],
++        "true_emitted_u_during_attack": float(sum(r.virtual_plant_input_u for r in records if r.attack_active)),
++        "nominal_authorised_u_during_attack": float(sum(r.allowed_u for r in records if r.attack_active)),
++        "true_excess_over_nominal_u_during_attack": float(sum(r.virtual_plant_input_u - r.allowed_u for r in records if r.attack_active)),
+         **safety,
+     }
+ 
+--- v4/geco_v4/datasets.py
++++ v5/geco_v4/datasets.py
+@@ -19,8 +19,20 @@
+ 
+ import numpy as np
+ import pandas as pd
++from .numerics import finite_number
+ 
+ MMOL_TO_MGDL = 18.0182
++
++
++def _event_amount(value, name):
++    """A blank event amount means no amount entered; invalid values are errors.
++
++    Unlike `float(value or 0)`, this policy explicitly handles pandas NaN cells.
++    It does not estimate unlogged therapy or food events.
++    """
++    if pd.isna(value):
++        return 0.0
++    return finite_number(float(value), name, minimum=0)
+ 
+ 
+ @dataclass
+@@ -99,8 +111,8 @@
+             slot = r["t"].floor("5min")
+             if slot in idx:
+                 k = idx.get_loc(slot)
+-                fast = float(r.get("fast_insulin", 0.0) or 0.0)
+-                slow = float(r.get("slow_insulin", 0.0) or 0.0)
++                fast = _event_amount(r.get("fast_insulin", 0.0), "fast_insulin")
++                slow = _event_amount(r.get("slow_insulin", 0.0), "slow_insulin")
+                 bolus[k] += fast
+                 # long-acting insulin is spread over 24 h as a pseudo-basal for the twin
+                 if slow > 0:
+@@ -118,7 +130,7 @@
+                 slot = t.floor("5min")
+                 if slot in idx:
+                     # calories -> rough carbohydrate estimate (50% energy from carbs, 4 kcal/g); annotated as estimate
+-                    carbs[idx.get_loc(slot)] += float(r.get("calories", 0.0) or 0.0) * 0.5 / 4.0
++                    carbs[idx.get_loc(slot)] += _event_amount(r.get("calories", 0.0), "calories") * 0.5 / 4.0
+         out.append(ParticipantSeries(pid, "D1NAMO v1.2.0 (Zenodo 5651217)", idx.values, cgm, basal, bolus, carbs, np.full(len(idx), np.nan), np.zeros(len(idx))))
+     return out
+ 
+--- v4/geco_v4/delivery.py
++++ v5/geco_v4/delivery.py
+@@ -22,6 +22,7 @@
+ import numpy as np
+ 
+ from .detectors import Evidence, OneSidedAccumulator
++from .numerics import finite_number, positive_number
+ 
+ 
+ @dataclass
+@@ -34,6 +35,13 @@
+     noise_floor_g: float = 0.01      # balance resolution
+     unauthorised_flow_g: float = 0.03  # mass increase with no outstanding command
+     rel_sigma: float = 0.01          # relative residual scatter for large deliveries
++
++    def __post_init__(self):
++        for name in ("grams_per_unit", "gain", "threshold_g", "noise_floor_g"):
++            positive_number(getattr(self, name), name)
++        for name in ("residual_sigma_g", "unauthorised_flow_g", "rel_sigma"):
++            finite_number(getattr(self, name), name, minimum=0)
++        finite_number(self.offset_g, "offset_g")
+ 
+     def expected_mass(self, units: float) -> float:
+         return self.gain * self.grams_per_unit * max(0.0, units) + self.offset_g
+@@ -94,6 +102,10 @@
+         self.under_acc = OneSidedAccumulator(0.5 * self.cal.threshold_g, 2.5 * self.cal.threshold_g)
+ 
+     def reconcile(self, authorised_u: float, acked_u: float | None, delta_mass_g: float) -> tuple[Evidence, DeliveryObservation]:
++        finite_number(authorised_u, "authorised_u", minimum=0)
++        finite_number(delta_mass_g, "delta_mass_g")
++        if acked_u is not None:
++            finite_number(acked_u, "acked_u", minimum=0)
+         expected = self.cal.expected_mass(authorised_u) if authorised_u > 0 else 0.0
+         residual = delta_mass_g - expected
+         thr = self.cal.threshold_for(expected)
+--- v4/geco_v4/detectors.py
++++ v5/geco_v4/detectors.py
+@@ -12,6 +12,7 @@
+ from __future__ import annotations
+ 
+ from dataclasses import dataclass
++import math
+ 
+ 
+ @dataclass(frozen=True)
+@@ -48,7 +49,8 @@
+         self.negative = 0.0
+ 
+     def update(self, standardized_innovation: float | None) -> Evidence:
+-        if standardized_innovation is None:
++        self.last_alarm = False
++        if standardized_innovation is None or not math.isfinite(standardized_innovation):
+             return Evidence("physiology_cusum", "physiology", min(1.0, self.statistic / self.threshold), reliable=False, detail="missing sample")
+         z = max(-self.clip, min(self.clip, float(standardized_innovation)))
+         self.positive = max(0.0, self.positive + z - self.drift)
+--- v4/geco_v4/kernel.py
++++ v5/geco_v4/kernel.py
+@@ -21,6 +21,7 @@
+ from typing import Mapping
+ 
+ from .fusion import Assessment, Severity
++from .numerics import finite_number, positive_number
+ 
+ 
+ @dataclass(frozen=True)
+@@ -60,6 +61,12 @@
+         predictive_budget_u_3h: float = 0.60,
+         cutoff_actuation_score: float = 0.90,
+     ):
++        for name, value in (("max_command_u", max_command_u), ("max_cgm_age_s", max_cgm_age_s),
++                            ("max_pump_age_s", max_pump_age_s), ("low_stop_mgdl", low_stop_mgdl),
++                            ("predicted_low_mgdl", predicted_low_mgdl)):
++            positive_number(value, name)
++        finite_number(predictive_budget_u_3h, "predictive_budget_u_3h", minimum=0)
++        finite_number(cutoff_actuation_score, "cutoff_actuation_score", minimum=0, maximum=1)
+         self.max_command_u = max_command_u
+         self.max_cgm_age_s = max_cgm_age_s
+         self.max_pump_age_s = max_pump_age_s
+@@ -69,14 +76,37 @@
+         self.cutoff_actuation_score = cutoff_actuation_score
+ 
+     def authorize(self, requested_u: float, ctx: KernelContext) -> KernelDecision:
++        # Invalid context is unavailable evidence, never numerical reassurance.
++        try:
++            finite_number(ctx.now_s, "now_s")
++            finite_number(ctx.glucose_slope_mgdl_min, "glucose_slope_mgdl_min")
++            for name in ("cgm_age_s", "pump_age_s", "delivered_u_3h", "reactive_u_3h"):
++                finite_number(getattr(ctx, name), name, minimum=0)
++            for name in ("glucose_mgdl", "predicted_glucose_30m"):
++                if getattr(ctx, name) is not None:
++                    finite_number(getattr(ctx, name), name)
++            finite_number(ctx.actuation_score, "actuation_score", minimum=0, maximum=1)
++            finite_number(ctx.assessment.compromise_probability, "compromise_probability", minimum=0, maximum=1)
++            finite_number(ctx.assessment.confidence, "confidence", minimum=0, maximum=1)
++            if ctx.assessment.severity not in _ORDER:
++                raise ValueError("unrecognized assessment severity")
++        except (ValueError, TypeError) as exc:
++            return KernelDecision(requested_u, 0.0, Severity.SAFE_MODE,
++                                  (f"K13 invalid numerical context: {exc}",), False, True)
+         reasons: list[str] = []
+         allowed = requested_u
+         severity = ctx.assessment.severity
+         cutoff = False
+ 
+-        if not math.isfinite(requested_u) or requested_u < 0:
++        try:
++            finite_number(requested_u, "requested_u", minimum=0)
++            command_valid = True
++        except (ValueError, TypeError):
++            command_valid = False
++        if not command_valid:
+             allowed, severity = 0.0, Severity.SAFE_MODE
+             reasons.append("K01 invalid command")
++            return KernelDecision(requested_u, 0.0, severity, tuple(reasons), False, True)
+         if not ctx.command_authenticated:
+             allowed, severity = 0.0, Severity.SAFE_MODE
+             reasons.append("K02 command source not authenticated")
+--- v4/geco_v4/numerics.py
++++ v5/geco_v4/numerics.py
+@@ -0,0 +1,56 @@
++"""Shared numerical validity rules for the v5 research-only compatibility fork.
++
++These checks enforce representation and physical sign constraints, not clinical
++thresholds. Missing sensor values use None/NaN only at documented input boundaries.
++"""
++import math
++from numbers import Real
++
++
++def finite_number(value, name, *, minimum=None, maximum=None):
++    if isinstance(value, bool) or not isinstance(value, Real) or not math.isfinite(value):
++        raise ValueError(f"{name} must be a finite number")
++    value = float(value)
++    if minimum is not None and value < minimum:
++        raise ValueError(f"{name} must be >= {minimum}")
++    if maximum is not None and value > maximum:
++        raise ValueError(f"{name} must be <= {maximum}")
++    return value
++
++
++def positive_number(value, name):
++    value = finite_number(value, name, minimum=0)
++    if value == 0:
++        raise ValueError(f"{name} must be positive")
++    return value
++
++
++def finite_tree(value, name="payload"):
++    """Reject non-finite nested numbers before JSON serialization/signing."""
++    if isinstance(value, float):
++        finite_number(value, name)
++    elif isinstance(value, dict):
++        for key, item in value.items():
++            finite_tree(item, f"{name}.{key}")
++    elif isinstance(value, (list, tuple)):
++        for i, item in enumerate(value):
++            finite_tree(item, f"{name}[{i}]")
++
++
++def payload_numeric_issue(message_type, payload):
++    """Return a data-schema explanation, without throwing through runtime ingress."""
++    try:
++        finite_tree(payload)
++        required = {"CGM": ("glucose_mgdl",), "CMD": ("units",),
++                    "ACK": ("executed_units",), "BUDGET": ("units",),
++                    "TRUTH": ("mass_g", "delta_g")}.get(message_type, ())
++        for field in required:
++            minimum = 0 if field in ("units", "executed_units") else None
++            finite_number(payload.get(field), field, minimum=minimum)
++        if message_type == "CONFIG":
++            version = payload.get("version")
++            if isinstance(version, bool) or not isinstance(version, int) or version < 0:
++                raise ValueError("version must be a nonnegative integer")
++    except (ValueError, TypeError) as exc:
++        return str(exc)
++    return None
+--- v4/geco_v4/physiology.py
++++ v5/geco_v4/physiology.py
+@@ -24,6 +24,7 @@
+ from typing import Iterable
+ 
+ import numpy as np
++from .numerics import finite_number, positive_number
+ 
+ 
+ @dataclass
+@@ -42,6 +43,14 @@
+     kc: float = 0.40           # glucose rise per gram absorbed per min (mg/dL/min/g)
+     tau_i: float = 9.0         # interstitial lag (min)
+ 
++    def __post_init__(self):
++        for name in ("dt_min", "gb", "p1", "p2", "ki", "ku", "ka", "tau_i"):
++            positive_number(getattr(self, name), name)
++        for name in ("egp", "p3", "ib", "kc"):
++            finite_number(getattr(self, name), name, minimum=0)
++        if isinstance(self.sub_steps, bool) or not isinstance(self.sub_steps, int) or self.sub_steps < 1:
++            raise ValueError("sub_steps must be a positive integer")
++
+     def vector(self) -> np.ndarray:
+         return np.array([self.egp, self.p1, self.kc], dtype=float)
+ 
+@@ -64,6 +73,8 @@
+         self.p = params or TwinParams()
+ 
+     def initial_state(self, glucose: float, basal_u_per_sample: float = 0.0) -> np.ndarray:
++        finite_number(glucose, "initial glucose")
++        finite_number(basal_u_per_sample, "initial basal", minimum=0)
+         p = self.p
+         i_ss = p.ku * basal_u_per_sample / max(p.ki * p.dt_min, 1e-9) if basal_u_per_sample > 0 else p.ib
+         x_ss = p.p3 * (i_ss - p.ib) / max(p.p2, 1e-9)
+@@ -72,6 +83,10 @@
+     def step(self, x: np.ndarray, insulin_u: float, carbs_g: float) -> np.ndarray:
+         """Advance one sample (dt_min) with sub-stepped Euler integration."""
+         p = self.p
++        if np.shape(x) != (self.N_STATES,) or not np.isfinite(x).all():
++            raise ValueError("model state must contain five finite values")
++        finite_number(insulin_u, "model insulin input", minimum=0)
++        finite_number(carbs_g, "model carbohydrate input", minimum=0)
+         g, xa, ins, gut, gi = [float(v) for v in x]
+         h = p.dt_min / p.sub_steps
+         u_rate = max(0.0, insulin_u) / p.dt_min       # U per min over the sample
+@@ -111,6 +126,7 @@
+     H = np.array([[0.0, 0.0, 0.0, 0.0, 1.0]])
+ 
+     def __init__(self, params: TwinParams | None = None, r_std: float = 9.0):
++        positive_number(r_std, "r_std")
+         self.model = GlucoseModel(params)
+         self.p = self.model.p
+         self.r_var = float(r_std) ** 2
+@@ -178,6 +194,15 @@
+         Returns the innovation statistics. When the sample is missing the twin
+         propagates only and reports quality='missing'.
+         """
++        if cgm is not None and np.isnan(cgm):
++            cgm = None
++        if cgm is not None:
++            finite_number(cgm, "CGM")
++        positive_number(self.innovation_inflation, "innovation_inflation")
++        positive_number(self.sigma6, "sigma6")
++        finite_number(self.ar1_rho, "ar1_rho", minimum=0)
++        if self.ar1_rho >= 1:
++            raise ValueError("ar1_rho must be less than 1")
+         if not self.initialised:
+             self.reset(cgm if cgm is not None else 120.0)
+         self._k += 1
+--- v4/geco_v4/protocol.py
++++ v5/geco_v4/protocol.py
+@@ -22,6 +22,7 @@
+ from typing import Any
+ 
+ from .wire import ACK, ASSOC, BUDGET, CGM, CMD, CONFIG, HEARTBEAT, TRUTH, Envelope, verify_signature
++from .numerics import finite_number, payload_numeric_issue
+ 
+ 
+ class PeerState(str, Enum):
+@@ -48,6 +49,7 @@
+     "P12": "association requests occur only inside the commissioning window",
+     "P13": "sequence gap is within the loss allowance",
+     "P14": "configuration release carries a valid signature and a newer version",
++    "P15": "numerical message fields are finite and schema-valid",
+ }
+ 
+ 
+@@ -148,6 +150,14 @@
+     def verify(self, env: Envelope, now: float) -> Verdict:
+         violations: list[str] = []
+         rec = self.peers.get(env.src)
++        issue = payload_numeric_issue(env.type, env.payload)
++        try:
++            finite_number(now, "receiver time")
++            finite_number(env.ts, "message timestamp")
++        except ValueError as exc:
++            issue = str(exc)
++        if issue:
++            return self._finish(env, ["P15"], now, rec)
+         if rec is None:
+             violations.append("P01")
+             if env.type == ASSOC:
+@@ -199,7 +209,7 @@
+             self.counters[v] += 1
+             self.recent_violations.append((v, env.type, now))
+         # Hard rejections: anything that breaks authentication, freshness, replay or identity.
+-        hard = {"P01", "P02", "P03", "P04", "P05", "P06", "P07", "P12", "P14"}
++        hard = {"P01", "P02", "P03", "P04", "P05", "P06", "P07", "P12", "P14", "P15"}
+         accepted = not any(v in hard for v in violations)
+         if accepted and rec is not None:
+             rec.last_seq = env.seq
+--- v4/geco_v4/wire.py
++++ v5/geco_v4/wire.py
+@@ -22,6 +22,7 @@
+ import secrets
+ from dataclasses import dataclass, field, asdict
+ from typing import Any
++from .numerics import finite_number, finite_tree
+ 
+ PROFILES = ("legacy", "protected")
+ 
+@@ -52,7 +53,8 @@
+ 
+     def payload_wire(self) -> str:
+         """Compact, key-sorted JSON of the payload - the exact bytes that travel and are signed."""
+-        return json.dumps(self.payload, separators=(",", ":"), sort_keys=True)
++        finite_tree(self.payload)
++        return json.dumps(self.payload, separators=(",", ":"), sort_keys=True, allow_nan=False)
+ 
+     def canonical(self) -> bytes:
+         """Signature input. Pipe-joined header fields followed by the payload text verbatim.
+@@ -60,6 +62,7 @@
+         This form is trivial to reproduce on a microcontroller: the receiver copies the
+         payload substring from the wire text and reformats ts with six decimals.
+         """
++        finite_number(self.ts, "timestamp")
+         head = f"{self.v}|{self.src}|{self.dst}|{self.type}|{self.seq}|{float(self.ts):.6f}|{self.nonce}|"
+         return (head + self.payload_wire()).encode("utf-8")
+ 
+@@ -67,11 +70,21 @@
+         d = asdict(self)
+         d.pop("meta", None)
+         d["ts"] = float(f"{float(self.ts):.6f}")
+-        return json.dumps(d, separators=(",", ":"), sort_keys=True).encode("utf-8")
++        return json.dumps(d, separators=(",", ":"), sort_keys=True, allow_nan=False).encode("utf-8")
+ 
+     @staticmethod
+     def from_wire(raw: bytes) -> "Envelope":
+-        d = json.loads(raw.decode("utf-8"))
++        def invalid_constant(value):
++            raise ValueError("non-finite JSON number: " + value)
++        d = json.loads(raw.decode("utf-8"), parse_constant=invalid_constant)
++        if not isinstance(d, dict) or not isinstance(d.get("payload", {}), dict):
++            raise ValueError("envelope and payload must be JSON objects")
++        finite_tree(d, "envelope")
++        finite_number(d["ts"], "timestamp")
++        for name, minimum in (("seq", 0), ("v", 1)):
++            value = d.get(name, 1)
++            if isinstance(value, bool) or not isinstance(value, int) or value < minimum:
++                raise ValueError(name + " must be a valid integer")
+         return Envelope(
+             src=str(d["src"]),
+             dst=str(d["dst"]),
+--- /dev/null
++++ v5/tests/test_v5_numerical_causality.py
+@@ -0,0 +1,130 @@
++"""Ordinary numerical, missing-data and causal-model regressions. Offline only."""
++import dataclasses
++import json
++from pathlib import Path
++import unittest
++from unittest.mock import patch
++import numpy as np
++from geco_v4.bench import BenchConfig, GatewayRuntime, run_scenario
++from geco_v4.datasets import _event_amount, load_d1namo
++from geco_v4.delivery import DeliveryCalibration
++from geco_v4.detectors import TwoSidedCUSUM
++from geco_v4.fusion import Assessment, Severity
++from geco_v4.hal import VirtualBalanceTruthNode
++from geco_v4.kernel import KernelContext, SafetyKernel
++from geco_v4.numerics import payload_numeric_issue
++from geco_v4.physiology import GlucoseModel, PhysiologyTwin, TwinParams
++from geco_v4.wire import Envelope
++
++
++class NumericalValidity(unittest.TestCase):
++    def context(self, **changes):
++        values=dict(now_s=0.,glucose_mgdl=150.,glucose_slope_mgdl_min=0.,cgm_age_s=0.,pump_age_s=0.,
++                    command_authenticated=True,predicted_glucose_30m=140.,delivered_u_3h=0.,reactive_u_3h=0.,
++                    assessment=Assessment(0.,Severity.NORMAL,1.,False,{},()),actuation_score=0.)
++        values.update(changes)
++        return KernelContext(**values)
++
++    def test_nonfinite_context_requests_review_and_zero_output(self):
++        for field in ('now_s','glucose_mgdl','glucose_slope_mgdl_min','cgm_age_s','pump_age_s',
++                      'predicted_glucose_30m','delivered_u_3h','reactive_u_3h','actuation_score'):
++            for bad in (float('nan'),float('inf'),float('-inf')):
++                with self.subTest(field=field,bad=bad):
++                    decision=SafetyKernel().authorize(.1,self.context(**{field:bad}))
++                    self.assertEqual(decision.allowed_u,0.)
++                    self.assertEqual(decision.severity,Severity.SAFE_MODE)
++                    self.assertTrue(decision.requires_human_review)
++
++    def test_invalid_command_is_total_function(self):
++        for bad in (float('nan'),float('inf'),-.1,'missing',True):
++            with self.subTest(bad=bad):
++                self.assertEqual(SafetyKernel().authorize(bad,self.context()).allowed_u,0.)
++
++    def test_invalid_parameters_rejected_without_new_thresholds(self):
++        constructors=[lambda:BenchConfig(dt_min=0),lambda:BenchConfig(grams_per_unit=float('nan')),
++                      lambda:BenchConfig(ar1_rho=1),lambda:SafetyKernel(predictive_budget_u_3h=float('inf')),
++                      lambda:TwinParams(sub_steps=0),lambda:TwinParams(tau_i=float('nan')),
++                      lambda:DeliveryCalibration(gain=0)]
++        for constructor in constructors:
++            with self.assertRaises(ValueError):constructor()
++
++    def test_missing_first_sensor_sample_keeps_finite_state(self):
++        twin=PhysiologyTwin();out=twin.update(float('nan'),.08,0.)
++        self.assertEqual(out.quality,'missing');self.assertTrue(np.isfinite(out.state).all())
++
++    def test_nonfinite_plant_inputs_raise(self):
++        model=GlucoseModel();x=model.initial_state(120.)
++        for insulin,carbs in [(float('nan'),0.),(.08,float('inf'))]:
++            with self.assertRaises(ValueError):model.step(x,insulin,carbs)
++
++    def test_json_and_payload_numeric_validation(self):
++        self.assertIsNotNone(payload_numeric_issue('ACK',{'executed_units':float('nan')}))
++        self.assertIsNotNone(payload_numeric_issue('ACK',{'executed_units':'missing'}))
++        self.assertIsNone(payload_numeric_issue('ACK',{'executed_units':.3}))
++        for token in ('NaN','Infinity','1e999'):
++            raw=('{"src":"a","dst":"b","type":"TRUTH","seq":1,"ts":0,"payload":{"delta_g":'+token+'}}').encode()
++            with self.assertRaises(ValueError):Envelope.from_wire(raw)
++
++    def test_missing_sample_does_not_repeat_alarm_event(self):
++        c=TwoSidedCUSUM(threshold=1);c.update(4.);self.assertTrue(c.last_alarm)
++        for _ in range(3):
++            ev=c.update(None);self.assertFalse(c.last_alarm);self.assertFalse(ev.reliable)
++        self.assertEqual(c.alarms,1)
++
++    def test_blank_event_amount_policy_and_invalid_values(self):
++        self.assertEqual(_event_amount(float('nan'),'amount'),0.)
++        self.assertEqual(_event_amount(2.,'amount'),2.)
++        for bad in (-1.,float('inf'),'invalid'):
++            with self.assertRaises(ValueError):_event_amount(bad,'amount')
++
++    def test_loaded_d1namo_event_arrays_are_finite(self):
++        data=Path(__file__).parents[1]/'data/raw/D1NAMO'
++        series=load_d1namo(str(data));self.assertTrue(series)
++        for item in series:
++            for values in (item.insulin,item.bolus,item.carbs):
++                self.assertTrue(np.isfinite(values).all());self.assertTrue((values>=0).all())
++
++    def test_replay_input_shape_and_finite_event_contract(self):
++        replay={'cgm':np.full(3,120.),'insulin':np.full(3,.08),'bolus':np.zeros(3),'carbs':np.zeros(3)}
++        bad=dict(replay,carbs=np.zeros(2))
++        with self.assertRaises(ValueError):run_scenario(BenchConfig(),None,TwinParams(),DeliveryCalibration(),replay=bad)
++        bad=dict(replay,insulin=np.array([.08,np.nan,.08]))
++        with self.assertRaises(ValueError):run_scenario(BenchConfig(),None,TwinParams(),DeliveryCalibration(),replay=bad)
++
++
++class CausalMassSeparation(unittest.TestCase):
++    def test_plant_is_invariant_to_balance_noise_with_feedback_disabled(self):
++        original=VirtualBalanceTruthNode.read
++        def shifted_measurement(device,now):
++            r=original(device,now)
++            # Measurement-only sensor offset; actual pump state is untouched.
++            r['mass_g']+=1.;r['delta_g']+=.1
++            return r
++        for seed in (0,1,2):
++            cfg=BenchConfig(mode='closed_loop',ablation='no_geco',seed=seed)
++            reference=run_scenario(cfg,None,TwinParams(),DeliveryCalibration(),steps=48)
++            with patch.object(VirtualBalanceTruthNode,'read',shifted_measurement):
++                shifted=run_scenario(cfg,None,TwinParams(),DeliveryCalibration(),steps=48)
++            self.assertEqual([r.true_glucose for r in reference.records],[r.true_glucose for r in shifted.records])
++            self.assertEqual([r.virtual_plant_input_u for r in reference.records],[r.virtual_plant_input_u for r in shifted.records])
++            self.assertNotEqual([r.local_measured_delta_g for r in reference.records],[r.local_measured_delta_g for r in shifted.records])
++
++    def test_emission_mapping_and_recorded_measurement_domains(self):
++        result=run_scenario(BenchConfig(mode='closed_loop'),None,TwinParams(),DeliveryCalibration(),steps=16)
++        for row in result.records:
++            self.assertAlmostEqual(row.virtual_plant_input_u,row.pump_emitted_mass_g/.1005)
++            self.assertEqual(row.pump_executed_physical_u,row.virtual_plant_input_u)
++            self.assertEqual(row.local_measured_delta_g,row.delta_mass_g)
++            self.assertTrue(row.network_truth_accepted)
++            self.assertAlmostEqual(row.network_reported_delta_g,row.local_measured_delta_g,places=4)
++        json.dumps([dataclasses.asdict(r) for r in result.records],allow_nan=False)
++
++    def test_missing_measurement_remains_unreliable(self):
++        keys={name:bytes([1])*32 for name in ('cgm','gateway','pump','truth','updater')}
++        runtime=GatewayRuntime(BenchConfig(),keys,TwinParams(),DeliveryCalibration())
++        evidence,observation=runtime.reconcile(.1,None,0.)
++        self.assertFalse(evidence.reliable);self.assertIsNone(observation)
++        self.assertEqual(len(runtime.delivery.history),0)
++
++
++if __name__=='__main__':unittest.main()

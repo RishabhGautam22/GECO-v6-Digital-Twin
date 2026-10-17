@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-09-07T12:48:42.920162+00:00",
+  "status": "PASS",
+  "script_sha256": "7a8b61477179fc390474a4c15312c7b526e8eac5cce61b421e2ef75ad97ed5f9",
+  "checks": [
+    {
+      "mode": "refit",
+      "source_guard": "PASS",
+      "csv_inputs": 52,
+      "output_guards": "PASS",
+      "fit_executed": false,
+      "test_executed": false
+    },
+    {
+      "mode": "frozen-test",
+      "source_guard": "PASS",
+      "csv_inputs": 52,
+      "output_guards": "PASS",
+      "fit_executed": false,
+      "test_executed": false
+    }
+  ],
+  "temporary_workspaces_removed": true
+}

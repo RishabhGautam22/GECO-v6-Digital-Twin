@@ -1,0 +1,25 @@
+{
+  "generated_utc": "2026-09-07T12:17:30.835048+00:00",
+  "status": "PASS",
+  "completed_traces_checked": 5184,
+  "samples_checked": 2985984,
+  "main_runs": 4608,
+  "secondary_runs": 576,
+  "expected_main": 4608,
+  "expected_secondary": 576,
+  "attempt_records_including_clean_references": 5280,
+  "attempt_status_counts": {
+    "complete": 5280
+  },
+  "issues": [],
+  "not_verified": [
+    "physical apparatus behavior",
+    "patient validity",
+    "every visual movie pixel",
+    "external independent simulator reproduction"
+  ],
+  "inputs": {
+    "RUN_RESULTS.json": "c15c791ee0cf8a488bd130295dc0f810f590413dea837f7f5e8a5e7dbf4598cc",
+    "PREREGISTERED_SPEC.json": "1de77c8ea792eb6ba7c5f5ea78891e9bfe3a89147a9b625b96b2368d960ce279"
+  }
+}

@@ -1,0 +1,4 @@
+convert /Users/rgpro/Desktop/GeCo GPT/GECOv6/05_PRESENTATION/GECOv6_Research_Seminar_Static.pptx as a Impress document -> /Users/rgpro/Desktop/GeCo GPT/GECOv6/05_PRESENTATION/GECOv6_Research_Seminar_Static.pdf using filter : impress_pdf_Export
+Fontconfig warning: no <cachedir> elements found. Check configuration.
+Fontconfig warning: adding <cachedir>/@.__________________________________________________OOO/var/cache/fontconfig</cachedir>
+Fontconfig warning: adding <cachedir prefix="xdg">fontconfig</cachedir>

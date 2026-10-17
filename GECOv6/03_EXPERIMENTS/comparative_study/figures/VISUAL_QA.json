@@ -1,0 +1,8 @@
+{
+  "figure": "F01_paired_detector_effects.png",
+  "method": "Opened the generated2340x1800PNG and inspected all four panels; tool display scaled to1789x1375",
+  "status": "PASS_SCOPED_VISUAL_REVIEW",
+  "observations": ["All eight conditions and both plant labels are visible", "Paired point estimates/intervals and zero-reference lines are legible", "Axis units distinguish researchU, minutes and percentage points", "No overlapping or clipped plotted labels observed"],
+  "scientific_caption_required": "Full-minus-simple differences are synthetic fixed-command effects. Hovorka has extensive numerical/domain failures, including negative endogenous production. Glucose differences are mathematical model outputs, not clinically valid effects. See RESULTS_INTERPRETATION.md.",
+  "not_claimed": ["Independent statistical recomputation by visual inspection", "Native PowerPoint rendering of this figure", "Clinical validity"]
+}

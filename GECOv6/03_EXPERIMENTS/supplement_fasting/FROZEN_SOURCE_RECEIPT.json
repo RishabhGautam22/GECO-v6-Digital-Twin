@@ -1,0 +1,159 @@
+{
+  "created_utc": "2026-09-07T12:34:37.650284+00:00",
+  "purpose": "Exact source used in completed campaign, preserved before later benign legacy bench timing integration repairs",
+  "configuration_sha256": "0dc073508dcddd3eff2f272a7860feccd78dfe16d3e04ddc378f0446d122e983",
+  "file_count": 30,
+  "all_hashes_match": true,
+  "files": [
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/__init__.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/__init__.py",
+      "sha256": "095e97934ea95f2d2a31af4171e0fc6634dabc1e5b12cad9b93bb8f7c0f25687"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/attacks.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/attacks.py",
+      "sha256": "13312e8411ec2e34bcb74e31f6732ba978389e9b1083793db01f482fcaaca5c5"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/audit.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/audit.py",
+      "sha256": "40fd3e79566ea01a820560e4d3c28a67fe99451407fb3b22285c33bcb783243c"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/bench.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/bench.py",
+      "sha256": "8f391e9c5e99258250b429f44c53e667690721b436794fae390939f5c5e90a9a"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/calibrate.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/calibrate.py",
+      "sha256": "fc1740efb3b26cd4775707076d30f25f586b9aafe3afd51008d0eeae07102f7c"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/campaign.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/campaign.py",
+      "sha256": "2a09edc7ebd16c82cf9b3d4945358a2a7d1c8ac04fcf719d39f3cdc50773b758"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/controller.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/controller.py",
+      "sha256": "ad01129a5332197723925c965cd915d78188a368d3160f35afcc286240ece2b6"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/datasets.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/datasets.py",
+      "sha256": "9ee20292833c54972211b2fd7d2e16e18ca5c939116a8d4268518c0e92bc0518"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/delivery.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/delivery.py",
+      "sha256": "81709e2912e0274d60d782662f67b119f2ffe6920c99dced8a30ac10c3a87fce"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/detectors.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/detectors.py",
+      "sha256": "e6ac96568bd8cd1dd8510ebee6ae910b1cda54bca3b744d085fb3b6f8489ac9d"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/fusion.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/fusion.py",
+      "sha256": "bb13e1c15fc8f6b52da4c4f3e697d855b8386f9c842e9dd2f148c96edf27775b"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/hal.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/hal.py",
+      "sha256": "88c18a0a61db5cd6fc5be9242333dc940b811c7171b06d6291f4c4d5489516ab"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/kernel.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/kernel.py",
+      "sha256": "b368d0d30f4bdf7b5981a3497b6be7f14c9d3732310e92892b97ebc9772777a3"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/numerics.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/numerics.py",
+      "sha256": "35debd4693723817c3d3cf350df3d32486fed4c52443d2bd8eb1184316484ed5"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/physiology.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/physiology.py",
+      "sha256": "c15a86a970ce7b71d307fad39fcc3a431d5cd81602698292134b990cd1dea659"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/protocol.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/protocol.py",
+      "sha256": "29feffddd42b59906ea9cb0720d46aa7da5f2bb1afa7e33883ceac19ff2e98ad"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v4/wire.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v4/wire.py",
+      "sha256": "ff6e32db10ba938e9780f8ef9ea8cd39780cb4d5ffafd58dab228986eb15f4e9"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/__init__.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/__init__.py",
+      "sha256": "a542cb3a1db73d27ac68789b2dbb0385659ef08954b52e90929de506dc9059cd"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/audit_results.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/audit_results.py",
+      "sha256": "f2b27e0834de02cc6a3cd48a52fd65dfc9b9fefe971561758f6405776d261f6a"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/campaign.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/campaign.py",
+      "sha256": "132fdc260a3207f0b83efb3da9709b99a129773a5d6543bf8203be5a7e0804f9"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/engine.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/engine.py",
+      "sha256": "3b0efae86add9329f90e2ab2629f20c1c52e727bc781ad48e74db58ec6f5ef20"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/plants.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/plants.py",
+      "sha256": "14c18bb409f2ec613296f6b60d1f6e01520a8ea1c3377f8af86b684a98a5cb49"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/plot_results.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/plot_results.py",
+      "sha256": "7bcaf8fd71f3ef9d1f3ee098baf1068a0613081634d328b67013b55ce3e18c4d"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/preregister.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/preregister.py",
+      "sha256": "fde864505d378b1a18b9ec1f35073ce48007ab37f505134eb314e1cc2485da97"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/summarize.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/summarize.py",
+      "sha256": "b2a6874a5de68a6189bfbd40b65a151907ba6bb4e46a81559153f7e89eeadac1"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/supplement/__init__.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/supplement/__init__.py",
+      "sha256": "46e15c918926b798ef245bd64882f9602d9aafb644917d5e7534cf894b181027"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/supplement/audit_results.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/supplement/audit_results.py",
+      "sha256": "e6070bf71e9fb455e90cf242f53c43ffd0a30523fe0846d6806c28546d849564"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/supplement/study.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/supplement/study.py",
+      "sha256": "e006f32ab38ee2a598da02e5ad8577f75f00fdc8a15efb3e71f202d78641d515"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/geco_v6_study/supplement/summarize.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/geco_v6_study/supplement/summarize.py",
+      "sha256": "23eec17742b0735908214298ba9af9115eb052abddac9310f2a904ff32c9a8a7"
+    },
+    {
+      "original_relative_path": "02_IMPLEMENTATION/tests/test_v6_supplement.py",
+      "frozen_copy_relative_path": "03_EXPERIMENTS/supplement_fasting/FROZEN_SOURCE/02_IMPLEMENTATION/tests/test_v6_supplement.py",
+      "sha256": "25e987f30d0aff63a0f5eaa9acafb349b0a28472ab26cd4fa091fa9d6204d626"
+    }
+  ]
+}

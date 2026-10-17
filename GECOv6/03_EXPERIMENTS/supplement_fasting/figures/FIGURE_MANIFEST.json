@@ -1,0 +1,21 @@
+{
+  "generated_utc": "2026-09-07T12:38:34.862494+00:00",
+  "source_results_sha256": "a64855864224d4aab0d918a740a11d21e9d7f6fef477db51714ed4dafc8fa52f",
+  "script_sha256": "4e5ad63f7c0939efb0ead0fe4de9b24da3902b3f05a68ddae34b84f0b85e4ba1",
+  "matplotlib": "3.9.2",
+  "outputs": [
+    {
+      "path": "03_EXPERIMENTS/supplement_fasting/figures/F02_fasting_component_effects.png",
+      "sha256": "c80451ba4f564a9a6a1ee0f0e5297f584946be891f2a08415755bfc2ba5cfa24"
+    },
+    {
+      "path": "03_EXPERIMENTS/supplement_fasting/figures/F02_fasting_component_effects.svg",
+      "sha256": "f67aaba292daa7be5ccbe0ad4681656e52d04f05b4b6b05e2a9c391b8dea4b6f"
+    },
+    {
+      "path": "03_EXPERIMENTS/supplement_fasting/figures/F02_fasting_component_effects.pdf",
+      "sha256": "fde642ba300031518e98356900e2cbbde61a299a370e3d114476395e2ffc56da"
+    }
+  ],
+  "scope": "All eight registered conditions; all primary component and aggregation contrasts, excess and deficit. Negative is lower for the named delivery quantity, not overall clinical benefit. Domain screen passed in these runs; no physiological validation implied."
+}

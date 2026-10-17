@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "GECO v6 Max: Multi-Room WebSocket Server (ws://127.0.0.1:8766)",
+      "type": "python",
+      "request": "launch",
+      "module": "geco_v6_max.multi_room_server",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "GECO_WS_PORT": "8766"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "GECO v6 Max: Run Benchmark & Failure Permutation Suite",
+      "type": "python",
+      "request": "launch",
+      "module": "geco_v6_max.benchmarks",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "GECO v6 Max: Generate OpenUSD Stages (138-Part Rig + 6-Room Ward)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/omniverse_usd/build_usd_stages.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Attach to NVIDIA Isaac Sim 6.1.0 Kit Debugger (Port 3000)",
+      "type": "python",
+      "request": "attach",
+      "connect": {
+        "host": "127.0.0.1",
+        "port": 3000
+      },
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}/isaac_extension",
+          "remoteRoot": "${workspaceFolder}/isaac_extension"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+version: "3.9"
+
+# ============================================================================
+# GECO v6 Max — Cloud GPU & NVIDIA Omniverse Deployment Stack
+# Compatible with RunPod Secure Cloud (RTX 4090 / L40S / A100), Lambda Labs,
+# AWS EC2 G5/G6e, and local NVIDIA Container Toolkit hosts.
+# ============================================================================
+
+services:
+  geco-v6-multiroom-server:
+    image: python:3.11-slim
+    container_name: geco_v6_max_multiroom_server
+    working_dir: /workspace/GECO_v6_Max_Omniverse_Twin
+    volumes:
+      - ../:/workspace/GECO_v6_Max_Omniverse_Twin:rw
+      - ../../GECOv6:/workspace/GECOv6:ro
+    environment:
+      - PYTHONPATH=/workspace/GECO_v6_Max_Omniverse_Twin
+      - GECO_WS_HOST=0.0.0.0
+      - GECO_WS_PORT=8766
+    ports:
+      - "8766:8766"
+    command: >
+      bash -c "pip install --no-cache-dir websockets numpy &&
+               python3 -m geco_v6_max.multi_room_server"
+    restart: unless-stopped
+
+  geco-v6-webgl-cockpit:
+    image: python:3.11-slim
+    container_name: geco_v6_max_webgl_cockpit
+    working_dir: /workspace/GECO_v6_Max_Omniverse_Twin/cockpit
+    volumes:
+      - ../cockpit:/workspace/GECO_v6_Max_Omniverse_Twin/cockpit:ro
+      - ../omniverse_usd:/workspace/GECO_v6_Max_Omniverse_Twin/omniverse_usd:ro
+    ports:
+      - "8096:8096"
+    command: ["python3", "-m", "http.server", "8096", "--bind", "0.0.0.0"]
+    restart: unless-stopped
+
+  geco-v6-isaac-sim-webrtc:
+    image: nvcr.io/nvidia/isaac-sim:6.1.0
+    container_name: geco_v6_max_isaac_sim
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - ACCEPT_EULA=Y
+      - PRIVACY_CONSENT=Y
+      - GECO_WS_URI=ws://geco-v6-multiroom-server:8766
+      - OMNI_NUCLEUS_URL=${OMNI_NUCLEUS_URL:-omniverse://localhost/Projects/GECO_v6_Max}
+    volumes:
+      - ../omniverse_usd:/workspace/omniverse_usd:rw
+      - ../isaac_extension:/workspace/isaac_extension:ro
+    ports:
+      - "8211:8211"
+      - "49100:49100"
+    depends_on:
+      - geco-v6-multiroom-server
+    entrypoint:
+      - /isaac-sim/runheadless.native.sh
+      - --ext-folder
+      - /workspace/isaac_extension
+      - --enable
+      - geco.v6.omniverse.ward
+      - --/app/window/drawMouse=true
+    restart: unless-stopped

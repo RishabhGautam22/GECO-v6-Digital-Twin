@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. GECO v6 Max: Build OpenUSD Stages (138-Part Rig + 6-Room Ward)",
+      "type": "shell",
+      "command": "python3",
+      "args": ["omniverse_usd/build_usd_stages.py"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "2. GECO v6 Max: Run Full Benchmark & Permutation Matrix Suite",
+      "type": "shell",
+      "command": "python3",
+      "args": ["-m", "geco_v6_max.benchmarks"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "3. GECO v6 Max: Start Multi-Room WebSocket Server (ws://127.0.0.1:8766)",
+      "type": "shell",
+      "command": "python3",
+      "args": ["-m", "geco_v6_max.multi_room_server"],
+      "isBackground": true,
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}",
+          "GECO_WS_PORT": "8766"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "4. GECO v6 Max: Open Interactive 3D WebGL Digital Twin Cockpit",
+      "type": "shell",
+      "command": "open",
+      "args": ["cockpit/GECO_v6_Max_Cockpit.html"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "5. GECO v6 Max: Upload OpenUSD Stages to NVIDIA Omniverse Nucleus",
+      "type": "shell",
+      "command": "python3",
+      "args": ["cloud_deployment/upload_geco_v6_to_nucleus.py", "--dry-run"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,2803 @@
+{
+  "participant": "D1NAMO-002",
+  "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+  "array_sha256": "58b67e60ce9d75b0676491ecf74ac76bc7e2ad9e6ffb7ef090ae513033c49c48",
+  "eligibility": {
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 528,
+          "slots": 528,
+          "first_timestamp": "2014-10-01T19:20:00.000000",
+          "last_timestamp": "2014-10-03T15:15:00.000000",
+          "observed_cgm": 528,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 486
+        },
+        "tune": {
+          "start_index": 528,
+          "stop_index_exclusive": 792,
+          "slots": 264,
+          "first_timestamp": "2014-10-03T15:20:00.000000",
+          "last_timestamp": "2014-10-04T13:15:00.000000",
+          "observed_cgm": 264,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 222
+        },
+        "test": {
+          "start_index": 792,
+          "stop_index_exclusive": 1057,
+          "slots": 265,
+          "first_timestamp": "2014-10-04T13:20:00.000000",
+          "last_timestamp": "2014-10-05T11:20:00.000000",
+          "observed_cgm": 264,
+          "cgm_coverage": 0.9962264150943396,
+          "eligible_forecast_pairs": 222
+        }
+      }
+    }
+  },
+  "started_utc": "2026-09-07T12:06:26.448314+00:00",
+  "status": "frozen",
+  "params": {
+    "dt_min": 5.0,
+    "sub_steps": 5,
+    "gb": 160.6486331818182,
+    "egp": 0.38844637452519704,
+    "p1": 0.0015957258582328015,
+    "p2": 0.02,
+    "p3": 8.664067213752425e-06,
+    "ki": 0.03,
+    "ku": 6.0,
+    "ib": 2.2222222222222223,
+    "ka": 0.025,
+    "kc": 0.330592743087074,
+    "tau_i": 9.0
+  },
+  "validation": {
+    "participant": "D1NAMO-002",
+    "cal_days": 1.8333333333333333,
+    "val_days": 0.9166666666666666,
+    "test_days": 0.9201388888888888,
+    "rmse30_cal": 30.036230514586737,
+    "rmse30_val": 32.45960952391278,
+    "z_mean_val": 0.03643465761048249,
+    "z_std_val": 0.9383270735498851,
+    "z_lag1_autocorr_val": 0.9774019446855724,
+    "coverage95_val": 0.9473684210526315,
+    "cusum_drift": 0.5,
+    "cusum_threshold": 14.0,
+    "benign_alarm_episodes_per_day_val": 0.0,
+    "ar1_rho": 0.9798159402736252,
+    "z_lag1_autocorr_val_whitened": 0.827159754900351,
+    "sigma6_mgdl": 35.766414795918365,
+    "cusum6_threshold": 20.5,
+    "innovation_inflation": 4.859429525918668,
+    "isf_mgdl_per_u": 13.09629031909219,
+    "params": {
+      "dt_min": 5.0,
+      "sub_steps": 5,
+      "gb": 160.6486331818182,
+      "egp": 0.38844637452519704,
+      "p1": 0.0015957258582328015,
+      "p2": 0.02,
+      "p3": 8.664067213752425e-06,
+      "ki": 0.03,
+      "ku": 6.0,
+      "ib": 2.2222222222222223,
+      "ka": 0.025,
+      "kc": 0.330592743087074,
+      "tau_i": 9.0
+    },
+    "forecast_policy": {
+      "kind": "trend",
+      "hold_insulin_u": 0.05555555555555555,
+      "trend_window": 4,
+      "trend_damping": 0.5,
+      "slope_limit_mgdl_min": 3.0
+    },
+    "threshold_result": {
+      "feasible": true,
+      "threshold": 14.0,
+      "target_episodes_per_calendar_day": 0.5,
+      "candidate_min": 4.0,
+      "candidate_max": 128.0,
+      "observed_slots": 228,
+      "slots": 264,
+      "coverage": 0.8636363636363636,
+      "search": [
+        {
+          "threshold": 4.0,
+          "alarm_count": 11,
+          "episodes_per_calendar_day": 12.0
+        },
+        {
+          "threshold": 4.5,
+          "alarm_count": 7,
+          "episodes_per_calendar_day": 7.636363636363637
+        },
+        {
+          "threshold": 5.0,
+          "alarm_count": 6,
+          "episodes_per_calendar_day": 6.545454545454546
+        },
+        {
+          "threshold": 5.5,
+          "alarm_count": 6,
+          "episodes_per_calendar_day": 6.545454545454546
+        },
+        {
+          "threshold": 6.0,
+          "alarm_count": 5,
+          "episodes_per_calendar_day": 5.454545454545455
+        },
+        {
+          "threshold": 6.5,
+          "alarm_count": 5,
+          "episodes_per_calendar_day": 5.454545454545455
+        },
+        {
+          "threshold": 7.0,
+          "alarm_count": 3,
+          "episodes_per_calendar_day": 3.272727272727273
+        },
+        {
+          "threshold": 7.5,
+          "alarm_count": 3,
+          "episodes_per_calendar_day": 3.272727272727273
+        },
+        {
+          "threshold": 8.0,
+          "alarm_count": 3,
+          "episodes_per_calendar_day": 3.272727272727273
+        },
+        {
+          "threshold": 8.5,
+          "alarm_count": 3,
+          "episodes_per_calendar_day": 3.272727272727273
+        },
+        {
+          "threshold": 9.0,
+          "alarm_count": 3,
+          "episodes_per_calendar_day": 3.272727272727273
+        },
+        {
+          "threshold": 9.5,
+          "alarm_count": 3,
+          "episodes_per_calendar_day": 3.272727272727273
+        },
+        {
+          "threshold": 10.0,
+          "alarm_count": 3,
+          "episodes_per_calendar_day": 3.272727272727273
+        },
+        {
+          "threshold": 10.5,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 11.0,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 11.5,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 12.0,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 12.5,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 13.0,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 13.5,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 14.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 14.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 15.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 15.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 16.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 16.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 17.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 17.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 18.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 18.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 19.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 19.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 20.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 20.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 21.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 21.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 22.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 22.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 23.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 23.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 24.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 24.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 25.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 25.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 26.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 26.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 27.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 27.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 28.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 28.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 29.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 29.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 30.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 30.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 31.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 31.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 32.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 32.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 33.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 33.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 34.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 34.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 35.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 35.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 36.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 36.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 37.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 37.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 38.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 38.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 39.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 39.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 40.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 40.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 41.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 41.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 42.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 42.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 43.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 43.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 44.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 44.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 45.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 45.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 46.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 46.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 47.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 47.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 48.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 48.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 49.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 49.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 50.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 50.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 51.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 51.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 52.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 52.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 53.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 53.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 54.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 54.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 55.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 55.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 56.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 56.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 57.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 57.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 58.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 58.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 59.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 59.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 60.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 60.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 61.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 61.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 62.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 62.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 63.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 63.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 64.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 64.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 65.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 65.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 66.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 66.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 67.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 67.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 68.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 68.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 69.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 69.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 70.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 70.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 71.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 71.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 72.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 72.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 73.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 73.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 74.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 74.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 75.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 75.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 76.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 76.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 77.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 77.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 78.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 78.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 79.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 79.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 80.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 80.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 81.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 81.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 82.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 82.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 83.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 83.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 84.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 84.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 85.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 85.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 86.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 86.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 87.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 87.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 88.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 88.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 89.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 89.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 90.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 90.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 91.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 91.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 92.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 92.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 93.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 93.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 94.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 94.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 95.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 95.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 96.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 96.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 97.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 97.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 98.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 98.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 99.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 99.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 100.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 100.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 101.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 101.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 102.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 102.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 103.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 103.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 104.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 104.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 105.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 105.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 106.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 106.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 107.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 107.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 108.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 108.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 109.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 109.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 110.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 110.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 111.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 111.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 112.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 112.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 113.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 113.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 114.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 114.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 115.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 115.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 116.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 116.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 117.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 117.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 118.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 118.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 119.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 119.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 120.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 120.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 121.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 121.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 122.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 122.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 123.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 123.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 124.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 124.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 125.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 125.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 126.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 126.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 127.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 127.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 128.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        }
+      ],
+      "achieved": {
+        "alarm_count": 0,
+        "alarm_indices": [],
+        "slots": 264,
+        "observed_slots": 228,
+        "coverage": 0.8636363636363636,
+        "calendar_days": 0.9166666666666666,
+        "observed_equivalent_days": 0.7916666666666666,
+        "episodes_per_calendar_day": 0.0,
+        "episodes_per_observed_equivalent_day": 0.0
+      },
+      "reason": "budget_met_on_tune_only"
+    },
+    "threshold6_result": {
+      "feasible": true,
+      "threshold": 20.5,
+      "target_episodes_per_calendar_day": 0.5,
+      "candidate_min": 4.0,
+      "candidate_max": 128.0,
+      "observed_slots": 222,
+      "slots": 264,
+      "coverage": 0.8409090909090909,
+      "search": [
+        {
+          "threshold": 4.0,
+          "alarm_count": 9,
+          "episodes_per_calendar_day": 9.818181818181818
+        },
+        {
+          "threshold": 4.5,
+          "alarm_count": 8,
+          "episodes_per_calendar_day": 8.727272727272728
+        },
+        {
+          "threshold": 5.0,
+          "alarm_count": 6,
+          "episodes_per_calendar_day": 6.545454545454546
+        },
+        {
+          "threshold": 5.5,
+          "alarm_count": 6,
+          "episodes_per_calendar_day": 6.545454545454546
+        },
+        {
+          "threshold": 6.0,
+          "alarm_count": 6,
+          "episodes_per_calendar_day": 6.545454545454546
+        },
+        {
+          "threshold": 6.5,
+          "alarm_count": 4,
+          "episodes_per_calendar_day": 4.363636363636364
+        },
+        {
+          "threshold": 7.0,
+          "alarm_count": 4,
+          "episodes_per_calendar_day": 4.363636363636364
+        },
+        {
+          "threshold": 7.5,
+          "alarm_count": 4,
+          "episodes_per_calendar_day": 4.363636363636364
+        },
+        {
+          "threshold": 8.0,
+          "alarm_count": 3,
+          "episodes_per_calendar_day": 3.272727272727273
+        },
+        {
+          "threshold": 8.5,
+          "alarm_count": 3,
+          "episodes_per_calendar_day": 3.272727272727273
+        },
+        {
+          "threshold": 9.0,
+          "alarm_count": 3,
+          "episodes_per_calendar_day": 3.272727272727273
+        },
+        {
+          "threshold": 9.5,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 10.0,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 10.5,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 11.0,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 11.5,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 12.0,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 12.5,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 13.0,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 13.5,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 14.0,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 14.5,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 15.0,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 15.5,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 16.0,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 16.5,
+          "alarm_count": 2,
+          "episodes_per_calendar_day": 2.181818181818182
+        },
+        {
+          "threshold": 17.0,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 17.5,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 18.0,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 18.5,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 19.0,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 19.5,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 20.0,
+          "alarm_count": 1,
+          "episodes_per_calendar_day": 1.090909090909091
+        },
+        {
+          "threshold": 20.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 21.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 21.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 22.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 22.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 23.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 23.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 24.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 24.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 25.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 25.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 26.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 26.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 27.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 27.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 28.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 28.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 29.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 29.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 30.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 30.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 31.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 31.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 32.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 32.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 33.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 33.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 34.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 34.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 35.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 35.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 36.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 36.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 37.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 37.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 38.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 38.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 39.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 39.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 40.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 40.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 41.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 41.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 42.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 42.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 43.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 43.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 44.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 44.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 45.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 45.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 46.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 46.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 47.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 47.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 48.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 48.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 49.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 49.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 50.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 50.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 51.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 51.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 52.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 52.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 53.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 53.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 54.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 54.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 55.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 55.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 56.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 56.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 57.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 57.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 58.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 58.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 59.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 59.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 60.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 60.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 61.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 61.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 62.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 62.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 63.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 63.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 64.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 64.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 65.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 65.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 66.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 66.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 67.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 67.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 68.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 68.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 69.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 69.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 70.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 70.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 71.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 71.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 72.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 72.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 73.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 73.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 74.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 74.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 75.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 75.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 76.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 76.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 77.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 77.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 78.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 78.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 79.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 79.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 80.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 80.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 81.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 81.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 82.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 82.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 83.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 83.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 84.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 84.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 85.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 85.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 86.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 86.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 87.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 87.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 88.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 88.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 89.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 89.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 90.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 90.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 91.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 91.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 92.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 92.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 93.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 93.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 94.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 94.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 95.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 95.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 96.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 96.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 97.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 97.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 98.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 98.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 99.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 99.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 100.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 100.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 101.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 101.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 102.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 102.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 103.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 103.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 104.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 104.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 105.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 105.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 106.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 106.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 107.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 107.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 108.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 108.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 109.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 109.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 110.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 110.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 111.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 111.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 112.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 112.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 113.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 113.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 114.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 114.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 115.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 115.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 116.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 116.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 117.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 117.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 118.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 118.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 119.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 119.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 120.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 120.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 121.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 121.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 122.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 122.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 123.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 123.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 124.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 124.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 125.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 125.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 126.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 126.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 127.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 127.5,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        },
+        {
+          "threshold": 128.0,
+          "alarm_count": 0,
+          "episodes_per_calendar_day": 0.0
+        }
+      ],
+      "achieved": {
+        "alarm_count": 0,
+        "alarm_indices": [],
+        "slots": 264,
+        "observed_slots": 222,
+        "coverage": 0.8409090909090909,
+        "calendar_days": 0.9166666666666666,
+        "observed_equivalent_days": 0.7708333333333334,
+        "episodes_per_calendar_day": 0.0,
+        "episodes_per_observed_equivalent_day": 0.0
+      },
+      "reason": "budget_met_on_tune_only"
+    },
+    "fit_diagnostics": {
+      "method": "scipy.optimize.least_squares",
+      "objective": "causal30_rmse_every_sixth_eligible_origin",
+      "attempts": [
+        {
+          "kc_start": 0.4,
+          "success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "nfev": 7,
+          "cost": 81554.05393471387,
+          "optimality": 260.5543152644264,
+          "log_parameters": [
+            5.494826411920979,
+            -6.440426562732897,
+            -1.1068680445709376,
+            -11.656326290475683
+          ]
+        },
+        {
+          "kc_start": 1.2,
+          "success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "nfev": 6,
+          "cost": 81608.29261764364,
+          "optimality": 648.3233665380774,
+          "log_parameters": [
+            5.486437833040063,
+            -6.404617711532199,
+            -0.8737837010381088,
+            -11.608103872271323
+          ]
+        }
+      ],
+      "selected_log_parameters": [
+        5.494826411920979,
+        -6.440426562732897,
+        -1.1068680445709376,
+        -11.656326290475683
+      ],
+      "bound_proximity_1pct": [],
+      "jacobian_singular_values": [
+        152.88140236745136,
+        96.62806537269736,
+        44.90526152952652,
+        30.26037967148549
+      ],
+      "jacobian_condition": 5.052197098224523,
+      "hold_insulin_u": 0.05555555555555555,
+      "fit_pairs_all": 486,
+      "fit_pairs_objective": 81,
+      "identification_claim": "none; local conditioning does not establish physiological identifiability"
+    },
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 528,
+          "slots": 528,
+          "first_timestamp": "2014-10-01T19:20:00.000000",
+          "last_timestamp": "2014-10-03T15:15:00.000000",
+          "observed_cgm": 528,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 486
+        },
+        "tune": {
+          "start_index": 528,
+          "stop_index_exclusive": 792,
+          "slots": 264,
+          "first_timestamp": "2014-10-03T15:20:00.000000",
+          "last_timestamp": "2014-10-04T13:15:00.000000",
+          "observed_cgm": 264,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 222
+        },
+        "test": {
+          "start_index": 792,
+          "stop_index_exclusive": 1057,
+          "slots": 265,
+          "first_timestamp": "2014-10-04T13:20:00.000000",
+          "last_timestamp": "2014-10-05T11:20:00.000000",
+          "observed_cgm": 264,
+          "cgm_coverage": 0.9962264150943396,
+          "eligible_forecast_pairs": 222
+        }
+      }
+    },
+    "forecast_metrics_cal": {
+      "mechanistic": {
+        "rmse": 45.15480955624654,
+        "mae": 32.58594531763813,
+        "n_pairs": 486
+      },
+      "persistence": {
+        "rmse": 37.536626452394955,
+        "mae": 24.83619790123457,
+        "n_pairs": 486
+      },
+      "trend": {
+        "rmse": 30.036230514586737,
+        "mae": 19.91911496707819,
+        "n_pairs": 486
+      }
+    },
+    "forecast_metrics_val": {
+      "mechanistic": {
+        "rmse": 45.97243996261147,
+        "mae": 33.44467007789129,
+        "n_pairs": 222
+      },
+      "persistence": {
+        "rmse": 41.05149743127672,
+        "mae": 28.01748936936937,
+        "n_pairs": 222
+      },
+      "trend": {
+        "rmse": 32.45960952391278,
+        "mae": 21.370868477477472,
+        "n_pairs": 222
+      }
+    },
+    "alarm_summary_val": {
+      "innovation": {
+        "alarm_count": 0,
+        "alarm_indices": [],
+        "slots": 264,
+        "observed_slots": 228,
+        "coverage": 0.8636363636363636,
+        "calendar_days": 0.9166666666666666,
+        "observed_equivalent_days": 0.7916666666666666,
+        "episodes_per_calendar_day": 0.0,
+        "episodes_per_observed_equivalent_day": 0.0
+      },
+      "forecast": {
+        "alarm_count": 0,
+        "alarm_indices": [],
+        "slots": 264,
+        "observed_slots": 222,
+        "coverage": 0.8409090909090909,
+        "calendar_days": 0.9166666666666666,
+        "observed_equivalent_days": 0.7708333333333334,
+        "episodes_per_calendar_day": 0.0,
+        "episodes_per_observed_equivalent_day": 0.0
+      },
+      "union_count": 0,
+      "union_indices": [],
+      "union_episodes_per_calendar_day": 0.0
+    },
+    "empirical_coverage_val": {
+      "innovation_95": 0.9473684210526315,
+      "selected_forecast_95": 0.9459459459459459,
+      "innovation_channel_coverage": 0.8636363636363636,
+      "forecast_channel_coverage": 0.8409090909090909
+    },
+    "selection_rule": "V6: tune RMSE; ties persistence, trend, mechanistic",
+    "r_std": 9.0
+  },
+  "elapsed_seconds": 0.6665134170325473
+}

@@ -1,0 +1,139 @@
+{
+  "voice_source": "macOS local speech synthesis",
+  "voice": "Aman",
+  "nominal_words_per_minute": 155,
+  "provenance": "Disclosed synthetic speech; no human voice impersonation",
+  "frames_per_second": 24,
+  "duration_seconds": 479.9583333333333,
+  "chapters": [
+    {
+      "chapter": "C01",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 31.035333333333334,
+      "padded_seconds": 31.708333333333332,
+      "text_sha256": "57b9af278e179de83ece11123624cba79324f487ba1c5e99eeb4e25f3fe74a46",
+      "audio_sha256": "6a80d0bcead2d1dfe45a88c5e55496d8475e266bd37dc94d90b4543f80d6e9cc"
+    },
+    {
+      "chapter": "C02",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 34.4939375,
+      "padded_seconds": 35.166666666666664,
+      "text_sha256": "3adbe060de07fa5809d5c34f48ddf7c18468e433b155b8a950a6447df271825e",
+      "audio_sha256": "9c567cb3aea6e0b66f2d6af3c0a4da61deb962bb92988eae93dc2dd9fa5cc2c4"
+    },
+    {
+      "chapter": "C03",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 32.101145833333334,
+      "padded_seconds": 32.791666666666664,
+      "text_sha256": "5856b7eb258a83a8674709fc4686c16f55e18d8bc24ac65b97e397e2d03dbe31",
+      "audio_sha256": "4c01fee0d4dac3a4cce631f394cc1f7d13470d7881f6a44ab3ec1dccfe288bf3"
+    },
+    {
+      "chapter": "C04",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 36.505270833333334,
+      "padded_seconds": 37.166666666666664,
+      "text_sha256": "a196aa21d137e5c6b06f68c04beee116eebf394e23474e5bf5edc31e6364428b",
+      "audio_sha256": "d9d777faf9ea13d542ba274e46a5a4beb0322e703e5e864fa2539f171ac9c919"
+    },
+    {
+      "chapter": "C05",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 33.091125,
+      "padded_seconds": 33.75,
+      "text_sha256": "ff1dc877ffdd60ca5e178b5d9a638a266a271d2128dd968e0112224c2691c05b",
+      "audio_sha256": "78ad29b817aac7368aa4a67f3234835656cb4b5259c4c611da218a9170ea7fe7"
+    },
+    {
+      "chapter": "C06",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 32.76164583333333,
+      "padded_seconds": 33.416666666666664,
+      "text_sha256": "c4c29600ed4c9f48f0b0b6bb1efe1064228f541f15fd6082527b49853d392d29",
+      "audio_sha256": "84afa00c178f3902fa77a535f8033e54155510113bfcd27542ce622cd01d8b03"
+    },
+    {
+      "chapter": "C07",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 35.1633125,
+      "padded_seconds": 35.833333333333336,
+      "text_sha256": "25a04023744c48c64896a9d326d9cf2670794e91de1abd713f6bc51f4394e007",
+      "audio_sha256": "cc960d9062d605f9e6577c1810b261951b9ef48b13db3776cd7fcd5bb3d8f1cd"
+    },
+    {
+      "chapter": "C08",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 32.905541666666664,
+      "padded_seconds": 33.583333333333336,
+      "text_sha256": "90215982b088cc28af5f6d144131a59a8bbc534ef1328a0e4a6aaf5b04c278d3",
+      "audio_sha256": "6c2eb4f7341bef1d984b44ce1b7facfd5d3d81c4a30f94433f9c72520559ad23"
+    },
+    {
+      "chapter": "C09",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 32.93841666666667,
+      "padded_seconds": 33.625,
+      "text_sha256": "04c4fb25d7609f78d563170414aed2a546e051fc6ab26c2c6d679d19bb6646a2",
+      "audio_sha256": "47288da9e81e958d62e3e8b371109e2cadaa7eaacbfc54cc98a232b8392920cf"
+    },
+    {
+      "chapter": "C10",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 32.07747916666667,
+      "padded_seconds": 32.75,
+      "text_sha256": "88b7ec18005c4c28679da1c15a84356654c5b99d7acec17f5aec98b6dff63d5f",
+      "audio_sha256": "7b397c8a81a7b6d5a84431074e65bd8d5518665a00da208e804e281d3eb32429"
+    },
+    {
+      "chapter": "C11",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 35.2273125,
+      "padded_seconds": 35.916666666666664,
+      "text_sha256": "633310c30e4839d7c935ac634b935d5e201663742cbcb9b0ffef906f4e1c1d9d",
+      "audio_sha256": "08f840424edaba615d94ffa56d07abe51e3ecc79e256a7a1abe4d42659286cde"
+    },
+    {
+      "chapter": "C12",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 33.47116666666667,
+      "padded_seconds": 34.125,
+      "text_sha256": "09af01d66fe0121abb1d927200a9fd4574eec74dfd19286b82fbbb4e6842ad62",
+      "audio_sha256": "907733d00195c6b67e5f1fd1ac64ac70c4f2f539d6fe4fc7dc8e636768fed4be"
+    },
+    {
+      "chapter": "C13",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 33.587895833333334,
+      "padded_seconds": 34.25,
+      "text_sha256": "b169cc2e63304c526314532dc4ddf10181184ccdab717180e0d083dc4645d9ac",
+      "audio_sha256": "68379f9703946fb32d6a65b43720c16d827e35d8f29b72d77c692015723a0ceb"
+    },
+    {
+      "chapter": "C14",
+      "voice": "Aman",
+      "rate_wpm": 155,
+      "spoken_seconds": 35.1990625,
+      "padded_seconds": 35.875,
+      "text_sha256": "bef991ea5ece6ec2585ff905d75d5faf6861f00f3e697af10ddedf496b0fe6b4",
+      "audio_sha256": "b815f97fcc0e7a05ed6a83e12715187e8ea559d0b5e36bc9104e6c19152c3b84"
+    }
+  ],
+  "subtitle_timing": "Sentence-weighted approximate cues; audio duration is measured",
+  "narration_sha256": "3a4bcf0dc2dfc77d3362ac8530a37302b6b69c6b228ce38e542a83f98ca5e38e",
+  "watermark_claim": "No watermark or authorship-detector certification performed"
+}

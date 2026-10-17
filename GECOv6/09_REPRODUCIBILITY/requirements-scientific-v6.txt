@@ -1,0 +1,7 @@
+# Recorded GECOv6 scientific runtime; CPython 3.12.7, macOS arm64.
+# Install into a new environment, not a managed/application Python runtime.
+numpy==1.26.4
+scipy==1.13.1
+pandas==3.0.2
+numba==0.60.0
+matplotlib==3.9.2

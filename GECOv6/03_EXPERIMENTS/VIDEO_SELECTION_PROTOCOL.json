@@ -1,0 +1,22 @@
+{
+  "registered_utc": "2026-09-07T12:01:54.619480+00:00",
+  "selection_rule": "first locked synthetic parameter unit, first registered noise seed (1103), by preregistered identifier ordering; retain all outcomes including failures",
+  "primary_conditions": [
+    "clean",
+    "excess_2x",
+    "stuck_on",
+    "cgm_missing",
+    "excess_bias_report_mask"
+  ],
+  "plants": [
+    "geco_original",
+    "hovorka_2004"
+  ],
+  "policy_comparison": [
+    "full_supervised",
+    "simple_supervised"
+  ],
+  "presentation_rule": "identical clock and axes, full 48-hour record; mark missing observations and censored recovery; no interpolation to invent samples",
+  "status": "illustrative fixed examples, not estimator of aggregate treatment effect",
+  "case_exclusion": "none based on outcomes; any technical inability must be recorded"
+}

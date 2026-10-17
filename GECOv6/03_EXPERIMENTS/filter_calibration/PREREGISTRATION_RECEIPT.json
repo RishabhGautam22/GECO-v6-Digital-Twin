@@ -1,0 +1,303 @@
+{
+  "committed_utc": "2026-09-07T11:58:27.002012+00:00",
+  "status": "committed_before_new_v6_outcomes",
+  "spec_sha256": "5ea51f6aa130bb09cd6ca1ea2001d9ff2451c2e756dc115f0be1aad5b23e3f55",
+  "model_identity": "unknown",
+  "inputs": [
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/geco_v4/physiology.py",
+      "size": 18191,
+      "sha256": "f74188d4d2456237e8fc4312faf24f10b5a7a0f1b8f95db51503c045c4b4c0a2"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/geco_v4/calibrate.py",
+      "size": 6304,
+      "sha256": "88f75a6274700daa4a60bb7170b84001fb16e7d671643978556f2f29f47c147c"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/geco_v4/datasets.py",
+      "size": 7394,
+      "sha256": "9ee20292833c54972211b2fd7d2e16e18ca5c939116a8d4268518c0e92bc0518"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/geco_v4/detectors.py",
+      "size": 4007,
+      "sha256": "e6ac96568bd8cd1dd8510ebee6ae910b1cda54bca3b744d085fb3b6f8489ac9d"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/geco_v4/numerics.py",
+      "size": 2256,
+      "sha256": "35debd4693723817c3d3cf350df3d32486fed4c52443d2bd8eb1184316484ed5"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/001/food.csv",
+      "size": 2361,
+      "sha256": "39c6efda76850f631a6f7258a128853eda481bf17302e8cc4ec0683049d8747a"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/001/glucose.csv",
+      "size": 42172,
+      "sha256": "88957cfde653ac1db69dbf50da9a3f26f473bb527a12428454bcd5ff05ab6a67"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/001/insulin.csv",
+      "size": 510,
+      "sha256": "28f2f63bedaa47ba2b177544e184f6868b9f873cbc49e4686c057bf00ace9b78"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/002/food.csv",
+      "size": 936,
+      "sha256": "0485f28ae4a9913def5d7e0521c322e526fe8d15a79f2454482b5f84cbda2d28"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/002/glucose.csv",
+      "size": 31449,
+      "sha256": "473a13999c75ff9999eac26fdf654256cc4ef8fce03872611863cfc23ea8365f"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/002/insulin.csv",
+      "size": 363,
+      "sha256": "9981f1ec0d1ef29898290e23d1c521f4aec8b3737780dc7998533ade527a7633"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/003/food.csv",
+      "size": 294,
+      "sha256": "7365b7defaf0fc5c6dbbc36f8996492e85ffa4710262a3bfb9b39e70d523652a"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/003/glucose.csv",
+      "size": 5395,
+      "sha256": "278ec54e31fff052211770f719a47e4f966e9ba6d71c9aa244380d77d5bc3fc3"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/003/insulin.csv",
+      "size": 258,
+      "sha256": "4b4fc76d8955533bf6a18b697da86d62ecd5938bd1406a4a5e1fe4793ae1af4e"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/004/food.csv",
+      "size": 747,
+      "sha256": "7e36466682b0968ed53a193d22f7d7afde0efec0611996b22b69b78882715f3c"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/004/glucose.csv",
+      "size": 28992,
+      "sha256": "678c84dde7f88596b690b472d2da287d3c2da0718bdec83596ed9293877a7159"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/004/insulin.csv",
+      "size": 399,
+      "sha256": "f2a4185676b462be1d10d65f6c8cde631023ea610820b946045ae0685e9261bd"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/005/food.csv",
+      "size": 782,
+      "sha256": "5cd6cd96652a3521e3838b9d02a95b5ca69b10f8133a3c8dd72c50cd066191b3"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/005/glucose.csv",
+      "size": 27119,
+      "sha256": "51080900ac3d03a3fb02245a52541c76bc3aa356f1313414c767eaba0cd91284"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/005/insulin.csv",
+      "size": 222,
+      "sha256": "bc376ddb4c8b9fca2dd3c1f7d6e046f34adaeae45b5f96308f6651685f7936b4"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/006/food.csv",
+      "size": 665,
+      "sha256": "7611a9377f6187fb6dd0a1c6f303b13160087e07a991f969f74747bf82373902"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/006/glucose.csv",
+      "size": 38001,
+      "sha256": "4caaa06c3b0cc56b53c71cd29417bd6ab5b86ca95502d48c462ccc6bfed60d6f"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/006/insulin.csv",
+      "size": 290,
+      "sha256": "e1f9533df8b12f1b013889e263d4f10ea00d6a97a86a0cfbbaf06f70e31e47b1"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/007/food.csv",
+      "size": 2156,
+      "sha256": "05283c7b5ff0fe4826f790f3e6702a66ef43169c2857c064659fd48553ad330a"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/007/glucose.csv",
+      "size": 29401,
+      "sha256": "ec43f2e89ad75a0bf99a77f2470df68e137961fe4878d3a3f038755132e3abef"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/007/insulin.csv",
+      "size": 428,
+      "sha256": "0f2d0a042165f85b05cd4057141437d4eb6db7fc13c7748c529a0f8b28d88a1c"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/008/food.csv",
+      "size": 1680,
+      "sha256": "541f9551d1f549211c418ace76759ca497f072966edfa14d0e65d711d7849bf5"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/008/glucose.csv",
+      "size": 34264,
+      "sha256": "4c776ffec4b2445c1a9a2d4e9f0b5318eef56a5835bd5507e148da52c0c21d79"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/008/insulin.csv",
+      "size": 573,
+      "sha256": "e7dd97bbefd7881c5e3a1446602e6f66634643b6e3bf3f6376b6ee1f0e1d334f"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/009/food.csv",
+      "size": 1168,
+      "sha256": "d755a152c2e14abce5e40f7fec8f08aa03469262b0f878ed7250185c07717601"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/009/glucose.csv",
+      "size": 3867,
+      "sha256": "940e1ef3a8b82d99e404c3f2dd2506c80c8e8df04728c096e34a0616aaabbdd8"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/csv/diabetes_subset_pictures-glucose-food-insulin/009/insulin.csv",
+      "size": 433,
+      "sha256": "ac280652bd21cd464bc80923d2ec7a56687bd546a2168657feb3732b645cc657"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/D1NAMO/diabetes_subset_pictures-glucose-food-insulin.zip",
+      "size": 251668618,
+      "sha256": "89db2ac2dc915929514bae3eae06dcff3e3870d21b5ff4531f80d09eadb7101d"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0001P.csv",
+      "size": 360458,
+      "sha256": "896eb76eaf2ea4d09029b3a41c6bbcd1fa66188d6726f97d4305d941d1670c4a"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0002P.csv",
+      "size": 294858,
+      "sha256": "8cbf9b74b86afe51a6ca4426799cd4b5ce44cfe5b14f7c0924f8d240e2519dfb"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0003P.csv",
+      "size": 359903,
+      "sha256": "30b17497fd995d7b54704985e8c781d6c5f0f04e1e41b485d75077d453e9110e"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0004P.csv",
+      "size": 309348,
+      "sha256": "8eda013377249a4fd30b65207bafebeabd4ef597ff20d949a63b6456be04f55e"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0005P.csv",
+      "size": 358712,
+      "sha256": "2fa3624fbef11e80e4fec680e4e430279865ffdc2479649c9ed1bffb58fbf068"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0006P.csv",
+      "size": 213457,
+      "sha256": "eaeddc9e2e410bd38cb689c1b14996b14d456bb0d03e2a9e5453ba2e851389e6"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0007P.csv",
+      "size": 371751,
+      "sha256": "516925df64872c16544a40caae0189d5bb4b461f008660c12a1e859daee0664d"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0009P.csv",
+      "size": 356416,
+      "sha256": "02436b5d726e6569bd64eb7230a6a97f967667876c760fadfbaa6587977a0ce0"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0010P.csv",
+      "size": 281983,
+      "sha256": "a3659471317ded0f87c77ee1c47b3a243e6262a77d1a67ef64c96cbfd4bac55b"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0011P.csv",
+      "size": 303513,
+      "sha256": "0c0c79ec3a47f61e463ac17f06c9b92645c535a00fc353df2cd4ce1fe86304e5"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0014P.csv",
+      "size": 314109,
+      "sha256": "e70b75671a2ad00a3528aa1d0fe1b8fdaf9fc4c8325199caa31e113460180a33"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0015P.csv",
+      "size": 296381,
+      "sha256": "8ed0743846a71e241e74a4499935f8752ec74aa00aeb151f708f8e05f78234c9"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0016P.csv",
+      "size": 383590,
+      "sha256": "f5195df984b804e18920ef2e98eab66a4485fb6f4aa35e8d663d8a1cda8811c2"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0017P.csv",
+      "size": 309028,
+      "sha256": "8f4fc9edfd1179b055794d7e096320a2037d88b1b3abceb5d39bb6e814897a6f"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0018P.csv",
+      "size": 302156,
+      "sha256": "0a2470501426478ab8e260eaeb22b65c3880de2a0ce8ac57b6d4e70d4f826026"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0019P.csv",
+      "size": 315725,
+      "sha256": "9d623efd5f583778a54067fff03d5d71d668f141ef722e731f151850c6ef820a"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0020P.csv",
+      "size": 241144,
+      "sha256": "00b9d634b5a51e1b43364e59843b9db59a05f3bb5db57cfc614c76319d94f062"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0021P.csv",
+      "size": 198863,
+      "sha256": "15aa6e243faf0f984e5c805a03856908cd2d9b18ca96aefaa839416383fa50ff"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0022P.csv",
+      "size": 378037,
+      "sha256": "0ec395eee35233e7289197694b528940ab013b2cbd514e7367fdb42a01c1f5c3"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0023P.csv",
+      "size": 332365,
+      "sha256": "c0abd3674929266fb03ce2f765ddd5ae69f8cb86bb4bed8cda9758f634f6bde2"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0024P.csv",
+      "size": 248359,
+      "sha256": "20bfd7e4911eabb1428d89f9d2ef011302bc166f059ee3ff8850b3c139995fe1"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0025P.csv",
+      "size": 379238,
+      "sha256": "b9e2754e32f71ea11445edceb4b6c4be1d5b577c3ea2760017c9794b8e44aa31"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0026P.csv",
+      "size": 3354069,
+      "sha256": "286b2faf50a6c88ee3e773252151f8e763c3037319b1e0cb42b597dfaee44186"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0027P.csv",
+      "size": 14054763,
+      "sha256": "f989b65fe22bb97a74bb85931d42fbf50759d9aabb366115f2e0032ad0b69240"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM Diabetes Dataset/Preprocessed/HUPA0028P.csv",
+      "size": 2193712,
+      "sha256": "f8d2d449bca2fda0571464cd2ce8bdf8f84aadac590c200cf7f7980171d2048e"
+    },
+    {
+      "path": "GECOv6/02_IMPLEMENTATION/data/raw/HUPA-UCM/HUPA-UCM_3hbcscwz44-1.zip",
+      "size": 81460176,
+      "sha256": "db60753024508a3ccf8003858b65a610449ffb38bb6ff1cf5c9ff41bf0b44de3"
+    }
+  ]
+}

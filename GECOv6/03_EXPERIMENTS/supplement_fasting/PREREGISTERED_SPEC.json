@@ -1,0 +1,143 @@
+{
+  "version": "1.0",
+  "registered_utc": "2026-09-07T12:32:19.238055+00:00",
+  "purpose": "Offline synthetic fault-containment comparison; not a patient holdout or deployment study",
+  "plant_families": [
+    "geco_original",
+    "hovorka_2004"
+  ],
+  "units_per_family": {
+    "calibration": 4,
+    "locked_test": 16
+  },
+  "independent_unit": "synthetic parameter vector; two repeated seeds are averaged within unit before inference",
+  "noise_meal_seeds": [
+    3907,
+    4801
+  ],
+  "parameter_seed": 202609072,
+  "steps": 576,
+  "dt_min": 5.0,
+  "fault_start_step": 144,
+  "fault_end_step_exclusive": 168,
+  "warmup_steps": 36,
+  "conditions": [
+    "clean",
+    "excess_2x",
+    "occlusion",
+    "stuck_on",
+    "cgm_bias_40",
+    "cgm_missing",
+    "excess_bias_25",
+    "excess_bias_report_mask"
+  ],
+  "fault_mapping": {
+    "excess_2x": "ACT-01 physical emission multiplier 2",
+    "occlusion": "ACT-02 physical delivery zero",
+    "stuck_on": "ACT-03 adds 0.25 research U per step while powered",
+    "cgm_bias_40": "Existing RF-05 numerical +40 mg/dL sensor perturbation only; no wire or security simulation",
+    "cgm_missing": "Existing missing-sensor abstraction; no RF execution",
+    "excess_bias_25": "Existing COORD-03 2x physical multiplier and +25 mg/dL components only; no injected commands/keys",
+    "excess_bias_report_mask": "Same plus existing COORD-04 reported mass replacement with authorized mass; local cutoff remains enabled in ALL arms"
+  },
+  "arms": [
+    "full_supervised",
+    "simple_supervised",
+    "masscusum_supervised",
+    "sham_supervised"
+  ],
+  "main_run_count": 2048,
+  "primary_estimand": "Fasting fixed constant command intervention; known nominal emission map compensates synthetic equilibrium basal. Not feedback therapy; not a patient holdout.",
+  "clean_controller": "No feedback controller in this supplement: the same analytically compensated constant request is used by all four arms and the clean reference. Production filter remains active in full and clean calibration; mass-only/simple/sham do not require its predictions.",
+  "production_integration": "Import corrected geco_v4.PhysiologyTwin, GlucoseModel, ResearchController and freshly refitted parameter/calibration records; pooled median frozen calibration drives study twin; new study adapter only coordinates offline sensors, detectors and recovery",
+  "detectors": {
+    "simple": "absolute single-step reported-mass residual / fixed benign mass residual scale",
+    "full": "new study adapter: max(two-sided delivery CUSUM, geometric corroboration of delivery CUSUM and one physiology-group CUSUM). Physiology group uses max standardized innovation and causal due forecast residual, never counts two CGM transforms as separate evidence groups. This adapter is not the unmodified v4 complete protocol/kernel stack.",
+    "cusum": "drift 0.5, absolute standardized input clipped at 6, reset on statistical containment; physiology uses production corrected filter and selected forecast policy",
+    "calibration": "Three independent thresholds strictly exceed each score maximum on16new clean calibration runs (8independent new units,2repeated seeds). Same clean exposure, zero empirical calibration statistical containments; no prospective bound. No locked outcomes used.",
+    "masscusum": "same two-sided massCUSUM as full, same drift0.5, clipping\u00b16 and sigma; no physiology corroboration"
+  },
+  "shared_authority": {
+    "max_command_u": 0.3,
+    "grams_per_research_unit": 0.1005,
+    "local_per_step_margin_g": 0.03,
+    "local_rolling_12_step_margin_g": 0.05,
+    "budget_factor": 1.05,
+    "sensor_missing_trip_steps": 6,
+    "measurement": "0.01-g quantized cumulative balance, median five 0.003-g Gaussian samples; same pre-generated noise array across arms. Physical pump quantization 200 steps/U, calibration factor1.015, 0.0015-g dribble and 0.0008-g noise only on positive delivery.",
+    "stop": "Main simulation stops future powered emission on next five-minute sample after observed trip; current-sample emission cannot be undone. No subsecond measured latency claim."
+  },
+  "recovery": {
+    "states": [
+      "RUN",
+      "LATCHED",
+      "VERIFY",
+      "PROBATION"
+    ],
+    "operator_authorization": "Fixed every24 samples (120min), independent of fault condition/end/evaluator truth; all arms share authorization schedule",
+    "latch_min_steps": 6,
+    "quiet_window_steps": 6,
+    "supervised": "Same operator/quiet prerequisites, then three bounded verification samples (min(clean request,0.08U)), requiring available CGM and aggregate local mass within0.012g of expected calibrated mass; then six probation samples capped0.08U before RUN. Monitor-visible evidence can be insufficient or misleading; this is supervised-reset emulation, not certified autonomy.",
+    "catchup": "None; missed commands never accumulated or repaid"
+  },
+  "secondary_sensitivity": "No additional feedback/stop matrix in supplement",
+  "metrics": [
+    "total_emitted_u",
+    "stepwise_excess_vs_clean_u",
+    "stepwise_deficit_vs_clean_u",
+    "net_emission_difference_u",
+    "longest_interruption_min",
+    "total_interruption_min",
+    "post_fault_recovery_latency_min_or_censored",
+    "time_below54_pct",
+    "time_below70_pct",
+    "time70to180_pct",
+    "time_above180_pct",
+    "time_above250_pct",
+    "glucose_rmse_vs_clean",
+    "glucose_mean_difference_vs_clean",
+    "first_trip_latency_min",
+    "trip_count",
+    "reset_count",
+    "failed_verification_count",
+    "invalid_physiology_samples"
+  ],
+  "inference": "Paired mean difference,2seed repetitions averaged within new parameter unit;4096percentile bootstrap resamples at unit level, separately perplant/condition.16testunits perplant. Descriptive exploratory intervals, no clinical or multiplicity-adjusted superiority claim.",
+  "invalid_and_failures": "Every attempted run logged append-only with exception/attempt number. No failed or invalid trajectory silently dropped. Negative/nonfinite physiological states flagged; invalidity counts reported; retries separately recorded.",
+  "trace_schema": "All samples include clocks, requested/authorized/emitted/local measured/reported/plant-input quantities, true and reported glucose, detector scores/state, local/statistical trip, cutoff, reset state and simulated authorization.",
+  "source_freeze_gate": "Final runs require corrected filter/calibration frozen source and file hashes. This initial spec does not assert they are already available.",
+  "amendments": "Any implementation or design change before/after outcomes goes into an appended amendment file; initial specification is immutable.",
+  "study": "post-primary exploratory fasting and component sensitivity",
+  "primary_results_preserved": {
+    "manifest_sha256": "c97a5bd441b29b219b7aed82bcf921614fb2d22837d252c82e039895013c17be",
+    "results_sha256": "c15c791ee0cf8a488bd130295dc0f810f590413dea837f7f5e8a5e7dbf4598cc",
+    "scope": "Primary4608+576runs and all adverse/domain findings are unchanged; this is a follow-on study, not original confirmatory preregistration"
+  },
+  "motivation_calibration_only": {
+    "investigation": "03_EXPERIMENTS/comparative_study/CALIBRATION_DOMAIN_INVESTIGATION.json",
+    "sha256": "6f070b4724caba6154a88a145a31aab182874f2240f1e91b58e25db412bc0aed",
+    "hovorka_calibration": "16/16runs negativeEGP,1606negativeEGP and1773domain-invalid samples;zero negativeEGP before first meal",
+    "original_calibration": "16runs,0domain-invalid samples,4remote-action boundary samples"
+  },
+  "command_rule": "Each unit: analytically calculate fixed mean-equilibrium basal, choose command minimizing absolute nominal physical-emission error among zero and floor/ceil positive200steps/U candidates after1.015gain and0.0015gdribble; ties lower request;0.30Ucap. Record zero-command units, residual per-step/48h, requested/authorized/emitted cost. No outcome-based unit exclusion or retuning.",
+  "command_noise_limitation": "Compensation inverts the noise-free nominal map; the nonnegative stochastic emission clamp can add small positive bias, retained in observed emission error rather than fitted away.",
+  "meals": "None in every run; all other paired exogenous random arrays follow the new seeds",
+  "component_arms": {
+    "full": "same full score as primary",
+    "masscusum": "same two-sided massCUSUM as full, same drift0.5, clipping\u00b16 and sigma; no physiology corroboration",
+    "simple": "same single-step residual as primary",
+    "sham": "no statistical trips; identical local/quality/cutoff/supervised-reset authority"
+  },
+  "threshold_calibration": "Three independent thresholds strictly exceed each score maximum on16new clean calibration runs (8independent new units,2repeated seeds). Same clean exposure, zero empirical calibration statistical containments; no prospective bound. No locked outcomes used.",
+  "recovery_policy": "Supervised emulation only, reusing corrected primary engine including30min cooldown from trip-end, fixed120min operator slots, same verification/probation rules",
+  "stop_model": "one_sample_baseline only; prior delayed/tail sensitivity remains in the primary study",
+  "supplementary_contrasts": [
+    "full-masscusum (increment of physiology/cross-channel rule under separately matched clean maxima)",
+    "masscusum-simple (mass aggregation)",
+    "full-simple",
+    "full-sham",
+    "masscusum-sham",
+    "simple-sham"
+  ],
+  "domain_reporting": "All cases retained; numerical/domain flags, negativeEGP, original clamp boundaries, glucose bands, compensation bias and zero requests explicitly counted. A stable fasting regime cannot validate the original meal-excited regime."
+}

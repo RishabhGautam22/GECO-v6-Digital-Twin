@@ -1,0 +1,17 @@
+graph 1 12.057 2.8258
+node outlet 1.0154 2.4546 2.0308 0.555 "Defined water/saline outlet\nM01–M02" filled box #334E61 #FFF2CC
+node balance 3.7181 2.4546 2.2808 0.7425 "Raw signed balance indication\nforce isolation + blank trials\nM03, M05–M06" filled box #334E61 #FFF2CC
+node temperature 3.7181 1.4129 2.2496 0.7425 "Separate sample temperature\nfluid identity + density\nM04" filled box #334E61 #FFF2CC
+node reconstruct 7.8444 1.4129 2.4058 0.7425 "Validated delivery reconstruction\ncorrections, delay, uncertainty\nM07–M09" filled box #334E61 #FFF2CC
+node reference 3.7181 0.37125 2.4579 0.7425 "Independent calibrated reference\nmethod selection pending\nM07" filled box #334E61 #FFF2CC
+node logger 7.8444 2.4546 2.2392 0.7425 "Synchronized native records\nclock transform + time marker\nM10" filled box #334E61 #FFF2CC
+node virtual 10.782 1.4129 2.5517 0.555 "Explicit physical-to-model mapping\nvirtual-patient input" filled box #334E61 #FFF2CC
+node stop 10.782 2.4546 2.5308 0.7425 "Decision, electrical stop, cessation\npost-stop flow + recovery\nM11–M16" filled box #334E61 #FFF2CC
+edge outlet balance 4 2.0368 2.4546 2.176 2.4546 2.3204 2.4546 2.4633 2.4546 solid #38596A
+edge balance reconstruct 4 4.8628 2.1672 5.3793 2.0359 5.9939 1.8797 6.5294 1.7436 solid #38596A
+edge balance logger 4 4.8628 2.4546 5.4059 2.4546 6.0576 2.4546 6.6117 2.4546 solid #38596A
+edge temperature reconstruct 4 4.8465 1.4129 5.3666 1.4129 5.9888 1.4129 6.5301 1.4129 solid #38596A
+edge reconstruct virtual 4 9.0543 1.4129 9.1659 1.4129 9.2796 1.4129 9.3927 1.4129 solid #38596A
+edge reference reconstruct 4 4.9506 0.68096 5.4485 0.8075 6.0251 0.95405 6.531 1.0826 "validation comparison" 5.7943 1.1192 solid #38596A
+edge logger stop 4 8.9707 2.4546 9.1113 2.4546 9.2564 2.4546 9.4004 2.4546 solid #38596A
+stop

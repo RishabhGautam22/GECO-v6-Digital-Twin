@@ -1,0 +1,999 @@
+{
+  "utc": "2026-09-07T12:16:21.263940+00:00",
+  "method": "Direct sums of squared/absolute exported prediction-minus-target errors; no original metric helper imported",
+  "passed": true,
+  "checks": [
+    {
+      "participant": "HUPA0001P",
+      "policy": "mechanistic",
+      "pairs": 982,
+      "rmse_mgdl": 37.1203008200216,
+      "mae_mgdl": 26.739200491303656,
+      "csv_sha256": "2812a1e56fbb5f938458f56c51c8f8183e999ea5937f1fa50feba2a155d6f380"
+    },
+    {
+      "participant": "HUPA0001P",
+      "policy": "persistence",
+      "pairs": 982,
+      "rmse_mgdl": 32.66511668963949,
+      "mae_mgdl": 23.534962661235575,
+      "csv_sha256": "2812a1e56fbb5f938458f56c51c8f8183e999ea5937f1fa50feba2a155d6f380"
+    },
+    {
+      "participant": "HUPA0001P",
+      "policy": "trend",
+      "pairs": 982,
+      "rmse_mgdl": 29.092170985768902,
+      "mae_mgdl": 19.86494805041471,
+      "csv_sha256": "2812a1e56fbb5f938458f56c51c8f8183e999ea5937f1fa50feba2a155d6f380"
+    },
+    {
+      "participant": "HUPA0001P",
+      "policy": "selected",
+      "pairs": 982,
+      "rmse_mgdl": 29.092170985768902,
+      "mae_mgdl": 19.86494805041471,
+      "csv_sha256": "2812a1e56fbb5f938458f56c51c8f8183e999ea5937f1fa50feba2a155d6f380"
+    },
+    {
+      "participant": "HUPA0002P",
+      "policy": "mechanistic",
+      "pairs": 754,
+      "rmse_mgdl": 25.26887200402659,
+      "mae_mgdl": 18.320902853517822,
+      "csv_sha256": "52970e2da8fcb3b46c6a0c2ca25c5f17fc82ae9dd2b01ce99fccc134e0602a7c"
+    },
+    {
+      "participant": "HUPA0002P",
+      "policy": "persistence",
+      "pairs": 754,
+      "rmse_mgdl": 21.903129021728,
+      "mae_mgdl": 14.503684055408195,
+      "csv_sha256": "52970e2da8fcb3b46c6a0c2ca25c5f17fc82ae9dd2b01ce99fccc134e0602a7c"
+    },
+    {
+      "participant": "HUPA0002P",
+      "policy": "trend",
+      "pairs": 754,
+      "rmse_mgdl": 16.49858604608659,
+      "mae_mgdl": 11.009961685823754,
+      "csv_sha256": "52970e2da8fcb3b46c6a0c2ca25c5f17fc82ae9dd2b01ce99fccc134e0602a7c"
+    },
+    {
+      "participant": "HUPA0002P",
+      "policy": "selected",
+      "pairs": 754,
+      "rmse_mgdl": 16.49858604608659,
+      "mae_mgdl": 11.009961685823754,
+      "csv_sha256": "52970e2da8fcb3b46c6a0c2ca25c5f17fc82ae9dd2b01ce99fccc134e0602a7c"
+    },
+    {
+      "participant": "HUPA0003P",
+      "policy": "mechanistic",
+      "pairs": 901,
+      "rmse_mgdl": 28.666513924048907,
+      "mae_mgdl": 22.190502825696708,
+      "csv_sha256": "337bd0e22c1331e75484438654fde5192a34570d3675d04300454e8b5f3a8cea"
+    },
+    {
+      "participant": "HUPA0003P",
+      "policy": "persistence",
+      "pairs": 901,
+      "rmse_mgdl": 22.744572435786047,
+      "mae_mgdl": 18.028856825749166,
+      "csv_sha256": "337bd0e22c1331e75484438654fde5192a34570d3675d04300454e8b5f3a8cea"
+    },
+    {
+      "participant": "HUPA0003P",
+      "policy": "trend",
+      "pairs": 901,
+      "rmse_mgdl": 17.831132077918387,
+      "mae_mgdl": 13.38945615982242,
+      "csv_sha256": "337bd0e22c1331e75484438654fde5192a34570d3675d04300454e8b5f3a8cea"
+    },
+    {
+      "participant": "HUPA0003P",
+      "policy": "selected",
+      "pairs": 901,
+      "rmse_mgdl": 17.831132077918387,
+      "mae_mgdl": 13.38945615982242,
+      "csv_sha256": "337bd0e22c1331e75484438654fde5192a34570d3675d04300454e8b5f3a8cea"
+    },
+    {
+      "participant": "HUPA0004P",
+      "policy": "mechanistic",
+      "pairs": 754,
+      "rmse_mgdl": 29.575633939749675,
+      "mae_mgdl": 23.171462197371415,
+      "csv_sha256": "67c0bb952bef543a94fd2fb6eda042ce427abbf3713f1771162a0fad86e835ca"
+    },
+    {
+      "participant": "HUPA0004P",
+      "policy": "persistence",
+      "pairs": 754,
+      "rmse_mgdl": 22.49621443119923,
+      "mae_mgdl": 14.440025745046029,
+      "csv_sha256": "67c0bb952bef543a94fd2fb6eda042ce427abbf3713f1771162a0fad86e835ca"
+    },
+    {
+      "participant": "HUPA0004P",
+      "policy": "trend",
+      "pairs": 754,
+      "rmse_mgdl": 17.330797721459174,
+      "mae_mgdl": 10.546921646642746,
+      "csv_sha256": "67c0bb952bef543a94fd2fb6eda042ce427abbf3713f1771162a0fad86e835ca"
+    },
+    {
+      "participant": "HUPA0004P",
+      "policy": "selected",
+      "pairs": 754,
+      "rmse_mgdl": 17.330797721459174,
+      "mae_mgdl": 10.546921646642746,
+      "csv_sha256": "67c0bb952bef543a94fd2fb6eda042ce427abbf3713f1771162a0fad86e835ca"
+    },
+    {
+      "participant": "HUPA0005P",
+      "policy": "mechanistic",
+      "pairs": 923,
+      "rmse_mgdl": 18.490037484015023,
+      "mae_mgdl": 14.358349462824227,
+      "csv_sha256": "1ea8c2394a90153a34907c3dc8c7731fecf1d7a607121993c2d7240e1646a894"
+    },
+    {
+      "participant": "HUPA0005P",
+      "policy": "persistence",
+      "pairs": 923,
+      "rmse_mgdl": 16.776558084651626,
+      "mae_mgdl": 13.092993860599496,
+      "csv_sha256": "1ea8c2394a90153a34907c3dc8c7731fecf1d7a607121993c2d7240e1646a894"
+    },
+    {
+      "participant": "HUPA0005P",
+      "policy": "trend",
+      "pairs": 923,
+      "rmse_mgdl": 15.806732744250223,
+      "mae_mgdl": 11.905308775731312,
+      "csv_sha256": "1ea8c2394a90153a34907c3dc8c7731fecf1d7a607121993c2d7240e1646a894"
+    },
+    {
+      "participant": "HUPA0005P",
+      "policy": "selected",
+      "pairs": 923,
+      "rmse_mgdl": 15.806732744250223,
+      "mae_mgdl": 11.905308775731312,
+      "csv_sha256": "1ea8c2394a90153a34907c3dc8c7731fecf1d7a607121993c2d7240e1646a894"
+    },
+    {
+      "participant": "HUPA0006P",
+      "policy": "mechanistic",
+      "pairs": 531,
+      "rmse_mgdl": 34.13841947417813,
+      "mae_mgdl": 22.790661596160888,
+      "csv_sha256": "29da0f6ae17445867817aac5501cd0b39589ed1d600d0236c5071fed7c983be5"
+    },
+    {
+      "participant": "HUPA0006P",
+      "policy": "persistence",
+      "pairs": 531,
+      "rmse_mgdl": 28.792897126134946,
+      "mae_mgdl": 20.068310220852595,
+      "csv_sha256": "29da0f6ae17445867817aac5501cd0b39589ed1d600d0236c5071fed7c983be5"
+    },
+    {
+      "participant": "HUPA0006P",
+      "policy": "trend",
+      "pairs": 531,
+      "rmse_mgdl": 21.461890930457464,
+      "mae_mgdl": 15.164433411326069,
+      "csv_sha256": "29da0f6ae17445867817aac5501cd0b39589ed1d600d0236c5071fed7c983be5"
+    },
+    {
+      "participant": "HUPA0006P",
+      "policy": "selected",
+      "pairs": 531,
+      "rmse_mgdl": 21.461890930457464,
+      "mae_mgdl": 15.164433411326069,
+      "csv_sha256": "29da0f6ae17445867817aac5501cd0b39589ed1d600d0236c5071fed7c983be5"
+    },
+    {
+      "participant": "HUPA0007P",
+      "policy": "mechanistic",
+      "pairs": 923,
+      "rmse_mgdl": 33.34745541669394,
+      "mae_mgdl": 27.587684101651423,
+      "csv_sha256": "411fb727fb62411078d8636660d770a2de8551c99e219dc676084815446d37dd"
+    },
+    {
+      "participant": "HUPA0007P",
+      "policy": "persistence",
+      "pairs": 923,
+      "rmse_mgdl": 28.255990169015433,
+      "mae_mgdl": 21.500060190201033,
+      "csv_sha256": "411fb727fb62411078d8636660d770a2de8551c99e219dc676084815446d37dd"
+    },
+    {
+      "participant": "HUPA0007P",
+      "policy": "trend",
+      "pairs": 923,
+      "rmse_mgdl": 24.741912210822612,
+      "mae_mgdl": 17.020759600337065,
+      "csv_sha256": "411fb727fb62411078d8636660d770a2de8551c99e219dc676084815446d37dd"
+    },
+    {
+      "participant": "HUPA0007P",
+      "policy": "selected",
+      "pairs": 923,
+      "rmse_mgdl": 24.741912210822612,
+      "mae_mgdl": 17.020759600337065,
+      "csv_sha256": "411fb727fb62411078d8636660d770a2de8551c99e219dc676084815446d37dd"
+    },
+    {
+      "participant": "HUPA0009P",
+      "policy": "mechanistic",
+      "pairs": 911,
+      "rmse_mgdl": 5.921527560097016,
+      "mae_mgdl": 4.161620375199574,
+      "csv_sha256": "bb2dcc4c2cc841eaf7b6b8b62a767848170115ab60cdeb2d14b9b7cabeb6d03d"
+    },
+    {
+      "participant": "HUPA0009P",
+      "policy": "persistence",
+      "pairs": 911,
+      "rmse_mgdl": 6.2517211097519345,
+      "mae_mgdl": 3.97129885128516,
+      "csv_sha256": "bb2dcc4c2cc841eaf7b6b8b62a767848170115ab60cdeb2d14b9b7cabeb6d03d"
+    },
+    {
+      "participant": "HUPA0009P",
+      "policy": "trend",
+      "pairs": 911,
+      "rmse_mgdl": 3.807212760034272,
+      "mae_mgdl": 2.220519153630267,
+      "csv_sha256": "bb2dcc4c2cc841eaf7b6b8b62a767848170115ab60cdeb2d14b9b7cabeb6d03d"
+    },
+    {
+      "participant": "HUPA0009P",
+      "policy": "selected",
+      "pairs": 911,
+      "rmse_mgdl": 3.807212760034272,
+      "mae_mgdl": 2.220519153630267,
+      "csv_sha256": "bb2dcc4c2cc841eaf7b6b8b62a767848170115ab60cdeb2d14b9b7cabeb6d03d"
+    },
+    {
+      "participant": "HUPA0010P",
+      "policy": "mechanistic",
+      "pairs": 702,
+      "rmse_mgdl": 22.233864875474524,
+      "mae_mgdl": 15.234893175054651,
+      "csv_sha256": "3c995540c08e773c51d605a2d191b3b00b3b46b741024344fbe353493c175df2"
+    },
+    {
+      "participant": "HUPA0010P",
+      "policy": "persistence",
+      "pairs": 702,
+      "rmse_mgdl": 20.25706196527928,
+      "mae_mgdl": 12.37304799323961,
+      "csv_sha256": "3c995540c08e773c51d605a2d191b3b00b3b46b741024344fbe353493c175df2"
+    },
+    {
+      "participant": "HUPA0010P",
+      "policy": "trend",
+      "pairs": 702,
+      "rmse_mgdl": 18.882083799555776,
+      "mae_mgdl": 9.57165329159189,
+      "csv_sha256": "3c995540c08e773c51d605a2d191b3b00b3b46b741024344fbe353493c175df2"
+    },
+    {
+      "participant": "HUPA0010P",
+      "policy": "selected",
+      "pairs": 702,
+      "rmse_mgdl": 18.882083799555776,
+      "mae_mgdl": 9.57165329159189,
+      "csv_sha256": "3c995540c08e773c51d605a2d191b3b00b3b46b741024344fbe353493c175df2"
+    },
+    {
+      "participant": "HUPA0011P",
+      "policy": "mechanistic",
+      "pairs": 918,
+      "rmse_mgdl": 25.773271833540356,
+      "mae_mgdl": 19.713700224044402,
+      "csv_sha256": "3aa3d63bc3b9a36d616e617abb0b5ce60a4c0cbc29855eb9ebd2fe0b39fea8e4"
+    },
+    {
+      "participant": "HUPA0011P",
+      "policy": "persistence",
+      "pairs": 918,
+      "rmse_mgdl": 27.727709779480623,
+      "mae_mgdl": 20.462236746550474,
+      "csv_sha256": "3aa3d63bc3b9a36d616e617abb0b5ce60a4c0cbc29855eb9ebd2fe0b39fea8e4"
+    },
+    {
+      "participant": "HUPA0011P",
+      "policy": "trend",
+      "pairs": 918,
+      "rmse_mgdl": 23.549332480475154,
+      "mae_mgdl": 16.84041394335512,
+      "csv_sha256": "3aa3d63bc3b9a36d616e617abb0b5ce60a4c0cbc29855eb9ebd2fe0b39fea8e4"
+    },
+    {
+      "participant": "HUPA0011P",
+      "policy": "selected",
+      "pairs": 918,
+      "rmse_mgdl": 23.549332480475154,
+      "mae_mgdl": 16.84041394335512,
+      "csv_sha256": "3aa3d63bc3b9a36d616e617abb0b5ce60a4c0cbc29855eb9ebd2fe0b39fea8e4"
+    },
+    {
+      "participant": "HUPA0014P",
+      "policy": "mechanistic",
+      "pairs": 916,
+      "rmse_mgdl": 28.003295427915894,
+      "mae_mgdl": 21.421388042925688,
+      "csv_sha256": "2aa7cf877e325d5b5cb61c158fbe7478291de2e5566b17d351b1be825f2c0659"
+    },
+    {
+      "participant": "HUPA0014P",
+      "policy": "persistence",
+      "pairs": 916,
+      "rmse_mgdl": 22.562942664640097,
+      "mae_mgdl": 17.235995680142743,
+      "csv_sha256": "2aa7cf877e325d5b5cb61c158fbe7478291de2e5566b17d351b1be825f2c0659"
+    },
+    {
+      "participant": "HUPA0014P",
+      "policy": "trend",
+      "pairs": 916,
+      "rmse_mgdl": 16.926968795284825,
+      "mae_mgdl": 12.211551645049317,
+      "csv_sha256": "2aa7cf877e325d5b5cb61c158fbe7478291de2e5566b17d351b1be825f2c0659"
+    },
+    {
+      "participant": "HUPA0014P",
+      "policy": "selected",
+      "pairs": 916,
+      "rmse_mgdl": 16.926968795284825,
+      "mae_mgdl": 12.211551645049317,
+      "csv_sha256": "2aa7cf877e325d5b5cb61c158fbe7478291de2e5566b17d351b1be825f2c0659"
+    },
+    {
+      "participant": "HUPA0015P",
+      "policy": "mechanistic",
+      "pairs": 906,
+      "rmse_mgdl": 22.580316149218987,
+      "mae_mgdl": 16.39163220435784,
+      "csv_sha256": "0c636d190da85b1793c7e523df67408590ff053570f3af8f4b8ccbd4adaa7912"
+    },
+    {
+      "participant": "HUPA0015P",
+      "policy": "persistence",
+      "pairs": 906,
+      "rmse_mgdl": 27.60339738539606,
+      "mae_mgdl": 19.699484915378957,
+      "csv_sha256": "0c636d190da85b1793c7e523df67408590ff053570f3af8f4b8ccbd4adaa7912"
+    },
+    {
+      "participant": "HUPA0015P",
+      "policy": "trend",
+      "pairs": 906,
+      "rmse_mgdl": 20.09844821137377,
+      "mae_mgdl": 13.915820456217807,
+      "csv_sha256": "0c636d190da85b1793c7e523df67408590ff053570f3af8f4b8ccbd4adaa7912"
+    },
+    {
+      "participant": "HUPA0015P",
+      "policy": "selected",
+      "pairs": 906,
+      "rmse_mgdl": 20.09844821137377,
+      "mae_mgdl": 13.915820456217807,
+      "csv_sha256": "0c636d190da85b1793c7e523df67408590ff053570f3af8f4b8ccbd4adaa7912"
+    },
+    {
+      "participant": "HUPA0016P",
+      "policy": "mechanistic",
+      "pairs": 917,
+      "rmse_mgdl": 22.35588301748139,
+      "mae_mgdl": 16.551090264640862,
+      "csv_sha256": "2eb8f611ca9cc3bc95901753c2312482d1c229a60be18d07ded559ffd54ec676"
+    },
+    {
+      "participant": "HUPA0016P",
+      "policy": "persistence",
+      "pairs": 917,
+      "rmse_mgdl": 19.802717879654928,
+      "mae_mgdl": 14.614093914112535,
+      "csv_sha256": "2eb8f611ca9cc3bc95901753c2312482d1c229a60be18d07ded559ffd54ec676"
+    },
+    {
+      "participant": "HUPA0016P",
+      "policy": "trend",
+      "pairs": 917,
+      "rmse_mgdl": 17.59320719561981,
+      "mae_mgdl": 11.799892468624018,
+      "csv_sha256": "2eb8f611ca9cc3bc95901753c2312482d1c229a60be18d07ded559ffd54ec676"
+    },
+    {
+      "participant": "HUPA0016P",
+      "policy": "selected",
+      "pairs": 917,
+      "rmse_mgdl": 17.59320719561981,
+      "mae_mgdl": 11.799892468624018,
+      "csv_sha256": "2eb8f611ca9cc3bc95901753c2312482d1c229a60be18d07ded559ffd54ec676"
+    },
+    {
+      "participant": "HUPA0018P",
+      "policy": "mechanistic",
+      "pairs": 932,
+      "rmse_mgdl": 20.44114019244663,
+      "mae_mgdl": 17.621001569889145,
+      "csv_sha256": "c43fa7863c52a3bc756bbfeecce4ee49922f85e5f7ead2d1850b3de2a1895480"
+    },
+    {
+      "participant": "HUPA0018P",
+      "policy": "persistence",
+      "pairs": 932,
+      "rmse_mgdl": 19.024989213985766,
+      "mae_mgdl": 12.745994277539342,
+      "csv_sha256": "c43fa7863c52a3bc756bbfeecce4ee49922f85e5f7ead2d1850b3de2a1895480"
+    },
+    {
+      "participant": "HUPA0018P",
+      "policy": "trend",
+      "pairs": 932,
+      "rmse_mgdl": 15.429336673557293,
+      "mae_mgdl": 10.238948497854079,
+      "csv_sha256": "c43fa7863c52a3bc756bbfeecce4ee49922f85e5f7ead2d1850b3de2a1895480"
+    },
+    {
+      "participant": "HUPA0018P",
+      "policy": "selected",
+      "pairs": 932,
+      "rmse_mgdl": 15.429336673557293,
+      "mae_mgdl": 10.238948497854079,
+      "csv_sha256": "c43fa7863c52a3bc756bbfeecce4ee49922f85e5f7ead2d1850b3de2a1895480"
+    },
+    {
+      "participant": "HUPA0019P",
+      "policy": "mechanistic",
+      "pairs": 886,
+      "rmse_mgdl": 37.417871688430324,
+      "mae_mgdl": 30.305051573781277,
+      "csv_sha256": "13e134598bb4788a2dd9d7893ee714e7ae33d5f87199e8ac7e7e93609785e7b8"
+    },
+    {
+      "participant": "HUPA0019P",
+      "policy": "persistence",
+      "pairs": 886,
+      "rmse_mgdl": 32.36997973681054,
+      "mae_mgdl": 24.98081264108352,
+      "csv_sha256": "13e134598bb4788a2dd9d7893ee714e7ae33d5f87199e8ac7e7e93609785e7b8"
+    },
+    {
+      "participant": "HUPA0019P",
+      "policy": "trend",
+      "pairs": 886,
+      "rmse_mgdl": 28.219731870932417,
+      "mae_mgdl": 21.119149736644093,
+      "csv_sha256": "13e134598bb4788a2dd9d7893ee714e7ae33d5f87199e8ac7e7e93609785e7b8"
+    },
+    {
+      "participant": "HUPA0019P",
+      "policy": "selected",
+      "pairs": 886,
+      "rmse_mgdl": 28.219731870932417,
+      "mae_mgdl": 21.119149736644093,
+      "csv_sha256": "13e134598bb4788a2dd9d7893ee714e7ae33d5f87199e8ac7e7e93609785e7b8"
+    },
+    {
+      "participant": "HUPA0020P",
+      "policy": "mechanistic",
+      "pairs": 674,
+      "rmse_mgdl": 31.255498645780786,
+      "mae_mgdl": 23.5131394541404,
+      "csv_sha256": "1d63ffa7341121fca7fce9d11b3b7a2bea3482f9dd7a65848d9f766caf7748c8"
+    },
+    {
+      "participant": "HUPA0020P",
+      "policy": "persistence",
+      "pairs": 674,
+      "rmse_mgdl": 26.7735309299497,
+      "mae_mgdl": 20.265084075173096,
+      "csv_sha256": "1d63ffa7341121fca7fce9d11b3b7a2bea3482f9dd7a65848d9f766caf7748c8"
+    },
+    {
+      "participant": "HUPA0020P",
+      "policy": "trend",
+      "pairs": 674,
+      "rmse_mgdl": 20.783664788900175,
+      "mae_mgdl": 15.346488625123643,
+      "csv_sha256": "1d63ffa7341121fca7fce9d11b3b7a2bea3482f9dd7a65848d9f766caf7748c8"
+    },
+    {
+      "participant": "HUPA0020P",
+      "policy": "selected",
+      "pairs": 674,
+      "rmse_mgdl": 20.783664788900175,
+      "mae_mgdl": 15.346488625123643,
+      "csv_sha256": "1d63ffa7341121fca7fce9d11b3b7a2bea3482f9dd7a65848d9f766caf7748c8"
+    },
+    {
+      "participant": "HUPA0021P",
+      "policy": "mechanistic",
+      "pairs": 544,
+      "rmse_mgdl": 32.71943233382084,
+      "mae_mgdl": 21.98076898625676,
+      "csv_sha256": "653c9b98a127512c1689a1fbab9bbc367fa0afc60f0f095b38f7b18a3dd7ca26"
+    },
+    {
+      "participant": "HUPA0021P",
+      "policy": "persistence",
+      "pairs": 544,
+      "rmse_mgdl": 30.11937035510927,
+      "mae_mgdl": 20.63235294117647,
+      "csv_sha256": "653c9b98a127512c1689a1fbab9bbc367fa0afc60f0f095b38f7b18a3dd7ca26"
+    },
+    {
+      "participant": "HUPA0021P",
+      "policy": "trend",
+      "pairs": 544,
+      "rmse_mgdl": 26.954540183791075,
+      "mae_mgdl": 17.852083333333333,
+      "csv_sha256": "653c9b98a127512c1689a1fbab9bbc367fa0afc60f0f095b38f7b18a3dd7ca26"
+    },
+    {
+      "participant": "HUPA0021P",
+      "policy": "selected",
+      "pairs": 544,
+      "rmse_mgdl": 26.954540183791075,
+      "mae_mgdl": 17.852083333333333,
+      "csv_sha256": "653c9b98a127512c1689a1fbab9bbc367fa0afc60f0f095b38f7b18a3dd7ca26"
+    },
+    {
+      "participant": "HUPA0022P",
+      "policy": "mechanistic",
+      "pairs": 964,
+      "rmse_mgdl": 16.055058879991204,
+      "mae_mgdl": 11.527337834916207,
+      "csv_sha256": "5bd4839ba165c3f53ca9e350095a5f7a8ee73ffb27ea31cd656f6772c0cabed9"
+    },
+    {
+      "participant": "HUPA0022P",
+      "policy": "persistence",
+      "pairs": 964,
+      "rmse_mgdl": 15.660665841124619,
+      "mae_mgdl": 10.383817427385893,
+      "csv_sha256": "5bd4839ba165c3f53ca9e350095a5f7a8ee73ffb27ea31cd656f6772c0cabed9"
+    },
+    {
+      "participant": "HUPA0022P",
+      "policy": "trend",
+      "pairs": 964,
+      "rmse_mgdl": 20.010230324958954,
+      "mae_mgdl": 11.422856154910097,
+      "csv_sha256": "5bd4839ba165c3f53ca9e350095a5f7a8ee73ffb27ea31cd656f6772c0cabed9"
+    },
+    {
+      "participant": "HUPA0022P",
+      "policy": "selected",
+      "pairs": 964,
+      "rmse_mgdl": 15.660665841124619,
+      "mae_mgdl": 10.383817427385893,
+      "csv_sha256": "5bd4839ba165c3f53ca9e350095a5f7a8ee73ffb27ea31cd656f6772c0cabed9"
+    },
+    {
+      "participant": "HUPA0023P",
+      "policy": "mechanistic",
+      "pairs": 938,
+      "rmse_mgdl": 16.254574865562024,
+      "mae_mgdl": 12.698286180128635,
+      "csv_sha256": "148db17956cc4c22cbe01bb576a289b0d77512ba77a45057620693f6d08fc3a2"
+    },
+    {
+      "participant": "HUPA0023P",
+      "policy": "persistence",
+      "pairs": 938,
+      "rmse_mgdl": 14.802150128428773,
+      "mae_mgdl": 10.250177683013503,
+      "csv_sha256": "148db17956cc4c22cbe01bb576a289b0d77512ba77a45057620693f6d08fc3a2"
+    },
+    {
+      "participant": "HUPA0023P",
+      "policy": "trend",
+      "pairs": 938,
+      "rmse_mgdl": 12.903080113964528,
+      "mae_mgdl": 9.16453447050462,
+      "csv_sha256": "148db17956cc4c22cbe01bb576a289b0d77512ba77a45057620693f6d08fc3a2"
+    },
+    {
+      "participant": "HUPA0023P",
+      "policy": "selected",
+      "pairs": 938,
+      "rmse_mgdl": 12.903080113964528,
+      "mae_mgdl": 9.16453447050462,
+      "csv_sha256": "148db17956cc4c22cbe01bb576a289b0d77512ba77a45057620693f6d08fc3a2"
+    },
+    {
+      "participant": "HUPA0024P",
+      "policy": "mechanistic",
+      "pairs": 684,
+      "rmse_mgdl": 21.45229589604914,
+      "mae_mgdl": 15.30552379715117,
+      "csv_sha256": "ab300503a03976fcd9776355013f00e37bed5d99e4ffb68ccaaa67dba398d2b0"
+    },
+    {
+      "participant": "HUPA0024P",
+      "policy": "persistence",
+      "pairs": 684,
+      "rmse_mgdl": 19.54009057556041,
+      "mae_mgdl": 13.893762183235866,
+      "csv_sha256": "ab300503a03976fcd9776355013f00e37bed5d99e4ffb68ccaaa67dba398d2b0"
+    },
+    {
+      "participant": "HUPA0024P",
+      "policy": "trend",
+      "pairs": 684,
+      "rmse_mgdl": 16.096928875821884,
+      "mae_mgdl": 10.779191033138403,
+      "csv_sha256": "ab300503a03976fcd9776355013f00e37bed5d99e4ffb68ccaaa67dba398d2b0"
+    },
+    {
+      "participant": "HUPA0024P",
+      "policy": "selected",
+      "pairs": 684,
+      "rmse_mgdl": 16.096928875821884,
+      "mae_mgdl": 10.779191033138403,
+      "csv_sha256": "ab300503a03976fcd9776355013f00e37bed5d99e4ffb68ccaaa67dba398d2b0"
+    },
+    {
+      "participant": "HUPA0025P",
+      "policy": "mechanistic",
+      "pairs": 960,
+      "rmse_mgdl": 18.618969783841557,
+      "mae_mgdl": 14.02875868235344,
+      "csv_sha256": "82fcb0a4e998fc6924772889dfccbd6eb028a93a190ffccda3fba2d237169663"
+    },
+    {
+      "participant": "HUPA0025P",
+      "policy": "persistence",
+      "pairs": 960,
+      "rmse_mgdl": 15.061893909736192,
+      "mae_mgdl": 10.149305555555554,
+      "csv_sha256": "82fcb0a4e998fc6924772889dfccbd6eb028a93a190ffccda3fba2d237169663"
+    },
+    {
+      "participant": "HUPA0025P",
+      "policy": "trend",
+      "pairs": 960,
+      "rmse_mgdl": 12.167668432883623,
+      "mae_mgdl": 8.112916666666667,
+      "csv_sha256": "82fcb0a4e998fc6924772889dfccbd6eb028a93a190ffccda3fba2d237169663"
+    },
+    {
+      "participant": "HUPA0025P",
+      "policy": "selected",
+      "pairs": 960,
+      "rmse_mgdl": 12.167668432883623,
+      "mae_mgdl": 8.112916666666667,
+      "csv_sha256": "82fcb0a4e998fc6924772889dfccbd6eb028a93a190ffccda3fba2d237169663"
+    },
+    {
+      "participant": "HUPA0026P",
+      "policy": "mechanistic",
+      "pairs": 10110,
+      "rmse_mgdl": 30.130212706224576,
+      "mae_mgdl": 21.52252710105746,
+      "csv_sha256": "80049c81dcff48790026a1e6f90bb7642e9d84664fcd1bd27ca9e9dc4279eedc"
+    },
+    {
+      "participant": "HUPA0026P",
+      "policy": "persistence",
+      "pairs": 10110,
+      "rmse_mgdl": 25.802715653406093,
+      "mae_mgdl": 17.875443612327885,
+      "csv_sha256": "80049c81dcff48790026a1e6f90bb7642e9d84664fcd1bd27ca9e9dc4279eedc"
+    },
+    {
+      "participant": "HUPA0026P",
+      "policy": "trend",
+      "pairs": 10110,
+      "rmse_mgdl": 22.285477553841616,
+      "mae_mgdl": 14.906524785559897,
+      "csv_sha256": "80049c81dcff48790026a1e6f90bb7642e9d84664fcd1bd27ca9e9dc4279eedc"
+    },
+    {
+      "participant": "HUPA0026P",
+      "policy": "selected",
+      "pairs": 10110,
+      "rmse_mgdl": 22.285477553841616,
+      "mae_mgdl": 14.906524785559897,
+      "csv_sha256": "80049c81dcff48790026a1e6f90bb7642e9d84664fcd1bd27ca9e9dc4279eedc"
+    },
+    {
+      "participant": "HUPA0027P",
+      "policy": "mechanistic",
+      "pairs": 41285,
+      "rmse_mgdl": 18.999845708269365,
+      "mae_mgdl": 13.89791735357483,
+      "csv_sha256": "25afbb8e8e7c73a54fd62a74cdbbe70596b4fff802581e265ebcaddfc9c3f60d"
+    },
+    {
+      "participant": "HUPA0027P",
+      "policy": "persistence",
+      "pairs": 41285,
+      "rmse_mgdl": 16.48131662734209,
+      "mae_mgdl": 11.447500269897949,
+      "csv_sha256": "25afbb8e8e7c73a54fd62a74cdbbe70596b4fff802581e265ebcaddfc9c3f60d"
+    },
+    {
+      "participant": "HUPA0027P",
+      "policy": "trend",
+      "pairs": 41285,
+      "rmse_mgdl": 14.457217538939851,
+      "mae_mgdl": 9.74962109433747,
+      "csv_sha256": "25afbb8e8e7c73a54fd62a74cdbbe70596b4fff802581e265ebcaddfc9c3f60d"
+    },
+    {
+      "participant": "HUPA0027P",
+      "policy": "selected",
+      "pairs": 41285,
+      "rmse_mgdl": 14.457217538939851,
+      "mae_mgdl": 9.74962109433747,
+      "csv_sha256": "25afbb8e8e7c73a54fd62a74cdbbe70596b4fff802581e265ebcaddfc9c3f60d"
+    },
+    {
+      "participant": "HUPA0028P",
+      "policy": "mechanistic",
+      "pairs": 6434,
+      "rmse_mgdl": 24.412685338443044,
+      "mae_mgdl": 18.146970002680543,
+      "csv_sha256": "4f4e98ce3e4666af1dcf0ed0a083560d9b15142164b92fb2d36f69356132e3a4"
+    },
+    {
+      "participant": "HUPA0028P",
+      "policy": "persistence",
+      "pairs": 6434,
+      "rmse_mgdl": 20.371747942060573,
+      "mae_mgdl": 14.32608999538437,
+      "csv_sha256": "4f4e98ce3e4666af1dcf0ed0a083560d9b15142164b92fb2d36f69356132e3a4"
+    },
+    {
+      "participant": "HUPA0028P",
+      "policy": "trend",
+      "pairs": 6434,
+      "rmse_mgdl": 17.55126870044284,
+      "mae_mgdl": 12.056507596353729,
+      "csv_sha256": "4f4e98ce3e4666af1dcf0ed0a083560d9b15142164b92fb2d36f69356132e3a4"
+    },
+    {
+      "participant": "HUPA0028P",
+      "policy": "selected",
+      "pairs": 6434,
+      "rmse_mgdl": 17.55126870044284,
+      "mae_mgdl": 12.056507596353729,
+      "csv_sha256": "4f4e98ce3e4666af1dcf0ed0a083560d9b15142164b92fb2d36f69356132e3a4"
+    },
+    {
+      "participant": "D1NAMO-001",
+      "policy": "mechanistic",
+      "pairs": 311,
+      "rmse_mgdl": 36.396759814760784,
+      "mae_mgdl": 25.904923561763216,
+      "csv_sha256": "7e9561a7e440d07b4df5556b305e2d61e33a0909c080bd5c4368647af0942aa4"
+    },
+    {
+      "participant": "D1NAMO-001",
+      "policy": "persistence",
+      "pairs": 311,
+      "rmse_mgdl": 27.360695079808433,
+      "mae_mgdl": 19.698353697749198,
+      "csv_sha256": "7e9561a7e440d07b4df5556b305e2d61e33a0909c080bd5c4368647af0942aa4"
+    },
+    {
+      "participant": "D1NAMO-001",
+      "policy": "trend",
+      "pairs": 311,
+      "rmse_mgdl": 23.209902130341025,
+      "mae_mgdl": 16.28098193569132,
+      "csv_sha256": "7e9561a7e440d07b4df5556b305e2d61e33a0909c080bd5c4368647af0942aa4"
+    },
+    {
+      "participant": "D1NAMO-001",
+      "policy": "selected",
+      "pairs": 311,
+      "rmse_mgdl": 23.209902130341025,
+      "mae_mgdl": 16.28098193569132,
+      "csv_sha256": "7e9561a7e440d07b4df5556b305e2d61e33a0909c080bd5c4368647af0942aa4"
+    },
+    {
+      "participant": "D1NAMO-002",
+      "policy": "mechanistic",
+      "pairs": 222,
+      "rmse_mgdl": 50.90956554204222,
+      "mae_mgdl": 36.52759399527514,
+      "csv_sha256": "bfc91576322e68a2f1603322641cb469d62e7042a48bfda1e8578358369bc407"
+    },
+    {
+      "participant": "D1NAMO-002",
+      "policy": "persistence",
+      "pairs": 222,
+      "rmse_mgdl": 39.88663585943617,
+      "mae_mgdl": 29.535238648648647,
+      "csv_sha256": "bfc91576322e68a2f1603322641cb469d62e7042a48bfda1e8578358369bc407"
+    },
+    {
+      "participant": "D1NAMO-002",
+      "policy": "trend",
+      "pairs": 222,
+      "rmse_mgdl": 27.711383738588882,
+      "mae_mgdl": 18.82457550450451,
+      "csv_sha256": "bfc91576322e68a2f1603322641cb469d62e7042a48bfda1e8578358369bc407"
+    },
+    {
+      "participant": "D1NAMO-002",
+      "policy": "selected",
+      "pairs": 222,
+      "rmse_mgdl": 27.711383738588882,
+      "mae_mgdl": 18.82457550450451,
+      "csv_sha256": "bfc91576322e68a2f1603322641cb469d62e7042a48bfda1e8578358369bc407"
+    },
+    {
+      "participant": "D1NAMO-004",
+      "policy": "mechanistic",
+      "pairs": 200,
+      "rmse_mgdl": 59.07268624659474,
+      "mae_mgdl": 46.16630501875292,
+      "csv_sha256": "d728d7da16dee855e1d67d13710a445d3a7059ff32fbf690b767c5876e2d5167"
+    },
+    {
+      "participant": "D1NAMO-004",
+      "policy": "persistence",
+      "pairs": 200,
+      "rmse_mgdl": 47.64579033495588,
+      "mae_mgdl": 31.0994132,
+      "csv_sha256": "d728d7da16dee855e1d67d13710a445d3a7059ff32fbf690b767c5876e2d5167"
+    },
+    {
+      "participant": "D1NAMO-004",
+      "policy": "trend",
+      "pairs": 200,
+      "rmse_mgdl": 39.264929797039095,
+      "mae_mgdl": 26.398910729999997,
+      "csv_sha256": "d728d7da16dee855e1d67d13710a445d3a7059ff32fbf690b767c5876e2d5167"
+    },
+    {
+      "participant": "D1NAMO-004",
+      "policy": "selected",
+      "pairs": 200,
+      "rmse_mgdl": 39.264929797039095,
+      "mae_mgdl": 26.398910729999997,
+      "csv_sha256": "d728d7da16dee855e1d67d13710a445d3a7059ff32fbf690b767c5876e2d5167"
+    },
+    {
+      "participant": "D1NAMO-005",
+      "policy": "mechanistic",
+      "pairs": 185,
+      "rmse_mgdl": 30.25081128872506,
+      "mae_mgdl": 25.93225614145738,
+      "csv_sha256": "8beefb29193c50648b77def818ff4f8ea951c2a15412e11f3655ef3e425d887c"
+    },
+    {
+      "participant": "D1NAMO-005",
+      "policy": "persistence",
+      "pairs": 185,
+      "rmse_mgdl": 22.928450106571756,
+      "mae_mgdl": 16.956587135135134,
+      "csv_sha256": "8beefb29193c50648b77def818ff4f8ea951c2a15412e11f3655ef3e425d887c"
+    },
+    {
+      "participant": "D1NAMO-005",
+      "policy": "trend",
+      "pairs": 185,
+      "rmse_mgdl": 17.325734238723882,
+      "mae_mgdl": 12.77246890810811,
+      "csv_sha256": "8beefb29193c50648b77def818ff4f8ea951c2a15412e11f3655ef3e425d887c"
+    },
+    {
+      "participant": "D1NAMO-005",
+      "policy": "selected",
+      "pairs": 185,
+      "rmse_mgdl": 17.325734238723882,
+      "mae_mgdl": 12.77246890810811,
+      "csv_sha256": "8beefb29193c50648b77def818ff4f8ea951c2a15412e11f3655ef3e425d887c"
+    },
+    {
+      "participant": "D1NAMO-006",
+      "policy": "mechanistic",
+      "pairs": 278,
+      "rmse_mgdl": 20.96457860965481,
+      "mae_mgdl": 15.644399045130717,
+      "csv_sha256": "dabdb2e45df72ef10e07d2ca15f5cb52b6cb62f332ac8f2492cc560d6eae9a67"
+    },
+    {
+      "participant": "D1NAMO-006",
+      "policy": "persistence",
+      "pairs": 278,
+      "rmse_mgdl": 17.83972664217015,
+      "mae_mgdl": 12.94977107913669,
+      "csv_sha256": "dabdb2e45df72ef10e07d2ca15f5cb52b6cb62f332ac8f2492cc560d6eae9a67"
+    },
+    {
+      "participant": "D1NAMO-006",
+      "policy": "trend",
+      "pairs": 278,
+      "rmse_mgdl": 14.529397969776948,
+      "mae_mgdl": 9.980008762589929,
+      "csv_sha256": "dabdb2e45df72ef10e07d2ca15f5cb52b6cb62f332ac8f2492cc560d6eae9a67"
+    },
+    {
+      "participant": "D1NAMO-006",
+      "policy": "selected",
+      "pairs": 278,
+      "rmse_mgdl": 14.529397969776948,
+      "mae_mgdl": 9.980008762589929,
+      "csv_sha256": "dabdb2e45df72ef10e07d2ca15f5cb52b6cb62f332ac8f2492cc560d6eae9a67"
+    },
+    {
+      "participant": "D1NAMO-007",
+      "policy": "mechanistic",
+      "pairs": 222,
+      "rmse_mgdl": 22.93972391595859,
+      "mae_mgdl": 18.81131301755718,
+      "csv_sha256": "0f7be56bcd55037bb291f9f7b453eb8854aaf0fdc505e449e7f608985dfd851a"
+    },
+    {
+      "participant": "D1NAMO-007",
+      "policy": "persistence",
+      "pairs": 222,
+      "rmse_mgdl": 19.0663696138155,
+      "mae_mgdl": 15.453447207207208,
+      "csv_sha256": "0f7be56bcd55037bb291f9f7b453eb8854aaf0fdc505e449e7f608985dfd851a"
+    },
+    {
+      "participant": "D1NAMO-007",
+      "policy": "trend",
+      "pairs": 222,
+      "rmse_mgdl": 15.011033274573068,
+      "mae_mgdl": 11.4017870990991,
+      "csv_sha256": "0f7be56bcd55037bb291f9f7b453eb8854aaf0fdc505e449e7f608985dfd851a"
+    },
+    {
+      "participant": "D1NAMO-007",
+      "policy": "selected",
+      "pairs": 222,
+      "rmse_mgdl": 15.011033274573068,
+      "mae_mgdl": 11.4017870990991,
+      "csv_sha256": "0f7be56bcd55037bb291f9f7b453eb8854aaf0fdc505e449e7f608985dfd851a"
+    },
+    {
+      "participant": "D1NAMO-008",
+      "policy": "mechanistic",
+      "pairs": 243,
+      "rmse_mgdl": 26.917581669342592,
+      "mae_mgdl": 20.02775618548533,
+      "csv_sha256": "ae37c0efa7be0764b7c76ac226b4e8b6bd20cb0878c226e128f7c6246fe048a2"
+    },
+    {
+      "participant": "D1NAMO-008",
+      "policy": "persistence",
+      "pairs": 243,
+      "rmse_mgdl": 24.4164647233812,
+      "mae_mgdl": 18.240646913580246,
+      "csv_sha256": "ae37c0efa7be0764b7c76ac226b4e8b6bd20cb0878c226e128f7c6246fe048a2"
+    },
+    {
+      "participant": "D1NAMO-008",
+      "policy": "trend",
+      "pairs": 243,
+      "rmse_mgdl": 21.362815439479398,
+      "mae_mgdl": 15.954634131687243,
+      "csv_sha256": "ae37c0efa7be0764b7c76ac226b4e8b6bd20cb0878c226e128f7c6246fe048a2"
+    },
+    {
+      "participant": "D1NAMO-008",
+      "policy": "selected",
+      "pairs": 243,
+      "rmse_mgdl": 21.362815439479398,
+      "mae_mgdl": 15.954634131687243,
+      "csv_sha256": "ae37c0efa7be0764b7c76ac226b4e8b6bd20cb0878c226e128f7c6246fe048a2"
+    }
+  ]
+}

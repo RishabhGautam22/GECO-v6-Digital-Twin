@@ -1,0 +1,17 @@
+{
+  "doi": "10.1088/0967-3334/25/4/010",
+  "source_pdf": "/Users/rgpro/Desktop/GeCo GPT/GECO_Insulin_DigitalTwin_Package/Reference_Papers/15382830HovorkaWilinskaNonlinearmodelpredictivecontrolofglucoseconcentrationinsubjectswithtype1diabetesPhysiolMeas2004.pdf",
+  "source_sha256": "8009f009ef7b826ee143fd656d33626f8ea1b075b7ba93636f027bd6d80c1bda",
+  "pdf_page_one_based": 5,
+  "printed_page": 909,
+  "render": "GECOv6/01_RESEARCH_PROTOCOL/literature_editorial/Hovorka2004_page909.png",
+  "render_sha256": "713adbb8233982a5918161ac8d914382b2a862c0845d8829a3f321cbaa3a330b",
+  "tool": "pdftoppm -f5 -singlefile -png -scale-to2000; view_image(detail=original)",
+  "verified_values": {
+    "S_IT": "51.2e-4 min^-1 per mU L^-1",
+    "S_ID": "8.2e-4 min^-1 per mU L^-1",
+    "S_IE": "520e-4 per mU L^-1"
+  },
+  "footnotes": "Mean parameters for Bayesian estimation; alternative parameterization S_Ij=k_bj/k_aj",
+  "claim": "Printed values, not a claim that every derivative implementation must use these means without validation."
+}

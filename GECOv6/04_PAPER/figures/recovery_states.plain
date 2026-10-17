@@ -1,0 +1,15 @@
+graph 1 15.613 2.2737
+node run 1.1196 0.2775 2.2392 0.555 "RUN\nnormal bounded authorization" filled box #334E61 #E8F3F3
+node latched 6.2824 0.94417 1.8954 0.555 "LATCHED\ncommanded delivery = 0" filled box #334E61 #FFF2CC
+node verify 11.601 1.2775 2.0933 0.7425 "VERIFY\n3 capped requests\naggregate mass agreement" filled box #334E61 white
+node probation 14.879 0.45806 1.4683 0.555 "PROBATION\n6 capped intervals" filled box #334E61 white
+node note 6.2824 1.9025 3.6142 0.7425 "Recovery cannot read the fault label or end time.\nNo accumulated catch-up delivery.\nPhysical flow can persist after a commanded \
+latch." filled plaintext #334E61 white
+edge run latched 7 2.2435 0.54426 2.3171 0.55842 2.3902 0.57153 2.4614 0.58306 3.3875 0.73286 4.4511 0.8273 5.2183 0.88187 "observed trip\nat interval end" 3.3572 0.94632 solid #38596A
+edge latched run 10 5.6527 0.66096 5.2611 0.49677 4.7383 0.30626 4.2531 0.22194 3.4685 0.085619 3.2575 0.2053 2.4614 0.22194 2.4262 0.22268 2.3905 0.22353 2.3545 0.22446 "manual arm: same release gate\nwithout verification/probation" 3.3572 0.36778 dashed #38596A
+edge latched verify 7 7.2331 1.0624 7.5724 1.1013 7.9588 1.141 8.3117 1.1664 9.0186 1.2173 9.813 1.2449 10.442 1.2599 "fixed operator slot + 30 min elapsed\n6 quiet readings + current CGM" 9.3221 1.4011 solid #38596A
+edge verify latched 7 10.55 1.0243 10.476 1.0119 10.404 1.0012 10.332 0.99278 9.3218 0.8734 8.1588 0.87382 7.3417 0.89654 "trip / failed verification" 9.3221 1.0657 solid #AF642F
+edge verify probation 4 12.652 1.016 13.099 0.90327 13.615 0.77328 14.036 0.66715 "verification passes" 13.396 1.0141 solid #38596A
+edge probation run 13 14.139 0.4134 14.066 0.40945 13.993 0.40574 13.922 0.4025 9.6271 0.20499 8.5523 0.15405 4.2531 0.083056 3.4569 0.069907 3.2556 0.025218 2.4614 0.083056 2.426 0.085636 2.39 0.0886 2.3538 0.091891 "probation completes" 9.3221 0.31343 solid #38596A
+edge probation latched 7 14.14 0.47243 13.283 0.49177 11.814 0.5323 10.555 0.60389 9.4576 0.66625 8.204 0.77041 7.3425 0.84709 "new trip" 11.601 0.67681 solid #AF642F
+stop

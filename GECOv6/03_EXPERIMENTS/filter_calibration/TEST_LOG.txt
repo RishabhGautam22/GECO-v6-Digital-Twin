@@ -1,0 +1,35 @@
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+HUPA0001P test evaluated 982 pairs
+HUPA0002P test evaluated 754 pairs
+HUPA0003P test evaluated 901 pairs
+HUPA0004P test evaluated 754 pairs
+HUPA0005P test evaluated 923 pairs
+HUPA0006P test evaluated 531 pairs
+HUPA0007P test evaluated 923 pairs
+HUPA0009P test evaluated 911 pairs
+HUPA0010P test evaluated 702 pairs
+HUPA0011P test evaluated 918 pairs
+HUPA0014P test evaluated 916 pairs
+HUPA0015P test evaluated 906 pairs
+HUPA0016P test evaluated 917 pairs
+HUPA0018P test evaluated 932 pairs
+HUPA0019P test evaluated 886 pairs
+HUPA0020P test evaluated 674 pairs
+HUPA0021P test evaluated 544 pairs
+HUPA0022P test evaluated 964 pairs
+HUPA0023P test evaluated 938 pairs
+HUPA0024P test evaluated 684 pairs
+HUPA0025P test evaluated 960 pairs
+HUPA0026P test evaluated 10110 pairs
+HUPA0027P test evaluated 41285 pairs
+HUPA0028P test evaluated 6434 pairs
+D1NAMO-001 test evaluated 311 pairs
+D1NAMO-002 test evaluated 222 pairs
+D1NAMO-004 test evaluated 200 pairs
+D1NAMO-005 test evaluated 185 pairs
+D1NAMO-006 test evaluated 278 pairs
+D1NAMO-007 test evaluated 222 pairs
+D1NAMO-008 test evaluated 243 pairs

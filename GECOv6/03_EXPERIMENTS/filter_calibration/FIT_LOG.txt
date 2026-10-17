@@ -1,0 +1,55 @@
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+HUPA0002P frozen 2.55
+HUPA0004P frozen 2.63
+HUPA0003P frozen 2.89
+HUPA0001P frozen 2.92
+HUPA0006P frozen 1.37
+HUPA0005P frozen 2.17
+HUPA0007P frozen 2.4
+HUPA0009P frozen 2.44
+HUPA0010P frozen 1.7
+HUPA0011P frozen 2.4
+HUPA0017P failed 0.0
+HUPA0015P frozen 2.21
+HUPA0014P frozen 2.39
+HUPA0016P frozen 2.39
+HUPA0020P frozen 1.56
+HUPA0021P frozen 1.34
+HUPA0018P frozen 2.47
+HUPA0019P frozen 2.43
+HUPA0024P frozen 1.61
+HUPA0023P frozen 2.3
+HUPA0022P frozen 2.64
+HUPA0025P frozen 2.59
+D1NAMO-001 frozen 1.03
+D1NAMO-002 frozen 0.73
+D1NAMO-003 excluded 0.0
+D1NAMO-004 frozen 0.87
+D1NAMO-005 frozen 0.6
+D1NAMO-006 frozen 0.66
+D1NAMO-007 frozen 0.78
+D1NAMO-008 frozen 0.83
+D1NAMO-009 excluded 0.0
+HUPA0028P frozen 15.97
+HUPA0026P frozen 23.26
+HUPA0027P frozen 93.86
+FIT FREEZE COMPLETE

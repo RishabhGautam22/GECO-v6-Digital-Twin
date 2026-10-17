@@ -1,0 +1,1486 @@
+[
+  {
+    "id": "S01",
+    "kind": "text",
+    "title": "GECO: evidence, intervention and recovery",
+    "section": "RESEARCH QUESTION",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Open with the practical question: when a system reports that it delivered something, what evidence would persuade us? GECOv6 is a research package, not an approved medical device. All numerical units are research model units. The IIT Patna rig is a proposal pending construction and measurement.",
+    "claims": [],
+    "paragraphs": [
+      "A reproducible simulation and methods study",
+      "Corrected prediction · matched comparisons · a measurable saline rig",
+      "IEEE-style research seminar | team and author details to be completed"
+    ],
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S02",
+    "kind": "text",
+    "title": "The motivating question",
+    "section": "WHY THIS TOPIC",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Explain the three verbs: request, permit and emit. They name different events. Then explain the tradeoff in ordinary language: stopping a malfunction can help, but a stop that lasts too long also has a cost. Do not suggest the simulations establish patient benefit.",
+    "claims": [],
+    "paragraphs": [
+      "A permitted command and an accepted command do not prove fluid reached the outlet.",
+      "A monitor can reduce unwanted delivery while also interrupting wanted delivery.",
+      "The study measures both sides of intervention, including return to service."
+    ],
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S03",
+    "kind": "flow",
+    "title": "The evidence boundary",
+    "section": "WHY THIS TOPIC",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Trace the six boxes in order. A digital acknowledgment belongs near authorization; it must not be used as a substitute for emitted fluid. The experiment distinguishes local mass evidence from the network report, which matters when only the report is masked.",
+    "claims": [],
+    "nodes": [
+      "Observation\nCGM or replay",
+      "Requested amount\ncontrol policy",
+      "Authorized amount\nlocal decision",
+      "Emitted amount\nactuator output",
+      "Measured evidence\nbalance indication",
+      "Received report\nmonitor input"
+    ],
+    "caption": "Each link has its own value, timestamp, authority and possible failure.",
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S04",
+    "kind": "text",
+    "title": "The contribution to test",
+    "section": "CONTRIBUTION",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "The contribution is the accountable method and evidence separation. Prior work already includes insulin safety monitors, physiological models and gravimetric pump assessment. Do not claim the first digital twin, first safety monitor or first mass-sensing pump.",
+    "claims": [],
+    "paragraphs": [
+      "An auditable chain from observations and commands to measurement and response.",
+      "A comparison that matches what each practical method can observe and control.",
+      "A release that preserves failures, censored recovery and model-domain violations."
+    ],
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S05",
+    "kind": "table",
+    "title": "What each evidence source can establish",
+    "section": "EVIDENCE",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Keep these four evidence classes separate throughout the talk. The new simulated parameter vectors were unexamined before execution, but their physiological model structure is not independent clinical evidence.",
+    "claims": [],
+    "values": [
+      [
+        "Evidence",
+        "Supported use",
+        "Current limit"
+      ],
+      [
+        "Supplied participant records",
+        "Internal forecast comparison",
+        "Previously exposed; not external validation"
+      ],
+      [
+        "New synthetic trajectories",
+        "Paired intervention experiments",
+        "Depend on plant and actuator assumptions"
+      ],
+      [
+        "Native rig animation",
+        "Explain proposed components and measurements",
+        "Conceptual, not an as-built rig"
+      ],
+      [
+        "Future saline measurements",
+        "Physical measurement and stopping estimates",
+        "IIT Patna measurement pending"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S06",
+    "kind": "table",
+    "title": "Corrections before new experiments",
+    "section": "METHODS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Describe what changed without calling the earlier numerical findings reliable. No predicted or authorized dose substitutes for the emitted input to the plant. Calibration infeasibility is a result to report, not a threshold to silently force.",
+    "claims": [],
+    "values": [
+      [
+        "Problem",
+        "Repair",
+        "Validation"
+      ],
+      [
+        "Uncertain covariance and gaps",
+        "Joseph update, finite and PSD guards, gap reset",
+        "Focused failure and timing tests"
+      ],
+      [
+        "Prediction choice",
+        "Causal mechanistic, persistence and trend candidates",
+        "Fit/tune/test separation"
+      ],
+      [
+        "Calibration path",
+        "One frozen runtime configuration; explicit failures",
+        "Configuration and execution receipts"
+      ],
+      [
+        "Response accounting",
+        "Previous inputs; interval timing; actual emitted input",
+        "Independent trace recomputation"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S07",
+    "kind": "flow",
+    "title": "Calibration and causal prediction",
+    "section": "METHODS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json",
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Parameter fitting uses the first chronological half; tuning uses the next quarter. The last quarter is an internal held-out segment of already supplied records. Forecasts are compared on identical due pairs. Offline interpolation upstream in supplied preprocessing limits strict claims about raw-data causality.",
+    "claims": [],
+    "nodes": [
+      "Chronological fit\nfirst 50%",
+      "Tune candidate\nnext 25%",
+      "Freeze choices\nparameters + threshold",
+      "Test once\nlast 25%",
+      "Compare shared pairs\nsame due timestamps",
+      "Report failures\nno silent exclusions"
+    ],
+    "caption": "Only information available at the prediction origin can enter that forecast.",
+    "source_hashes": {
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json": "1b6a4899b849bdc64f3341a80d66f3e09c6fc63ab78122353818544f43deb1ec",
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S08",
+    "kind": "chart",
+    "title": "Thirty-minute prediction error",
+    "section": "PREDICTION RESULTS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json"
+    ],
+    "notes": "Embedded chart values are rounded to 6 decimalplaces from the linked exact source; labels display 1 decimal. The selected model was trend for 30 participants and persistence for 1; none selected the mechanistic predictor. A median of selected participant errors is not the same as selecting the best method on the final test set.",
+    "claims": [],
+    "categories": [
+      "Mechanistic",
+      "Persistence",
+      "Trend",
+      "Selected on tune"
+    ],
+    "series": [
+      {
+        "name": "Median participant RMSE (mg/dL)",
+        "values": [
+          25.773272,
+          22.562943,
+          17.831132,
+          17.593207
+        ]
+      }
+    ],
+    "caption": "31 participants; 77,110 shared pairs. Lower is better. Medians weight participants equally.",
+    "source_hashes": {
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json": "1b6a4899b849bdc64f3341a80d66f3e09c6fc63ab78122353818544f43deb1ec"
+    }
+  },
+  {
+    "id": "S09",
+    "kind": "table",
+    "title": "Prediction findings and limits",
+    "section": "PREDICTION RESULTS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json",
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Bootstrap intervals describe variation across these participants, not an external population guarantee. The median empirical 95% forecast coverage was 95.82%, ranging 87.50–98.92%. Good median coverage conceals poor coverage for individual participants.24/31 fits approached parameter bounds; do not infer physiological identifiability.",
+    "claims": [],
+    "values": [
+      [
+        "Finding",
+        "Estimate",
+        "Interpretation"
+      ],
+      [
+        "Selected − persistence RMSE",
+        "−4.14 mg/dL; 95% CI −5.02 to −3.33",
+        "Paired participant bootstrap"
+      ],
+      [
+        "Mechanistic versus persistence",
+        "Worse in 28 of 31 participants",
+        "Added structure did not ensure accuracy"
+      ],
+      [
+        "Test union alarm burden",
+        "13 of 31 exceeded 1 episode/day",
+        "Tune budget did not generalize to all"
+      ],
+      [
+        "Record disposition",
+        "31 evaluated; 2 excluded; 1 failed",
+        "Negative insulin entries caused explicit failure"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json": "1b6a4899b849bdc64f3341a80d66f3e09c6fc63ab78122353818544f43deb1ec",
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S10",
+    "kind": "text",
+    "title": "What this says about the model",
+    "section": "PREDICTION RESULTS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json",
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "This is the plain-language answer to whether the model is “good.” A scientifically defensible model earns its role through comparison. Here the forecast evidence favors a trend or persistence fallback. Avoid referring to a vague “Jacob model”; distinguish the supplied mechanistic predictor from its numerical Jacobian.",
+    "claims": [],
+    "paragraphs": [
+      "The mechanistic model was less accurate than persistence for most supplied participants.",
+      "The corrected pipeline therefore permits a simpler predictor selected before testing.",
+      "This is a limit of this model, implementation and dataset combination; it is not a verdict on every physiological model."
+    ],
+    "source_hashes": {
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json": "1b6a4899b849bdc64f3341a80d66f3e09c6fc63ab78122353818544f43deb1ec",
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S11",
+    "kind": "flow",
+    "title": "Matched intervention experiments",
+    "section": "METHODS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "The primary request tape is generated in a clean reference run and replayed into each arm. This isolates intervention under a common demand. Feedback-stopping sensitivity is separately reported. Practical methods share observation channels and local cutoffs; the oracle is deliberately privileged and cannot be treated as an implementable competitor.",
+    "claims": [],
+    "nodes": [
+      "Shared reference\nrequest tape",
+      "Same meals + noise\npaired seed",
+      "Practical methods\nequal observations",
+      "Same local rules\nequal stop authority",
+      "Emitted amount\ndrives plant",
+      "Excess + deficit\ninterruption + recovery"
+    ],
+    "caption": "Oracle uses evaluator-only fault timing and is reported as a privileged benchmark.",
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S12",
+    "kind": "table",
+    "title": "The primary experiment",
+    "section": "METHODS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "The Hovorka implementation retains the published unclipped endogenous glucose production expression and logs domain failures. The48 runs per condition/arm are 24 parameter vectors each paired over 2 seeds. Confidence intervals resample parameter vectors after averaging paired seeds.",
+    "claims": [],
+    "values": [
+      [
+        "Design choice",
+        "Frozen specification"
+      ],
+      [
+        "Physiological plants",
+        "GECO original five-state; original Hovorka 2004 equations"
+      ],
+      [
+        "Test units",
+        "24 parameter vectors × 2 noise seeds per plant"
+      ],
+      [
+        "Duration and disturbances",
+        "48 h at 5 min; fault 12–14 h; eight conditions"
+      ],
+      [
+        "Primary comparisons",
+        "Six response arms; 4,608 runs"
+      ],
+      [
+        "Stop-model sensitivity",
+        "576 runs; 5,184 completed in total"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S13",
+    "kind": "table",
+    "title": "Faults and observation assumptions",
+    "section": "METHODS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "The factor 2 is applied before quantization, gain, noise and dribble, so do not say exactly twice the emitted dose. Masked network reports do not compromise the independent local mass cutoff. This makes the model of remaining trusted evidence narrower than total sensor compromise.",
+    "claims": [],
+    "values": [
+      [
+        "Condition",
+        "Injected change",
+        "Evidence retained"
+      ],
+      [
+        "Excess / stuck-on",
+        "Actuator input doubled / added emission",
+        "Local and reported balance"
+      ],
+      [
+        "Occlusion",
+        "No emission in fault window",
+        "Commands and local balance"
+      ],
+      [
+        "Biased / missing CGM",
+        "+40 mg/dL / absent report",
+        "Mass evidence and local rules"
+      ],
+      [
+        "Combined excess + bias",
+        "Excess with +25 mg/dL CGM bias",
+        "Local and reported mass"
+      ],
+      [
+        "Masked network report",
+        "Combined fault; report substituted",
+        "Independent local mass remains"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S14",
+    "kind": "table",
+    "title": "The six primary response arms",
+    "section": "METHODS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Full and simple differ in temporal aggregation as well as physiological input. Their difference alone cannot identify the incremental value of physiology. The separate exploratory fasting supplement adds a mass-CUSUM-only arm to address this component question.",
+    "claims": [],
+    "values": [
+      [
+        "Arm",
+        "Monitor",
+        "Return to service"
+      ],
+      [
+        "Full, manual",
+        "Mass CUSUM + physiological residuals",
+        "Scheduled manual release"
+      ],
+      [
+        "Full, supervised",
+        "Same full detector",
+        "Probe and probation"
+      ],
+      [
+        "Simple, manual",
+        "Instantaneous absolute mass residual",
+        "Scheduled manual release"
+      ],
+      [
+        "Simple, supervised",
+        "Same simple detector",
+        "Probe and probation"
+      ],
+      [
+        "Sham / oracle",
+        "Local rules only / known fault timing",
+        "Matched local rules / privileged timing"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S15",
+    "kind": "flow",
+    "title": "Response and recovery states",
+    "section": "METHODS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Trip timing is measured at the end of the triggering interval; stop effect is at the next interval in the primary model. Cooldown starts at that interval boundary. Supervised checks require current CGM and six quiet local readings; probe aggregate mass must meet the specified tolerance. The state before emission determines latch exposure. Guards remain active throughout probation.",
+    "claims": [],
+    "nodes": [
+      "Running\nnormal authorization",
+      "Trip decision\nend of interval",
+      "Latched\nminimum 30 min",
+      "Scheduled check\nevery 120 min",
+      "Supervised probes\nthree capped amounts",
+      "Probation → running\nsix capped intervals"
+    ],
+    "caption": "No catch-up delivery. Manual release and supervised recovery are separate comparisons.",
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S16",
+    "kind": "table",
+    "title": "Outcomes that a stop can hide",
+    "section": "METHODS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "All research-U quantities are simulated model amounts, not clinical dosing recommendations. The simulated reference is a clean model trajectory; in the physical work it must be replaced or qualified by a measured reference with an uncertainty budget.",
+    "claims": [],
+    "values": [
+      [
+        "Outcome",
+        "Definition",
+        "Reason to retain"
+      ],
+      [
+        "Stepwise excess",
+        "Sum max(emitted − clean, 0)",
+        "Extra delivery cannot cancel a deficit"
+      ],
+      [
+        "Stepwise deficit",
+        "Sum max(clean − emitted, 0)",
+        "A long stop remains visible"
+      ],
+      [
+        "Longest interruption",
+        "Positive request; zero emission",
+        "Duration matters beyond total dose"
+      ],
+      [
+        "Recovery onset / confirmation",
+        "First six good intervals / confirmation 30 min later",
+        "No single ambiguous recovery time"
+      ],
+      [
+        "Censored recovery / domain flags",
+        "Retain failed outcomes and denominators",
+        "Failures remain in the denominator"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S17",
+    "kind": "text",
+    "title": "Primary experiment outcome",
+    "section": "PRIMARY RESULTS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/comparative_study/ARM_SUMMARIES.json",
+      "03_EXPERIMENTS/comparative_study/PAIRED_PARAMETER_UNIT_CI.json",
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Execution success means the specified software ran; it does not mean the model was physiologically valid.2,108 of 4,608 main runs had domain violations, all in the Hovorka branch. This is a central limitation, not a footnote.",
+    "claims": [],
+    "paragraphs": [
+      "5,184 runs completed without execution exceptions.",
+      "The full monitor did not show consistent superiority to the simpler monitor.",
+      "Independent review checked every full trace and recomputed core outcomes; all domain violations were retained."
+    ],
+    "source_hashes": {
+      "03_EXPERIMENTS/comparative_study/ARM_SUMMARIES.json": "38f6b259f02d10e76d015815b47b3b710d713451649d4904d818e17c939beb7f",
+      "03_EXPERIMENTS/comparative_study/PAIRED_PARAMETER_UNIT_CI.json": "a3b601d26949969c2675e0e5461db7a1bb3f4351252533ec44e124b01f269dd2",
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S18",
+    "kind": "table",
+    "title": "Selected paired contrasts",
+    "section": "PRIMARY RESULTS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/comparative_study/PAIRED_PARAMETER_UNIT_CI.json"
+    ],
+    "notes": "These are parameter-vector paired bootstrap contrasts, averaged across the 2 seeds before resampling. They illustrate the central non-superiority finding; the full paper and machine-readable table contain every prespecified contrast. Hovorka comparisons cannot support credible clinical benefit because domain checks failed.",
+    "claims": [],
+    "values": [
+      [
+        "Full supervised − simple supervised",
+        "Mean difference",
+        "95% paired CI"
+      ],
+      [
+        "Original: stuck-on excess",
+        "+0.13745 research U",
+        "+0.10044 to +0.17445"
+      ],
+      [
+        "Hovorka: stuck-on excess",
+        "+0.08458 research U",
+        "+0.04229 to +0.12688"
+      ],
+      [
+        "Hovorka: occlusion deficit",
+        "+1.13031 research U",
+        "+0.13982 to +2.37804"
+      ]
+    ],
+    "caption": "Positive means more excess or deficit for the full monitor. Hovorka results are validity-limited.",
+    "source_hashes": {
+      "03_EXPERIMENTS/comparative_study/PAIRED_PARAMETER_UNIT_CI.json": "a3b601d26949969c2675e0e5461db7a1bb3f4351252533ec44e124b01f269dd2"
+    }
+  },
+  {
+    "id": "S19",
+    "kind": "table",
+    "title": "Physiological validity audit",
+    "section": "PRIMARY RESULTS",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/comparative_study/ARM_SUMMARIES.json",
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "EGP is endogenous glucose production. Negative EGP in the retained equations is a physiological-domain violation. The original branch also reaches remote-action clamps, which must be disclosed. We preserve all traces and do not delete problematic units to produce a favorable claim.",
+    "claims": [],
+    "values": [
+      [
+        "Branch",
+        "Clean practical comparison",
+        "Interpretation"
+      ],
+      [
+        "Original model",
+        "0/48 clean trips for full and simple",
+        "No glucose-domain failure; action clamps remain"
+      ],
+      [
+        "Original Hovorka equations",
+        "44/48 clean runs had negative EGP",
+        "Clean baseline already outside valid domain"
+      ],
+      [
+        "Hovorka clean trips",
+        "Full 2/48; simple 0/48",
+        "False intervention did not disappear"
+      ],
+      [
+        "Main Hovorka traces",
+        "2,108/2,304 had negative EGP",
+        "Intervention benefit claims are restricted"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "03_EXPERIMENTS/comparative_study/ARM_SUMMARIES.json": "38f6b259f02d10e76d015815b47b3b710d713451649d4904d818e17c939beb7f",
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S20",
+    "kind": "text",
+    "title": "A separate validity and component check",
+    "section": "EXPLORATORY SUPPLEMENT",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Clearly distinguish this post-primary protocol from the originally frozen experiment. It removes meals and compensates the nominal actuator mapping analytically. It is not an external cohort, therapy validation or a retrospective repair of primary results. The final results slide is generated only from reviewed supplemental output.",
+    "claims": [],
+    "paragraphs": [
+      "Exploratory follow-up after the primary model-domain failures.",
+      "New fasting parameter vectors and noise seeds; actuator-aware basal compensation.",
+      "Full, simple, mass-CUSUM-only and sham arms isolate a narrower component question."
+    ],
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S21",
+    "kind": "table",
+    "title": "Fasting supplement: validity and false stops",
+    "section": "EXPLORATORY SUPPLEMENT",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/supplement_fasting/RESULT_SUMMARY.json",
+      "03_EXPERIMENTS/supplement_fasting/ARM_SUMMARIES.json"
+    ],
+    "notes": "Post-primary exploratory design; 16 new test parameter vectors per plant,2 new noise seeds,8 conditions and 4 supervised arms. Analytically selected actuator-aware fasting commands avoid the primary meal-driven domain failures. This does not validate meal responses or actual physiology. No unit or unsuccessful result was excluded. The original family still recorded 18,648 remote-action clamp slots, including 51 in clean runs; passing the screen is not physiological validation.",
+    "claims": [],
+    "values": [
+      [
+        "Finding",
+        "Locked exploratory result"
+      ],
+      [
+        "Execution",
+        "2,048/2,048 completed; no failed runs"
+      ],
+      [
+        "Physiological checks",
+        "0 domain-invalid and 0 negative-EGP runs"
+      ],
+      [
+        "Original clean trips",
+        "Full, mass-CUSUM and simple:3/32 each"
+      ],
+      [
+        "Hovorka clean trips",
+        "Full 3/32; mass-CUSUM and simple 2/32"
+      ],
+      [
+        "Interpretation",
+        "Declared screens passed; false stops remain"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "03_EXPERIMENTS/supplement_fasting/RESULT_SUMMARY.json": "c6038a02f3ebb96a71cfb0149bd52fce91de5346a849852272ce28872bdc41a5",
+      "03_EXPERIMENTS/supplement_fasting/ARM_SUMMARIES.json": "57c3ad8f02c60542cb08b677aa0176615847f88f6dd05887494130946009d8da"
+    }
+  },
+  {
+    "id": "S22",
+    "kind": "table",
+    "title": "Full versus mass CUSUM: benefits and costs",
+    "section": "EXPLORATORY SUPPLEMENT",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/supplement_fasting/PAIRED_PARAMETER_UNIT_CI.json"
+    ],
+    "notes": "These contrasts compare the added physiological rule together with its separately clean-calibrated threshold: full 2.8330 versus mass-only 2.5291. They do not isolate physiology at an identical numerical threshold. The full detector can gain sensitivity when observations support it and incur costs when CGM is biased. These four examples do not replace the complete six-contrast table and all 8 condition results.",
+    "claims": [],
+    "values": [
+      [
+        "Full − mass-CUSUM only",
+        "Mean difference",
+        "95% paired CI"
+      ],
+      [
+        "Original: combined excess+bias excess",
+        "−0.07073 research U",
+        "−0.09821 to −0.04298"
+      ],
+      [
+        "Hovorka: combined excess+bias excess",
+        "−0.04187 research U",
+        "−0.07946 to −0.00952"
+      ],
+      [
+        "Original: bias-only deficit",
+        "+1.33868 research U",
+        "+0.71855 to +2.10441"
+      ],
+      [
+        "Hovorka: bias-only deficit",
+        "+0.39818 research U",
+        "+0.20601 to +0.60903"
+      ]
+    ],
+    "caption": "Exploratory fasting comparison. Less excess under a combined fault; more deficit under biased CGM.",
+    "source_hashes": {
+      "03_EXPERIMENTS/supplement_fasting/PAIRED_PARAMETER_UNIT_CI.json": "a64855864224d4aab0d918a740a11d21e9d7f6fef477db51714ed4dafc8fa52f"
+    }
+  },
+  {
+    "id": "S23",
+    "kind": "text",
+    "title": "Reading the simulation movies",
+    "section": "RESULT PLAYBACK",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "The ten cases were selected before outcome inspection: first test vector 08, seed 1103, five conditions, two plants. They are demonstrations of trace interpretation rather than a representative statistical sample. The primary estimates use all paired runs.",
+    "claims": [],
+    "paragraphs": [
+      "Each frame advances through the saved five-minute samples; no synthetic intermediate measurements.",
+      "Full and simple monitors share the request tape, noise and reference.",
+      "State, emission, excess, deficit and model-domain flags remain visible."
+    ],
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S24",
+    "kind": "video",
+    "title": "Doubled actuator input: original model",
+    "section": "RESULT PLAYBACK",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "06_RIG_AND_MEDIA/Result_Player/SOURCE_RECEIPT.json"
+    ],
+    "notes": "Play the 55 second trace once. Point out the fault interval, then compare the two response states. Extra stopping is not automatically better. For Hovorka, explicitly name the domain flag counter before discussing glucose. The movie has no narration; presenter notes supply the explanation.",
+    "claims": [],
+    "video": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__excess_2x.mp4",
+    "poster": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__excess_2x_fault.png",
+    "caption": "Play with Tab, then Enter. Numerical playback only; all displayed quantities come from the frozen trace.",
+    "source_hashes": {
+      "06_RIG_AND_MEDIA/Result_Player/SOURCE_RECEIPT.json": "87fd8d455579d0a068e5e68ebf01e55f934123f0019814d5fa605482cb7757df"
+    }
+  },
+  {
+    "id": "S25",
+    "kind": "video",
+    "title": "Stuck-on delivery and recovery",
+    "section": "RESULT PLAYBACK",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "06_RIG_AND_MEDIA/Result_Player/SOURCE_RECEIPT.json"
+    ],
+    "notes": "Play the 55 second trace once. Point out the fault interval, then compare the two response states. Extra stopping is not automatically better. For Hovorka, explicitly name the domain flag counter before discussing glucose. The movie has no narration; presenter notes supply the explanation.",
+    "claims": [],
+    "video": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__stuck_on.mp4",
+    "poster": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__stuck_on_fault.png",
+    "caption": "Play with Tab, then Enter. Numerical playback only; all displayed quantities come from the frozen trace.",
+    "source_hashes": {
+      "06_RIG_AND_MEDIA/Result_Player/SOURCE_RECEIPT.json": "87fd8d455579d0a068e5e68ebf01e55f934123f0019814d5fa605482cb7757df"
+    }
+  },
+  {
+    "id": "S26",
+    "kind": "video",
+    "title": "Missing observation and interruption",
+    "section": "RESULT PLAYBACK",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "06_RIG_AND_MEDIA/Result_Player/SOURCE_RECEIPT.json"
+    ],
+    "notes": "Play the 55 second trace once. Point out the fault interval, then compare the two response states. Extra stopping is not automatically better. For Hovorka, explicitly name the domain flag counter before discussing glucose. The movie has no narration; presenter notes supply the explanation.",
+    "claims": [],
+    "video": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__cgm_missing.mp4",
+    "poster": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__cgm_missing_fault.png",
+    "caption": "Play with Tab, then Enter. Numerical playback only; all displayed quantities come from the frozen trace.",
+    "source_hashes": {
+      "06_RIG_AND_MEDIA/Result_Player/SOURCE_RECEIPT.json": "87fd8d455579d0a068e5e68ebf01e55f934123f0019814d5fa605482cb7757df"
+    }
+  },
+  {
+    "id": "S27",
+    "kind": "video",
+    "title": "Combined fault: Hovorka domain flags",
+    "section": "RESULT PLAYBACK",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "06_RIG_AND_MEDIA/Result_Player/SOURCE_RECEIPT.json"
+    ],
+    "notes": "Play the 55 second trace once. Point out the fault interval, then compare the two response states. Extra stopping is not automatically better. For Hovorka, explicitly name the domain flag counter before discussing glucose. The movie has no narration; presenter notes supply the explanation.",
+    "claims": [],
+    "video": "06_RIG_AND_MEDIA/videos/results/GECOv6_hovorka_2004__excess_bias_report_mask.mp4",
+    "poster": "06_RIG_AND_MEDIA/videos/results/GECOv6_hovorka_2004__excess_bias_report_mask_fault.png",
+    "caption": "Play with Tab, then Enter. Numerical playback only; all displayed quantities come from the frozen trace.",
+    "source_hashes": {
+      "06_RIG_AND_MEDIA/Result_Player/SOURCE_RECEIPT.json": "87fd8d455579d0a068e5e68ebf01e55f934123f0019814d5fa605482cb7757df"
+    }
+  },
+  {
+    "id": "S28",
+    "kind": "image",
+    "title": "The proposed saline twin",
+    "section": "RIG AND MEASUREMENT",
+    "evidence": "CONCEPTUAL RIG",
+    "sources": [
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md"
+    ],
+    "notes": "Walk left to right from motor and syringe to outlet receiver, balance and acquisition computer. No instrument shown has been purchased, certified or physically validated by this release. Dimensions illustrate assembly relationships and must be finalized by the team.",
+    "claims": [],
+    "image": "06_RIG_AND_MEDIA/stills/rig_overview.png",
+    "caption": "Concept geometry for explanation. Every physical performance estimate is pending.",
+    "pending": true,
+    "source_hashes": {
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md": "dab38ac32713cd02fab2aca3cfa32022292323f3a82940df2f9ec44bd2072fc9"
+    }
+  },
+  {
+    "id": "S29",
+    "kind": "video",
+    "title": "The complete rig explanation",
+    "section": "RIG AND MEASUREMENT",
+    "evidence": "CONCEPTUAL RIG",
+    "sources": [
+      "06_RIG_AND_MEDIA/narration/FINAL_TRANSCRIPT.md",
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md"
+    ],
+    "notes": "In Slide Show, press Tab then Enter to play the embedded movie full screen. Narration is disclosed macOS synthetic speech. The model is a conceptual render; arrows indicate paths rather than measured flow rates. Use the complete tour for a general audience, or skip it and use the following chapter clips for an engineering seminar.",
+    "claims": [],
+    "video": "06_RIG_AND_MEDIA/videos/GECOv6_Rig_Explained.mp4",
+    "poster": "06_RIG_AND_MEDIA/stills/rig_overview.png",
+    "caption": "8-minute narrated tour: components, evidence paths, objective measurement and recovery.",
+    "pending": true,
+    "source_hashes": {
+      "06_RIG_AND_MEDIA/narration/FINAL_TRANSCRIPT.md": "52202a152b2aed2e971333942550f2da91d0cc5533fddacf00575d0e87b2dc80",
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb"
+    }
+  },
+  {
+    "id": "S30",
+    "kind": "video",
+    "title": "Drive mechanism",
+    "section": "RIG AND MEASUREMENT",
+    "evidence": "CONCEPTUAL RIG",
+    "sources": [
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md"
+    ],
+    "notes": "Use the chapter clip and pause at its final component view. All performance quantities remain pending. Ask the audience to identify the reference instrument, the recorded event and the uncertainty contribution. These clips are exact excerpts from the full narrated tour.",
+    "claims": [],
+    "video": "06_RIG_AND_MEDIA/videos/chapters/GECOv6_Rig_C04.mp4",
+    "poster": "06_RIG_AND_MEDIA/stills/pump_mechanism.png",
+    "caption": "Motor, coupling, lead screw, carriage and rail: verify actual travel and repeatability.",
+    "pending": true,
+    "source_hashes": {
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md": "dab38ac32713cd02fab2aca3cfa32022292323f3a82940df2f9ec44bd2072fc9"
+    }
+  },
+  {
+    "id": "S31",
+    "kind": "video",
+    "title": "Mass measurement",
+    "section": "RIG AND MEASUREMENT",
+    "evidence": "CONCEPTUAL RIG",
+    "sources": [
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md"
+    ],
+    "notes": "Use the chapter clip and pause at its final component view. All performance quantities remain pending. Ask the audience to identify the reference instrument, the recorded event and the uncertainty contribution. These clips are exact excerpts from the full narrated tour.",
+    "claims": [],
+    "video": "06_RIG_AND_MEDIA/videos/chapters/GECOv6_Rig_C06.mp4",
+    "poster": "06_RIG_AND_MEDIA/stills/mass_measurement.png",
+    "caption": "Receiver, load cell and independent reference: define the outlet and retain signed readings.",
+    "pending": true,
+    "source_hashes": {
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md": "dab38ac32713cd02fab2aca3cfa32022292323f3a82940df2f9ec44bd2072fc9"
+    }
+  },
+  {
+    "id": "S32",
+    "kind": "video",
+    "title": "Independent recording and clocks",
+    "section": "RIG AND MEASUREMENT",
+    "evidence": "CONCEPTUAL RIG",
+    "sources": [
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md"
+    ],
+    "notes": "Use the chapter clip and pause at its final component view. All performance quantities remain pending. Ask the audience to identify the reference instrument, the recorded event and the uncertainty contribution. These clips are exact excerpts from the full narrated tour.",
+    "claims": [],
+    "video": "06_RIG_AND_MEDIA/videos/chapters/GECOv6_Rig_C09.mp4",
+    "poster": "06_RIG_AND_MEDIA/stills/reference_recording.png",
+    "caption": "Acquisition computer, camera and timing marker: align clocks with measured residual error.",
+    "pending": true,
+    "source_hashes": {
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md": "dab38ac32713cd02fab2aca3cfa32022292323f3a82940df2f9ec44bd2072fc9"
+    }
+  },
+  {
+    "id": "S33",
+    "kind": "video",
+    "title": "Local interruption",
+    "section": "RIG AND MEASUREMENT",
+    "evidence": "CONCEPTUAL RIG",
+    "sources": [
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md"
+    ],
+    "notes": "Use the chapter clip and pause at its final component view. All performance quantities remain pending. Ask the audience to identify the reference instrument, the recorded event and the uncertainty contribution. These clips are exact excerpts from the full narrated tour.",
+    "claims": [],
+    "video": "06_RIG_AND_MEDIA/videos/chapters/GECOv6_Rig_C11.mp4",
+    "poster": "06_RIG_AND_MEDIA/stills/local_trip.png",
+    "caption": "Trip command, actuator disable and outlet cessation are separate observable events.",
+    "pending": true,
+    "source_hashes": {
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md": "dab38ac32713cd02fab2aca3cfa32022292323f3a82940df2f9ec44bd2072fc9"
+    }
+  },
+  {
+    "id": "S34",
+    "kind": "flow",
+    "title": "From indication to a measurement",
+    "section": "RIG AND MEASUREMENT",
+    "evidence": "PHYSICAL PROTOCOL",
+    "sources": [
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md"
+    ],
+    "notes": "Mass indication is not automatically true outlet delivery. The definition must identify the outlet, transport delay and capture efficiency. The balance may settle after flow changes. Density and temperature are measured or supported by a valid model. An uncertainty budget must match the actual apparatus and interval.",
+    "claims": [],
+    "nodes": [
+      "Raw balance indication\nsigned mass + time",
+      "Calibration evidence\nreference and traceability",
+      "Corrections\ndrift, evaporation, buoyancy",
+      "Density and temperature\nfluid-specific evidence",
+      "Interval volume or flow\nexplicit averaging window",
+      "Uncertainty statement\nmethod + coverage"
+    ],
+    "caption": "Never convert every negative mass change to zero. It biases low-flow estimates.",
+    "pending": true,
+    "source_hashes": {
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb"
+    }
+  },
+  {
+    "id": "S35",
+    "kind": "table",
+    "title": "Objective measurements at IIT Patna",
+    "section": "RIG AND MEASUREMENT",
+    "evidence": "PHYSICAL PROTOCOL",
+    "sources": [
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md"
+    ],
+    "notes": "A camera can support an event record, but it is not automatically a calibrated flowmeter. The local load-cell signal and an independent reference must not be the same unexamined evidence. Never label the interlock “physically stopping flow” using only a software acknowledgment.",
+    "claims": [],
+    "values": [
+      [
+        "Quantity",
+        "Independent evidence",
+        "Report with estimate"
+      ],
+      [
+        "Cumulative delivery",
+        "Calibrated gravimetric reference",
+        "Bias, repeatability, uncertainty"
+      ],
+      [
+        "Low-flow response",
+        "Long interval capture; drift/evaporation runs",
+        "Window length and detection limit"
+      ],
+      [
+        "Trip-to-disable latency",
+        "Aligned command and electrical event logs",
+        "Clock offset, residual error, interval"
+      ],
+      [
+        "Outlet cessation / residual fluid",
+        "Defined outlet trace + video if validated",
+        "Cessation criterion, tail mass, uncertainty"
+      ],
+      [
+        "Recovery",
+        "Probe, emission and state records",
+        "Deficit, failed restart, confirmation time"
+      ]
+    ],
+    "caption": "",
+    "pending": true,
+    "source_hashes": {
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb",
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md": "dab38ac32713cd02fab2aca3cfa32022292323f3a82940df2f9ec44bd2072fc9"
+    }
+  },
+  {
+    "id": "S36",
+    "kind": "image",
+    "title": "Calibration and temperature",
+    "section": "RIG AND MEASUREMENT",
+    "evidence": "CONCEPTUAL RIG",
+    "sources": [
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md"
+    ],
+    "notes": "No mass class, certificate, sensor accuracy or vendor part is asserted. The separate probe vial avoids mechanically loading the receiver. Characterize whether that sample represents fluid temperature at the measurement boundary.",
+    "claims": [],
+    "image": "06_RIG_AND_MEDIA/stills/calibration_temperature.png",
+    "caption": "Reference masses and a separate fluid-temperature sample illustrate required evidence.",
+    "pending": true,
+    "source_hashes": {
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb"
+    }
+  },
+  {
+    "id": "S37",
+    "kind": "flow",
+    "title": "An immutable acquisition record",
+    "section": "IIT PATNA HANDOFF",
+    "evidence": "PHYSICAL PROTOCOL",
+    "sources": [
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md",
+      "07_IIT_PATNA_HANDOFF/tools/validate_acquisition.py"
+    ],
+    "notes": "The delivered validator checks data-contract consistency, not instrument accuracy. It never controls hardware. A successful validation only means the fields and rules passed. Calibration validity, physical uncertainty and experimental interpretation still require review.",
+    "claims": [],
+    "nodes": [
+      "Trial identity\nfluid + rig revision",
+      "Instrument evidence\ncalibration + units",
+      "Raw samples\nsequence + time + status",
+      "Clock transformation\nmethod + residuals",
+      "Derived estimates\nsource hashes + method",
+      "Independent review\naccept, reject or repeat"
+    ],
+    "caption": "Blank templates remain blank until measured. The offline validator rejects missing evidence.",
+    "pending": true,
+    "source_hashes": {
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb",
+      "07_IIT_PATNA_HANDOFF/tools/validate_acquisition.py": "0c3f0eb692cf0a6e3d427624d81b0dff06913e2f73cbd69010919d871a95c3df"
+    }
+  },
+  {
+    "id": "S38",
+    "kind": "table",
+    "title": "Paper fields to fill after the build",
+    "section": "IIT PATNA HANDOFF",
+    "evidence": "PHYSICAL PROTOCOL",
+    "sources": [
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md",
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md"
+    ],
+    "notes": "These are measurement tasks, not numbers to be estimated by the writing team. Do not remove pending markers merely because the rig is assembled; remove a marker only when its evidence, analysis and review are complete.",
+    "claims": [],
+    "values": [
+      [
+        "Physical result section",
+        "IIT Patna must supply"
+      ],
+      [
+        "Rig and instrumentation",
+        "As-built dimensions, parts, fluid, calibration evidence"
+      ],
+      [
+        "Measurement performance",
+        "Mass/volume bias, repeatability, low-flow behavior"
+      ],
+      [
+        "Timing and stopping",
+        "Clock alignment, disable latency, outlet cessation, residual mass"
+      ],
+      [
+        "Failure and recovery",
+        "Excess, deficit, long interruption, failed and successful restart"
+      ],
+      [
+        "Transfer and reproducibility",
+        "Measured-data replay, model discrepancy, raw traces and analysis"
+      ]
+    ],
+    "caption": "Amber text and tables in the manuscript mark these pending claims beside the relevant discussion.",
+    "pending": true,
+    "source_hashes": {
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md": "dab38ac32713cd02fab2aca3cfa32022292323f3a82940df2f9ec44bd2072fc9",
+      "07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md": "ed0d692517f893e244caf50f81ce0665f1efdc7887c7500da6a142d7f96296bb"
+    }
+  },
+  {
+    "id": "S39",
+    "kind": "table",
+    "title": "M01–M08: apparatus and metrology",
+    "section": "IIT PATNA HANDOFF",
+    "evidence": "PHYSICAL PROTOCOL",
+    "sources": [
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md"
+    ],
+    "notes": "Use the exact M01–M16 checklist in the manuscript companion; this slide groups work for planning. Confirm each identifier against the authoritative table before assigning tasks. The presentation does not authorize an unsupervised medical experiment.",
+    "claims": [],
+    "values": [
+      [
+        "ID",
+        "Evidence to complete"
+      ],
+      [
+        "M01–M02",
+        "As-built apparatus; outlet and acquisition boundary"
+      ],
+      [
+        "M03–M04",
+        "Traceable balance calibration; fluid temperature and density"
+      ],
+      [
+        "M05–M06",
+        "Evaporation/environment; mechanical force isolation"
+      ],
+      [
+        "M07–M08",
+        "Independent reference; reconstruction and zero-flow bias"
+      ]
+    ],
+    "caption": "",
+    "pending": true,
+    "source_hashes": {
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md": "dab38ac32713cd02fab2aca3cfa32022292323f3a82940df2f9ec44bd2072fc9"
+    }
+  },
+  {
+    "id": "S40",
+    "kind": "table",
+    "title": "M09–M16: interruption and transfer",
+    "section": "IIT PATNA HANDOFF",
+    "evidence": "PHYSICAL PROTOCOL",
+    "sources": [
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md"
+    ],
+    "notes": "These are grouped labels; the exact evidence requirements and manuscript insertion locations are in the M matrix. A safe-looking animation supplies none of these measurements.",
+    "claims": [],
+    "values": [
+      [
+        "ID",
+        "Evidence to complete"
+      ],
+      [
+        "M09–M10",
+        "Delivery accuracy and timing; acquisition synchronization"
+      ],
+      [
+        "M11–M12",
+        "Stop response; post-stop residual flow"
+      ],
+      [
+        "M13–M14",
+        "Stop-path independence; nuisance alarms and misses"
+      ],
+      [
+        "M15–M16",
+        "Restart and recovery; locked physical study and records"
+      ]
+    ],
+    "caption": "",
+    "pending": true,
+    "source_hashes": {
+      "04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md": "dab38ac32713cd02fab2aca3cfa32022292323f3a82940df2f9ec44bd2072fc9"
+    }
+  },
+  {
+    "id": "S41",
+    "kind": "text",
+    "title": "What can be claimed now",
+    "section": "CONCLUSION",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "The paper is ready for team review as a simulation/methods manuscript. Publication acceptance is a reviewer decision. The scientific value includes the negative result: added monitor complexity did not earn an unconditional superiority claim.",
+    "claims": [],
+    "paragraphs": [
+      "A reproducible simulation and methods contribution with explicit evidence boundaries.",
+      "A corrected prediction comparison that favors simpler candidates on these records.",
+      "A documented intervention tradeoff and a physical validation protocol ready for the team."
+    ],
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S42",
+    "kind": "text",
+    "title": "What remains before submission",
+    "section": "CONCLUSION",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Hardware is not automatically required for every simulation paper. A submission can proceed on a carefully scoped simulation contribution if the venue accepts that scope. Hardware accuracy, physical cessation and clinical safety claims need the corresponding evidence; the manuscript does not make them.",
+    "claims": [],
+    "paragraphs": [
+      "Authors must approve the claims, contributions, references and assistance disclosure.",
+      "Choose the IEEE venue, then apply its exact scope, length and submission requirements.",
+      "Physical measurement claims remain amber until IIT Patna supplies reviewed evidence."
+    ],
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S43",
+    "kind": "text",
+    "title": "The research story",
+    "section": "CONCLUSION",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Close by returning to the opening question. The contribution is more persuasive when the audience can see what would falsify it. Explain that future saline measurements can either support or challenge the assumed sensor and actuator behavior.",
+    "claims": [],
+    "paragraphs": [
+      "We asked whether a monitor can connect permission with credible delivery evidence.",
+      "We repaired the testable implementation and challenged it against simpler alternatives.",
+      "The strongest result is a transparent method, a bounded claim and a concrete next experiment."
+    ],
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S44",
+    "kind": "table",
+    "title": "Technical: prediction and calibration",
+    "section": "TECHNICAL APPENDIX",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json",
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Refer to the paper equations and exact frozen configuration for numerical details. The filter uses a Joseph covariance update and records reset behavior. Separate one-step innovation coverage from 30-minute forecast coverage.",
+    "claims": [],
+    "values": [
+      [
+        "Item",
+        "Definition or limit"
+      ],
+      [
+        "Innovation normalization",
+        "Inflation scales alarm normalization, not nominal measurement covariance"
+      ],
+      [
+        "Forecast candidates",
+        "Mechanistic, persistence, bounded causal trend"
+      ],
+      [
+        "Gap handling",
+        "Filter memory reset after prolonged missing observations"
+      ],
+      [
+        "Coverage",
+        "Empirical symmetric ±1.96-scale coverage; participant range"
+      ],
+      [
+        "Optimization",
+        "Bounded fit; near-bound solutions are not identifiability evidence"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json": "1b6a4899b849bdc64f3341a80d66f3e09c6fc63ab78122353818544f43deb1ec",
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S45",
+    "kind": "table",
+    "title": "Technical: model assumptions",
+    "section": "TECHNICAL APPENDIX",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "These are simulation assumptions, not measured specifications of the proposed saline rig. The calibrated synthetic balance scale is not a traceable physical uncertainty. The actuator also adds configured positive-command noise and the study records all delivered values.",
+    "claims": [],
+    "values": [
+      [
+        "Item",
+        "Frozen illustrative value"
+      ],
+      [
+        "Sampling and horizon",
+        "5 min; 576 intervals over 48 h"
+      ],
+      [
+        "Dose-to-mass mapping",
+        "0.1005 g per research U"
+      ],
+      [
+        "Actuator",
+        "200 steps/U; gain 1.015; positive-command dribble 0.0015 g"
+      ],
+      [
+        "Balance",
+        "0.01 g quantization; median of 5; 0.003 g sample noise"
+      ],
+      [
+        "Mass residual scale",
+        "0.0051435068 g; supplied numerical calibration"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S46",
+    "kind": "table",
+    "title": "Technical: uncertainty and pairing",
+    "section": "TECHNICAL APPENDIX",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json",
+      "03_EXPERIMENTS/comparative_study/PAIRED_PARAMETER_UNIT_CI.json",
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "A large number of five-minute samples does not create the same number of independent subjects. HUPA0027P contributes 41,285 of 77,110 forecast pairs, which is why equal participant weighting and participant bootstrap matter.",
+    "claims": [],
+    "values": [
+      [
+        "Analysis",
+        "Unit and meaning"
+      ],
+      [
+        "Forecast contrast",
+        "Participant paired difference; 10,000 bootstrap resamples"
+      ],
+      [
+        "Intervention contrast",
+        "Parameter-vector mean over paired seeds; vector bootstrap"
+      ],
+      [
+        "Clean comparison",
+        "Shared request tape and clean reference emission"
+      ],
+      [
+        "Recovery censoring",
+        "Reported separately; failed recovery is not a finite time"
+      ],
+      [
+        "Multiplicity",
+        "Descriptive contrasts; no universal superiority conclusion"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json": "1b6a4899b849bdc64f3341a80d66f3e09c6fc63ab78122353818544f43deb1ec",
+      "03_EXPERIMENTS/comparative_study/PAIRED_PARAMETER_UNIT_CI.json": "a3b601d26949969c2675e0e5461db7a1bb3f4351252533ec44e124b01f269dd2",
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S47",
+    "kind": "table",
+    "title": "Technical: prior work and distinction",
+    "section": "TECHNICAL APPENDIX",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "01_RESEARCH_PROTOCOL/literature_editorial/SOURCE_LEDGER.json",
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "Consult the numbered manuscript references and source ledger for exact DOI, year, title and access limits. Use primary sources for factual attribution; preserve metadata-only limitations where full text was inaccessible.",
+    "claims": [],
+    "values": [
+      [
+        "Source family",
+        "What it contributes",
+        "GECOv6 boundary"
+      ],
+      [
+        "GlucOS; KnowSafe",
+        "Safety monitoring and runtime decisions",
+        "No first-monitor claim"
+      ],
+      [
+        "Hovorka 2004; prediction literature",
+        "Physiology and forecasting context",
+        "Not clinical model validation"
+      ],
+      [
+        "Gravimetric pump metrology",
+        "Measurement and uncertainty methods",
+        "No transferred instrument accuracy"
+      ],
+      [
+        "IEEE author guidance",
+        "Format and assistance disclosure",
+        "No acceptance or affiliation claim"
+      ]
+    ],
+    "caption": "",
+    "source_hashes": {
+      "01_RESEARCH_PROTOCOL/literature_editorial/SOURCE_LEDGER.json": "ac71d77af712c2b4fad3a00f04e47a7eec4a0fc2e5d0398f54120f79a01af663",
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S48",
+    "kind": "text",
+    "title": "Technical: originality and provenance",
+    "section": "TECHNICAL APPENDIX",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "08_REVIEW_AND_QA/editorial/FINAL_MANUSCRIPT_LOCAL_OVERLAP.json",
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "The work includes AI-assisted code, analysis, text and visuals. Style changes must not alter numerical results or erase assistance provenance. A zero exact 12 word overlap finding is not a comprehensive plagiarism check and does not cover a proprietary publication database.",
+    "claims": [],
+    "paragraphs": [
+      "Scientific review precedes writing and similarity diagnostics.",
+      "The bounded local overlap check is evidence about the supplied corpus only.",
+      "AI assistance and synthetic narration are disclosed; no AI-free, SynthID-free or detector certification is claimed."
+    ],
+    "source_hashes": {
+      "08_REVIEW_AND_QA/editorial/FINAL_MANUSCRIPT_LOCAL_OVERLAP.json": "b45eed552398bbf582c1aa16fd3595a9bd9773e85f34f9cdf40b468d92e0723d",
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  },
+  {
+    "id": "S49",
+    "kind": "text",
+    "title": "Technical: reproduce and inspect",
+    "section": "TECHNICAL APPENDIX",
+    "evidence": "SIMULATION / METHODS",
+    "sources": [
+      "04_PAPER/GECOv6_MANUSCRIPT.md"
+    ],
+    "notes": "The all-in-one package contains the source and native media projects. External build tools and environments are documented. Never present a simulator replay as a physical measurement. Any sharing of the private prior archive requires a separate rights and privacy review.",
+    "claims": [],
+    "paragraphs": [
+      "Frozen inputs, configurations, raw traces and review receipts travel with this package.",
+      "The original release is preserved separately; new results are clearly versioned.",
+      "Start with the release guide, then follow the exact experiment and artifact instructions."
+    ],
+    "source_hashes": {
+      "04_PAPER/GECOv6_MANUSCRIPT.md": "787d1d5372ebdf4ec8a88e0d3f7ac37c5cd61f3d8ccf2c786519027e72fb1c7c"
+    }
+  }
+]

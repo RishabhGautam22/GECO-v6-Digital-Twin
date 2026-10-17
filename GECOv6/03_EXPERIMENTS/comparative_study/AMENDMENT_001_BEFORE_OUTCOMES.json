@@ -1,0 +1,15 @@
+{
+  "amendment_id": "001",
+  "timing": "Before any calibration or locked study outcome execution; after13 ordinary unit tests on canonical/small deterministic fixtures",
+  "reason": "Science lane supplied final corrected production forecast interface, including training/validation-selected persistence, trend or mechanistic policies",
+  "changes": [
+    "Use production configure_calibration(mapping) and forecast(6) without a legacy explicit insulin override. The pooled selected policy is modal kind among freshly refitted frozen participants, with median policy parameters among that kind. A mechanistic policy holds its frozen training-derived insulin and future meals0. Persistence/trend use their selected causal observation rule.",
+    "The initial spec's general basal-hold forecast wording applies only to the mechanistic candidate. The actual selected causal policy is recorded in FROZEN_STUDY_CONFIG.json and may be persistence or trend.",
+    "A coordinate-wise median of fresh frozen numerical model/calibration fields is an explicit composite transferred to synthetic plants, not a fitted virtual participant. Synthetic benign data tunes detector run maxima only.",
+    "Mass residual normalization uses the retained supplied benign delivery-calibration sigma0.005143506785294255g for every arm. Synthetic clean calibration freezes new detector thresholds; no new hardware calibration is implied.",
+    "Post-fault recovery requires six consecutive intervals without latch and at least95% requested authorization, with positive demand in that window. Unrecovered runs retain censoring plus horizon-restricted latency for paired descriptive inference. Offline fault_end is used only by fault generation, labelled oracle and outcome evaluation, never by recovery authorization.",
+    "Hovorka Table2 exact -4 exponents were confirmed visually by a separate research task; no replacement with more familiar secondary-code defaults. Negative physiological states are preserved and flagged."
+  ],
+  "unchanged": "Synthetic splits, sample counts, fault magnitudes/windows, all arms, common command/measurement/cutoff authority, operator schedule, primary estimand and planned inference remain as preregistered",
+  "new_security_or_hardware_work": false
+}

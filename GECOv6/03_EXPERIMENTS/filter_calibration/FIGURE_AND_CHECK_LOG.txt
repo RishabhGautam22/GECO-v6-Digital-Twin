@@ -1,0 +1,19 @@
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+{
+  "test_union_above_one_per_day": 13,
+  "test_union_max_per_day": 12.0,
+  "test_union_max_participant": "HUPA0010P",
+  "test_innovation_coverage_min": 0.861198738170347,
+  "test_innovation_coverage_max": 0.9872881355932204,
+  "test_forecast_coverage_min": 0.875,
+  "test_forecast_coverage_max": 0.9891657638136512,
+  "bound_proximity_any_count": 24,
+  "source_counts": {
+    "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)": 24,
+    "D1NAMO v1.2.0 (Zenodo 5651217)": 7
+  },
+  "participant_duration_note": "HUPA0027P contributes 41285 of 77110 test pairs; reported aggregates weight participants equally."
+}

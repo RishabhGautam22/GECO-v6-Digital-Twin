@@ -1,0 +1,20 @@
+digraph GECO {
+graph [rankdir=LR, bgcolor="white", pad="0.12", nodesep="0.30", ranksep="0.44", fontname="Arial", fontsize=12];
+node [shape=box, style="filled", fillcolor="white", color="#334E61", fontname="Arial", fontsize=11, margin="0.13,0.09"];
+edge [color="#38596A", fontname="Arial", fontsize=9, arrowsize=0.65];
+
+unit [label="Synthetic parameter unit\n2 plants, 24 locked units each"];
+exo [label="Matched meals and noise\n2 repeated seeds per unit"];
+clean [label="Clean feedback reference\nfreeze requested-command tape"];
+full [label="Full detector\nmanual / supervised recovery",fillcolor="#E8F3F3"];
+simple [label="Simple mass residual\nmanual / supervised recovery",fillcolor="#E8F3F3"];
+sham [label="Sham statistical detector\ncommon local and quality stops"];
+oracle [label="Privileged fault-window oracle\nevaluator reference",fillcolor="#F4F4F4"];
+paired [label="Same cap, local stop and observations\nfull 48 h; 8 conditions"];
+out [label="Matched-clean excess AND deficit\ninterruption, recovery, glucose\nbootstrap parameter units"];
+unit -> clean; exo -> clean;
+clean -> full; clean -> simple; clean -> sham; clean -> oracle;
+full -> paired; simple -> paired; sham -> paired; oracle -> paired; paired -> out;
+{rank=same;full;simple;sham;oracle;}
+
+}

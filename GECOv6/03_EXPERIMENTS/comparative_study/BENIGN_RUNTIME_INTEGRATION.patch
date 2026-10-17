@@ -1,0 +1,103 @@
+--- before/geco_v4/bench.py
++++ after/geco_v4/bench.py
+@@ -29,7 +29,7 @@
+ from .fusion import Assessment, DependencyAwareFusion, Severity
+ from .hal import PumpFault, VirtualBalanceTruthNode, VirtualSyringePump
+ from .kernel import KernelContext, SafetyKernel
+-from .physiology import GlucoseModel, PhysiologyTwin, TwinParams
++from .physiology import GlucoseModel, PhysiologyTwin, TwinParams, ForecastPolicy
+ from .wire import ACK, ASSOC, BUDGET, CGM, CMD, CONFIG, TRUTH, Envelope, Signer
+ from .numerics import finite_number, positive_number, payload_numeric_issue
+ 
+@@ -54,6 +54,7 @@
+     sigma6_mgdl: float = 25.0
+     cusum6_threshold: float = 8.0
+     innovation_inflation: float = 1.0
++    forecast_policy: dict = field(default_factory=dict)
+     meal_announcement_rate: float = 0.6        # closed loop: fraction of meals the gateway is told about
+     seed: int = 0
+     time_compression: float = 20.0             # bench seconds per physiological minute^-1 (documentation only in virtual mode)
+@@ -76,6 +77,7 @@
+             raise ValueError("unrecognized profile or mode")
+         if self.ablation not in ("geco_full", "geco_no_delivery", "kernel_only", "no_geco"):
+             raise ValueError("unrecognized ablation")
++        self.forecast_policy = asdict(ForecastPolicy(**self.forecast_policy))
+ 
+ 
+ @dataclass
+@@ -145,10 +147,8 @@
+             max_age_s=cfg.max_age_s,
+             ack_window_s=cfg.dt_min * 60 * 1.5,
+         )
+-        self.twin = PhysiologyTwin(twin_params, r_std=cfg.r_std)
+-        self.twin.ar1_rho = cfg.ar1_rho
+-        self.twin.innovation_inflation = cfg.innovation_inflation
+-        self.twin.sigma6 = cfg.sigma6_mgdl
++        self.twin = PhysiologyTwin(twin_params, r_std=cfg.r_std, forecast_policy=cfg.forecast_policy)
++        self.twin.configure_calibration(asdict(cfg))
+         self.cusum = TwoSidedCUSUM(drift=cfg.cusum_drift, threshold=cfg.cusum_threshold)
+         self.cusum6 = TwoSidedCUSUM(drift=cfg.cusum_drift, threshold=cfg.cusum6_threshold)
+         self.delivery = DeliveryTwin(delivery_cal)
+@@ -207,7 +207,7 @@
+         cgm_age = now - self.last_cgm_ts
+         cgm_value = self.last_cgm if cgm_age <= self.cfg.dt_min * 60 * 0.5 + 1e-6 else None
+         out = self.twin.update(cgm_value, insulin_logged_u, carbs_g)
+-        z = None if out.quality == "missing" else out.standardized_innovation
++        z = out.standardized_innovation if out.innovation_valid else None
+         ev6 = self.cusum6.update(self.twin.last_forecast_residual_z)
+         ev6 = Evidence("physiology_forecast_cusum", "physiology", ev6.score, ev6.reliable, ev6.detail)
+         ev_phys = [self.cusum.update(z), ev6, plausibility_evidence(out.quality)]
+@@ -221,7 +221,7 @@
+         chain_ok, _ = self.audit.verify()
+         ev_int = integrity_evidence(self.config_ok, chain_ok)
+         assessment = self.fusion.assess(ev_phys + [ev_prov, ev_act, ev_int])
+-        forecast = self.twin.forecast(6, automated_request or 0.0) if cgm_value is not None else None
++        forecast = self.twin.forecast(6) if cgm_value is not None else None
+         slope = 0.0 if (self.last_cgm is None or self.prev_cgm is None) else (self.last_cgm - self.prev_cgm) / self.cfg.dt_min
+         requested = automated_request if automated_request is not None else self.controller.request(cgm_value, forecast)
+         ctx = KernelContext(
+--- before/geco_v4/campaign.py
++++ after/geco_v4/campaign.py
+@@ -16,7 +16,7 @@
+ 
+ from .attacks import catalogue
+ from .bench import BenchConfig, RunResult, records_to_rows, run_scenario
+-from .calibrate import TwinValidation, calibrate_delivery, calibrate_participant
++from .calibrate import TwinValidation, calibrate_delivery, calibrate_participant, calibration_split
+ from .datasets import ParticipantSeries, load_d1namo, load_hupa_ucm, quality_report
+ from .physiology import TwinParams
+ 
+@@ -27,11 +27,19 @@
+ 
+ 
+ def _cfg_from_validation(v: TwinValidation, profile: str, ablation: str = "geco_full", mode: str = "replay", seed: int = 0) -> BenchConfig:
++    # V6 threshold failures are explicit; never consume a failed search ceiling.
++    for name, scalar in (("threshold_result", v.cusum_threshold), ("threshold6_result", v.cusum6_threshold)):
++        result = getattr(v, name, {})
++        if result and (not result.get("feasible", False) or result.get("threshold") != scalar):
++            raise ValueError(f"Cannot construct runtime from inconsistent/infeasible {name}")
+     return BenchConfig(
+         profile=profile,
+         mode=mode,
+         ablation=ablation,
++        cusum_drift=v.cusum_drift,
+         cusum_threshold=v.cusum_threshold,
++        r_std=v.r_std,
++        forecast_policy=v.forecast_policy,
+         ar1_rho=v.ar1_rho,
+         sigma6_mgdl=v.sigma6_mgdl,
+         cusum6_threshold=v.cusum6_threshold,
+@@ -62,9 +70,12 @@
+     for pid, blob in frozen.items():
+         if pid not in by_id:
+             continue
++        if blob.get("status", "frozen") != "frozen":
++            continue
+         params = TwinParams(**blob["params"])
+         val = TwinValidation(participant=pid, params=blob["params"], **{k: v for k, v in blob["validation"].items() if k not in ("participant", "params")})
+-        _, _, test = chronological_split(by_id[pid])
++        # Preserve the split that generated the calibration; V6 uses exact50/25/25.
++        _, _, test = calibration_split(by_id[pid]) if val.split_provenance else chronological_split(by_id[pid])
+         out[pid] = (params, val, test)
+     return out
+ 

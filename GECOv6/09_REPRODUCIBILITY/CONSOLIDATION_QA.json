@@ -1,0 +1,56 @@
+{
+  "generated_utc": "2026-09-07T12:49:52.276148+00:00",
+  "status": "PASS",
+  "scope": "Bounded source/docs/input-hash and six fresh restoration layout checks; no refit, participant test evaluation or campaign rerun",
+  "source_sets": [
+    {
+      "study": "comparative_study",
+      "saved_sources_verified": 25,
+      "saved_source_mismatches": [],
+      "current_late_legacy_differences": [
+        "02_IMPLEMENTATION/geco_v4/bench.py",
+        "02_IMPLEMENTATION/geco_v4/campaign.py"
+      ]
+    },
+    {
+      "study": "supplement_fasting",
+      "saved_sources_verified": 30,
+      "saved_source_mismatches": [],
+      "current_late_legacy_differences": [
+        "02_IMPLEMENTATION/geco_v4/bench.py",
+        "02_IMPLEMENTATION/geco_v4/campaign.py"
+      ]
+    }
+  ],
+  "restoration_checks": "Four primary/supplement outcome/recalibration layouts and two refit/frozen-test layouts imported and passed exact source guards; raw files hashed before restore",
+  "reproducer_blocker_fixed": "Outcome-only supplemental restoration initially omitted calibration ledger/traces needed by its QA reader. Default restore now includes these; recalibration flag leaves them empty and preserves original configs/results under reference names. All four study layouts checked.",
+  "archived_readme": {
+    "old_name": "02_IMPLEMENTATION/README_V5_FORK.md",
+    "new_name": "02_IMPLEMENTATION/ARCHIVED_V5_README.md",
+    "sha256": "9833ae21150c43ca9435a37bf0c832b625ae47b5a06f63044ef5e24cb52d972e",
+    "bytes_equal_prior_v5": true
+  },
+  "core_absolute_input_path_blockers": [],
+  "historical_absolute_metadata_preserved": true,
+  "fresh_environment_installation_verified": false,
+  "broken_markdown_links": [],
+  "legacy_independent_review": {
+    "path": "08_REVIEW_AND_QA/filter/LEGACY_INTEGRATION_RECHECK.json",
+    "sha256": "d6e77b0fa1b6edae58f2721b4e221e8d04d628b43f3904bf03254e32a5b40e50",
+    "status": "passed"
+  },
+  "files": {
+    "09_REPRODUCIBILITY/REPRODUCE_EXPERIMENTS.md": "1f513ad898ceae3b9f2c9df8e4cc58b0e8b9ccb25314f86894f44ba39fe761d8",
+    "09_REPRODUCIBILITY/requirements-scientific-v6.txt": "38cf7f79e88811621fa0aa7a0a5fe6ed2c4445cc49bb5c5fe87194e9b77d0ac1",
+    "09_REPRODUCIBILITY/DATA_AND_DEPENDENCY_PROVENANCE.md": "4730ea7350cb60004451d628b6c2dced0e862537631e11bdc6a9be67a61a2c49",
+    "09_REPRODUCIBILITY/PARTICIPANT_SOURCE_FILES.json": "397d1aa276c2b553b4e2a20ed9dc1d652a11fe846f571f926161a61461f3326f",
+    "09_REPRODUCIBILITY/restore_campaign_workspace.py": "0323f68d81222a8fccb1c7a1b8309d5b3937eeb6f2b58888c77fe27de7398b8e",
+    "09_REPRODUCIBILITY/restore_calibration_workspace.py": "7a8b61477179fc390474a4c15312c7b526e8eac5cce61b421e2ef75ad97ed5f9",
+    "09_REPRODUCIBILITY/RESTORATION_QA.json": "cd0d4cae4efd5563cf9295d2125d15136415b6b1c96d90599d918980c73539dd",
+    "09_REPRODUCIBILITY/CALIBRATION_RESTORATION_QA.json": "ae9ebf1c47f646a79711a1229b0139c04dca8702330e11264f4df18af1441272",
+    "02_IMPLEMENTATION/README_GECOv6.md": "56da682257fdfb1cf73e7e5cb812773d9db7105762a0a9f841e2521e4135262d",
+    "02_IMPLEMENTATION/ARCHIVED_V5_README.md": "9833ae21150c43ca9435a37bf0c832b625ae47b5a06f63044ef5e24cb52d972e",
+    "08_REVIEW_AND_QA/FIX_COMPLETION_MATRIX.md": "aafd5e6b43fa6b522231d3a7f4644b6b8b7d5ea968aeaa6a4c28977fe16fbd6d"
+  },
+  "model_invocation_identity": "not exposed"
+}

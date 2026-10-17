@@ -1,0 +1,42 @@
+[
+  {
+    "name": "signal_boundaries",
+    "source": "04_PAPER/figures/signal_boundaries.dot",
+    "evidence": "IMPLEMENTED_SIMULATION_METHOD",
+    "editable_formats": [
+      "dot",
+      "svg"
+    ],
+    "physical_performance_claim": false
+  },
+  {
+    "name": "matched_experiment",
+    "source": "04_PAPER/figures/matched_experiment.dot",
+    "evidence": "IMPLEMENTED_SIMULATION_METHOD",
+    "editable_formats": [
+      "dot",
+      "svg"
+    ],
+    "physical_performance_claim": false
+  },
+  {
+    "name": "recovery_states",
+    "source": "04_PAPER/figures/recovery_states.dot",
+    "evidence": "IMPLEMENTED_SIMULATION_METHOD",
+    "editable_formats": [
+      "dot",
+      "svg"
+    ],
+    "physical_performance_claim": false
+  },
+  {
+    "name": "physical_measurement",
+    "source": "04_PAPER/figures/physical_measurement.dot",
+    "evidence": "CONCEPTUAL_PENDING",
+    "editable_formats": [
+      "dot",
+      "svg"
+    ],
+    "physical_performance_claim": false
+  }
+]

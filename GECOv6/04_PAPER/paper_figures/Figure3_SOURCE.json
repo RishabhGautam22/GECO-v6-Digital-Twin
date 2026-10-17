@@ -1,0 +1,8 @@
+{
+  "source_image": "06_RIG_AND_MEDIA/stills/rig_overview.png",
+  "source_sha256": "d65e37552ded9af207d0de214fe6ded0efd6b9aa4f25917c811bc9769abe45a0",
+  "source_use": "Whole image, unchanged; conceptual visualization supplied by root.",
+  "new_graphic": "ReportLab vector rectangles, arrows and text; same editable SVG primitives.",
+  "claims": "Proposed acquisition/reconstruction chain, all physical validation pending; no actual components or measurements inferred.",
+  "script": "04_PAPER/paper_rig_figure.py"
+}

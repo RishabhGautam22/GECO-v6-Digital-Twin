@@ -1,0 +1,112 @@
+[
+  {
+    "case": "geco_original__clean",
+    "path": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__clean.mp4",
+    "duration_s": 55.041667,
+    "frames": 1321,
+    "sha256": "fe4253e4d0ad5dd1d55a65cd555af3957badd120e38b547b88bf75eba8b1d82b",
+    "source_samples_per_arm": 576,
+    "has_audio": false,
+    "status": "FROZEN_V6_SIMULATION_PLAYBACK",
+    "domain_limit": "Numerical/domain flags retained; no clinical interpretation"
+  },
+  {
+    "case": "geco_original__cgm_missing",
+    "path": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__cgm_missing.mp4",
+    "duration_s": 55.041667,
+    "frames": 1321,
+    "sha256": "2564be5b6ccb12478280669e6c709529af0b96d709d59ee9268af098919b7cdb",
+    "source_samples_per_arm": 576,
+    "has_audio": false,
+    "status": "FROZEN_V6_SIMULATION_PLAYBACK",
+    "domain_limit": "Numerical/domain flags retained; no clinical interpretation"
+  },
+  {
+    "case": "geco_original__excess_bias_report_mask",
+    "path": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__excess_bias_report_mask.mp4",
+    "duration_s": 55.041667,
+    "frames": 1321,
+    "sha256": "e5765bbeb1cea1ff75622530a6742b3952944079959330032837cd10657a0216",
+    "source_samples_per_arm": 576,
+    "has_audio": false,
+    "status": "FROZEN_V6_SIMULATION_PLAYBACK",
+    "domain_limit": "Numerical/domain flags retained; no clinical interpretation"
+  },
+  {
+    "case": "hovorka_2004__clean",
+    "path": "06_RIG_AND_MEDIA/videos/results/GECOv6_hovorka_2004__clean.mp4",
+    "duration_s": 55.041667,
+    "frames": 1321,
+    "sha256": "bbcaa2f348844a0532004539cea18e39cdd396c67e398d0e2331157fd0f757d2",
+    "source_samples_per_arm": 576,
+    "has_audio": false,
+    "status": "FROZEN_V6_SIMULATION_PLAYBACK",
+    "domain_limit": "Numerical/domain flags retained; no clinical interpretation"
+  },
+  {
+    "case": "hovorka_2004__stuck_on",
+    "path": "06_RIG_AND_MEDIA/videos/results/GECOv6_hovorka_2004__stuck_on.mp4",
+    "duration_s": 55.041667,
+    "frames": 1321,
+    "sha256": "9fd9a6acde01b3b3aba76670a5d31372f96781f5efd74cfeaec0fb3e859ee1f7",
+    "source_samples_per_arm": 576,
+    "has_audio": false,
+    "status": "FROZEN_V6_SIMULATION_PLAYBACK",
+    "domain_limit": "Numerical/domain flags retained; no clinical interpretation"
+  },
+  {
+    "case": "hovorka_2004__cgm_missing",
+    "path": "06_RIG_AND_MEDIA/videos/results/GECOv6_hovorka_2004__cgm_missing.mp4",
+    "duration_s": 55.041667,
+    "frames": 1321,
+    "sha256": "026a07e118bea2b358d9fc80be1860938f95f02a0b32f2f1d792992e792a674d",
+    "source_samples_per_arm": 576,
+    "has_audio": false,
+    "status": "FROZEN_V6_SIMULATION_PLAYBACK",
+    "domain_limit": "Numerical/domain flags retained; no clinical interpretation"
+  },
+  {
+    "case": "hovorka_2004__excess_bias_report_mask",
+    "path": "06_RIG_AND_MEDIA/videos/results/GECOv6_hovorka_2004__excess_bias_report_mask.mp4",
+    "duration_s": 55.041667,
+    "frames": 1321,
+    "sha256": "d394b8afdd6b0e6ecd89ac9d28f5906602bf57d17daf7cd58e60875c32672324",
+    "source_samples_per_arm": 576,
+    "has_audio": false,
+    "status": "FROZEN_V6_SIMULATION_PLAYBACK",
+    "domain_limit": "Numerical/domain flags retained; no clinical interpretation"
+  },
+  {
+    "case": "geco_original__excess_2x",
+    "path": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__excess_2x.mp4",
+    "duration_s": 55.041667,
+    "frames": 1321,
+    "sha256": "3694601c40b1606eb0feeb86c205650e5a9d93bf16a02ac7799e9b9cce8316e1",
+    "source_samples_per_arm": 576,
+    "has_audio": false,
+    "status": "FROZEN_V6_SIMULATION_PLAYBACK",
+    "domain_limit": "Numerical/domain flags retained; no clinical interpretation"
+  },
+  {
+    "case": "hovorka_2004__excess_2x",
+    "path": "06_RIG_AND_MEDIA/videos/results/GECOv6_hovorka_2004__excess_2x.mp4",
+    "duration_s": 55.041667,
+    "frames": 1321,
+    "sha256": "691bdcd6d1014e964cec48541d5f671ad448740ecbb53ae99f5bc329a94238ad",
+    "source_samples_per_arm": 576,
+    "has_audio": false,
+    "status": "FROZEN_V6_SIMULATION_PLAYBACK",
+    "domain_limit": "Numerical/domain flags retained; no clinical interpretation"
+  },
+  {
+    "case": "geco_original__stuck_on",
+    "path": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__stuck_on.mp4",
+    "duration_s": 55.041667,
+    "frames": 1321,
+    "sha256": "45cc3711b5f9ab997ef95b6f00a701a6eb7bb822e17d70433b5aeb802bd00557",
+    "source_samples_per_arm": 576,
+    "has_audio": false,
+    "status": "FROZEN_V6_SIMULATION_PLAYBACK",
+    "domain_limit": "Numerical/domain flags retained; no clinical interpretation"
+  }
+]

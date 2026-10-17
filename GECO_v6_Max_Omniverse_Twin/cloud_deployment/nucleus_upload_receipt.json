@@ -1,0 +1,158 @@
+{
+  "generated_at": "2026-10-16T11:16:47.092439+00:00",
+  "nucleus_root": "omniverse://localhost/Projects/GECO_v6_Max",
+  "primary_ward_stage_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/geco_v6_smart_hospital_ward.usda",
+  "primary_rig_stage_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/geco_v6_metrology_rig.usda",
+  "omni_client_available": false,
+  "dry_run": true,
+  "total_files": 16,
+  "total_size_bytes": 1744267,
+  "total_usd_reference_rewrites": 41,
+  "uploaded_count": 0,
+  "files": [
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/omniverse_usd/geco_v6_metrology_rig.usda",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/omniverse_usd/geco_v6_metrology_rig.usda",
+      "relative_path": "omniverse_usd/geco_v6_metrology_rig.usda",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/geco_v6_metrology_rig.usda",
+      "size_bytes": 146815,
+      "sha256": "c415ec067a9143d89f7bf1df9ddaea1c284e278788afd4ec809e47fe23e46d08",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/omniverse_usd/geco_v6_smart_hospital_ward.usda",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/omniverse_usd/geco_v6_smart_hospital_ward.usda",
+      "relative_path": "omniverse_usd/geco_v6_smart_hospital_ward.usda",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/geco_v6_smart_hospital_ward.usda",
+      "size_bytes": 283428,
+      "sha256": "1332b35478aa427385a83f29e3289e37c8466a161b06b5cddcf62390edec3e16",
+      "usd_paths_rewritten": 41
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/omniverse_usd/geco_v6_brep_pump_cad.usda",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/omniverse_usd/geco_v6_brep_pump_cad.usda",
+      "relative_path": "omniverse_usd/geco_v6_brep_pump_cad.usda",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/geco_v6_brep_pump_cad.usda",
+      "size_bytes": 14888,
+      "sha256": "183723d0843dd99b2214910321273d48740d5166185e61ba08028019b4d4dbd3",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/omniverse_usd/build_usd_stages.py",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/omniverse_usd/build_usd_stages.py",
+      "relative_path": "omniverse_usd/build_usd_stages.py",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/build_usd_stages.py",
+      "size_bytes": 82379,
+      "sha256": "9929971e12fdc635374d6f8dcaa4b8796fe817fa4e7f1d8fef5c0af11fbc4424",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/isaac_extension/config/extension.toml",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/isaac_extension/config/extension.toml",
+      "relative_path": "isaac_extension/config/extension.toml",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/isaac_extension/config/extension.toml",
+      "size_bytes": 1080,
+      "sha256": "32c43011a4b9beecd25f92ef69ddbd77d09988a0510f26d8374b9dec398fb2cb",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/isaac_extension/geco_omniverse_ward/__init__.py",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/isaac_extension/geco_omniverse_ward/__init__.py",
+      "relative_path": "isaac_extension/geco_omniverse_ward/__init__.py",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/isaac_extension/geco_omniverse_ward/__init__.py",
+      "size_bytes": 619,
+      "sha256": "038c1b884923ea718f26571c4170524378cd3c34c0e643aab312553e784053d4",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/isaac_extension/geco_omniverse_ward/extension.py",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/isaac_extension/geco_omniverse_ward/extension.py",
+      "relative_path": "isaac_extension/geco_omniverse_ward/extension.py",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/isaac_extension/geco_omniverse_ward/extension.py",
+      "size_bytes": 9843,
+      "sha256": "6d8190c6f4441851d0c406f625b4424c3643ee4cf3c3126d1fab785a8e41a5a0",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/isaac_extension/geco_omniverse_ward/ward_scene_controller.py",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/isaac_extension/geco_omniverse_ward/ward_scene_controller.py",
+      "relative_path": "isaac_extension/geco_omniverse_ward/ward_scene_controller.py",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/isaac_extension/geco_omniverse_ward/ward_scene_controller.py",
+      "size_bytes": 19933,
+      "sha256": "e2d8637b7e7ec7fddc8e48d145cf927572e9eea09cfe1a16134a547a35f78592",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/isaac_extension/geco_omniverse_ward/ward_ui.py",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/isaac_extension/geco_omniverse_ward/ward_ui.py",
+      "relative_path": "isaac_extension/geco_omniverse_ward/ward_ui.py",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/isaac_extension/geco_omniverse_ward/ward_ui.py",
+      "size_bytes": 45754,
+      "sha256": "84f756d22c20d8973888f0d23f7ab0631f605aa0683cde0bc03e6fa09f508b2c",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cockpit/GECO_v6_Max_Cockpit.html",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/cockpit/GECO_v6_Max_Cockpit.html",
+      "relative_path": "cockpit/GECO_v6_Max_Cockpit.html",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/cockpit/GECO_v6_Max_Cockpit.html",
+      "size_bytes": 68948,
+      "sha256": "38c9f06cdbdaa000a1bd80e04d58dda73fac071f711e7dc47d20cd2139fe756b",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/omniverse_usd/Desktop/SM_Computer_02b.usd",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/omniverse_usd/Desktop/SM_Computer_02b.usd",
+      "relative_path": "omniverse_usd/Desktop/SM_Computer_02b.usd",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/Desktop/SM_Computer_02b.usd",
+      "size_bytes": 34136,
+      "sha256": "a555fee07c303b24fba91adfb152de6b737340cd3df2b98177a24314458e556e",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/omniverse_usd/Desktop/SM_GasCart_01c.usd",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/omniverse_usd/Desktop/SM_GasCart_01c.usd",
+      "relative_path": "omniverse_usd/Desktop/SM_GasCart_01c.usd",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/Desktop/SM_GasCart_01c.usd",
+      "size_bytes": 33887,
+      "sha256": "d1e36236cbad2b1b65d8b0e815e5f0f7e8c21dfbab7be3cdfa93d09638411aa6",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/omniverse_usd/Desktop/SM_HospitalBed_01b.usd",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/omniverse_usd/Desktop/SM_HospitalBed_01b.usd",
+      "relative_path": "omniverse_usd/Desktop/SM_HospitalBed_01b.usd",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/Desktop/SM_HospitalBed_01b.usd",
+      "size_bytes": 388892,
+      "sha256": "a643fb3b1fbd5c8b502c459e9094efa6be8b248e879a23061e253c3f0bb0d5c6",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/omniverse_usd/Desktop/SM_SideTable_02a.usd",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/omniverse_usd/Desktop/SM_SideTable_02a.usd",
+      "relative_path": "omniverse_usd/Desktop/SM_SideTable_02a.usd",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/Desktop/SM_SideTable_02a.usd",
+      "size_bytes": 70779,
+      "sha256": "c9c92085a94b06dd3eea5c35915f3e63c82a9143d7bfcd5b9f9d8dbd1ea261b0",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/omniverse_usd/Desktop/SM_SupplyCabinet_01c.usd",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/omniverse_usd/Desktop/SM_SupplyCabinet_01c.usd",
+      "relative_path": "omniverse_usd/Desktop/SM_SupplyCabinet_01c.usd",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/Desktop/SM_SupplyCabinet_01c.usd",
+      "size_bytes": 409826,
+      "sha256": "56ffa7f93361020ae7993dd02ae8256c9d7cf90fc0a2887ce21e20212028c87f",
+      "usd_paths_rewritten": 0
+    },
+    {
+      "local_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/omniverse_usd/Desktop/SM_SupplyCart_01e.usd",
+      "staged_path": "/home/axion/twin/omniverse/src/02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin/cloud_deployment/build/nucleus_staging/omniverse_usd/Desktop/SM_SupplyCart_01e.usd",
+      "relative_path": "omniverse_usd/Desktop/SM_SupplyCart_01e.usd",
+      "nucleus_uri": "omniverse://localhost/Projects/GECO_v6_Max/omniverse_usd/Desktop/SM_SupplyCart_01e.usd",
+      "size_bytes": 133060,
+      "sha256": "befdb897f2544f0d2e676b385b56ad3993ff913d455457049a5fa42c9d24d933",
+      "usd_paths_rewritten": 0
+    }
+  ]
+}

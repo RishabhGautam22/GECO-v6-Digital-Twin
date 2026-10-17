@@ -1,0 +1,10 @@
+{
+  "registered_utc": "2026-09-07T11:50:41.429788+00:00",
+  "outcomes_executed": false,
+  "files": {
+    "PREREGISTERED_SPEC.json": "1de77c8ea792eb6ba7c5f5ea78891e9bfe3a89147a9b625b96b2368d960ce279",
+    "SYNTHETIC_PARAMETER_SPLIT.json": "04f39fdf5718a12321767a5e0f2e389630d399e1e1a54a2fe8e4841d14b345df",
+    "preregister.py": "fde864505d378b1a18b9ec1f35073ce48007ab37f505134eb314e1cc2485da97"
+  },
+  "external_timestamp_registration": false
+}

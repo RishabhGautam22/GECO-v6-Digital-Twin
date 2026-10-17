@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GECO v6.1+ Max — Smart Hospital &amp; Cyber-Physical Digital Twin</title>
+<style>
+  :root {
+    interpolate-size: allow-keywords;
+    --bg: #F5F5F7;
+    --card: rgba(255, 255, 255, 0.85);
+    --card-solid: #FFFFFF;
+    --text: #1D1D1F;
+    --text-secondary: #6E6E73;
+    --text-tertiary: #86868B;
+    --border: rgba(0, 0, 0, 0.06);
+    --blue: #007AFF;
+    --green: #34C759;
+    --orange: #FF9500;
+    --red: #FF3B30;
+    --indigo: #5856D6;
+    --teal: #30B0C7;
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02);
+    --radius-lg: 22px;
+    --radius-md: 14px;
+    --radius-pill: 999px;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    height: 64px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid var(--border);
+    z-index: 30;
+    flex-shrink: 0;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1D1D1F, #007AFF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+  }
+
+  .brand-title {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .brand-subtitle {
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .segmented-control {
+    display: inline-flex;
+    background: rgba(118, 118, 128, 0.12);
+    padding: 3px;
+    border-radius: 11px;
+    gap: 2px;
+  }
+
+  .seg-btn {
+    border: none;
+    background: transparent;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .seg-btn.active {
+    background: var(--card-solid);
+    color: var(--text);
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 13px;
+    border-radius: var(--radius-pill);
+    background: rgba(52, 199, 89, 0.12);
+    color: #1D7A35;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+  }
+
+  main {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tab-view {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 20px 28px;
+  }
+
+  .tab-view.active {
+    display: grid;
+  }
+
+  /* View 1: 3D Ward & Metrology Rig */
+  #view-ward.active {
+    grid-template-columns: 1fr 400px;
+    gap: 22px;
+  }
+
+  .stage-card {
+    position: relative;
+    background: #EAEEF5;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+  }
+
+  #wardCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: grab;
+  }
+
+  #wardCanvas:active {
+    cursor: grabbing;
+  }
+
+  .stage-top-bar {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  .camera-pills {
+    display: flex;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 5px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    pointer-events: auto;
+    flex-wrap: wrap;
+  }
+
+  .cam-pill {
+    border: none;
+    background: transparent;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.18s ease;
+  }
+
+  .cam-pill:hover, .cam-pill.active {
+    background: var(--text);
+    color: white;
+  }
+
+  .stage-hint {
+    background: rgba(255, 255, 255, 0.84);
+    backdrop-filter: blur(20px);
+    padding: 7px 14px;
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+  }
+
+  /* Floating Clicked 3D Object Inspector Sheet */
+  .inspector-sheet {
+    position: absolute;
+    bottom: 84px;
+    left: 18px;
+    width: 345px;
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(28px) saturate(190%);
+    -webkit-backdrop-filter: blur(28px) saturate(190%);
+    border-radius: 20px;
+    padding: 16px 18px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.10);
+    border: 1px solid var(--border);
+    z-index: 12;
+  }
+
+  .inspector-tag {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--blue);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .inspector-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 2px;
+  }
+
+  .inspector-prim {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  .inspector-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 10px 0;
+  }
+
+  .mini-stat {
+    background: rgba(118, 118, 128, 0.07);
+    border-radius: 10px;
+    padding: 8px 10px;
+  }
+
+  .mini-stat-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  .mini-stat-val {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 2px;
+  }
+
+  /* Floating Bottom Scenario Dock with Left/Right Scroll Arrows */
+  .scenario-dock {
+    position: absolute;
+    bottom: 16px;
+    left: 18px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    padding: 7px 10px;
+    border-radius: 18px;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.10);
+    border: 1px solid var(--border);
+    z-index: 15;
+  }
+
+  .scenario-dock-track {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding: 2px 4px;
+    scrollbar-width: thin;
+  }
+
+  .scenario-dock-track::-webkit-scrollbar {
+    height: 4px;
+  }
+  .scenario-dock-track::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 99px;
+  }
+
+  .dock-arrow {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: white;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.15s ease;
+  }
+  .dock-arrow:hover {
+    background: var(--text);
+    color: white;
+  }
+
+  .dock-btn {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: white;
+    padding: 8px 13px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.18s ease;
+    white-space: nowrap;
+  }
+
+  .dock-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .dock-btn.active-nominal { background: var(--green); color: white; border-color: transparent; }
+  .dock-btn.active-site { background: var(--teal); color: white; border-color: transparent; }
+  .dock-btn.active-hw { background: var(--orange); color: white; border-color: transparent; }
+  .dock-btn.active-cyber { background: var(--red); color: white; border-color: transparent; }
+
+  /* Calm Right Sidebar */
+  .right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 2px;
+  }
+
+  .apple-card {
+    background: var(--card);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: var(--radius-lg);
+    padding: 20px 22px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+  }
+
+  .badge-green { background: rgba(52, 199, 89, 0.14); color: #1D7A35; }
+  .badge-red { background: rgba(255, 59, 48, 0.14); color: #C81E14; }
+  .badge-orange { background: rgba(255, 149, 0, 0.16); color: #B25000; }
+  .badge-blue { background: rgba(0, 122, 255, 0.12); color: #0055B3; }
+
+  .hero-metric {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .hero-number {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  .hero-unit {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    margin-left: 4px;
+  }
+
+  .hero-sub {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-align: right;
+  }
+
+  .chart-wrap {
+    width: 100%;
+    height: 102px;
+    background: rgba(118, 118, 128, 0.05);
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .chart-wrap canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .explanation-box {
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--text-secondary);
+    background: rgba(118, 118, 128, 0.06);
+    padding: 11px 14px;
+    border-radius: 12px;
+  }
+
+  /* View 2: Cyber Attack & Defense Studio */
+  #view-cyber.active {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 18px;
+    overflow-y: auto;
+  }
+
+  .cyber-top-bar {
+    grid-column: 1 / -1;
+    background: var(--card-solid);
+    border-radius: var(--radius-lg);
+    padding: 18px 24px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .cyber-panel {
+    background: var(--card-solid);
+    border-radius: var(--radius-lg);
+    padding: 20px 22px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cyber-chart-box {
+    flex: 1;
+    min-height: 155px;
+    background: #F9F9FB;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .cyber-chart-box canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* 6-Channel Sigma Progress Bars */
+  .sigma-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .sigma-row {
+    display: grid;
+    grid-template-columns: 165px 1fr 48px;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .sigma-track {
+    height: 9px;
+    background: rgba(118, 118, 128, 0.12);
+    border-radius: 99px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .sigma-fill {
+    height: 100%;
+    border-radius: 99px;
+    background: var(--green);
+    transition: width 0.2s ease, background 0.2s ease;
+  }
+
+  /* View 3: Interactive Physics Sliders & Permutations */
+  #view-physics.active {
+    grid-template-columns: 420px 1fr;
+    gap: 22px;
+    overflow-y: auto;
+  }
+
+  .slider-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .slider-label-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--blue);
+  }
+
+  /* View 4: Benchmarks & BRep CAD */
+  #view-benchmarks.active {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    overflow-y: auto;
+    align-content: start;
+  }
+
+  .spec-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .spec-list li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+
+  .spec-list li span:first-child { color: var(--text-secondary); }
+  .spec-list li span:last-child { font-weight: 600; color: var(--text); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-icon">v6.1</div>
+    <div>
+      <div class="brand-title">GECO v6.1+ Max Digital Twin</div>
+      <div class="brand-subtitle">10-Patient Smart ICU Ward (P01–P10) · 138-Part Rig · IEEE-1588 PTP Master Clock</div>
+    </div>
+  </div>
+
+  <div class="segmented-control">
+    <button class="seg-btn active" onclick="switchView('ward', this)">10-Patient Ward &amp; Rig</button>
+    <button class="seg-btn" onclick="switchView('cyber', this)">Cyber &amp; Master Clock</button>
+    <button class="seg-btn" onclick="switchView('physics', this)">Multi-Physics Studio</button>
+    <button class="seg-btn" onclick="switchView('benchmarks', this)">V6.1+ &amp; BRep Specs</button>
+  </div>
+
+  <div style="display:flex; gap:8px; align-items:center;">
+    <div class="status-pill" id="ptpClockPill" title="IEEE-1588v2 PTP Grandmaster Clock (Part_A05) &amp; 10Hz Optical Strobe (Part_A06)">
+      <span class="status-dot" id="ptpDot" style="background:#007AFF; box-shadow:0 0 0 3px rgba(0,122,255,0.18);"></span>
+      <span id="ptpClockText">PTP Master Clock A05 · LOCKED (Δt 0.02ms)</span>
+    </div>
+    <div class="status-pill">
+      <span class="status-dot"></span>
+      <span id="wsStatusText">10 Patients · :8766</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- VIEW 1: 3D HOSPITAL WARD & 138-PART METROLOGY RIG -->
+  <section id="view-ward" class="tab-view active">
+    <div class="stage-card">
+      <canvas id="wardCanvas"></canvas>
+
+      <div class="stage-top-bar">
+        <div class="camera-pills">
+          <button class="cam-pill active" onclick="setWardCamera('overview', this)">12-Bay Overview (P01–P10)</button>
+          <button class="cam-pill" onclick="setWardCamera('r1', this)">P01: Nominal</button>
+          <button class="cam-pill" onclick="setWardCamera('r2', this)">P02: Pipe Debris</button>
+          <button class="cam-pill" onclick="setWardCamera('r3', this)">P03: Battery</button>
+          <button class="cam-pill" onclick="setWardCamera('r4', this)">P04: Simplex</button>
+          <button class="cam-pill" onclick="setWardCamera('r7', this)">P07: Clock Skew</button>
+          <button class="cam-pill" onclick="setWardCamera('r5', this)">Bay 11: 138-Part Rig</button>
+          <button class="cam-pill" onclick="setWardCamera('r6', this)">Bay 12: Master Clock &amp; SOC</button>
+        </div>
+        <div class="stage-hint">All 10 Patients Equipped with Borosilicate Syringe S01 + PTP Sync</div>
+      </div>
+
+      <!-- Clicked 3D Object Popover -->
+      <div class="inspector-sheet">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+          <div>
+            <div class="inspector-tag" id="wInspRole">CLICKED 3D USD PRIM</div>
+            <div class="inspector-title" id="wInspTitle">Room 4 — Simplex Cyber-Protected Pump</div>
+            <div class="inspector-prim" id="wInspPath">/World/Ward/Room_04_Cyber_MITM/Pump_04</div>
+          </div>
+          <span class="badge badge-blue" id="wInspBadge">138 Prims Verified</span>
+        </div>
+        <div class="inspector-metrics">
+          <div class="mini-stat">
+            <div class="mini-stat-label" id="wStat1L">Plunger / Lead Screw</div>
+            <div class="mini-stat-val" id="wStat1V">11.64 mm</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-label" id="wStat2L">Gravimetric Balance</div>
+            <div class="mini-stat-val" id="wStat2V">1.128 g</div>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height: 64px;">
+          <canvas id="chartWardInsp"></canvas>
+        </div>
+      </div>
+
+      <!-- Bottom Scenario Bar with Left/Right Scroll Arrows & Wheel Support -->
+      <div class="scenario-dock">
+        <button class="dock-arrow" title="Scroll Left" onclick="scrollWardDock(-240)">‹</button>
+        <div class="scenario-dock-track" id="wardDockTrack">
+          <button class="dock-btn active-nominal" id="dBtnNom" onclick="selectScenario('NOMINAL', this, 'active-nominal')">Nominal</button>
+          <button class="dock-btn" onclick="selectScenario('A2_WET_SITE', this, 'active-site')">A2: Wet Cannula Site (Non-Cyber)</button>
+          <button class="dock-btn" onclick="selectScenario('A4_PISA', this, 'active-site')">A4: Sleep Compression Low</button>
+          <button class="dock-btn" onclick="selectScenario('B2_DEBRIS', this, 'active-hw')">B2: Pipe Fibril Debris</button>
+          <button class="dock-btn" onclick="selectScenario('B5_BATTERY', this, 'active-hw')">B5: Battery Brownout</button>
+          <button class="dock-btn" onclick="selectScenario('C1_REPLAY', this, 'active-cyber')">C1: RF 2x Replay Attack</button>
+          <button class="dock-btn" onclick="selectScenario('C3_CUSUM', this, 'active-cyber')">C3: Stealth CUSUM Drip</button>
+          <button class="dock-btn" onclick="selectScenario('C4_CLOCK', this, 'active-cyber')">C4: +3h Clock Skew</button>
+        </div>
+        <button class="dock-arrow" title="Scroll Right" onclick="scrollWardDock(240)">›</button>
+      </div>
+    </div>
+
+    <!-- Calm Right Column: 3 Apple Health Cards -->
+    <aside class="right-sidebar">
+      <!-- Card 1: Glucose & 7-State EKF -->
+      <div class="apple-card">
+        <div class="card-header">
+          <span class="card-title">Blood Glucose &amp; 7-State EKF</span>
+          <span class="badge badge-green" id="wBgBadge">Euglycemic (100% TIR)</span>
+        </div>
+        <div class="hero-metric">
+          <div>
+            <span class="hero-number" id="wValBG">114.2</span>
+            <span class="hero-unit">mg/dL</span>
+          </div>
+          <div class="hero-sub">
+            <div>30-Min EKF: <strong id="wValEKF">114.5 mg/dL</strong></div>
+            <div style="color: var(--text-tertiary);">Reported CGM: <span id="wValCGM">114.4</span> mg/dL</div>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="chartWardBG"></canvas>
+        </div>
+      </div>
+
+      <!-- Card 2: Multi-Physics Fluidics & Battery -->
+      <div class="apple-card">
+        <div class="card-header">
+          <span class="card-title">Hagen-Poiseuille Fluidics &amp; Power</span>
+          <span class="badge badge-blue" id="wPhysBadge">Nominal Lumen</span>
+        </div>
+        <div class="hero-metric">
+          <div>
+            <span class="hero-number" id="wValPres">14.2</span>
+            <span class="hero-unit">kPa</span>
+          </div>
+          <div class="hero-sub">
+            <div>Effective Flow: <strong id="wValFlow">1.00 U/hr</strong></div>
+            <div style="color: var(--text-tertiary);">Li-Ion Cell: <span id="wValBat">3.98 V (0.18 Ω)</span></div>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="chartWardPhys"></canvas>
+        </div>
+      </div>
+
+      <!-- Card 3: Root-Cause Attribution (Installation vs Hardware vs Cyber) -->
+      <div class="apple-card">
+        <div class="card-header">
+          <span class="card-title">Root-Cause Attribution &amp; Simplex Kernel</span>
+          <span class="badge badge-green" id="wRootBadge">0% False Lockout</span>
+        </div>
+        <div class="inspector-metrics" style="margin: 2px 0;">
+          <div class="mini-stat">
+            <div class="mini-stat-label">Root-Cause Class</div>
+            <div class="mini-stat-val" id="wValClass">Nominal Clean</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-label">Simplex Output</div>
+            <div class="mini-stat-val" id="wValSimplex">1.00 U/hr</div>
+          </div>
+        </div>
+        <div class="explanation-box" id="wHumanExplain">
+          All 6 orthogonal physics and security channels are in-family. 7-State EKF tracks true blood glucose with 12.48 mg/dL RMSE (-32.7% vs. v6 baseline).
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- VIEW 2: REAL-TIME CYBERSECURITY ATTACK & DEFENSE SCREEN -->
+  <section id="view-cyber" class="tab-view">
+    <div class="cyber-top-bar">
+      <div>
+        <div style="font-size: 18px; font-weight: 600;">Real-Time Cybersecurity Attack &amp; Simplex Defense Operations</div>
+        <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">
+          6-Channel Orthogonal Physics/Crypto Detector · Multi-Scale CUSUM (k=0.10σ &amp; k=0.50σ) · Zero False Cyber Alarms on Site Issues
+        </div>
+      </div>
+      <div style="display:flex; gap:7px; flex-wrap:wrap;">
+        <button class="dock-btn" onclick="selectScenario('C1_REPLAY', this, 'active-cyber')">Inject C1: RF 2x Replay</button>
+        <button class="dock-btn" onclick="selectScenario('C3_CUSUM', this, 'active-cyber')">Inject C3: Stealth CUSUM Drip</button>
+        <button class="dock-btn" onclick="selectScenario('C4_CLOCK', this, 'active-cyber')">Inject C4: +3h Clock Skew</button>
+        <button class="dock-btn" onclick="selectScenario('A2_WET_SITE', this, 'active-site')">Test A2: Wet Site (Non-Cyber)</button>
+        <button class="dock-btn active-nominal" onclick="selectScenario('NOMINAL', this, 'active-nominal')">Reset Nominal</button>
+      </div>
+    </div>
+
+    <!-- Panel 1: Attacker Requested Dose vs Simplex Safe-Basal Clamped Output -->
+    <div class="cyber-panel">
+      <div class="card-header">
+        <span class="card-title">1. Attacker Requested Dose (Red) vs. Simplex Clamped Safe Output (Green)</span>
+        <span class="badge badge-green" id="cBadge1">96.4% Overdose Reduction</span>
+      </div>
+      <div class="cyber-chart-box">
+        <canvas id="cChartDose"></canvas>
+      </div>
+    </div>
+
+    <!-- Panel 2: 6-Channel Orthogonal Security & Physics Sensors -->
+    <div class="cyber-panel">
+      <div class="card-header">
+        <span class="card-title">2. 6-Channel Orthogonal Detector — Live Sigma Levels (Trip = 3.0 σ)</span>
+        <span class="badge badge-blue" id="cBadge2">Orthogonal Attribution</span>
+      </div>
+      <div class="sigma-list">
+        <div class="sigma-row">
+          <span>Ch1: CGM-EKF Innovation</span>
+          <div class="sigma-track"><div class="sigma-fill" id="barCh1" style="width:8%"></div></div>
+          <strong id="valCh1">0.42σ</strong>
+        </div>
+        <div class="sigma-row">
+          <span>Ch2: Dual-Scale CUSUM</span>
+          <div class="sigma-track"><div class="sigma-fill" id="barCh2" style="width:6%"></div></div>
+          <strong id="valCh2">0.28σ</strong>
+        </div>
+        <div class="sigma-row">
+          <span>Ch3: Motor Current vs Flow</span>
+          <div class="sigma-track"><div class="sigma-fill" id="barCh3" style="width:7%"></div></div>
+          <strong id="valCh3">0.35σ</strong>
+        </div>
+        <div class="sigma-row">
+          <span>Ch4: Gravimetric Mass</span>
+          <div class="sigma-track"><div class="sigma-fill" id="barCh4" style="width:6%"></div></div>
+          <strong id="valCh4">0.31σ</strong>
+        </div>
+        <div class="sigma-row">
+          <span>Ch5: Hydraulic Impedance</span>
+          <div class="sigma-track"><div class="sigma-fill" id="barCh5" style="width:8%"></div></div>
+          <strong id="valCh5">0.39σ</strong>
+        </div>
+        <div class="sigma-row">
+          <span>Ch6: Crypto Nonce / RTC</span>
+          <div class="sigma-track"><div class="sigma-fill" id="barCh6" style="width:3%"></div></div>
+          <strong id="valCh6">0.12σ</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 3: Multi-Scale CUSUM Accumulator Bank -->
+    <div class="cyber-panel">
+      <div class="card-header">
+        <span class="card-title">3. Multi-Scale CUSUM Bank: Stealth Drift (k=0.10σ Indigo) vs. Fast Impulse (k=0.50σ Orange)</span>
+        <span class="badge badge-blue">Catches Sub-Threshold Titration</span>
+      </div>
+      <div class="cyber-chart-box">
+        <canvas id="cChartCusum"></canvas>
+      </div>
+    </div>
+
+    <!-- Panel 4: Physiological Protection -->
+    <div class="cyber-panel">
+      <div class="card-header">
+        <span class="card-title">4. Physiological Protection: True BG (Green) vs. Spoofed CGM (Orange) vs. EKF (Blue)</span>
+        <span class="badge badge-green">0.0% Hypoglycemia Under Attack</span>
+      </div>
+      <div class="cyber-chart-box">
+        <canvas id="cChartBG"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW 3: MULTI-PHYSICS PARAMETER STUDIO -->
+  <section id="view-physics" class="tab-view">
+    <div class="apple-card">
+      <div class="card-title" style="font-size:15px; color:var(--text);">Continuous Coupled Multi-Physics Controls</div>
+      <p style="font-size:12.5px; color:var(--text-secondary);">
+        Adjust physical fluidic, tissue, and electrochemical parameters in real time to observe Hagen-Poiseuille back-pressure, compressible air-bubble compliance, and Li-Ion brownout dynamics.
+      </p>
+
+      <div class="slider-group">
+        <div class="slider-label-row"><span>Microbore Pipe Fibril Debris</span><strong id="lblDebris">0%</strong></div>
+        <input type="range" min="0" max="90" value="0" oninput="updateSliders('debris', this.value)" />
+      </div>
+
+      <div class="slider-group">
+        <div class="slider-label-row"><span>Compressible Air Bubble Volume</span><strong id="lblBubble">0 µL</strong></div>
+        <input type="range" min="0" max="45" value="0" oninput="updateSliders('bubble', this.value)" />
+      </div>
+
+      <div class="slider-group">
+        <div class="slider-label-row"><span>Teflon Cannula Kink Restriction</span><strong id="lblKink">0%</strong></div>
+        <input type="range" min="0" max="85" value="0" oninput="updateSliders('kink', this.value)" />
+      </div>
+
+      <div class="slider-group">
+        <div class="slider-label-row"><span>Li-Ion Battery Internal Resistance (R_int)</span><strong id="lblRint">0.18 Ω</strong></div>
+        <input type="range" min="18" max="180" value="18" oninput="updateSliders('rint', this.value)" />
+      </div>
+    </div>
+
+    <div class="apple-card">
+      <div class="card-header">
+        <span class="card-title">Real-Time Hagen-Poiseuille Line Pressure (kPa) &amp; Effective Tissue Delivery (U/hr)</span>
+        <span class="badge badge-blue">Occlusion Relief Threshold = 85 kPa</span>
+      </div>
+      <div class="large-chart" style="flex:1; min-height:360px;">
+        <canvas id="pChartMain"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW 4: V6 vs V6.1+ & NVIDIA USD-BREP BENCHMARKS -->
+  <section id="view-benchmarks" class="tab-view">
+    <div class="apple-card">
+      <div class="card-title">Baseline GECO v6 vs. Enhanced v6.1+ Max</div>
+      <ul class="spec-list">
+        <li><span>10-Patient Mean 30m RMSE</span><span>18.54 → 12.48 mg/dL (-32.7%)</span></li>
+        <li><span>P09 Brittle T1D RMSE</span><span>28.20 → 17.65 mg/dL (-37.4%)</span></li>
+        <li><span>Hovorka Minimum BG</span><span>-349.6 (Invalid) → 74.2 mg/dL</span></li>
+        <li><span>Overdose Excess Insulin</span><span>6.65 U → 0.24 U (-96.4%)</span></li>
+        <li><span>False Alarm TIR Penalty</span><span>-4.2% → 0.0% (Simplex Hold)</span></li>
+        <li><span>Stealth CUSUM Detection</span><span>Missed → 100% Caught (k=0.10σ)</span></li>
+      </ul>
+    </div>
+
+    <div class="apple-card">
+      <div class="card-title">NVIDIA Omniverse `usd-brep` CAD Integration</div>
+      <ul class="spec-list">
+        <li><span>Solid Modeling Kernel</span><span>SMLib NURBS BRep (`_omni_solid`)</span></li>
+        <li><span>Syringe S01 Usable Bore</span><span>3014.78 µL (301.5 U)</span></li>
+        <li><span>Syringe Wall Solid Volume</span><span>2057.26 mm³ (Manifold)</span></li>
+        <li><span>Luer-Lock Cone Dead-Space</span><span>222.20 µL (22.2 U)</span></li>
+        <li><span>60cm Catheter F01 Volume</span><span>68.05 µL (6.8 U Unprimed)</span></li>
+        <li><span>BRep USD Asset</span><span>geco_v6_brep_pump_cad.usda</span></li>
+      </ul>
+    </div>
+
+    <div class="apple-card">
+      <div class="card-title">22-Scenario Root-Cause Permutation Matrix</div>
+      <ul class="spec-list">
+        <li><span>Cat A: Installation &amp; Site (A1–A6)</span><span>0.0% False Cyber Lockout</span></li>
+        <li><span>Cat B: Fluidic &amp; Battery (B1–B6)</span><span>1.2 min Occlusion Relief</span></li>
+        <li><span>Cat C: Cyber Attacks (C1–C7)</span><span>100% Clamped to Safe Basal</span></li>
+        <li><span>Cat D: Compound Multi-Fault</span><span>Orthogonal Channel Separation</span></li>
+        <li><span>OpenUSD Metrology Rig</span><span>138 / 138 Parts Verified</span></li>
+        <li><span>Automated Pytest Suite</span><span>15 / 15 Tests Passing</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ---------------------------------------------------------------------------
+// View Navigation
+// ---------------------------------------------------------------------------
+function switchView(viewId, btn) {
+  document.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + viewId).classList.add('active');
+  window.dispatchEvent(new Event('resize'));
+}
+
+// ---------------------------------------------------------------------------
+// Coupled Simulation State
+// ---------------------------------------------------------------------------
+const wState = {
+  scenario: 'NOMINAL',
+  bg: 114.2,
+  cgm: 114.4,
+  ekf: 114.5,
+  req: 1.00,
+  simplex: 1.00,
+  pressure: 14.2,
+  flow: 1.00,
+  batV: 3.98,
+  rint: 0.18,
+  debrisPct: 0,
+  bubbleUl: 0,
+  kinkPct: 0,
+  plungerMm: 11.64,
+  balanceG: 1.128,
+  cusumFast: 0.28,
+  cusumStealth: 0.22,
+  sigmas: [0.42, 0.28, 0.35, 0.31, 0.39, 0.12],
+  histBG: Array.from({length: 80}, (_, i) => 114 + Math.sin(i * 0.12) * 1.4),
+  histCGM: Array.from({length: 80}, (_, i) => 114.2 + Math.sin(i * 0.12) * 1.6),
+  histEKF: Array.from({length: 80}, (_, i) => 114.1 + Math.sin(i * 0.12 + 0.15) * 1.3),
+  histReq: Array.from({length: 80}, () => 1.00),
+  histSimplex: Array.from({length: 80}, () => 1.00),
+  histPres: Array.from({length: 80}, () => 14.2),
+  histFlow: Array.from({length: 80}, () => 1.00),
+  histCusumFast: Array.from({length: 80}, () => 0.28),
+  histCusumStealth: Array.from({length: 80}, () => 0.22),
+};
+
+// Connect to live GECO v6.1+ WebSocket server (:8766)
+let gecoWS = null;
+try {
+  gecoWS = new WebSocket('ws://127.0.0.1:8766');
+  gecoWS.onopen = () => {
+    document.getElementById('wsStatusText').textContent = 'Connected · ws://127.0.0.1:8766';
+  };
+} catch (e) {}
+
+function selectScenario(code, btn, activeClass) {
+  wState.scenario = code;
+  document.querySelectorAll('.scenario-dock .dock-btn').forEach(b => b.className = 'dock-btn');
+  if (btn && btn.parentElement.classList.contains('scenario-dock')) {
+    btn.classList.add(activeClass);
+  }
+}
+
+function updateSliders(type, val) {
+  val = Number(val);
+  if (type === 'debris') {
+    wState.debrisPct = val;
+    document.getElementById('lblDebris').textContent = val + '%';
+    wState.scenario = val > 15 ? 'B2_DEBRIS' : 'NOMINAL';
+  } else if (type === 'bubble') {
+    wState.bubbleUl = val;
+    document.getElementById('lblBubble').textContent = val + ' µL';
+  } else if (type === 'kink') {
+    wState.kinkPct = val;
+    document.getElementById('lblKink').textContent = val + '%';
+    wState.scenario = val > 20 ? 'B2_DEBRIS' : 'NOMINAL';
+  } else if (type === 'rint') {
+    wState.rint = val / 100.0;
+    document.getElementById('lblRint').textContent = wState.rint.toFixed(2) + ' Ω';
+    wState.scenario = wState.rint > 0.65 ? 'B5_BATTERY' : 'NOMINAL';
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Realistic 3D 6-Room Smart Hospital Ward & 138-Part Metrology Rig (Three.js)
+// ---------------------------------------------------------------------------
+const wardCanvas = document.getElementById('wardCanvas');
+const renderer = new THREE.WebGLRenderer({canvas: wardCanvas, antialias: true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.08;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xEEF1F6);
+
+const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 120);
+let camPos = new THREE.Vector3(0, 11.5, 14.5);
+let camTarget = new THREE.Vector3(0, 0.4, 0);
+let desiredPos = camPos.clone();
+let desiredTarget = camTarget.clone();
+
+scene.add(new THREE.HemisphereLight(0xFFFFFF, 0xD5DCE6, 0.88));
+const sun = new THREE.DirectionalLight(0xFFFDF8, 1.15);
+sun.position.set(8, 16, 10);
+sun.castShadow = true;
+sun.shadow.mapSize.width = 2048;
+sun.shadow.mapSize.height = 2048;
+const d = 12;
+sun.shadow.camera.left = -d; sun.shadow.camera.right = d;
+sun.shadow.camera.top = d; sun.shadow.camera.bottom = -d;
+scene.add(sun);
+
+const pickables = [];
+function registerPick(mesh, title, primPath, role) {
+  mesh.userData = {title, primPath, role};
+  pickables.push(mesh);
+}
+
+// Hospital Floor Plate (4x3 12-Bay Smart Hospital Ward)
+const mainFloor = new THREE.Mesh(
+  new THREE.BoxGeometry(23.5, 0.16, 16.8),
+  new THREE.MeshStandardMaterial({color: 0xE6E9EF, roughness: 0.7})
+);
+mainFloor.position.set(0, -0.08, 0);
+mainFloor.receiveShadow = true;
+scene.add(mainFloor);
+
+// Build 12 Detailed Bays in a 4x3 Architectural Grid:
+// - Bays 1..10: All 10 Clinical Patient Archetypes (P01..P10), each with full Borosilicate Syringe & 9-subsystem stack
+// - Bay 11: 138-Part IIT Patna Gravimetric Metrology Lab Rig
+// - Bay 12: IEEE-1588v2 PTP Grandmaster Clock Rack (Part_A05), 10Hz Optical Sync Strobe (Part_A06) & Cyber SOC
+const roomConfigs = [
+  // Row 1 (z = -5.2)
+  {id: 'r1',  x: -8.1, z: -5.2, isPatient: true, pIdx: 1,  title: 'Bay 1 — P01 Nominal Adult (75kg)', prim: '/World/Ward/Room_01_Nominal_Adult', accent: 0x34C759},
+  {id: 'r2',  x: -2.7, z: -5.2, isPatient: true, pIdx: 2,  title: 'Bay 2 — P02 Pipe Fibril Debris & Bubble (58kg)', prim: '/World/Ward/Room_02_Fluidic_Debris', accent: 0x30B0C7},
+  {id: 'r3',  x:  2.7, z: -5.2, isPatient: true, pIdx: 3,  title: 'Bay 3 — P03 Battery Brownout & Supercap (82kg)', prim: '/World/Ward/Room_03_Battery_Brownout', accent: 0xFF9500},
+  {id: 'r4',  x:  8.1, z: -5.2, isPatient: true, pIdx: 4,  title: 'Bay 4 — P04 CGM Spoofing & Simplex Clamp (64kg)', prim: '/World/Ward/Room_04_Cyber_MITM', accent: 0x007AFF},
+  // Row 2 (z = 0.0)
+  {id: 'r5',  x: -8.1, z:  0.0, isPatient: true, pIdx: 5,  title: 'Bay 5 — P05 Dislodged Wet Cannula Site (70kg)', prim: '/World/Ward/Room_07_Wet_Site_Adult_P05', accent: 0x5AC8FA},
+  {id: 'r6',  x: -2.7, z:  0.0, isPatient: true, pIdx: 6,  title: 'Bay 6 — P06 Sleep PISA Compression Drop (88kg)', prim: '/World/Ward/Room_08_PISA_Compression_P06', accent: 0xAF52DE},
+  {id: 'r7',  x:  2.7, z:  0.0, isPatient: true, pIdx: 7,  title: 'Bay 7 — P07 +3h Clock-Skew Dawn T1D (52kg)', prim: '/World/Ward/Room_09_Clock_Skew_Dawn_P07', accent: 0xFF2D55},
+  {id: 'r8',  x:  8.1, z:  0.0, isPatient: true, pIdx: 8,  title: 'Bay 8 — P08 Stealth CUSUM Micro-Drip (79kg)', prim: '/World/Ward/Room_10_Stealth_CUSUM_P08', accent: 0x5856D6},
+  // Row 3 (z = +5.2)
+  {id: 'r9',  x: -8.1, z:  5.2, isPatient: true, pIdx: 9,  title: 'Bay 9 — P09 Sub-GHz RF 14U Overdose Replay (61kg)', prim: '/World/Ward/Room_11_RF_Overdose_Brittle_P09', accent: 0xFF3B30},
+  {id: 'r10', x: -2.7, z:  5.2, isPatient: true, pIdx: 10, title: 'Bay 10 — P10 Unprimed 68 µL Catheter Line (73kg)', prim: '/World/Ward/Room_12_Unprimed_Line_P10', accent: 0xFFCC00},
+  {id: 'rig', x:  2.7, z:  5.2, isPatient: false, isRig: true,   title: 'Bay 11 — 138-Part IIT Patna Metrology Rig', prim: '/World/Ward/Room_05_IITP_Metrology_Lab', accent: 0x5856D6},
+  {id: 'clock', x: 8.1, z: 5.2, isPatient: false, isClock: true, title: 'Bay 12 — IEEE-1588v2 PTP Master Clock (A05/A06) & SOC', prim: '/World/Ward/MasterClock_PTP_Hub', accent: 0x00C7BE},
+];
+
+const wallGlassMat = new THREE.MeshPhysicalMaterial({color: 0xFFFFFF, transparent: true, opacity: 0.32, roughness: 0.1});
+const wallSolidMat = new THREE.MeshStandardMaterial({color: 0xF7F7FA, roughness: 0.8});
+const bedFrameMat = new THREE.MeshStandardMaterial({color: 0xC8D0DC, metalness: 0.5, roughness: 0.35});
+const mattressMat = new THREE.MeshStandardMaterial({color: 0xFFFFFF, roughness: 0.5});
+
+function scrollWardDock(dx) {
+  const tr = document.getElementById('wardDockTrack');
+  if (tr) tr.scrollBy({left: dx, behavior: 'smooth'});
+}
+const wardTrackEl = document.getElementById('wardDockTrack');
+if (wardTrackEl) {
+  wardTrackEl.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      wardTrackEl.scrollLeft += e.deltaY;
+    }
+  }, {passive: false});
+}
+
+const roomStatusStrips = {};
+let rigPlungerMesh = null;
+let rigScrewMesh = null;
+let ptpStrobeBeaconMesh = null;
+let ptpWaveRingMesh = null;
+const patientScrews = [];
+const patientPlungers = [];
+const patientDroplets = [];
+
+const boroGlassMat = new THREE.MeshPhysicalMaterial({
+  color: 0xE6F7FF, transparent: true, opacity: 0.38, roughness: 0.06, metalness: 0.05, transmission: 0.65
+});
+const salineFluidMat = new THREE.MeshPhysicalMaterial({
+  color: 0x00A699, emissive: 0x004D47, emissiveIntensity: 0.25, transparent: true, opacity: 0.86, roughness: 0.12
+});
+const leadScrewMat = new THREE.MeshStandardMaterial({color: 0xD4AF37, metalness: 0.85, roughness: 0.2});
+const plungerAnodizedMat = new THREE.MeshStandardMaterial({color: 0x007AFF, metalness: 0.4, roughness: 0.25});
+const pinchValveMat = new THREE.MeshStandardMaterial({color: 0xFF6B00, metalness: 0.3, roughness: 0.3});
+const gradRingMat = new THREE.MeshBasicMaterial({color: 0x1D1D1F});
+
+roomConfigs.forEach((rc, idx) => {
+  const rg = new THREE.Group();
+  rg.position.set(rc.x, 0, rc.z);
+  scene.add(rg);
+
+  // Room Back Wall & Glass Partitions
+  const bw = new THREE.Mesh(new THREE.BoxGeometry(5.1, 1.8, 0.10), wallSolidMat);
+  bw.position.set(0, 0.9, -2.35);
+  bw.castShadow = true; bw.receiveShadow = true;
+  rg.add(bw);
+
+  const lw = new THREE.Mesh(new THREE.BoxGeometry(0.08, 1.8, 4.7), wallGlassMat);
+  lw.position.set(-2.52, 0.9, 0);
+  rg.add(lw);
+
+  // Accent Status Strip on Back Wall
+  const stripMat = new THREE.MeshStandardMaterial({color: rc.accent, emissive: rc.accent, emissiveIntensity: 0.35});
+  const strip = new THREE.Mesh(new THREE.BoxGeometry(4.6, 0.08, 0.04), stripMat);
+  strip.position.set(0, 1.62, -2.28);
+  rg.add(strip);
+  roomStatusStrips[rc.id] = stripMat;
+
+  if (rc.isPatient) {
+    const pCode = 'P' + String(rc.pIdx).padStart(2, '0');
+    // Detailed ICU Bed, Patient Avatar, Supply Cabinet, Monitor, and Full Borosilicate Syringe Pump Assembly
+    const bed = new THREE.Mesh(new THREE.BoxGeometry(2.0, 0.24, 0.95), bedFrameMat);
+    bed.position.set(-0.3, 0.38, -0.2);
+    bed.castShadow = true;
+    registerPick(bed, rc.title + ' — ICU Bed', rc.prim + '/Bed_' + pCode, 'Omniverse SM_HospitalBed_01b');
+    rg.add(bed);
+
+    const mat = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.14, 0.88), mattressMat);
+    mat.position.set(-0.3, 0.56, -0.2);
+    rg.add(mat);
+
+    const headB = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.58, 0.95), new THREE.MeshStandardMaterial({color: rc.accent, roughness: 0.4}));
+    headB.position.set(-1.32, 0.62, -0.2);
+    rg.add(headB);
+
+    // Patient Avatar + Abdominal CGM Pod (C01)
+    const pHead = new THREE.Mesh(new THREE.SphereGeometry(0.12, 20, 20), new THREE.MeshStandardMaterial({color: 0xEBC4A8}));
+    pHead.position.set(-0.98, 0.74, -0.2);
+    registerPick(pHead, rc.title + ' — Patient Avatar (' + pCode + ')', rc.prim + '/Patient_' + pCode, '7-State Hovorka Physiology + EKF');
+    rg.add(pHead);
+
+    const pTorso = new THREE.Mesh(new THREE.BoxGeometry(0.75, 0.18, 0.42), new THREE.MeshStandardMaterial({color: 0x5B9BD5}));
+    pTorso.position.set(-0.42, 0.70, -0.2);
+    registerPick(pTorso, rc.title + ' — Patient Avatar (' + pCode + ')', rc.prim + '/Patient_' + pCode, '7-State Hovorka Physiology + EKF');
+    rg.add(pTorso);
+
+    const cgmPod = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 0.015, 20), new THREE.MeshStandardMaterial({color: 0xFFFFFF}));
+    cgmPod.position.set(-0.32, 0.80, -0.26);
+    registerPick(cgmPod, rc.title + ' — Dexcom G7 CGM Pod (Part_C01)', rc.prim + '/Patient_' + pCode + '/CGM_C01', 'Subcutaneous Glucose Telemetry');
+    rg.add(cgmPod);
+
+    // Bedside Pedestal Stand under the Pump Assembly
+    const pedTable = new THREE.Mesh(new THREE.BoxGeometry(0.62, 0.72, 0.46), new THREE.MeshStandardMaterial({color: 0xE2E6EE, roughness: 0.4}));
+    pedTable.position.set(0.48, 0.36, -0.85);
+    pedTable.castShadow = true;
+    rg.add(pedTable);
+
+    // Pump & Borosilicate Glass Syringe Assembly Group on Bedside Stand
+    const pAssy = new THREE.Group();
+    pAssy.position.set(0.48, 0.76, -0.85);
+    rg.add(pAssy);
+
+    const pumpBox = new THREE.Mesh(new THREE.BoxGeometry(0.50, 0.08, 0.30), new THREE.MeshStandardMaterial({color: 0x1D1D1F, metalness: 0.45, roughness: 0.25}));
+    pumpBox.castShadow = true;
+    registerPick(pumpBox, rc.title + ' — BRep Insulin Pump Chassis & Simplex Gateway (G01)', rc.prim + '/Pump_' + pCode, 'BRep Filleted CAD Housing + PTP Slave RTC');
+    pAssy.add(pumpBox);
+
+    // 1. Transparent Borosilicate Glass Syringe Barrel (Part_S01)
+    const patS01 = new THREE.Mesh(new THREE.CylinderGeometry(0.048, 0.048, 0.25, 28), boroGlassMat);
+    patS01.rotation.z = Math.PI / 2;
+    patS01.position.set(0.06, 0.085, -0.03);
+    registerPick(patS01, rc.title + ' — Borosilicate Glass Syringe Barrel (Part_S01)', rc.prim + '/Pump_' + pCode + '/Borosilicate_Syringe_S01', 'BRep Bore = 3014.78 µL (301.5 U)');
+    pAssy.add(patS01);
+
+    // 2. 7 Volumetric Graduation Rings (Part_S08_0..6) on Borosilicate Barrel
+    for (let g = 0; g < 7; g++) {
+      const gr = new THREE.Mesh(new THREE.CylinderGeometry(0.049, 0.049, 0.003, 24), gradRingMat);
+      gr.rotation.z = Math.PI / 2;
+      gr.position.set(-0.03 + g * 0.03, 0.085, -0.03);
+      pAssy.add(gr);
+    }
+
+    // 3. Luer-Lock Conical Taper Nozzle (Part_S04, 222.2 µL BRep Dead-Space)
+    const patLuer = new THREE.Mesh(new THREE.ConeGeometry(0.028, 0.042, 20), boroGlassMat);
+    patLuer.rotation.z = -Math.PI / 2;
+    patLuer.position.set(0.205, 0.085, -0.03);
+    registerPick(patLuer, rc.title + ' — Luer-Lock Conical Taper (Part_S04)', rc.prim + '/Pump_' + pCode + '/Luer_Cone_S04', 'BRep Dead-Space = 222.20 µL');
+    pAssy.add(patLuer);
+
+    // 4. Inner Dynamic Teal U-100 Insulin Fluid Column (Part_S02)
+    const patS02 = new THREE.Mesh(new THREE.CylinderGeometry(0.041, 0.041, 0.18, 24), salineFluidMat);
+    patS02.rotation.z = Math.PI / 2;
+    patS02.position.set(0.08, 0.085, -0.03);
+    registerPick(patS02, rc.title + ' — U-100 Insulin Fluid Column (Part_S02)', rc.prim + '/Pump_' + pCode + '/Reservoir', 'Active U-100 Reservoir');
+    pAssy.add(patS02);
+
+    // 5. Moving Plunger Piston & Carriage (Part_S03 / Part_M07)
+    const patS03 = new THREE.Mesh(new THREE.CylinderGeometry(0.040, 0.040, 0.042, 20), plungerAnodizedMat);
+    patS03.rotation.z = Math.PI / 2;
+    patS03.position.set(-0.035, 0.085, -0.03);
+    registerPick(patS03, rc.title + ' — Syringe Plunger Piston (Part_S03)', rc.prim + '/Pump_' + pCode + '/Plunger', 'PhysicsPrismaticJoint (0–32 mm)');
+    pAssy.add(patS03);
+    patientPlungers.push(patS03);
+
+    // 6. Rotating Helical Lead Screw (Part_M05)
+    const patM05 = new THREE.Mesh(new THREE.CylinderGeometry(0.020, 0.020, 0.16, 18), leadScrewMat);
+    patM05.rotation.z = Math.PI / 2;
+    patM05.position.set(-0.14, 0.085, -0.03);
+    registerPick(patM05, rc.title + ' — TR8x2 Helical Lead Screw (Part_M05)', rc.prim + '/Pump_' + pCode + '/LeadScrew_M05', 'PhysicsRevoluteJoint');
+    pAssy.add(patM05);
+    patientScrews.push(patM05);
+
+    // 7. Safety Pinch Valve (Part_V01)
+    const patV01 = new THREE.Mesh(new THREE.BoxGeometry(0.045, 0.055, 0.045), pinchValveMat);
+    patV01.position.set(0.23, 0.075, -0.03);
+    registerPick(patV01, rc.title + ' — Fail-Safe Pinch Valve (Part_V01)', rc.prim + '/Pump_' + pCode + '/PinchValve_V01', 'Hardware Occlusion / Cyber Cutoff');
+    pAssy.add(patV01);
+
+    // 8. Curved Translucent Microbore Infusion Catheter (Part_F01) from Syringe to Patient Abdomen
+    const pTubeCurve = new THREE.CatmullRomCurve3([
+      new THREE.Vector3(0.71, 0.845, -0.88),
+      new THREE.Vector3(0.42, 0.96, -0.64),
+      new THREE.Vector3(0.05, 0.94, -0.44),
+      new THREE.Vector3(-0.32, 0.81, -0.26),
+    ]);
+    const pTubeMesh = new THREE.Mesh(
+      new THREE.TubeGeometry(pTubeCurve, 36, 0.011, 12, false),
+      new THREE.MeshPhysicalMaterial({color: 0x30B0C7, transparent: true, opacity: 0.68, roughness: 0.12})
+    );
+    registerPick(pTubeMesh, rc.title + ' — 60cm Microbore Catheter (Part_F01)', rc.prim + '/Pump_' + pCode + '/InfusionTube', 'Hagen-Poiseuille Lumen (68.05 µL)');
+    rg.add(pTubeMesh);
+
+    // Animated Insulin Droplets inside every patient's catheter line
+    for (let dIdx = 0; dIdx < 4; dIdx++) {
+      const dm = new THREE.Mesh(
+        new THREE.SphereGeometry(0.014, 10, 10),
+        new THREE.MeshStandardMaterial({color: 0x007AFF, emissive: 0x007AFF, emissiveIntensity: 0.55})
+      );
+      rg.add(dm);
+      patientDroplets.push({mesh: dm, curve: pTubeCurve, t: dIdx * 0.25});
+    }
+
+    // Room-Specific Multi-Physics Visual Components
+    if (rc.pIdx === 2) {
+      // Bay 2 (P02): Visible Amber Insulin Fibril Debris Particles & Air Bubble in Catheter
+      for (let db = 0; db < 3; db++) {
+        const debMesh = new THREE.Mesh(
+          new THREE.DodecahedronGeometry(0.019),
+          new THREE.MeshStandardMaterial({color: 0xFF9500, emissive: 0xCC5500, emissiveIntensity: 0.5})
+        );
+        debMesh.position.copy(pTubeCurve.getPoint(0.42 + db * 0.08));
+        registerPick(debMesh, 'Insulin Fibril Debris Particle (Debris_0' + (db + 1) + ')', rc.prim + '/InfusionPipe/Debris_0' + (db + 1), 'Hagen-Poiseuille Lumen Restriction');
+        rg.add(debMesh);
+      }
+    } else if (rc.pIdx === 3) {
+      // Bay 3 (P03): Exposed Li-Ion Battery Cell & Supercapacitor Hold-Up Module
+      const batCell = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.028, 0.028, 0.12, 20),
+        new THREE.MeshStandardMaterial({color: 0x34C759, emissive: 0x1E7E34, emissiveIntensity: 0.35})
+      );
+      batCell.rotation.z = Math.PI / 2;
+      batCell.position.set(-0.10, 0.06, 0.08);
+      registerPick(batCell, 'Li-Ion 3.7V Cell & Supercap Hold-Up (Part_E01)', rc.prim + '/Pump_P03/BatteryPack/LiIon_Cell', 'Electro-Thermal Voltage Sag Monitor');
+      pAssy.add(batCell);
+    } else if (rc.pIdx === 4 || rc.pIdx === 7 || rc.pIdx === 8 || rc.pIdx === 9) {
+      // Cyber Bays (P04, P07, P08, P09): Translucent Simplex Safety Shield Dome over Borosilicate Syringe
+      const shieldDome = new THREE.Mesh(
+        new THREE.SphereGeometry(0.32, 24, 16, 0, Math.PI * 2, 0, Math.PI / 2),
+        new THREE.MeshPhysicalMaterial({color: 0x00C7BE, transparent: true, opacity: 0.22, roughness: 0.1})
+      );
+      shieldDome.position.set(0.02, 0.02, 0);
+      registerPick(shieldDome, 'Simplex Safe-Basal Hardware Clamp Shield (' + pCode + ')', rc.prim + '/Pump_' + pCode + '/Simplex_Clamp_Shield', '6-Channel Cyber Defense Envelope');
+      pAssy.add(shieldDome);
+    }
+
+    // Supply Cabinet (`SM_SupplyCabinet_01c`)
+    const cab = new THREE.Mesh(new THREE.BoxGeometry(0.65, 1.55, 0.42), new THREE.MeshStandardMaterial({color: 0xDCE2EA}));
+    cab.position.set(-1.85, 0.78, -1.85);
+    cab.castShadow = true;
+    registerPick(cab, 'Medical Supply Cabinet', rc.prim + '/CAD_SupplyCabinet_Mesh', 'USD Payload Asset');
+    rg.add(cab);
+  } else if (rc.isRig) {
+    // Bay 11: 138-Part IIT Patna Gravimetric Metrology Rig (`geco_v6_metrology_rig.usda`)
+    const bench = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.75, 1.3), new THREE.MeshStandardMaterial({color: 0x2C2C2E, metalness: 0.6, roughness: 0.3}));
+    bench.position.set(0, 0.38, -0.2);
+    bench.castShadow = true;
+    registerPick(bench, 'Optical Isolation Plate (B01)', '/GECOv6_Metrology_Rig/Bench/Part_B01', '138-Part Metrology Bench');
+    rg.add(bench);
+
+    // Syringe Barrel S01 (Borosilicate Glass)
+    const s01 = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.11, 0.11, 0.65, 24),
+      new THREE.MeshPhysicalMaterial({color: 0x30B0C7, transparent: true, opacity: 0.75, roughness: 0.1})
+    );
+    s01.rotation.z = Math.PI / 2;
+    s01.position.set(-0.15, 0.92, -0.2);
+    registerPick(s01, 'Borosilicate Syringe Barrel (Part_S01)', '/GECOv6_Metrology_Rig/Syringe/Part_S01', 'BRep Bore = 3014.78 µL');
+    rg.add(s01);
+
+    // Lead Screw M05 & Plunger S03
+    rigScrewMesh = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.045, 0.045, 0.68, 20),
+      new THREE.MeshStandardMaterial({color: 0xD4AF37, metalness: 0.85, roughness: 0.2})
+    );
+    rigScrewMesh.rotation.z = Math.PI / 2;
+    rigScrewMesh.position.set(-0.75, 0.92, -0.2);
+    registerPick(rigScrewMesh, 'TR8x2 Helical Lead Screw (Part_M05)', '/GECOv6_Metrology_Rig/Motion/Part_M05', 'PhysicsRevoluteJoint');
+    rg.add(rigScrewMesh);
+
+    rigPlungerMesh = new THREE.Mesh(
+      new THREE.BoxGeometry(0.14, 0.22, 0.18),
+      new THREE.MeshStandardMaterial({color: 0x007AFF, metalness: 0.5, roughness: 0.3})
+    );
+    rigPlungerMesh.position.set(-0.52, 0.92, -0.2);
+    registerPick(rigPlungerMesh, 'Syringe Plunger Carriage (Part_M07/S03)', '/GECOv6_Metrology_Rig/Motion/Part_M07', 'PhysicsPrismaticJoint');
+    rg.add(rigPlungerMesh);
+
+    // Analytical Gravimetric Balance T01/T02
+    const t01 = new THREE.Mesh(new THREE.BoxGeometry(0.46, 0.36, 0.42), new THREE.MeshStandardMaterial({color: 0xF5F5F7, roughness: 0.25}));
+    t01.position.set(0.68, 0.94, -0.2);
+    registerPick(t01, '0.01mg Analytical Microbalance (Part_T01)', '/GECOv6_Metrology_Rig/TruthBalance/Part_T01', 'Gravimetric Truth Reference');
+    rg.add(t01);
+  } else if (rc.isClock) {
+    // Bay 12: Dedicated IEEE-1588v2 PTP Grandmaster Clock Rack (Part_A05/A06) & SOC Command Center
+    const clockRack = new THREE.Mesh(
+      new THREE.BoxGeometry(0.75, 1.55, 0.55),
+      new THREE.MeshStandardMaterial({color: 0x1D1D1F, metalness: 0.7, roughness: 0.25})
+    );
+    clockRack.position.set(-1.15, 0.78, -0.45);
+    clockRack.castShadow = true;
+    registerPick(clockRack, 'IEEE-1588v2 PTP Grandmaster Clock Rack (Part_A05)', '/World/Ward/MasterClock_PTP_Hub/Part_A05_Grandmaster_Rack', 'Master Time Synchronizer (±0.2ms Jitter, Monotonic Nonce)');
+    rg.add(clockRack);
+
+    // Glowing Cyan/Green Digital PTP Epoch Display on Rack Face
+    const ptpFace = new THREE.Mesh(
+      new THREE.BoxGeometry(0.62, 0.28, 0.04),
+      new THREE.MeshStandardMaterial({color: 0x00C7BE, emissive: 0x00A699, emissiveIntensity: 0.85})
+    );
+    ptpFace.position.set(-1.15, 1.22, -0.16);
+    registerPick(ptpFace, 'PTP Master Epoch & Nonce Ledger Display', '/World/Ward/MasterClock_PTP_Hub/PTP_Epoch_Display', 'Detects +3h RTC Clock Skew (C4_CLOCK) on Patient P07');
+    rg.add(ptpFace);
+
+    // Gold 10 Hz Optical Sync Strobe Beacon (Part_A06) on top of the PTP Grandmaster Rack
+    ptpStrobeBeaconMesh = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.14, 0.18, 0.22, 24),
+      new THREE.MeshStandardMaterial({color: 0xFFD60A, emissive: 0xFF9F0A, emissiveIntensity: 0.9, metalness: 0.5, roughness: 0.2})
+    );
+    ptpStrobeBeaconMesh.position.set(-1.15, 1.68, -0.45);
+    registerPick(ptpStrobeBeaconMesh, '10 Hz Optical Sync Strobe Beacon (Part_A06)', '/World/Ward/MasterClock_PTP_Hub/Part_A06_Optical_Sync_Strobe', 'Optical Frame & Telemetry Timestamp Lock');
+    rg.add(ptpStrobeBeaconMesh);
+
+    // Pulsing Cyan PTP Synchronization Wave Ring
+    ptpWaveRingMesh = new THREE.Mesh(
+      new THREE.RingGeometry(0.25, 0.34, 36),
+      new THREE.MeshBasicMaterial({color: 0x00C7BE, side: THREE.DoubleSide, transparent: true, opacity: 0.75})
+    );
+    ptpWaveRingMesh.rotation.x = Math.PI / 2;
+    ptpWaveRingMesh.position.set(-1.15, 1.68, -0.45);
+    rg.add(ptpWaveRingMesh);
+
+    const desk = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.72, 0.8), new THREE.MeshStandardMaterial({color: 0x1D1D1F, roughness: 0.35}));
+    desk.position.set(0.65, 0.36, 0.2);
+    rg.add(desk);
+
+    const socWall = new THREE.Mesh(
+      new THREE.BoxGeometry(2.1, 0.95, 0.08),
+      new THREE.MeshStandardMaterial({color: 0x007AFF, emissive: 0x004099, emissiveIntensity: 0.6})
+    );
+    socWall.position.set(0.65, 1.25, -1.5);
+    registerPick(socWall, 'SOC Cybersecurity Command Wall', '/World/Ward/Room_06_SOC/CommandWall', '6-Channel Simplex Monitor across P01–P10');
+    rg.add(socWall);
+  }
+});
+
+// Camera Presets for 12-Bay (10-Patient + 138-Part Rig + Master Clock) Ward
+function setWardCamera(preset, btn) {
+  if (btn) {
+    document.querySelectorAll('.cam-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  const map = {
+    overview: {p: [0, 14.8, 18.2], t: [0, 0.4, 0.2]},
+    r1:  {p: [-8.1, 2.7, -1.8], t: [-8.1, 0.65, -5.2]},
+    r2:  {p: [-2.7, 2.7, -1.8], t: [-2.7, 0.65, -5.2]},
+    r3:  {p: [ 2.7, 2.7, -1.8], t: [ 2.7, 0.65, -5.2]},
+    r4:  {p: [ 8.1, 2.7, -1.8], t: [ 8.1, 0.65, -5.2]},
+    r5:  {p: [-8.1, 2.7,  3.4], t: [-8.1, 0.65,  0.0]},
+    r7:  {p: [ 2.7, 2.7,  3.4], t: [ 2.7, 0.65,  0.0]},
+    r9:  {p: [-8.1, 2.7,  8.6], t: [-8.1, 0.65,  5.2]},
+    rig: {p: [ 2.7, 2.4,  8.2], t: [ 2.7, 0.85,  5.0]},
+    clock: {p: [ 8.1, 2.6, 8.5], t: [ 8.1, 0.95, 4.8]},
+  };
+  const cfg = map[preset] || map.overview;
+  desiredPos.set(...cfg.p);
+  desiredTarget.set(...cfg.t);
+}
+
+// Orbit & Raycaster Click Picking
+let dragging = false;
+let prev = {x: 0, y: 0};
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+wardCanvas.addEventListener('pointerdown', (e) => {
+  dragging = true;
+  prev = {x: e.clientX, y: e.clientY};
+});
+
+window.addEventListener('pointerup', (e) => {
+  if (dragging && Math.hypot(e.clientX - prev.x, e.clientY - prev.y) < 5) {
+    const rect = wardCanvas.getBoundingClientRect();
+    if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+      mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+      raycaster.setFromCamera(mouse, camera);
+      const hits = raycaster.intersectObjects(pickables, false);
+      if (hits.length > 0) {
+        const u = hits[0].object.userData;
+        document.getElementById('wInspTitle').textContent = u.title;
+        document.getElementById('wInspPath').textContent = u.primPath;
+        document.getElementById('wInspRole').textContent = u.role;
+      }
+    }
+  }
+  dragging = false;
+});
+
+window.addEventListener('pointermove', (e) => {
+  if (!dragging) return;
+  const dx = (e.clientX - prev.x) * 0.008;
+  const dy = (e.clientY - prev.y) * 0.008;
+  prev = {x: e.clientX, y: e.clientY};
+  const offset = desiredPos.clone().sub(desiredTarget);
+  offset.applyAxisAngle(new THREE.Vector3(0, 1, 0), -dx);
+  offset.y = Math.max(1.2, Math.min(18.0, offset.y + dy * 4.0));
+  desiredPos.copy(desiredTarget).add(offset);
+});
+
+// ---------------------------------------------------------------------------
+// Apple Spline Chart Renderer
+// ---------------------------------------------------------------------------
+function drawSpline(canvasId, series, yMin, yMax, band) {
+  const c = document.getElementById(canvasId);
+  if (!c) return;
+  const rect = c.parentElement.getBoundingClientRect();
+  if (rect.width === 0 || rect.height === 0) return;
+  const dpr = window.devicePixelRatio || 1;
+  if (c.width !== Math.floor(rect.width * dpr) || c.height !== Math.floor(rect.height * dpr)) {
+    c.width = Math.floor(rect.width * dpr);
+    c.height = Math.floor(rect.height * dpr);
+  }
+  const ctx = c.getContext('2d');
+  ctx.save();
+  ctx.scale(dpr, dpr);
+  const w = rect.width, h = rect.height;
+  ctx.clearRect(0, 0, w, h);
+
+  if (band) {
+    const y1 = h - 8 - ((band[1] - yMin) / (yMax - yMin)) * (h - 16);
+    const y2 = h - 8 - ((band[0] - yMin) / (yMax - yMin)) * (h - 16);
+    ctx.fillStyle = 'rgba(52, 199, 89, 0.10)';
+    ctx.fillRect(0, y1, w, y2 - y1);
+  }
+
+  series.forEach(({data, color, width, fill}) => {
+    if (!data || data.length < 2) return;
+    ctx.beginPath();
+    data.forEach((v, i) => {
+      const x = 8 + (i / (data.length - 1)) * (w - 16);
+      const cl = Math.max(yMin, Math.min(yMax, v));
+      const y = h - 8 - ((cl - yMin) / (yMax - yMin)) * (h - 16);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    });
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width || 2.2;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.stroke();
+
+    if (fill) {
+      ctx.lineTo(w - 8, h);
+      ctx.lineTo(8, h);
+      ctx.closePath();
+      ctx.fillStyle = fill;
+      ctx.fill();
+    }
+  });
+  ctx.restore();
+}
+
+// ---------------------------------------------------------------------------
+// 4 Hz Telemetry & Multi-Physics Step
+// ---------------------------------------------------------------------------
+setInterval(() => {
+  const t = performance.now() * 0.001;
+  const w = Math.sin(t * 0.85);
+  const sc = wState.scenario;
+
+  if (sc === 'NOMINAL') {
+    wState.req = 1.00 + 0.04 * w;
+    wState.simplex = wState.req;
+    wState.bg += (114.0 - wState.bg) * 0.1 + 0.2 * w;
+    wState.cgm = wState.bg + 0.3 * Math.cos(t);
+    wState.ekf = wState.bg + 0.25 * w;
+    wState.pressure = 14.2 + 0.3 * w;
+    wState.flow = 1.00;
+    wState.batV = 3.98;
+    wState.cusumFast = 0.28 + 0.04 * Math.abs(w);
+    wState.cusumStealth = 0.22 + 0.03 * Math.abs(w);
+    wState.sigmas = [0.42, 0.28, 0.35, 0.31, 0.39, 0.12];
+  } else if (sc === 'A2_WET_SITE') {
+    wState.req = 1.15;
+    wState.simplex = 1.15; // Non-cyber! Zero false lockout!
+    wState.bg = Math.min(188, wState.bg + 0.45);
+    wState.cgm = wState.bg - 1.0;
+    wState.ekf = wState.bg + 4.2;
+    wState.pressure = 8.4 + 0.2 * w; // Low back-pressure due to wet cannula leak
+    wState.flow = 0.25;
+    wState.cusumFast = 1.15;
+    wState.cusumStealth = 0.92;
+    wState.sigmas = [2.10, 1.15, 0.55, 0.40, 5.85, 0.10];
+  } else if (sc === 'A4_PISA') {
+    wState.req = 0.0;
+    wState.simplex = 0.95; // Holds basal steady during compression artifact
+    wState.bg = 115.0 + 0.3 * w;
+    wState.cgm = 76.0 + 1.5 * w; // Compression drop artifact
+    wState.ekf = 114.6;
+    wState.pressure = 14.4;
+    wState.flow = 0.95;
+    wState.cusumFast = 1.40;
+    wState.cusumStealth = 0.65;
+    wState.sigmas = [3.80, 1.40, 0.35, 0.30, 0.45, 0.12];
+  } else if (sc === 'B2_DEBRIS') {
+    wState.req = 1.20;
+    wState.simplex = 0.15;
+    wState.bg = Math.min(182, wState.bg + 0.35);
+    wState.cgm = wState.bg;
+    wState.ekf = wState.bg + 3.8;
+    wState.pressure = Math.min(96.4, wState.pressure + 3.5);
+    wState.flow = 0.15;
+    wState.cusumFast = 1.35;
+    wState.cusumStealth = 1.10;
+    wState.sigmas = [1.65, 1.35, 6.40, 5.20, 7.90, 0.12];
+  } else if (sc === 'B5_BATTERY') {
+    wState.req = 1.10;
+    wState.simplex = 0.85;
+    wState.bg += (119.0 - wState.bg) * 0.08;
+    wState.cgm = wState.bg;
+    wState.ekf = 119.5;
+    wState.pressure = 13.6;
+    wState.flow = 0.85;
+    wState.batV = 2.86 + 0.03 * w;
+    wState.sigmas = [0.65, 0.85, 4.90, 0.75, 0.50, 0.14];
+  } else if (sc === 'C1_REPLAY') {
+    wState.req = 12.8 + 0.3 * w;
+    wState.simplex = 1.00; // Simplex Clamped!
+    wState.bg += (113.5 - wState.bg) * 0.1;
+    wState.cgm = wState.bg;
+    wState.ekf = 113.2;
+    wState.pressure = 14.1;
+    wState.flow = 1.00;
+    wState.cusumFast = 7.45 + 0.2 * Math.abs(w);
+    wState.cusumStealth = 5.80;
+    wState.sigmas = [1.20, 7.45, 5.95, 6.30, 0.75, 8.60];
+  } else if (sc === 'C3_CUSUM') {
+    wState.req = 2.15;
+    wState.simplex = 0.95;
+    wState.bg += (109.5 - wState.bg) * 0.1;
+    wState.cgm = wState.bg;
+    wState.ekf = 109.2;
+    wState.pressure = 14.0;
+    wState.flow = 0.95;
+    wState.cusumFast = 1.85;
+    wState.cusumStealth = Math.min(8.4, wState.cusumStealth + 0.45);
+    wState.sigmas = [2.35, wState.cusumStealth, 2.10, 4.80, 0.60, 3.55];
+  } else if (sc === 'C4_CLOCK') {
+    wState.req = 9.40;
+    wState.simplex = 1.00;
+    wState.bg += (114.0 - wState.bg) * 0.1;
+    wState.cgm = wState.bg;
+    wState.ekf = 113.8;
+    wState.cusumFast = 6.90;
+    wState.cusumStealth = 4.90;
+    wState.sigmas = [1.45, 6.90, 3.20, 4.10, 0.50, 9.20];
+  }
+
+  wState.plungerMm = Math.min(42, wState.plungerMm + wState.simplex * 0.002);
+  wState.balanceG += wState.simplex * 0.0003;
+
+  const pushShift = (arr, v) => { arr.push(v); arr.shift(); };
+  pushShift(wState.histBG, wState.bg);
+  pushShift(wState.histCGM, wState.cgm);
+  pushShift(wState.histEKF, wState.ekf);
+  pushShift(wState.histReq, wState.req);
+  pushShift(wState.histSimplex, wState.simplex);
+  pushShift(wState.histPres, wState.pressure);
+  pushShift(wState.histFlow, wState.flow * 20);
+  pushShift(wState.histCusumFast, wState.cusumFast);
+  pushShift(wState.histCusumStealth, wState.cusumStealth);
+
+  // Update Right Sidebar DOM
+  document.getElementById('wValBG').textContent = wState.bg.toFixed(1);
+  document.getElementById('wValEKF').textContent = wState.ekf.toFixed(1) + ' mg/dL';
+  document.getElementById('wValCGM').textContent = wState.cgm.toFixed(1);
+  document.getElementById('wValPres').textContent = wState.pressure.toFixed(1);
+  document.getElementById('wValFlow').textContent = wState.flow.toFixed(2) + ' U/hr';
+  document.getElementById('wValBat').textContent = `${wState.batV.toFixed(2)} V (${wState.rint.toFixed(2)} Ω)`;
+  document.getElementById('wValSimplex').textContent = wState.simplex.toFixed(2) + ' U/hr';
+  document.getElementById('wStat1V').textContent = wState.plungerMm.toFixed(2) + ' mm';
+  document.getElementById('wStat2V').textContent = wState.balanceG.toFixed(3) + ' g';
+
+  // Update IEEE-1588v2 PTP Master Clock Header Pill
+  const ptpPill = document.getElementById('ptpClockPill');
+  if (ptpPill) {
+    if (sc === 'C4_CLOCK') {
+      ptpPill.style.background = 'rgba(255, 59, 48, 0.14)';
+      ptpPill.style.color = '#C81E14';
+      ptpPill.textContent = `PTP MASTER A05: P07 +210m SKEW BLOCKED · t=${t.toFixed(1)}s`;
+    } else {
+      ptpPill.style.background = 'rgba(0, 122, 255, 0.09)';
+      ptpPill.style.color = '#007AFF';
+      ptpPill.textContent = `PTP MASTER A05: 10Hz LOCKED (P01–P10) · Δ=0.2ms · t=${t.toFixed(1)}s`;
+    }
+  }
+
+  const explain = document.getElementById('wHumanExplain');
+  const rootBadge = document.getElementById('wRootBadge');
+  const valClass = document.getElementById('wValClass');
+
+  if (sc.startsWith('C')) {
+    valClass.textContent = 'Cyber Attack Blocked';
+    rootBadge.className = 'badge badge-red';
+    rootBadge.textContent = 'Simplex Clamped';
+    explain.textContent = `Adversarial attack (${sc}) intercepted by 6-Channel Detector (max ${Math.max(...wState.sigmas).toFixed(1)}σ > 3.0σ). Simplex Kernel clamped ${wState.req.toFixed(1)} U/hr command to safe basal (${wState.simplex.toFixed(2)} U/hr).`;
+  } else if (sc.startsWith('A')) {
+    valClass.textContent = 'Clinical Site Issue';
+    rootBadge.className = 'badge badge-blue';
+    rootBadge.textContent = '0% False Cyber Lockout';
+    explain.textContent = `Clinical installation/site artifact (${sc}) identified via hydraulic impedance & biphasic CGM filter while crypto/motor channels remain clean (0.12σ). Advisory issued with zero false security lockout.`;
+  } else if (sc.startsWith('B')) {
+    valClass.textContent = 'Hardware / Fluidic Fault';
+    rootBadge.className = 'badge badge-orange';
+    rootBadge.textContent = 'Pinch Valve / Supercap';
+    explain.textContent = `Physical device fault (${sc}: P_line = ${wState.pressure.toFixed(1)} kPa, V_term = ${wState.batV.toFixed(2)} V). Pinch valve V01 and supercapacitor hold-up engaged safely.`;
+  } else {
+    valClass.textContent = 'Nominal Clean';
+    rootBadge.className = 'badge badge-green';
+    rootBadge.textContent = '0% False Lockout';
+    explain.textContent = 'All 6 orthogonal physics and security channels are in-family across P01–P10. 7-State EKF tracks true blood glucose with 12.48 mg/dL RMSE (-32.7% vs. v6 baseline).';
+  }
+
+  // Update 6-Channel Sigma Bars in Cyber View
+  wState.sigmas.forEach((sig, i) => {
+    const idx = i + 1;
+    const bar = document.getElementById('barCh' + idx);
+    const lbl = document.getElementById('valCh' + idx);
+    if (bar && lbl) {
+      bar.style.width = Math.min(100, (sig / 10.0) * 100) + '%';
+      bar.style.background = sig >= 3.0 ? '#FF3B30' : '#34C759';
+      lbl.textContent = sig.toFixed(2) + 'σ';
+      lbl.style.color = sig >= 3.0 ? '#C81E14' : '#1D1D1F';
+    }
+  });
+
+  // Render All Active Charts
+  drawSpline('chartWardInsp', [
+    {data: wState.histReq, color: '#FF3B30', width: 1.6},
+    {data: wState.histSimplex, color: '#007AFF', width: 2.3}
+  ], 0, 15);
+
+  drawSpline('chartWardBG', [
+    {data: wState.histCGM, color: '#FF9500', width: 1.6},
+    {data: wState.histEKF, color: '#007AFF', width: 1.8},
+    {data: wState.histBG, color: '#34C759', width: 2.5, fill: 'rgba(52, 199, 89, 0.08)'}
+  ], 50, 220, [70, 180]);
+
+  drawSpline('chartWardPhys', [
+    {data: wState.histFlow, color: '#007AFF', width: 1.8},
+    {data: wState.histPres, color: '#FF9500', width: 2.4, fill: 'rgba(255, 149, 0, 0.08)'}
+  ], 0, 105);
+
+  drawSpline('cChartDose', [
+    {data: wState.histReq, color: '#FF3B30', width: 2.2},
+    {data: wState.histSimplex, color: '#34C759', width: 3.0, fill: 'rgba(52, 199, 89, 0.12)'}
+  ], 0, 15);
+
+  drawSpline('cChartCusum', [
+    {data: wState.histCusumFast, color: '#FF9500', width: 2.0},
+    {data: wState.histCusumStealth, color: '#5856D6', width: 2.8, fill: 'rgba(88, 86, 214, 0.10)'}
+  ], 0, 10);
+
+  drawSpline('cChartBG', [
+    {data: wState.histCGM, color: '#FF9500', width: 1.8},
+    {data: wState.histEKF, color: '#007AFF', width: 2.0},
+    {data: wState.histBG, color: '#34C759', width: 2.8, fill: 'rgba(52, 199, 89, 0.10)'}
+  ], 50, 220, [70, 180]);
+
+  drawSpline('pChartMain', [
+    {data: wState.histFlow, color: '#007AFF', width: 2.2},
+    {data: wState.histPres, color: '#FF9500', width: 2.8, fill: 'rgba(255, 149, 0, 0.10)'}
+  ], 0, 105);
+}, 250);
+
+function animateWard() {
+  requestAnimationFrame(animateWard);
+  const w = wardCanvas.clientWidth;
+  const h = wardCanvas.clientHeight;
+  if (w > 0 && h > 0 && (wardCanvas.width !== w * renderer.getPixelRatio() || wardCanvas.height !== h * renderer.getPixelRatio())) {
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+
+  camPos.lerp(desiredPos, 0.08);
+  camTarget.lerp(desiredTarget, 0.08);
+  camera.position.copy(camPos);
+  camera.lookAt(camTarget);
+
+  if (rigScrewMesh) rigScrewMesh.rotation.x += 0.04 * wState.simplex;
+  if (rigPlungerMesh) rigPlungerMesh.position.x = -0.52 + (wState.plungerMm - 11.6) * 0.02;
+
+  if (ptpStrobeBeaconMesh) {
+    ptpStrobeBeaconMesh.rotation.y += 0.08;
+    const pulse = 0.5 + 0.5 * Math.sin(performance.now() * 0.02 * Math.PI);
+    ptpStrobeBeaconMesh.material.emissiveIntensity = 0.5 + 0.8 * pulse;
+  }
+  if (ptpWaveRingMesh) {
+    const waveScale = 1.0 + ((performance.now() * 0.002) % 3.5);
+    ptpWaveRingMesh.scale.set(waveScale, waveScale, 1);
+    ptpWaveRingMesh.material.opacity = Math.max(0.05, 0.85 * (1.0 - (waveScale - 1.0) / 3.5));
+  }
+
+  patientScrews.forEach(s => { s.rotation.x += 0.04 * wState.simplex; });
+  patientPlungers.forEach(p => { p.position.x = -0.035 + (wState.plungerMm - 11.6) * 0.015; });
+  patientDroplets.forEach(d => {
+    d.t = (d.t + 0.0045 * Math.max(0.15, wState.flow)) % 1.0;
+    d.mesh.position.copy(d.curve.getPoint(d.t));
+  });
+
+  renderer.render(scene, camera);
+}
+animateWard();
+</script>
+</body>
+</html>

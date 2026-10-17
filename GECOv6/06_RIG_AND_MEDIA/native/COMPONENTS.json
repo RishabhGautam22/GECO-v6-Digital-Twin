@@ -1,0 +1,2720 @@
+{
+  "version": "GECOv6-concept",
+  "units": "mm",
+  "status": "CONCEPTUAL_IIT_PATNA_MEASUREMENTS_PENDING",
+  "not_measured": [
+    "component dimensions",
+    "syringe bore and pitch",
+    "balance uncertainty",
+    "fluid density",
+    "flow cessation",
+    "clock alignment",
+    "recovery behavior"
+  ],
+  "parts": [
+    {
+      "id": "B01",
+      "name": "B01 Bench base",
+      "role": "Bench base",
+      "position_mm": [
+        400,
+        270,
+        0
+      ],
+      "dimensions_mm": [
+        800,
+        540,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "B02_30_30",
+      "name": "B02_30_30 Isolating foot",
+      "role": "Isolating foot",
+      "position_mm": [
+        29.999999,
+        29.999999,
+        -12.0
+      ],
+      "dimensions_mm": [
+        28,
+        28,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "B02_30_390",
+      "name": "B02_30_390 Isolating foot",
+      "role": "Isolating foot",
+      "position_mm": [
+        29.999999,
+        509.99999,
+        -12.0
+      ],
+      "dimensions_mm": [
+        28,
+        28,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "B02_570_30",
+      "name": "B02_570_30 Isolating foot",
+      "role": "Isolating foot",
+      "position_mm": [
+        769.999981,
+        29.999999,
+        -12.0
+      ],
+      "dimensions_mm": [
+        28,
+        28,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "B02_570_390",
+      "name": "B02_570_390 Isolating foot",
+      "role": "Isolating foot",
+      "position_mm": [
+        769.999981,
+        509.99999,
+        -12.0
+      ],
+      "dimensions_mm": [
+        28,
+        28,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M01",
+      "name": "M01 Syringe pump base",
+      "role": "Syringe pump base",
+      "position_mm": [
+        190,
+        145,
+        22
+      ],
+      "dimensions_mm": [
+        290,
+        122,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M02_105",
+      "name": "M02_105 Linear rail",
+      "role": "Linear rail",
+      "position_mm": [
+        190,
+        105,
+        41
+      ],
+      "dimensions_mm": [
+        258,
+        12,
+        14
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M02_183",
+      "name": "M02_183 Linear rail",
+      "role": "Linear rail",
+      "position_mm": [
+        190,
+        183,
+        41
+      ],
+      "dimensions_mm": [
+        258,
+        12,
+        14
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M03",
+      "name": "M03 Motor",
+      "role": "Motor",
+      "position_mm": [
+        70,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        42,
+        42,
+        42
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M04",
+      "name": "M04 Flexible coupling",
+      "role": "Flexible coupling",
+      "position_mm": [
+        101,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        18,
+        18,
+        20
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05",
+      "name": "M05 Lead screw",
+      "role": "Lead screw",
+      "position_mm": [
+        212,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        8,
+        8,
+        210
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_114",
+      "name": "M05t_114 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        114,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_118",
+      "name": "M05t_118 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        118,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_122",
+      "name": "M05t_122 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        122,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_126",
+      "name": "M05t_126 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        126,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_130",
+      "name": "M05t_130 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        130,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_134",
+      "name": "M05t_134 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        134,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_138",
+      "name": "M05t_138 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        138,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_142",
+      "name": "M05t_142 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        142,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_146",
+      "name": "M05t_146 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        146,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_150",
+      "name": "M05t_150 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        150,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_154",
+      "name": "M05t_154 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        154,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_158",
+      "name": "M05t_158 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        158,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_162",
+      "name": "M05t_162 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        162,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_166",
+      "name": "M05t_166 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        166,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_170",
+      "name": "M05t_170 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        170,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_174",
+      "name": "M05t_174 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        174,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_178",
+      "name": "M05t_178 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        178,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_182",
+      "name": "M05t_182 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        182,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_186",
+      "name": "M05t_186 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        186,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_190",
+      "name": "M05t_190 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        190,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_194",
+      "name": "M05t_194 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        194,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_198",
+      "name": "M05t_198 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        198,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_202",
+      "name": "M05t_202 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        202,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_206",
+      "name": "M05t_206 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        206,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_210",
+      "name": "M05t_210 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        210,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_214",
+      "name": "M05t_214 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        214,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_218",
+      "name": "M05t_218 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        218,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_222",
+      "name": "M05t_222 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        222,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_226",
+      "name": "M05t_226 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        226,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_230",
+      "name": "M05t_230 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        230,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_234",
+      "name": "M05t_234 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        234,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_238",
+      "name": "M05t_238 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        238,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_242",
+      "name": "M05t_242 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        242,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_246",
+      "name": "M05t_246 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        246,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_250",
+      "name": "M05t_250 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        250,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_254",
+      "name": "M05t_254 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        254,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_258",
+      "name": "M05t_258 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        258,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_262",
+      "name": "M05t_262 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        262,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_266",
+      "name": "M05t_266 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        266,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_270",
+      "name": "M05t_270 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        270,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_274",
+      "name": "M05t_274 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        274,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_278",
+      "name": "M05t_278 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        278,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_282",
+      "name": "M05t_282 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        282,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_286",
+      "name": "M05t_286 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        286,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_290",
+      "name": "M05t_290 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        290,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_294",
+      "name": "M05t_294 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        294,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_298",
+      "name": "M05t_298 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        298,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_302",
+      "name": "M05t_302 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        302,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_306",
+      "name": "M05t_306 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        306,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_310",
+      "name": "M05t_310 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        310,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M05t_314",
+      "name": "M05t_314 Illustrative screw ridge",
+      "role": "Illustrative screw ridge",
+      "position_mm": [
+        314,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        9.4,
+        9.4,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M06",
+      "name": "M06 Lead screw end bearing",
+      "role": "Lead screw end bearing",
+      "position_mm": [
+        319,
+        144,
+        67
+      ],
+      "dimensions_mm": [
+        14,
+        26,
+        26
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M07",
+      "name": "M07 Carriage",
+      "role": "Carriage",
+      "position_mm": [
+        145,
+        144,
+        56
+      ],
+      "dimensions_mm": [
+        25,
+        100,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M08",
+      "name": "M08 Plunger pusher",
+      "role": "Plunger pusher",
+      "position_mm": [
+        150,
+        144,
+        88
+      ],
+      "dimensions_mm": [
+        10,
+        66,
+        62
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M09_215",
+      "name": "M09_215 Syringe cradle",
+      "role": "Syringe cradle",
+      "position_mm": [
+        215,
+        144,
+        79
+      ],
+      "dimensions_mm": [
+        13,
+        50,
+        20
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M10_215",
+      "name": "M10_215 Cradle top saddle",
+      "role": "Cradle top saddle",
+      "position_mm": [
+        215,
+        144,
+        92
+      ],
+      "dimensions_mm": [
+        36,
+        36,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M09_284",
+      "name": "M09_284 Syringe cradle",
+      "role": "Syringe cradle",
+      "position_mm": [
+        284,
+        144,
+        79
+      ],
+      "dimensions_mm": [
+        13,
+        50,
+        20
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "M10_284",
+      "name": "M10_284 Cradle top saddle",
+      "role": "Cradle top saddle",
+      "position_mm": [
+        284,
+        144,
+        92
+      ],
+      "dimensions_mm": [
+        36,
+        36,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S01",
+      "name": "S01 Syringe barrel",
+      "role": "Syringe barrel",
+      "position_mm": [
+        239,
+        144,
+        102
+      ],
+      "dimensions_mm": [
+        30,
+        30,
+        116
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S02",
+      "name": "S02 Fluid inside barrel",
+      "role": "Fluid inside barrel",
+      "position_mm": [
+        255,
+        144,
+        102
+      ],
+      "dimensions_mm": [
+        24,
+        24,
+        77
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S03",
+      "name": "S03 Plunger seal",
+      "role": "Plunger seal",
+      "position_mm": [
+        211,
+        144,
+        102
+      ],
+      "dimensions_mm": [
+        25.0,
+        25.0,
+        7
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S04",
+      "name": "S04 Plunger rod",
+      "role": "Plunger rod",
+      "position_mm": [
+        181,
+        144,
+        102
+      ],
+      "dimensions_mm": [
+        6,
+        6,
+        57
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S05",
+      "name": "S05 Plunger flange",
+      "role": "Plunger flange",
+      "position_mm": [
+        153,
+        144,
+        102
+      ],
+      "dimensions_mm": [
+        34,
+        34,
+        4
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S06",
+      "name": "S06 Syringe finger flange",
+      "role": "Syringe finger flange",
+      "position_mm": [
+        181,
+        144,
+        102
+      ],
+      "dimensions_mm": [
+        40,
+        40,
+        3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S07",
+      "name": "S07 Outlet fitting",
+      "role": "Outlet fitting",
+      "position_mm": [
+        305,
+        144,
+        102
+      ],
+      "dimensions_mm": [
+        10,
+        10,
+        16
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_198",
+      "name": "S08_198 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        198,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_206",
+      "name": "S08_206 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        206,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_214",
+      "name": "S08_214 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        214,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_222",
+      "name": "S08_222 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        222,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_230",
+      "name": "S08_230 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        230,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_238",
+      "name": "S08_238 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        238,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_246",
+      "name": "S08_246 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        246,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_254",
+      "name": "S08_254 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        254,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_262",
+      "name": "S08_262 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        262,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_270",
+      "name": "S08_270 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        270,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "S08_278",
+      "name": "S08_278 Illustrative graduation",
+      "role": "Illustrative graduation",
+      "position_mm": [
+        278,
+        129,
+        103
+      ],
+      "dimensions_mm": [
+        0.7,
+        0.7,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "V01",
+      "name": "V01 Proposed pinch valve",
+      "role": "Proposed pinch valve",
+      "position_mm": [
+        365,
+        135,
+        49
+      ],
+      "dimensions_mm": [
+        44,
+        42,
+        66
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "V02",
+      "name": "V02 Valve mounting foot",
+      "role": "Valve mounting foot",
+      "position_mm": [
+        365,
+        135,
+        18
+      ],
+      "dimensions_mm": [
+        66,
+        68,
+        8
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "T01",
+      "name": "T01 Balance enclosure",
+      "role": "Balance enclosure",
+      "position_mm": [
+        488,
+        144,
+        27
+      ],
+      "dimensions_mm": [
+        154,
+        150,
+        42
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "T02",
+      "name": "T02 Balance pan",
+      "role": "Balance pan",
+      "position_mm": [
+        488,
+        158,
+        54
+      ],
+      "dimensions_mm": [
+        122,
+        122,
+        7
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "T03",
+      "name": "T03 Balance display",
+      "role": "Balance display",
+      "position_mm": [
+        487,
+        84,
+        45
+      ],
+      "dimensions_mm": [
+        72,
+        25,
+        3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "R01",
+      "name": "R01 Receiving vessel",
+      "role": "Receiving vessel",
+      "position_mm": [
+        488,
+        158,
+        103
+      ],
+      "dimensions_mm": [
+        72,
+        72,
+        88
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "R02",
+      "name": "R02 Saline in receiver",
+      "role": "Saline in receiver",
+      "position_mm": [
+        488,
+        158,
+        75
+      ],
+      "dimensions_mm": [
+        64,
+        64,
+        28
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "F01",
+      "name": "F01 Continuous saline path",
+      "role": "Continuous saline path",
+      "position_mm": [
+        313,
+        144,
+        102
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            313,
+            144,
+            102
+          ],
+          [
+            339,
+            144,
+            105
+          ],
+          [
+            355,
+            135,
+            81
+          ],
+          [
+            376,
+            135,
+            81
+          ],
+          [
+            430,
+            149,
+            152
+          ],
+          [
+            488,
+            158,
+            158
+          ],
+          [
+            488,
+            158,
+            139
+          ]
+        ],
+        "radius_mm": 2.1
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "T04",
+      "name": "T04 Independent monitor",
+      "role": "Independent monitor",
+      "position_mm": [
+        491,
+        295,
+        31
+      ],
+      "dimensions_mm": [
+        105,
+        88,
+        34
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "T05",
+      "name": "T05 Monitor PCB",
+      "role": "Monitor PCB",
+      "position_mm": [
+        491,
+        295,
+        49
+      ],
+      "dimensions_mm": [
+        92,
+        76,
+        2
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "T06",
+      "name": "T06 Trip driver",
+      "role": "Trip driver",
+      "position_mm": [
+        535,
+        291,
+        56
+      ],
+      "dimensions_mm": [
+        19,
+        25,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "G01",
+      "name": "G01 Gateway host",
+      "role": "Gateway host",
+      "position_mm": [
+        275,
+        311,
+        33
+      ],
+      "dimensions_mm": [
+        108,
+        92,
+        38
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "P01",
+      "name": "P01 Pump endpoint PCB",
+      "role": "Pump endpoint PCB",
+      "position_mm": [
+        115,
+        303,
+        23
+      ],
+      "dimensions_mm": [
+        82,
+        60,
+        3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "P02",
+      "name": "P02 Stepper driver",
+      "role": "Stepper driver",
+      "position_mm": [
+        118,
+        300,
+        33
+      ],
+      "dimensions_mm": [
+        24,
+        20,
+        17
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "C01",
+      "name": "C01 CGM emulator",
+      "role": "CGM emulator",
+      "position_mm": [
+        61,
+        358,
+        24
+      ],
+      "dimensions_mm": [
+        54,
+        36,
+        18
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "E01",
+      "name": "E01 Isolated supply concept",
+      "role": "Isolated supply concept",
+      "position_mm": [
+        396,
+        337,
+        31
+      ],
+      "dimensions_mm": [
+        66,
+        80,
+        35
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "W01",
+      "name": "W01 Conceptual electrical connection",
+      "role": "Conceptual electrical connection",
+      "position_mm": [
+        529,
+        283,
+        56
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            529,
+            283,
+            56
+          ],
+          [
+            559,
+            269,
+            58
+          ],
+          [
+            561,
+            233,
+            37
+          ],
+          [
+            383,
+            220,
+            37
+          ],
+          [
+            367,
+            156,
+            68
+          ]
+        ],
+        "radius_mm": 1.6
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "W02",
+      "name": "W02 Conceptual electrical connection",
+      "role": "Conceptual electrical connection",
+      "position_mm": [
+        469,
+        286,
+        51
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            469,
+            286,
+            51
+          ],
+          [
+            452,
+            257,
+            54
+          ],
+          [
+            471,
+            228,
+            40
+          ],
+          [
+            488,
+            215,
+            38
+          ]
+        ],
+        "radius_mm": 1.6
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "W03",
+      "name": "W03 Conceptual electrical connection",
+      "role": "Conceptual electrical connection",
+      "position_mm": [
+        129,
+        282,
+        26
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            129,
+            282,
+            26
+          ],
+          [
+            110,
+            255,
+            24
+          ],
+          [
+            68,
+            222,
+            40
+          ],
+          [
+            64,
+            166,
+            65
+          ]
+        ],
+        "radius_mm": 1.6
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "W04",
+      "name": "W04 Conceptual electrical connection",
+      "role": "Conceptual electrical connection",
+      "position_mm": [
+        306,
+        304,
+        38
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            306,
+            304,
+            38
+          ],
+          [
+            366,
+            281,
+            30
+          ],
+          [
+            469,
+            292,
+            44
+          ]
+        ],
+        "radius_mm": 1.6
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "W05",
+      "name": "W05 Conceptual electrical connection",
+      "role": "Conceptual electrical connection",
+      "position_mm": [
+        244,
+        304,
+        38
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            244,
+            304,
+            38
+          ],
+          [
+            177,
+            277,
+            25
+          ],
+          [
+            135,
+            303,
+            28
+          ]
+        ],
+        "radius_mm": 1.6
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "W06",
+      "name": "W06 Conceptual electrical connection",
+      "role": "Conceptual electrical connection",
+      "position_mm": [
+        397,
+        303,
+        42
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            397,
+            303,
+            42
+          ],
+          [
+            434,
+            279,
+            37
+          ],
+          [
+            469,
+            290,
+            44
+          ]
+        ],
+        "radius_mm": 1.6
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "L01",
+      "name": "L01 Independent acquisition computer",
+      "role": "Independent acquisition computer",
+      "position_mm": [
+        673,
+        283,
+        23
+      ],
+      "dimensions_mm": [
+        162,
+        112,
+        12
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "L02",
+      "name": "L02 Acquisition screen frame",
+      "role": "Acquisition screen frame",
+      "position_mm": [
+        673,
+        332,
+        92
+      ],
+      "dimensions_mm": [
+        164,
+        9,
+        116
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "L03",
+      "name": "L03 Acquisition screen",
+      "role": "Acquisition screen",
+      "position_mm": [
+        673,
+        326,
+        92
+      ],
+      "dimensions_mm": [
+        148,
+        1,
+        99
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "L04_0",
+      "name": "L04_0 Keyboard row",
+      "role": "Keyboard row",
+      "position_mm": [
+        672,
+        265,
+        30
+      ],
+      "dimensions_mm": [
+        126,
+        5,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "L04_1",
+      "name": "L04_1 Keyboard row",
+      "role": "Keyboard row",
+      "position_mm": [
+        672,
+        275,
+        30
+      ],
+      "dimensions_mm": [
+        126,
+        5,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "L04_2",
+      "name": "L04_2 Keyboard row",
+      "role": "Keyboard row",
+      "position_mm": [
+        672,
+        285,
+        30
+      ],
+      "dimensions_mm": [
+        126,
+        5,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "L04_3",
+      "name": "L04_3 Keyboard row",
+      "role": "Keyboard row",
+      "position_mm": [
+        672,
+        295,
+        30
+      ],
+      "dimensions_mm": [
+        126,
+        5,
+        1.3
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "D01",
+      "name": "D01 Temperature acquisition module",
+      "role": "Temperature acquisition module",
+      "position_mm": [
+        677,
+        424,
+        24
+      ],
+      "dimensions_mm": [
+        84,
+        50,
+        25
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "D02",
+      "name": "D02 Temperature probe in separate sample",
+      "role": "Temperature probe in separate sample",
+      "position_mm": [
+        725,
+        450,
+        47
+      ],
+      "dimensions_mm": [
+        3.2,
+        3.2,
+        47
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "D04",
+      "name": "D04 Separate temperature sample vial",
+      "role": "Separate temperature sample vial",
+      "position_mm": [
+        725,
+        450,
+        31
+      ],
+      "dimensions_mm": [
+        24,
+        24,
+        48
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "D05",
+      "name": "D05 Temperature sample fluid",
+      "role": "Temperature sample fluid",
+      "position_mm": [
+        725,
+        450,
+        23
+      ],
+      "dimensions_mm": [
+        20,
+        20,
+        25
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "D03",
+      "name": "D03 Probe lead",
+      "role": "Probe lead",
+      "position_mm": [
+        725,
+        450,
+        71
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            725,
+            450,
+            71
+          ],
+          [
+            735,
+            427,
+            79
+          ],
+          [
+            699,
+            405,
+            61
+          ],
+          [
+            677,
+            413,
+            35
+          ]
+        ],
+        "radius_mm": 1.0
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "A01",
+      "name": "A01 Reference camera post",
+      "role": "Reference camera post",
+      "position_mm": [
+        699,
+        125,
+        63
+      ],
+      "dimensions_mm": [
+        10,
+        10,
+        114
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "A02",
+      "name": "A02 Reference camera foot",
+      "role": "Reference camera foot",
+      "position_mm": [
+        699,
+        125,
+        10
+      ],
+      "dimensions_mm": [
+        66,
+        66,
+        8
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "A03",
+      "name": "A03 Reference camera body",
+      "role": "Reference camera body",
+      "position_mm": [
+        691,
+        125,
+        139
+      ],
+      "dimensions_mm": [
+        59,
+        44,
+        38
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "A04",
+      "name": "A04 Reference camera lens",
+      "role": "Reference camera lens",
+      "position_mm": [
+        655,
+        125,
+        139
+      ],
+      "dimensions_mm": [
+        26,
+        26,
+        31
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "A05",
+      "name": "A05 Clock marker module",
+      "role": "Clock marker module",
+      "position_mm": [
+        559,
+        160,
+        91
+      ],
+      "dimensions_mm": [
+        20,
+        23,
+        18
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "A06",
+      "name": "A06 Clock marker light",
+      "role": "Clock marker light",
+      "position_mm": [
+        548,
+        156,
+        103
+      ],
+      "dimensions_mm": [
+        10,
+        10,
+        5
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "K01",
+      "name": "K01 Reference mass selection pending",
+      "role": "Reference mass selection pending",
+      "position_mm": [
+        80,
+        456,
+        24.5
+      ],
+      "dimensions_mm": [
+        22,
+        22,
+        25
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "K11",
+      "name": "K11 Reference mass handle",
+      "role": "Reference mass handle",
+      "position_mm": [
+        80,
+        456,
+        37
+      ],
+      "dimensions_mm": [
+        9.9,
+        9.9,
+        8
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "K02",
+      "name": "K02 Reference mass selection pending",
+      "role": "Reference mass selection pending",
+      "position_mm": [
+        125,
+        456,
+        27.0
+      ],
+      "dimensions_mm": [
+        28,
+        28,
+        30
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "K12",
+      "name": "K12 Reference mass handle",
+      "role": "Reference mass handle",
+      "position_mm": [
+        125,
+        456,
+        42
+      ],
+      "dimensions_mm": [
+        12.6,
+        12.6,
+        8
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "K03",
+      "name": "K03 Reference mass selection pending",
+      "role": "Reference mass selection pending",
+      "position_mm": [
+        170,
+        456,
+        29.5
+      ],
+      "dimensions_mm": [
+        34,
+        34,
+        35
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "K13",
+      "name": "K13 Reference mass handle",
+      "role": "Reference mass handle",
+      "position_mm": [
+        170,
+        456,
+        47
+      ],
+      "dimensions_mm": [
+        15.3,
+        15.3,
+        8
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "K20",
+      "name": "K20 Reference mass tray",
+      "role": "Reference mass tray",
+      "position_mm": [
+        127,
+        456,
+        10
+      ],
+      "dimensions_mm": [
+        148,
+        61,
+        7
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "W07",
+      "name": "W07 Replay data connection",
+      "role": "Replay data connection",
+      "position_mm": [
+        61,
+        347,
+        31
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            61,
+            347,
+            31
+          ],
+          [
+            76,
+            330,
+            54
+          ],
+          [
+            168,
+            361,
+            58
+          ],
+          [
+            242,
+            341,
+            50
+          ]
+        ],
+        "radius_mm": 1.5
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "W08",
+      "name": "W08 Measurement record connection",
+      "role": "Measurement record connection",
+      "position_mm": [
+        523,
+        311,
+        50
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            523,
+            311,
+            50
+          ],
+          [
+            552,
+            357,
+            40
+          ],
+          [
+            598,
+            347,
+            29
+          ],
+          [
+            626,
+            303,
+            31
+          ]
+        ],
+        "radius_mm": 1.5
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "W09",
+      "name": "W09 Timestamp reference connection",
+      "role": "Timestamp reference connection",
+      "position_mm": [
+        683,
+        266,
+        31
+      ],
+      "dimensions_mm": {
+        "path_mm": [
+          [
+            683,
+            266,
+            31
+          ],
+          [
+            612,
+            220,
+            25
+          ],
+          [
+            559,
+            178,
+            88
+          ]
+        ],
+        "radius_mm": 1.3
+      },
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    },
+    {
+      "id": "B03",
+      "name": "B03 Render backdrop",
+      "role": "Render backdrop",
+      "position_mm": [
+        400,
+        270,
+        -34
+      ],
+      "dimensions_mm": [
+        10000,
+        10000,
+        20
+      ],
+      "status": "CONCEPTUAL",
+      "confidence": "illustrative; no vendor drawing or metrology",
+      "source": "tools/rig_foundation.py; expanded by tools/build_rig.py"
+    }
+  ]
+}

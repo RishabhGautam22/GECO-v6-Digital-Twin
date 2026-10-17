@@ -1,0 +1,962 @@
+[
+  {
+    "unit_id": "geco_original_00",
+    "family": "geco_original",
+    "split": "calibration",
+    "body_weight_kg": 87.16787632505232,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7881371054380887,
+      "absorption": 1.2110738187090748,
+      "clearance": 0.8091149508485374,
+      "glucose_flux": 1.2057121992441198,
+      "glucose_effectiveness": 0.9616296933939845,
+      "gut_gain": 0.9020329395444266
+    }
+  },
+  {
+    "unit_id": "geco_original_01",
+    "family": "geco_original",
+    "split": "calibration",
+    "body_weight_kg": 84.41856570817079,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.0049093572178904,
+      "absorption": 0.8597988578712126,
+      "clearance": 1.194777171035909,
+      "glucose_flux": 0.8854481649280468,
+      "glucose_effectiveness": 1.188538265172387,
+      "gut_gain": 0.7624864319689517
+    }
+  },
+  {
+    "unit_id": "geco_original_02",
+    "family": "geco_original",
+    "split": "calibration",
+    "body_weight_kg": 59.555093871157325,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8285951397067364,
+      "absorption": 1.1365715775802434,
+      "clearance": 0.8950333798794659,
+      "glucose_flux": 0.9758849200523001,
+      "glucose_effectiveness": 0.9731123015566331,
+      "gut_gain": 0.9021856818396427
+    }
+  },
+  {
+    "unit_id": "geco_original_03",
+    "family": "geco_original",
+    "split": "calibration",
+    "body_weight_kg": 71.69493024878255,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.0400910193722945,
+      "absorption": 0.9664447491184542,
+      "clearance": 0.7890499347488541,
+      "glucose_flux": 0.765307841856018,
+      "glucose_effectiveness": 1.1064026681248773,
+      "gut_gain": 0.784156029419723
+    }
+  },
+  {
+    "unit_id": "geco_original_04",
+    "family": "geco_original",
+    "split": "calibration",
+    "body_weight_kg": 98.13928126518388,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.783820107995685,
+      "absorption": 1.2352955329453237,
+      "clearance": 0.8816074933252472,
+      "glucose_flux": 1.0617377221574709,
+      "glucose_effectiveness": 1.0471440806891457,
+      "gut_gain": 0.8505377755959258
+    }
+  },
+  {
+    "unit_id": "geco_original_05",
+    "family": "geco_original",
+    "split": "calibration",
+    "body_weight_kg": 78.39460439281758,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8254027678423618,
+      "absorption": 1.096714671818129,
+      "clearance": 0.8224387075044628,
+      "glucose_flux": 1.0883915611862338,
+      "glucose_effectiveness": 1.0054312572856325,
+      "gut_gain": 0.9367645358991195
+    }
+  },
+  {
+    "unit_id": "geco_original_06",
+    "family": "geco_original",
+    "split": "calibration",
+    "body_weight_kg": 65.41654590360278,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.1497085096090491,
+      "absorption": 0.7803163006821636,
+      "clearance": 1.1708695687316306,
+      "glucose_flux": 1.2120906314928004,
+      "glucose_effectiveness": 0.8807005001613141,
+      "gut_gain": 0.7804279796842354
+    }
+  },
+  {
+    "unit_id": "geco_original_07",
+    "family": "geco_original",
+    "split": "calibration",
+    "body_weight_kg": 57.32930624195716,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7579307118439174,
+      "absorption": 1.2356735599805737,
+      "clearance": 0.7894894777789596,
+      "glucose_flux": 1.040735408550452,
+      "glucose_effectiveness": 0.899411190558445,
+      "gut_gain": 1.0736414970886643
+    }
+  },
+  {
+    "unit_id": "geco_original_08",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 97.37011324339379,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7715533755394104,
+      "absorption": 1.2239634629971443,
+      "clearance": 1.2125864643697166,
+      "glucose_flux": 0.8156583719526973,
+      "glucose_effectiveness": 0.8752288847958255,
+      "gut_gain": 0.909400566329629
+    }
+  },
+  {
+    "unit_id": "geco_original_09",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 86.66041175259855,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.0362354208403126,
+      "absorption": 0.7572301706077269,
+      "clearance": 0.7986017620477903,
+      "glucose_flux": 1.1213705912123921,
+      "glucose_effectiveness": 0.8593890258590834,
+      "gut_gain": 1.1819742362728156
+    }
+  },
+  {
+    "unit_id": "geco_original_10",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 83.94634910072476,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7769676435780506,
+      "absorption": 0.8964925169323823,
+      "clearance": 1.1301000608696248,
+      "glucose_flux": 0.8815650636578071,
+      "glucose_effectiveness": 0.7678076788838476,
+      "gut_gain": 0.9842426037397034
+    }
+  },
+  {
+    "unit_id": "geco_original_11",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 74.39581390742838,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.0545802037559453,
+      "absorption": 1.080690740263387,
+      "clearance": 0.7769531678716546,
+      "glucose_flux": 0.8956114796539563,
+      "glucose_effectiveness": 0.8209509379685758,
+      "gut_gain": 0.8750142018897867
+    }
+  },
+  {
+    "unit_id": "geco_original_12",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 57.54404261712879,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8204972399089706,
+      "absorption": 1.0612144275481075,
+      "clearance": 0.7979548923221608,
+      "glucose_flux": 1.1659717788530817,
+      "glucose_effectiveness": 1.085739660727431,
+      "gut_gain": 0.8902593686483282
+    }
+  },
+  {
+    "unit_id": "geco_original_13",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 90.55200977859658,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7951667898787153,
+      "absorption": 0.8274888855229892,
+      "clearance": 0.9620955322606832,
+      "glucose_flux": 1.005792638306433,
+      "glucose_effectiveness": 1.0452186955357858,
+      "gut_gain": 0.8010934957797788
+    }
+  },
+  {
+    "unit_id": "geco_original_14",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 80.32662856034892,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.0092944887837951,
+      "absorption": 0.9293880697077113,
+      "clearance": 0.8132036867417287,
+      "glucose_flux": 0.7849199693862131,
+      "glucose_effectiveness": 1.2239130690154092,
+      "gut_gain": 1.1468525299595504
+    }
+  },
+  {
+    "unit_id": "geco_original_15",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 98.10167315056535,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9120941174878152,
+      "absorption": 0.7812194271487848,
+      "clearance": 0.8148888527242985,
+      "glucose_flux": 1.0755511146061674,
+      "glucose_effectiveness": 0.8656871679021888,
+      "gut_gain": 0.8626428455976854
+    }
+  },
+  {
+    "unit_id": "geco_original_16",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 61.23283664405052,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.1449308031154024,
+      "absorption": 1.0352787685728682,
+      "clearance": 0.9607273550614662,
+      "glucose_flux": 0.9095336974469941,
+      "glucose_effectiveness": 1.0199758271716874,
+      "gut_gain": 1.1600768655145175
+    }
+  },
+  {
+    "unit_id": "geco_original_17",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 71.20917935115386,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.061246798079445,
+      "absorption": 0.8475100042290027,
+      "clearance": 1.0486649250700675,
+      "glucose_flux": 1.0440041232101231,
+      "glucose_effectiveness": 0.9143296900803564,
+      "gut_gain": 1.1595456667203123
+    }
+  },
+  {
+    "unit_id": "geco_original_18",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 79.64114871613991,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9499953621524847,
+      "absorption": 1.026397544493817,
+      "clearance": 0.7528144868362405,
+      "glucose_flux": 1.073659703459697,
+      "glucose_effectiveness": 0.8596993049322454,
+      "gut_gain": 0.8765579087931105
+    }
+  },
+  {
+    "unit_id": "geco_original_19",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 63.614908862478806,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.793916190307915,
+      "absorption": 1.2098542740122509,
+      "clearance": 0.9250306961391043,
+      "glucose_flux": 0.8728757443224548,
+      "glucose_effectiveness": 1.0098655710272346,
+      "gut_gain": 1.0292043250760274
+    }
+  },
+  {
+    "unit_id": "geco_original_20",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 57.46292174992297,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.2309639219601567,
+      "absorption": 1.0780330481221485,
+      "clearance": 1.1618549674643568,
+      "glucose_flux": 0.7672575641268643,
+      "glucose_effectiveness": 0.8157762369181293,
+      "gut_gain": 1.1048088872926816
+    }
+  },
+  {
+    "unit_id": "geco_original_21",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 62.32884433923367,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8841958447254816,
+      "absorption": 0.8129041488125415,
+      "clearance": 1.018771525798158,
+      "glucose_flux": 0.9874109097658542,
+      "glucose_effectiveness": 1.1000205555744524,
+      "gut_gain": 0.9156951058087742
+    }
+  },
+  {
+    "unit_id": "geco_original_22",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 63.43058903345266,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.071598067251643,
+      "absorption": 0.8946932481022398,
+      "clearance": 0.9603373784122213,
+      "glucose_flux": 0.9138796897515011,
+      "glucose_effectiveness": 0.8854128411875182,
+      "gut_gain": 1.157642616188434
+    }
+  },
+  {
+    "unit_id": "geco_original_23",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 87.14850744120207,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7545717317833219,
+      "absorption": 0.7785151717657532,
+      "clearance": 1.0949236703114722,
+      "glucose_flux": 1.1588903794326382,
+      "glucose_effectiveness": 1.1280972404158338,
+      "gut_gain": 0.8900557792912624
+    }
+  },
+  {
+    "unit_id": "geco_original_24",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 55.67773876940927,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8009974106004976,
+      "absorption": 1.1078449516778979,
+      "clearance": 1.1982381237704554,
+      "glucose_flux": 0.9653740965427005,
+      "glucose_effectiveness": 0.7511851156237209,
+      "gut_gain": 1.0080109580928875
+    }
+  },
+  {
+    "unit_id": "geco_original_25",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 80.824675205731,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.098353877542703,
+      "absorption": 1.148156415135315,
+      "clearance": 1.1678529835446445,
+      "glucose_flux": 1.0307505274449507,
+      "glucose_effectiveness": 0.8257004176395564,
+      "gut_gain": 1.1504360876173476
+    }
+  },
+  {
+    "unit_id": "geco_original_26",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 92.73192416222513,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.0415345543966101,
+      "absorption": 0.8702686443229574,
+      "clearance": 1.0764739044276666,
+      "glucose_flux": 1.1495439234986786,
+      "glucose_effectiveness": 0.8464136172522378,
+      "gut_gain": 0.8647421547481056
+    }
+  },
+  {
+    "unit_id": "geco_original_27",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 55.68647744712956,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9277102720836796,
+      "absorption": 0.8720814541784727,
+      "clearance": 0.8531974218891771,
+      "glucose_flux": 0.872593068076144,
+      "glucose_effectiveness": 1.1213189947198723,
+      "gut_gain": 0.9159581789900553
+    }
+  },
+  {
+    "unit_id": "geco_original_28",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 67.59446471181506,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8111904976778748,
+      "absorption": 0.9493976693140618,
+      "clearance": 1.023058604022585,
+      "glucose_flux": 0.8473088317964681,
+      "glucose_effectiveness": 0.8960011179799914,
+      "gut_gain": 1.1641294306863719
+    }
+  },
+  {
+    "unit_id": "geco_original_29",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 58.98111862338065,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.0040301214311727,
+      "absorption": 1.0270468398020278,
+      "clearance": 0.9930344850539103,
+      "glucose_flux": 0.8955213574951741,
+      "glucose_effectiveness": 1.1497469617465008,
+      "gut_gain": 1.2184560390098484
+    }
+  },
+  {
+    "unit_id": "geco_original_30",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 68.26744526413574,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8181418926731362,
+      "absorption": 0.83771120671594,
+      "clearance": 1.2058398003460444,
+      "glucose_flux": 0.8506666514649017,
+      "glucose_effectiveness": 0.8009081359195814,
+      "gut_gain": 1.0886682810933315
+    }
+  },
+  {
+    "unit_id": "geco_original_31",
+    "family": "geco_original",
+    "split": "locked_test",
+    "body_weight_kg": 96.08954543745722,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8188296555719239,
+      "absorption": 0.7927799505609863,
+      "clearance": 0.9196476319373048,
+      "glucose_flux": 1.239064491410412,
+      "glucose_effectiveness": 1.2108066990476656,
+      "gut_gain": 0.9147713373885181
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_00",
+    "family": "hovorka_2004",
+    "split": "calibration",
+    "body_weight_kg": 59.008632736719036,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9126389468228321,
+      "absorption": 0.8357755985321099,
+      "clearance": 0.8555891773610508,
+      "glucose_flux": 1.1951447452348902,
+      "glucose_effectiveness": 0.8640857655067015,
+      "gut_gain": 1.191029644906085
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_01",
+    "family": "hovorka_2004",
+    "split": "calibration",
+    "body_weight_kg": 60.61079366581024,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9714333523425914,
+      "absorption": 0.8468057392175105,
+      "clearance": 0.959370028746997,
+      "glucose_flux": 1.068879061862428,
+      "glucose_effectiveness": 1.0115273365383946,
+      "gut_gain": 1.050565009614399
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_02",
+    "family": "hovorka_2004",
+    "split": "calibration",
+    "body_weight_kg": 73.17444900640021,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.1682780369456371,
+      "absorption": 0.8080953479124667,
+      "clearance": 1.037260972741518,
+      "glucose_flux": 1.0458984944601604,
+      "glucose_effectiveness": 1.0025242342538234,
+      "gut_gain": 1.1957364860871458
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_03",
+    "family": "hovorka_2004",
+    "split": "calibration",
+    "body_weight_kg": 65.19983239453084,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.0102254763585121,
+      "absorption": 1.1530454662807508,
+      "clearance": 0.9742888983311374,
+      "glucose_flux": 0.7770930397990664,
+      "glucose_effectiveness": 0.8283963671300468,
+      "gut_gain": 1.0763245770240641
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_04",
+    "family": "hovorka_2004",
+    "split": "calibration",
+    "body_weight_kg": 83.62562713861364,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.942369638167834,
+      "absorption": 0.9095582731059989,
+      "clearance": 0.7730455291393334,
+      "glucose_flux": 0.8393317070775458,
+      "glucose_effectiveness": 0.9520827737126855,
+      "gut_gain": 0.9146512261340692
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_05",
+    "family": "hovorka_2004",
+    "split": "calibration",
+    "body_weight_kg": 93.08777060175281,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8869922120282151,
+      "absorption": 0.9968842896463972,
+      "clearance": 0.9479711629773746,
+      "glucose_flux": 0.9727462920765293,
+      "glucose_effectiveness": 0.7634224845571198,
+      "gut_gain": 0.8459893832807909
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_06",
+    "family": "hovorka_2004",
+    "split": "calibration",
+    "body_weight_kg": 70.82719452883318,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.12701457067867,
+      "absorption": 1.1941454446206554,
+      "clearance": 1.1769621258088698,
+      "glucose_flux": 0.7894972996115625,
+      "glucose_effectiveness": 1.0331867195243596,
+      "gut_gain": 1.248976015611618
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_07",
+    "family": "hovorka_2004",
+    "split": "calibration",
+    "body_weight_kg": 90.89226230441801,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8860290604634223,
+      "absorption": 1.016473115071199,
+      "clearance": 1.1212887077912947,
+      "glucose_flux": 1.1942092538518472,
+      "glucose_effectiveness": 0.9131932838126082,
+      "gut_gain": 0.7769948698730258
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_08",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 96.22266943993532,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.8942467833145901,
+      "absorption": 0.7600458437385291,
+      "clearance": 1.200095824381127,
+      "glucose_flux": 1.1169477811908441,
+      "glucose_effectiveness": 1.1474407120005432,
+      "gut_gain": 0.9093602009301448
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_09",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 77.0832677889639,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7872652550501843,
+      "absorption": 0.8908940681376709,
+      "clearance": 1.029819060264798,
+      "glucose_flux": 1.0375656165514147,
+      "glucose_effectiveness": 1.1834531707949165,
+      "gut_gain": 1.216891776641605
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_10",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 77.04916058360432,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9917298125869488,
+      "absorption": 0.9303635871162911,
+      "clearance": 0.7763691248531974,
+      "glucose_flux": 0.7742898755827179,
+      "glucose_effectiveness": 1.1120606805259718,
+      "gut_gain": 0.9321513656573017
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_11",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 96.30260745054807,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7610345279761697,
+      "absorption": 1.1524371816459014,
+      "clearance": 1.1661187273338856,
+      "glucose_flux": 1.1221466574577643,
+      "glucose_effectiveness": 0.9448593669018482,
+      "gut_gain": 1.049930876262188
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_12",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 79.47537010713344,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.839847817887253,
+      "absorption": 0.9304521371742006,
+      "clearance": 1.1537951735692002,
+      "glucose_flux": 0.9552382726640011,
+      "glucose_effectiveness": 0.9658382184479124,
+      "gut_gain": 0.7686713084860325
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_13",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 76.44481020134913,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.760800329340509,
+      "absorption": 0.9546605714100673,
+      "clearance": 1.2111008037793924,
+      "glucose_flux": 1.1441404586069637,
+      "glucose_effectiveness": 1.2359943073467912,
+      "gut_gain": 0.9723357520155499
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_14",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 76.70954015910394,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7630050365538597,
+      "absorption": 1.2251340055004705,
+      "clearance": 0.7727977585898302,
+      "glucose_flux": 1.2371101401141291,
+      "glucose_effectiveness": 1.2221745949896936,
+      "gut_gain": 0.7812613404706019
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_15",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 77.19242426279814,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7634995797840122,
+      "absorption": 0.8798642691089662,
+      "clearance": 0.8503502537877204,
+      "glucose_flux": 0.9321805113465294,
+      "glucose_effectiveness": 1.2031828769768371,
+      "gut_gain": 0.8657033549139451
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_16",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 66.33368591267022,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.766078758234908,
+      "absorption": 1.084030521229858,
+      "clearance": 0.8309586591361302,
+      "glucose_flux": 0.8064058367551329,
+      "glucose_effectiveness": 1.1618709991715188,
+      "gut_gain": 1.0076503859667134
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_17",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 88.82862039932164,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7592687945017833,
+      "absorption": 0.7688154901686618,
+      "clearance": 0.7742465709380775,
+      "glucose_flux": 1.1312931801542152,
+      "glucose_effectiveness": 0.8996979056048214,
+      "gut_gain": 0.9836350979491602
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_18",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 76.86850218568131,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9775251951863703,
+      "absorption": 1.0444562986795596,
+      "clearance": 1.0819038133247607,
+      "glucose_flux": 1.0547398306124705,
+      "glucose_effectiveness": 0.8426418206040729,
+      "gut_gain": 1.062896914471596
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_19",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 59.21570931774687,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.01852321477826,
+      "absorption": 0.7856619422855335,
+      "clearance": 1.0995055446280628,
+      "glucose_flux": 1.053405432847875,
+      "glucose_effectiveness": 0.933700504753182,
+      "gut_gain": 0.8830735033301507
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_20",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 97.27178216039565,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.0876972689309534,
+      "absorption": 0.8897471256086472,
+      "clearance": 1.1646150056153841,
+      "glucose_flux": 1.0926735857021113,
+      "glucose_effectiveness": 0.8503029511139587,
+      "gut_gain": 0.8299298832762481
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_21",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 58.537971711199795,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9304825769730012,
+      "absorption": 0.9693865054812629,
+      "clearance": 0.7925206073445222,
+      "glucose_flux": 0.8713521004621994,
+      "glucose_effectiveness": 0.8166439633179592,
+      "gut_gain": 1.2491577574117492
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_22",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 99.12713002188005,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.1688635996729253,
+      "absorption": 1.0389501056779256,
+      "clearance": 0.7795255937763471,
+      "glucose_flux": 1.040361666579897,
+      "glucose_effectiveness": 0.8338734327187103,
+      "gut_gain": 0.7626795813776815
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_23",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 79.73562246132134,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.789598174957598,
+      "absorption": 1.0739832796427435,
+      "clearance": 1.2498583222936137,
+      "glucose_flux": 0.8390446275107711,
+      "glucose_effectiveness": 0.8791831696664061,
+      "gut_gain": 1.0403949593508013
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_24",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 71.19845764818055,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.7802747945541328,
+      "absorption": 0.9527868004605924,
+      "clearance": 1.218519250096465,
+      "glucose_flux": 0.8721420661827496,
+      "glucose_effectiveness": 0.8847373631307593,
+      "gut_gain": 1.1633397984546041
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_25",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 60.299918113884424,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9162488054684481,
+      "absorption": 0.948591116238535,
+      "clearance": 0.8250782989538175,
+      "glucose_flux": 0.8883180062152525,
+      "glucose_effectiveness": 1.0469624926264995,
+      "gut_gain": 1.0089231290622793
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_26",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 76.0452701819133,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.887911296811813,
+      "absorption": 1.068699305080226,
+      "clearance": 0.7505204385493333,
+      "glucose_flux": 0.957545664300111,
+      "glucose_effectiveness": 1.1846306320672557,
+      "gut_gain": 1.2251788069067238
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_27",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 83.75683253288015,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9013293995539408,
+      "absorption": 1.058259529011337,
+      "clearance": 0.8448698878417827,
+      "glucose_flux": 0.8618335889865276,
+      "glucose_effectiveness": 0.8783643864131393,
+      "gut_gain": 1.1914176346050784
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_28",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 80.27597498732972,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9322125269543705,
+      "absorption": 0.7693540692603357,
+      "clearance": 0.7569311044906658,
+      "glucose_flux": 1.0378737682763246,
+      "glucose_effectiveness": 1.106684788987681,
+      "gut_gain": 0.8316509035497325
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_29",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 92.44259223598415,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 1.0111522481961843,
+      "absorption": 1.0776758759865286,
+      "clearance": 1.001941545939343,
+      "glucose_flux": 0.7751120533263203,
+      "glucose_effectiveness": 0.9832982587406898,
+      "gut_gain": 0.8818193205412925
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_30",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 96.43440211711001,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9206715921200151,
+      "absorption": 1.0290173323839127,
+      "clearance": 0.8641259645630629,
+      "glucose_flux": 0.8938078421594742,
+      "glucose_effectiveness": 0.8453482466837425,
+      "gut_gain": 0.8105546884852892
+    }
+  },
+  {
+    "unit_id": "hovorka_2004_31",
+    "family": "hovorka_2004",
+    "split": "locked_test",
+    "body_weight_kg": 80.46266246057067,
+    "initial_glucose_mgdl": 120.0,
+    "factors": {
+      "sensitivity": 0.9391547732239031,
+      "absorption": 1.0342090617252742,
+      "clearance": 1.0690371796829428,
+      "glucose_flux": 1.0563864940427274,
+      "glucose_effectiveness": 0.985301282333828,
+      "gut_gain": 0.959603538740883
+    }
+  }
+]

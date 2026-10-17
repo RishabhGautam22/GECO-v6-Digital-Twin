@@ -1,0 +1,23 @@
+code,expected_category,attributed_category,title,industry_status,false_cyber_lockout,true_cyber_detected,peak_line_pressure_kpa,min_battery_v,min_glucose_mgdl,max_glucose_mgdl,all_plant_valid
+unprimed_tubing_install,INSTALLATION_ARTIFACT,INSTALLATION_ARTIFACT,Unprimed Tubing Dead-Space Installation (11.5 U Air Line),UNSOLVED_CLINICAL_GAP,False,,0.08,3.917,108.5,117.5,True
+cannula_dislodgement_leak,INSTALLATION_ARTIFACT,INSTALLATION_ARTIFACT,Pulled-Out Cannula / 'Wet Site' Adhesive Leak,UNSOLVED_CLINICAL_GAP,False,,0.14,3.917,108.2,117.5,True
+lipohypertrophy_site,INSTALLATION_ARTIFACT,INSTALLATION_ARTIFACT,Cannula Inserted into Lipohypertrophic Scar Tissue,UNSOLVED_CLINICAL_GAP,False,,4.2,3.917,104.6,117.5,True
+pisa_compression_low,INSTALLATION_ARTIFACT,INSTALLATION_ARTIFACT,PISA Sleeping Sensor Compression Artifact ('Compression Low'),PARTIALLY_SOLVED,False,,1.55,3.917,93.1,117.5,True
+electrochemical_interferent,INSTALLATION_ARTIFACT,INSTALLATION_ARTIFACT,Medication Electrochemical CGM Interference (Hydroxyurea / High-Dose Ascorbate),PARTIALLY_SOLVED,False,,1.55,3.917,93.1,117.5,True
+wrong_concentration_or_denatured,INSTALLATION_ARTIFACT,INSTALLATION_ARTIFACT,Thermal Denatured (>37°C) or Wrong-Concentration Insulin Loaded,UNSOLVED_CLINICAL_GAP,False,,1.55,3.917,106.0,117.5,True
+pipe_debris,HARDWARE_FAILURE,HARDWARE_FAILURE,Insulin Fibril Aggregation & Microbore Pipe Debris Constriction,PARTIALLY_SOLVED,False,,119.14,3.866,106.7,117.5,True
+silent_basal_micro_occlusion,HARDWARE_FAILURE,HARDWARE_FAILURE,Silent Basal Micro-Occlusion (Unsolved 6-16 Hour Commercial Alarm Delay),UNSOLVED_CLINICAL_GAP,False,,119.14,3.866,106.7,117.5,True
+aircraft_depressurization_siphon,HARDWARE_FAILURE,HARDWARE_FAILURE,Aircraft Cabin Depressurization / Gravity Siphon Free-Flow (1.8 U Unintended Delivery),SOLVED_IN_MODERN_PUMPS,False,,0.95,3.918,93.1,117.5,True
+plunger_oring_blowby,HARDWARE_FAILURE,HARDWARE_FAILURE,Syringe Plunger Elastomeric O-Ring Seal Blow-By (Internal Reflux),UNSOLVED_CLINICAL_GAP,False,,0.72,3.917,105.3,117.5,True
+battery_brownout,HARDWARE_FAILURE,HARDWARE_FAILURE,High-Impedance Battery Passivation & Mid-Bolus Voltage Sag Brownout,PARTIALLY_SOLVED,False,,1.5,2.1,108.5,117.5,True
+motor_malfunction,HARDWARE_FAILURE,HARDWARE_FAILURE,Stepper Motor Bearing Stiction & Lead-Screw Backlash Deadband,SOLVED_IN_MODERN_PUMPS,False,,1.5,3.917,108.5,117.5,True
+stuck_on,HARDWARE_FAILURE,HARDWARE_FAILURE,H-Bridge MOSFET Short-Circuit / Runaway Actuator ('Stuck-On' +0.25 U/step),SOLVED_IN_MODERN_PUMPS,False,,1.76,3.828,41.4,117.5,True
+excess_2x,CYBER_ATTACK,CYBER_ATTACK,CVE-2019-10964 Style RF Replay / 2x Over-Delivery Command Injection,ACTIVE_CYBER_THREAT,False,True,1.58,3.884,90.8,117.5,True
+cgm_bias_40,CYBER_ATTACK,CYBER_ATTACK,BLE Man-in-the-Middle CGM +40 mg/dL False Hyperglycemia Spoofing,ACTIVE_CYBER_THREAT,False,True,1.55,3.917,93.1,117.5,True
+stealthy_cusum_drip,CYBER_ATTACK,CYBER_ATTACK,Stealthy Sub-Threshold Zero-Dynamics CUSUM Drip Attack (+0.42 sigma/step),ACTIVE_CYBER_THREAT,False,True,1.55,3.917,94.9,117.5,True
+clock_skew_iob_attack,CYBER_ATTACK,CYBER_ATTACK,RTC Clock-Skew / NTP Timestamp Manipulation (+3.5 hr Jump to Zero Out IOB),ACTIVE_CYBER_THREAT,False,True,1.55,3.918,93.1,117.5,True
+ekf_ramp_poisoning,CYBER_ATTACK,CYBER_ATTACK,Slow EKF Covariance & State Ramp Poisoning (+1.2 mg/dL per 5-min Step),ACTIVE_CYBER_THREAT,False,True,1.63,3.845,75.4,117.5,True
+excess_bias_report_mask,CYBER_ATTACK,CYBER_ATTACK,Coordinated Stuxnet-Style Dual Actuator Overdose + Telemetry Report Masking,ACTIVE_CYBER_THREAT,False,True,1.86,3.828,98.8,117.5,True
+emi_false_occlusion_dos,CYBER_ATTACK,CYBER_ATTACK,Resonant EMI / Acoustic False-Occlusion Injection (DKA Denial-of-Therapy Attack),ACTIVE_CYBER_THREAT,False,True,95.0,3.918,93.1,117.5,True
+compound_meal_plus_debris,COMPOUND_PERMUTATION,COMPOUND_PERMUTATION,Postprandial 65g Meal Bolus Coinciding with 80% Pipe Debris Constriction,UNSOLVED_CLINICAL_GAP,False,,119.14,3.866,106.7,117.5,True
+compound_pisa_plus_brownout,COMPOUND_PERMUTATION,COMPOUND_PERMUTATION,Nocturnal PISA Compression Low + Aged Battery High-Impedance Sag,UNSOLVED_CLINICAL_GAP,False,,1.5,2.1,108.5,117.5,True

@@ -1,0 +1,1 @@
+measurement_id,endpoint,estimate,unit,standard_uncertainty,coverage_factor,interval_low,interval_high,trial_count,exposure_hours,method_revision,raw_record_sha256,reviewer,evidence_status,interval_kind,coverage_probability,uncertainty_budget_record,calibration_evidence_record

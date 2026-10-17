@@ -1,0 +1,5 @@
+{
+  "glucose_min": 0,
+  "glucose_max": 650,
+  "delivery_max": 70
+}

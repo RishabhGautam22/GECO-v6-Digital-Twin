@@ -1,0 +1,15 @@
+{
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}",
+    "${workspaceFolder}/isaac_extension"
+  ],
+  "files.associations": {
+    "*.usda": "usd",
+    "*.usd": "usd",
+    "extension.toml": "toml"
+  },
+  "editor.formatOnSave": false,
+  "geco.omniverse.websocketUri": "ws://127.0.0.1:8766",
+  "geco.omniverse.wardStage": "${workspaceFolder}/omniverse_usd/geco_v6_smart_hospital_ward.usda",
+  "geco.omniverse.rigStage": "${workspaceFolder}/omniverse_usd/geco_v6_metrology_rig.usda"
+}

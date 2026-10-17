@@ -1,0 +1,20 @@
+digraph GECO {
+graph [rankdir=LR, bgcolor="white", pad="0.12", nodesep="0.30", ranksep="0.44", fontname="Arial", fontsize=12];
+node [shape=box, style="filled", fillcolor="white", color="#334E61", fontname="Arial", fontsize=11, margin="0.13,0.09"];
+edge [color="#38596A", fontname="Arial", fontsize=9, arrowsize=0.65];
+
+run [label="RUN\nnormal bounded authorization",fillcolor="#E8F3F3"];
+latched [label="LATCHED\ncommanded delivery = 0",fillcolor="#FFF2CC"];
+verify [label="VERIFY\n3 capped requests\naggregate mass agreement"];
+probation [label="PROBATION\n6 capped intervals"];
+run -> latched [label="observed trip\nat interval end"];
+latched -> verify [label="fixed operator slot + 30 min elapsed\n6 quiet readings + current CGM"];
+verify -> probation [label="verification passes"];
+probation -> run [label="probation completes"];
+verify -> latched [label="trip / failed verification",color="#AF642F"];
+probation -> latched [label="new trip",color="#AF642F"];
+latched -> run [label="manual arm: same release gate\nwithout verification/probation",style=dashed];
+note [shape=plaintext,label="Recovery cannot read the fault label or end time.\nNo accumulated catch-up delivery.\nPhysical flow can persist after a commanded latch."];
+{rank=same;latched;note;}
+
+}

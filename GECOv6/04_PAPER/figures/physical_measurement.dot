@@ -1,0 +1,20 @@
+digraph GECO {
+graph [rankdir=LR, bgcolor="white", pad="0.12", nodesep="0.30", ranksep="0.44", fontname="Arial", fontsize=12];
+node [shape=box, style="filled", fillcolor="white", color="#334E61", fontname="Arial", fontsize=11, margin="0.13,0.09"];
+edge [color="#38596A", fontname="Arial", fontsize=9, arrowsize=0.65];
+
+node [fillcolor="#FFF2CC"];
+outlet [label="Defined water/saline outlet\nM01–M02"];
+balance [label="Raw signed balance indication\nforce isolation + blank trials\nM03, M05–M06"];
+temperature [label="Separate sample temperature\nfluid identity + density\nM04"];
+reconstruct [label="Validated delivery reconstruction\ncorrections, delay, uncertainty\nM07–M09"];
+reference [label="Independent calibrated reference\nmethod selection pending\nM07"];
+logger [label="Synchronized native records\nclock transform + time marker\nM10"];
+virtual [label="Explicit physical-to-model mapping\nvirtual-patient input"];
+stop [label="Decision, electrical stop, cessation\npost-stop flow + recovery\nM11–M16"];
+outlet -> balance; balance -> reconstruct; temperature -> reconstruct;
+reference -> reconstruct [label="validation comparison"];
+reconstruct -> virtual; balance -> logger; logger -> stop;
+{rank=same;temperature;reference;balance;}
+
+}

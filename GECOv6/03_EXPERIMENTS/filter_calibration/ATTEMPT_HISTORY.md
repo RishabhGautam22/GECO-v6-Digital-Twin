@@ -1,0 +1,3 @@
+# Fit attempt history
+
+Attempt001 ran the preregistered fit/tune rules on all34 participants. A concurrent packaging countertest found that invalid/empty fit inputs imported SciPy before validation, preventing the declared pure-Python runtime from reporting a ValueError. The only production correction moved that optional import after array/empty-fit checks. The source-hash guard correctly rejected freezing attempt001 after this change. Its complete per-participant results, invocation, log and exact physiology source are preserved in attempt001_pre_import_guard_fix/. No locked-test outcomes had been computed. Attempt002 repeats all fits with the same data, starts, bounds, tolerances, eligibility, policy-selection and threshold rules; no prior parameters are reused.

@@ -1,0 +1,474 @@
+{
+  "runs": [
+    {
+      "run_id": "cal_geco_original_fasting_00_3907",
+      "maxima": {
+        "full": 2.094311366452801,
+        "simple": 2.010184963605323,
+        "masscusum": 1.5101849636053228
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.08,
+        "target_equilibrium_basal_u": 0.09860508368277349,
+        "nominal_emitted_u_per_step": 0.09612537313432834,
+        "nominal_quantization_residual_u_per_step": -0.0024797105484451465,
+        "nominal_bias_48h_u": -1.4283132759044044,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.08,
+          0.085
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_geco_original_fasting_00_3907.json.gz",
+        "sha256": "51bf439e590772a74fc27236cd660c95b761cc8c4a4678b7ff65be9c0260d8f7",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_geco_original_fasting_00_4801",
+      "maxima": {
+        "full": 2.227153126893481,
+        "simple": 2.010184963605323,
+        "masscusum": 1.5101849636053228
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.08,
+        "target_equilibrium_basal_u": 0.09860508368277349,
+        "nominal_emitted_u_per_step": 0.09612537313432834,
+        "nominal_quantization_residual_u_per_step": -0.0024797105484451465,
+        "nominal_bias_48h_u": -1.4283132759044044,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.08,
+          0.085
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_geco_original_fasting_00_4801.json.gz",
+        "sha256": "1801694a92a158e31a30d539928ba7da5dfc8eb6db494a06f15ba7e75a4407a2",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_geco_original_fasting_01_3907",
+      "maxima": {
+        "full": 2.473673685711954,
+        "simple": 2.406830692902799,
+        "masscusum": 1.9631340321305868
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.06,
+        "target_equilibrium_basal_u": 0.07363089155781653,
+        "nominal_emitted_u_per_step": 0.07582537313432834,
+        "nominal_quantization_residual_u_per_step": 0.0021944815765118086,
+        "nominal_bias_48h_u": 1.2640213880708018,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.055,
+          0.06
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_geco_original_fasting_01_3907.json.gz",
+        "sha256": "2362ffd0dc5d0519dbc53fff29e7a3862ffa62157c0ca00e24f1257c228d3b53",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_geco_original_fasting_01_4801",
+      "maxima": {
+        "full": 1.979154327561895,
+        "simple": 2.406830692902885,
+        "masscusum": 1.906830692902885
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.06,
+        "target_equilibrium_basal_u": 0.07363089155781653,
+        "nominal_emitted_u_per_step": 0.07582537313432834,
+        "nominal_quantization_residual_u_per_step": 0.0021944815765118086,
+        "nominal_bias_48h_u": 1.2640213880708018,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.055,
+          0.06
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_geco_original_fasting_01_4801.json.gz",
+        "sha256": "01c78244535aa842e555febd0324fd2b9afd3a3aee4c9d23b87f3bd4d45d82e2",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_geco_original_fasting_02_3907",
+      "maxima": {
+        "full": 2.387820017696748,
+        "simple": 2.5059921252272757,
+        "masscusum": 2.0059921252272757
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.055,
+        "target_equilibrium_basal_u": 0.07317645863069137,
+        "nominal_emitted_u_per_step": 0.07075037313432835,
+        "nominal_quantization_residual_u_per_step": -0.0024260854963630285,
+        "nominal_bias_48h_u": -1.3974252459051044,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.055,
+          0.06
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_geco_original_fasting_02_3907.json.gz",
+        "sha256": "3b5396db1afee4a052500cb7e6ea90b296bf6c9c909c734e01f295136ccbda65",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_geco_original_fasting_02_4801",
+      "maxima": {
+        "full": 2.7501194134660887,
+        "simple": 2.505992125227189,
+        "masscusum": 2.005992125227189
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.055,
+        "target_equilibrium_basal_u": 0.07317645863069137,
+        "nominal_emitted_u_per_step": 0.07075037313432835,
+        "nominal_quantization_residual_u_per_step": -0.0024260854963630285,
+        "nominal_bias_48h_u": -1.3974252459051044,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.055,
+          0.06
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_geco_original_fasting_02_4801.json.gz",
+        "sha256": "adeb5f79dfb24b3fa96bbe89c3d13b216864642f417259b3be41c55ebe6555e1",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_geco_original_fasting_03_3907",
+      "maxima": {
+        "full": 2.3348160273814593,
+        "simple": 2.010184963605323,
+        "masscusum": 1.5101849636053228
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.08,
+        "target_equilibrium_basal_u": 0.0952488979926469,
+        "nominal_emitted_u_per_step": 0.09612537313432834,
+        "nominal_quantization_residual_u_per_step": 0.0008764751416814459,
+        "nominal_bias_48h_u": 0.5048496816085128,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.075,
+          0.08
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_geco_original_fasting_03_3907.json.gz",
+        "sha256": "4231dd239d38b07f10a5d34c556d2c3a50d0408bdf2867c352e3f5f20a23149c",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_geco_original_fasting_03_4801",
+      "maxima": {
+        "full": 2.510207848849216,
+        "simple": 2.010184963605323,
+        "masscusum": 1.5101849636053228
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.08,
+        "target_equilibrium_basal_u": 0.0952488979926469,
+        "nominal_emitted_u_per_step": 0.09612537313432834,
+        "nominal_quantization_residual_u_per_step": 0.0008764751416814459,
+        "nominal_bias_48h_u": 0.5048496816085128,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.075,
+          0.08
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_geco_original_fasting_03_4801.json.gz",
+        "sha256": "a310440de2dc2155bba18d95ac01baf4d946ae8f3da24804c60cee010398ce1b",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_hovorka_2004_fasting_00_3907",
+      "maxima": {
+        "full": 2.3207499694243836,
+        "simple": 2.632474411954215,
+        "masscusum": 2.3207499694243836
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.02,
+        "target_equilibrium_basal_u": 0.0328774638329452,
+        "nominal_emitted_u_per_step": 0.03522537313432835,
+        "nominal_quantization_residual_u_per_step": 0.00234790930138315,
+        "nominal_bias_48h_u": 1.3523957575966943,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.015,
+          0.02
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_hovorka_2004_fasting_00_3907.json.gz",
+        "sha256": "ce873b53bc27736e8f0d4a994752e6b051ffd43468185e2d6c98b7446ee24f13",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_hovorka_2004_fasting_00_4801",
+      "maxima": {
+        "full": 2.239581902029347,
+        "simple": 2.632474411954215,
+        "masscusum": 2.132474411954215
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.02,
+        "target_equilibrium_basal_u": 0.0328774638329452,
+        "nominal_emitted_u_per_step": 0.03522537313432835,
+        "nominal_quantization_residual_u_per_step": 0.00234790930138315,
+        "nominal_bias_48h_u": 1.3523957575966943,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.015,
+          0.02
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_hovorka_2004_fasting_00_4801.json.gz",
+        "sha256": "4e1b5b5ab1c20dcf7d6eac7d3d194acf7f2ecd34923d404ceebf247a052ca681",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_hovorka_2004_fasting_01_3907",
+      "maxima": {
+        "full": 1.820369316394375,
+        "simple": 1.0576004323651393,
+        "masscusum": 1.15979526635685
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.03,
+        "target_equilibrium_basal_u": 0.04315344999727049,
+        "nominal_emitted_u_per_step": 0.04537537313432835,
+        "nominal_quantization_residual_u_per_step": 0.0022219231370578588,
+        "nominal_bias_48h_u": 1.2798277269453266,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.025,
+          0.03
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_hovorka_2004_fasting_01_3907.json.gz",
+        "sha256": "e903b1c63e9f2a3f2bc41a0c71bee1948ada0ed22b6ef92851ef72d2857c41d8",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_hovorka_2004_fasting_01_4801",
+      "maxima": {
+        "full": 2.330797276602996,
+        "simple": 2.830797276602996,
+        "masscusum": 2.330797276602996
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.03,
+        "target_equilibrium_basal_u": 0.04315344999727049,
+        "nominal_emitted_u_per_step": 0.04537537313432835,
+        "nominal_quantization_residual_u_per_step": 0.0022219231370578588,
+        "nominal_bias_48h_u": 1.2798277269453266,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.025,
+          0.03
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_hovorka_2004_fasting_01_4801.json.gz",
+        "sha256": "34ad53a579d4f9dc84c4653f4a9419d95111c3ffdc4518bc071ff55027bff5db",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_hovorka_2004_fasting_02_3907",
+      "maxima": {
+        "full": 2.833001088077812,
+        "simple": 2.5333129796298244,
+        "masscusum": 2.0333129796298244
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.015,
+        "target_equilibrium_basal_u": 0.031118199929576686,
+        "nominal_emitted_u_per_step": 0.030150373134328355,
+        "nominal_quantization_residual_u_per_step": -0.0009678267952483305,
+        "nominal_bias_48h_u": -0.5574682340630384,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.015,
+          0.02
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_hovorka_2004_fasting_02_3907.json.gz",
+        "sha256": "5ada22e597ba67eadaaf69114b0d527c0990b3045fb77aa8656a4d2da7e72385",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_hovorka_2004_fasting_02_4801",
+      "maxima": {
+        "full": 2.167289193776409,
+        "simple": 2.5333129796298244,
+        "masscusum": 2.0333129796298244
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.015,
+        "target_equilibrium_basal_u": 0.031118199929576686,
+        "nominal_emitted_u_per_step": 0.030150373134328355,
+        "nominal_quantization_residual_u_per_step": -0.0009678267952483305,
+        "nominal_bias_48h_u": -0.5574682340630384,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.015,
+          0.02
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_hovorka_2004_fasting_02_4801.json.gz",
+        "sha256": "eccb9f8f6b1ab444e078150d44ff238f072b58d38619762b52665f921adfdcdd",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_hovorka_2004_fasting_03_3907",
+      "maxima": {
+        "full": 2.529120141251777,
+        "simple": 3.029120141251777,
+        "masscusum": 2.529120141251777
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.04,
+        "target_equilibrium_basal_u": 0.056561249341926925,
+        "nominal_emitted_u_per_step": 0.05552537313432835,
+        "nominal_quantization_residual_u_per_step": -0.0010358762075985753,
+        "nominal_bias_48h_u": -0.5966646955767794,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.04,
+          0.045
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_hovorka_2004_fasting_03_3907.json.gz",
+        "sha256": "3cbf15c0e62d8668c59332bc2d58af0c4ebf3b89fca50b80e51941bc55ca17cf",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "cal_hovorka_2004_fasting_03_4801",
+      "maxima": {
+        "full": 2.529120141251777,
+        "simple": 3.029120141251777,
+        "masscusum": 2.529120141251777
+      },
+      "domain_invalid_samples": 0,
+      "negative_egp_samples": 0,
+      "compensation": {
+        "requested_constant_u": 0.04,
+        "target_equilibrium_basal_u": 0.056561249341926925,
+        "nominal_emitted_u_per_step": 0.05552537313432835,
+        "nominal_quantization_residual_u_per_step": -0.0010358762075985753,
+        "nominal_bias_48h_u": -0.5966646955767794,
+        "compensated_zero_command": false,
+        "candidates_u": [
+          0.0,
+          0.04,
+          0.045
+        ],
+        "rule": "minimum absolute nominal physical-basal error among zero and nearest positive microstep commands; ties lower request; no trajectory tuning"
+      },
+      "trace": {
+        "path": "03_EXPERIMENTS/supplement_fasting/calibration_traces/cal_hovorka_2004_fasting_03_4801.json.gz",
+        "sha256": "c54ffdfe1fa90e82a0765af3047ad0c8d8eca9cb6963d40c1fb185fbd834fe24",
+        "samples": 576
+      }
+    }
+  ],
+  "zero_empirical_statistical_containment": {
+    "full": true,
+    "simple": true,
+    "masscusum": true
+  },
+  "no_population_false_alarm_guarantee": true
+}

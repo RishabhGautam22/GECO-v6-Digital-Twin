@@ -1,0 +1,82 @@
+{
+  "pptx_sha256": "07676f4790a65ce5250cd24f947a6890ed97e5de5a45ce535b83b9c0ff6fa9af",
+  "slide_count": 49,
+  "embedded_movies": 9,
+  "all_media_internal": true,
+  "package_and_hash_check": "PASS",
+  "native_application_playback": "Separate receipt required",
+  "media": [
+    {
+      "slide": 24,
+      "file": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__excess_2x.mp4",
+      "package_part": "ppt/media/geco-24.mp4",
+      "sha256": "3694601c40b1606eb0feeb86c205650e5a9d93bf16a02ac7799e9b9cce8316e1",
+      "bytes": 2235883,
+      "evidence": "SIMULATION / METHODS"
+    },
+    {
+      "slide": 25,
+      "file": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__stuck_on.mp4",
+      "package_part": "ppt/media/geco-25.mp4",
+      "sha256": "45cc3711b5f9ab997ef95b6f00a701a6eb7bb822e17d70433b5aeb802bd00557",
+      "bytes": 2239935,
+      "evidence": "SIMULATION / METHODS"
+    },
+    {
+      "slide": 26,
+      "file": "06_RIG_AND_MEDIA/videos/results/GECOv6_geco_original__cgm_missing.mp4",
+      "package_part": "ppt/media/geco-26.mp4",
+      "sha256": "2564be5b6ccb12478280669e6c709529af0b96d709d59ee9268af098919b7cdb",
+      "bytes": 2215446,
+      "evidence": "SIMULATION / METHODS"
+    },
+    {
+      "slide": 27,
+      "file": "06_RIG_AND_MEDIA/videos/results/GECOv6_hovorka_2004__excess_bias_report_mask.mp4",
+      "package_part": "ppt/media/geco-27.mp4",
+      "sha256": "d394b8afdd6b0e6ecd89ac9d28f5906602bf57d17daf7cd58e60875c32672324",
+      "bytes": 2625304,
+      "evidence": "SIMULATION / METHODS"
+    },
+    {
+      "slide": 29,
+      "file": "06_RIG_AND_MEDIA/videos/GECOv6_Rig_Explained.mp4",
+      "package_part": "ppt/media/geco-29.mp4",
+      "sha256": "e795993f985e073ef0227d7bfa5f43177244f84985cf1dddd896fc88a0c39987",
+      "bytes": 140303118,
+      "evidence": "CONCEPTUAL RIG"
+    },
+    {
+      "slide": 30,
+      "file": "06_RIG_AND_MEDIA/videos/chapters/GECOv6_Rig_C04.mp4",
+      "package_part": "ppt/media/geco-30.mp4",
+      "sha256": "91141fc6cc08a4d56535310435a05847f53369a09e141bab9c6c7dcf38db85bd",
+      "bytes": 9104501,
+      "evidence": "CONCEPTUAL RIG"
+    },
+    {
+      "slide": 31,
+      "file": "06_RIG_AND_MEDIA/videos/chapters/GECOv6_Rig_C06.mp4",
+      "package_part": "ppt/media/geco-31.mp4",
+      "sha256": "8d205f50fe6cf5a7dcbdfe3e31bc65dfd1e989a68fe77c915bf9f1990d5ebd2d",
+      "bytes": 9846488,
+      "evidence": "CONCEPTUAL RIG"
+    },
+    {
+      "slide": 32,
+      "file": "06_RIG_AND_MEDIA/videos/chapters/GECOv6_Rig_C09.mp4",
+      "package_part": "ppt/media/geco-32.mp4",
+      "sha256": "3e88b346810cc4932dcd5916ef8309109fb908e913031e0d81478b335aa425c5",
+      "bytes": 8278778,
+      "evidence": "CONCEPTUAL RIG"
+    },
+    {
+      "slide": 33,
+      "file": "06_RIG_AND_MEDIA/videos/chapters/GECOv6_Rig_C11.mp4",
+      "package_part": "ppt/media/geco-33.mp4",
+      "sha256": "ef5661748895cfde6a6d213e00c8bf2d016d3845e0211d157d27edc00e451b28",
+      "bytes": 10995541,
+      "evidence": "CONCEPTUAL RIG"
+    }
+  ]
+}

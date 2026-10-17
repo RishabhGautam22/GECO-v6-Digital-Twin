@@ -1,0 +1,61 @@
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+HUPA0002P frozen 2.36
+HUPA0004P frozen 2.46
+HUPA0003P frozen 2.73
+HUPA0001P frozen 2.78
+HUPA0006P frozen 1.25
+HUPA0005P frozen 1.96
+HUPA0007P frozen 2.12
+HUPA0009P frozen 2.15
+HUPA0010P frozen 1.49
+HUPA0011P frozen 2.18
+HUPA0017P failed 0.0
+HUPA0015P frozen 2.04
+HUPA0014P frozen 2.2
+HUPA0016P frozen 2.16
+HUPA0020P frozen 1.41
+HUPA0021P frozen 1.23
+HUPA0018P frozen 2.22
+HUPA0019P frozen 2.21
+HUPA0024P frozen 1.42
+HUPA0023P frozen 2.02
+HUPA0022P frozen 2.39
+HUPA0025P frozen 2.46
+D1NAMO-001 frozen 0.89
+D1NAMO-002 frozen 0.67
+D1NAMO-003 excluded 0.0
+D1NAMO-004 frozen 0.82
+D1NAMO-005 frozen 0.51
+D1NAMO-006 frozen 0.78
+D1NAMO-007 frozen 0.59
+D1NAMO-008 frozen 0.71
+D1NAMO-009 excluded 0.0
+HUPA0028P frozen 16.04
+HUPA0026P frozen 23.09
+HUPA0027P frozen 94.05
+Traceback (most recent call last):
+  File "/Users/rgpro/Desktop/GeCo GPT/GECOv6/03_EXPERIMENTS/filter_calibration/run_calibration.py", line 175, in <module>
+    {'fit':fit,'test':test,'report':report}[args.mode](args)
+  File "/Users/rgpro/Desktop/GeCo GPT/GECOv6/03_EXPERIMENTS/filter_calibration/run_calibration.py", line 86, in fit
+    if source_hashes()!=sources:raise RuntimeError('Source changed during calibration; do not freeze mixed results')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Source changed during calibration; do not freeze mixed results

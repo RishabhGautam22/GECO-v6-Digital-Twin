@@ -1,0 +1,39 @@
+{
+  "recorded_utc": "2026-09-07T12:38:34.587309+00:00",
+  "role": "software_audit study implementation and software review",
+  "provider_invocation_id": "not exposed",
+  "exact_model_id": "not exposed",
+  "host_isolation": "Shared host/filesystem with coordinator, science and research agents; not independent labs",
+  "registration": "2026-09-07T12:32:19.249725+00:00",
+  "calibration_freeze": "2026-09-07T12:33:11.181607+00:00",
+  "locked_execution_start": "2026-09-07T12:33:22.844314+00:00",
+  "locked_execution_end": "2026-09-07T12:34:06.765216+00:00",
+  "registered_before_calibration_before_test": true,
+  "counts": {
+    "calibration_runs": 16,
+    "test_runs": 2048,
+    "clean_references": 64,
+    "failed_runs": 0,
+    "attempts_including_references": 2112
+  },
+  "sources_preserved_before_later_legacy_edits": "FROZEN_SOURCE_RECEIPT.json",
+  "documents": [
+    "METHODOLOGY.md",
+    "RESULTS_RELEASE.md",
+    "RESULTS_INTERPRETATION.md"
+  ],
+  "evidence": {
+    "PREREGISTERED_SPEC.json": "81fab4a12ce485130c0334b9f5d3ce58b51a4dc6d547849f8e1a607e1f4e0b75",
+    "SYNTHETIC_PARAMETER_SPLIT.json": "d79e97418b48a281d0783f1d5832991e0f7a8384b86e8c751c31d46fd5097144",
+    "PREREGISTRATION_COMMIT.json": "595af9f38e92ca3b34e296ff5ef947528f5678607226d84cb4d7c16672c5ce9f",
+    "PRE_OUTCOME_TESTS.log": "6f657a6074eec286f9eb10ba5a470a352d1d6678778492a0b113a001ce035951",
+    "CALIBRATION_RESULTS.json": "6328e55c4433fd6e8813f6855a7ddc45e5751476d20952eeba9dbc489dc0fbf9",
+    "FROZEN_SUPPLEMENT_CONFIG.json": "0dc073508dcddd3eff2f272a7860feccd78dfe16d3e04ddc378f0446d122e983",
+    "EXECUTION_MANIFEST.json": "24acf5f1073b9c588165c970c0b5ccb753be42da5aa94f68c9c04ea33b08cbf9",
+    "RUN_RESULTS.json": "c1cfc48c6ed43d47f3231ae3d4449eb9a45b0f474a5cdeb3d7d6437563a48ede",
+    "FAILED_RUNS.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "ARM_SUMMARIES.json": "57c3ad8f02c60542cb08b677aa0176615847f88f6dd05887494130946009d8da",
+    "PAIRED_PARAMETER_UNIT_CI.json": "a64855864224d4aab0d918a740a11d21e9d7f6fef477db51714ed4dafc8fa52f",
+    "EXHAUSTIVE_TRACE_QA.json": "bc030e2c8dff6bcbeba2b49bf3c2a699d5e0ee5929e99013ea739f8892ad6966"
+  }
+}

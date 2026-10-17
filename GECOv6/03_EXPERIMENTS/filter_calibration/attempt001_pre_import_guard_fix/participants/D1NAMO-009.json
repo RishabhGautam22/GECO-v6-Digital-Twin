@@ -1,0 +1,57 @@
+{
+  "participant": "D1NAMO-009",
+  "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+  "array_sha256": "4112c0350861d8edb83fae6300aecd96748acc8e3de095b94efb89cf887aff6a",
+  "eligibility": {
+    "eligible": false,
+    "reasons": [
+      "fit:too_short",
+      "fit:observed_cgm_below_50pct",
+      "fit:fewer_than_50_forecast_pairs",
+      "tune:too_short",
+      "tune:observed_cgm_below_50pct",
+      "tune:fewer_than_50_forecast_pairs",
+      "test:too_short",
+      "test:fewer_than_50_forecast_pairs"
+    ],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 184,
+          "slots": 184,
+          "first_timestamp": "2014-10-02T06:10:00.000000",
+          "last_timestamp": "2014-10-02T21:25:00.000000",
+          "observed_cgm": 64,
+          "cgm_coverage": 0.34782608695652173,
+          "eligible_forecast_pairs": 22
+        },
+        "tune": {
+          "start_index": 184,
+          "stop_index_exclusive": 276,
+          "slots": 92,
+          "first_timestamp": "2014-10-02T21:30:00.000000",
+          "last_timestamp": "2014-10-03T05:05:00.000000",
+          "observed_cgm": 0,
+          "cgm_coverage": 0.0,
+          "eligible_forecast_pairs": 0
+        },
+        "test": {
+          "start_index": 276,
+          "stop_index_exclusive": 368,
+          "slots": 92,
+          "first_timestamp": "2014-10-03T05:10:00.000000",
+          "last_timestamp": "2014-10-03T12:45:00.000000",
+          "observed_cgm": 53,
+          "cgm_coverage": 0.5760869565217391,
+          "eligible_forecast_pairs": 47
+        }
+      }
+    }
+  },
+  "started_utc": "2026-09-07T12:06:30.525608+00:00",
+  "status": "excluded",
+  "elapsed_seconds": 0.00021525000920519233
+}

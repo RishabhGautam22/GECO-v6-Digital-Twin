@@ -1,0 +1,12 @@
+{
+  "amendment_id": "003",
+  "timing": "Before clean calibration or locked study outcomes; fresh production calibration was separately frozen",
+  "review_sources": ["Research agent and coordinator: cooldown interval boundary", "Science agent: physiological-domain diagnostics"],
+  "changes": [
+    "Cooldown measures30minutes from the end of the trip interval. Store latched_end_sample=k+1 and require reset_sample-latched_end_sample>=6. A trip in sample18 ends at95min; operator slot24 at120min is only25min later and cannot reset.",
+    "Hovorka negative endogenous glucose production (x3>1) is logged as an evaluator-only diagnostic and counted as invalid physiological domain even before glucose becomes negative. The published equation is retained, with no clamp.",
+    "Original-family plasma, interstitial and remote-action clipping boundaries have separate per-sample flags/counts. Original-family plant_valid retains its finite/plasma-domain meaning; the extra flags expose additional clipping limitations."
+  ],
+  "validation": "Known-answer forced numerical detector event at sample18 with quiet balance and available CGM: sample24 reset false, next fixed operator slot48 reset true. Canonical Hovorka x3=1.2 produces negative unmodified EGP, flagged invalid.",
+  "parameter_split_arms_faults_operator_schedule_unchanged": true
+}

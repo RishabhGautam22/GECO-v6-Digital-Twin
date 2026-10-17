@@ -1,0 +1,2348 @@
+{
+  "HUPA0001P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 37.1203008200216,
+        "mae": 26.739200491303656,
+        "n_pairs": 982
+      },
+      "persistence": {
+        "rmse": 32.66511668963949,
+        "mae": 23.534962661235575,
+        "n_pairs": 982
+      },
+      "trend": {
+        "rmse": 29.092170985768902,
+        "mae": 19.86494805041471,
+        "n_pairs": 982
+      }
+    },
+    "selected_metrics": {
+      "rmse": 29.092170985768902,
+      "mae": 19.86494805041471,
+      "n_pairs": 982
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 1024,
+    "observed_cgm": 1024,
+    "innovation_coverage95": 0.9726720647773279,
+    "selected_forecast_coverage95": 0.9531568228105907,
+    "innovation_mean": 0.08795662462023579,
+    "innovation_std": 0.7695917819687865,
+    "innovation_lag1": 0.39358860587047884,
+    "forecast_lag1": 0.8141826240986672,
+    "alarm_innovation": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        427
+      ],
+      "slots": 1024,
+      "observed_slots": 988,
+      "coverage": 0.96484375,
+      "calendar_days": 3.5555555555555554,
+      "observed_equivalent_days": 3.4305555555555554,
+      "episodes_per_calendar_day": 0.28125,
+      "episodes_per_observed_equivalent_day": 0.29149797570850206
+    },
+    "alarm_forecast": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        424
+      ],
+      "slots": 1024,
+      "observed_slots": 982,
+      "coverage": 0.958984375,
+      "calendar_days": 3.5555555555555554,
+      "observed_equivalent_days": 3.4097222222222223,
+      "episodes_per_calendar_day": 0.28125,
+      "episodes_per_observed_equivalent_day": 0.29327902240325865
+    },
+    "alarm_union_count": 2,
+    "alarm_union_episodes_per_calendar_day": 0.5625,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0002P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 25.268872004026594,
+        "mae": 18.320902853517822,
+        "n_pairs": 754
+      },
+      "persistence": {
+        "rmse": 21.903129021728,
+        "mae": 14.503684055408195,
+        "n_pairs": 754
+      },
+      "trend": {
+        "rmse": 16.49858604608659,
+        "mae": 11.009961685823754,
+        "n_pairs": 754
+      }
+    },
+    "selected_metrics": {
+      "rmse": 16.49858604608659,
+      "mae": 11.009961685823754,
+      "n_pairs": 754
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 796,
+    "observed_cgm": 796,
+    "innovation_coverage95": 0.9605263157894737,
+    "selected_forecast_coverage95": 0.9376657824933687,
+    "innovation_mean": -0.005258740775004071,
+    "innovation_std": 0.8152763676782405,
+    "innovation_lag1": 0.6261979994156406,
+    "forecast_lag1": 0.9343079922465605,
+    "alarm_innovation": {
+      "alarm_count": 5,
+      "alarm_indices": [
+        416,
+        434,
+        645,
+        670,
+        756
+      ],
+      "slots": 796,
+      "observed_slots": 760,
+      "coverage": 0.9547738693467337,
+      "calendar_days": 2.763888888888889,
+      "observed_equivalent_days": 2.638888888888889,
+      "episodes_per_calendar_day": 1.8090452261306533,
+      "episodes_per_observed_equivalent_day": 1.8947368421052633
+    },
+    "alarm_forecast": {
+      "alarm_count": 7,
+      "alarm_indices": [
+        146,
+        392,
+        419,
+        440,
+        648,
+        661,
+        672
+      ],
+      "slots": 796,
+      "observed_slots": 754,
+      "coverage": 0.9472361809045227,
+      "calendar_days": 2.763888888888889,
+      "observed_equivalent_days": 2.6180555555555554,
+      "episodes_per_calendar_day": 2.5326633165829144,
+      "episodes_per_observed_equivalent_day": 2.673740053050398
+    },
+    "alarm_union_count": 12,
+    "alarm_union_episodes_per_calendar_day": 4.341708542713568,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0003P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 28.666513924048907,
+        "mae": 22.190502825696708,
+        "n_pairs": 901
+      },
+      "persistence": {
+        "rmse": 22.744572435786047,
+        "mae": 18.028856825749166,
+        "n_pairs": 901
+      },
+      "trend": {
+        "rmse": 17.83113207791839,
+        "mae": 13.38945615982242,
+        "n_pairs": 901
+      }
+    },
+    "selected_metrics": {
+      "rmse": 17.83113207791839,
+      "mae": 13.38945615982242,
+      "n_pairs": 901
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 943,
+    "observed_cgm": 943,
+    "innovation_coverage95": 0.960308710033076,
+    "selected_forecast_coverage95": 0.9822419533851277,
+    "innovation_mean": -0.021315831172501864,
+    "innovation_std": 0.8884551916579707,
+    "innovation_lag1": 0.45555012313220383,
+    "forecast_lag1": 0.905312577066036,
+    "alarm_innovation": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        366
+      ],
+      "slots": 943,
+      "observed_slots": 907,
+      "coverage": 0.9618239660657476,
+      "calendar_days": 3.2743055555555554,
+      "observed_equivalent_days": 3.1493055555555554,
+      "episodes_per_calendar_day": 0.3054082714740191,
+      "episodes_per_observed_equivalent_day": 0.3175303197353914
+    },
+    "alarm_forecast": {
+      "alarm_count": 3,
+      "alarm_indices": [
+        369,
+        520,
+        594
+      ],
+      "slots": 943,
+      "observed_slots": 901,
+      "coverage": 0.9554612937433722,
+      "calendar_days": 3.2743055555555554,
+      "observed_equivalent_days": 3.1284722222222223,
+      "episodes_per_calendar_day": 0.9162248144220573,
+      "episodes_per_observed_equivalent_day": 0.9589345172031076
+    },
+    "alarm_union_count": 4,
+    "alarm_union_episodes_per_calendar_day": 1.2216330858960764,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0004P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 29.575633939749675,
+        "mae": 23.171462197371415,
+        "n_pairs": 754
+      },
+      "persistence": {
+        "rmse": 22.49621443119923,
+        "mae": 14.440025745046029,
+        "n_pairs": 754
+      },
+      "trend": {
+        "rmse": 17.330797721459174,
+        "mae": 10.546921646642746,
+        "n_pairs": 754
+      }
+    },
+    "selected_metrics": {
+      "rmse": 17.330797721459174,
+      "mae": 10.546921646642746,
+      "n_pairs": 754
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 796,
+    "observed_cgm": 796,
+    "innovation_coverage95": 0.9723684210526315,
+    "selected_forecast_coverage95": 0.986737400530504,
+    "innovation_mean": 0.005127442899265707,
+    "innovation_std": 0.6838139471429987,
+    "innovation_lag1": 0.665106791035239,
+    "forecast_lag1": 0.9423356101772123,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 796,
+      "observed_slots": 760,
+      "coverage": 0.9547738693467337,
+      "calendar_days": 2.763888888888889,
+      "observed_equivalent_days": 2.638888888888889,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 796,
+      "observed_slots": 754,
+      "coverage": 0.9472361809045227,
+      "calendar_days": 2.763888888888889,
+      "observed_equivalent_days": 2.6180555555555554,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 0,
+    "alarm_union_episodes_per_calendar_day": 0.0,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0005P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 18.490037484015023,
+        "mae": 14.358349462824227,
+        "n_pairs": 923
+      },
+      "persistence": {
+        "rmse": 16.776558084651626,
+        "mae": 13.092993860599496,
+        "n_pairs": 923
+      },
+      "trend": {
+        "rmse": 15.80673274425022,
+        "mae": 11.905308775731312,
+        "n_pairs": 923
+      }
+    },
+    "selected_metrics": {
+      "rmse": 15.80673274425022,
+      "mae": 11.905308775731312,
+      "n_pairs": 923
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 965,
+    "observed_cgm": 965,
+    "innovation_coverage95": 0.9827771797631862,
+    "selected_forecast_coverage95": 0.9891657638136512,
+    "innovation_mean": -0.018836986908520637,
+    "innovation_std": 0.6626962603422442,
+    "innovation_lag1": 0.4103236344061707,
+    "forecast_lag1": 0.8790060464952184,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 965,
+      "observed_slots": 929,
+      "coverage": 0.9626943005181348,
+      "calendar_days": 3.3506944444444446,
+      "observed_equivalent_days": 3.2256944444444446,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 965,
+      "observed_slots": 923,
+      "coverage": 0.9564766839378238,
+      "calendar_days": 3.3506944444444446,
+      "observed_equivalent_days": 3.204861111111111,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 0,
+    "alarm_union_episodes_per_calendar_day": 0.0,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0006P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 34.13841947417813,
+        "mae": 22.790661596160888,
+        "n_pairs": 531
+      },
+      "persistence": {
+        "rmse": 28.792897126134946,
+        "mae": 20.068310220852595,
+        "n_pairs": 531
+      },
+      "trend": {
+        "rmse": 21.461890930457464,
+        "mae": 15.164433411326069,
+        "n_pairs": 531
+      }
+    },
+    "selected_metrics": {
+      "rmse": 21.461890930457464,
+      "mae": 15.164433411326069,
+      "n_pairs": 531
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 573,
+    "observed_cgm": 573,
+    "innovation_coverage95": 0.9683426443202979,
+    "selected_forecast_coverage95": 0.975517890772128,
+    "innovation_mean": -0.009886761194028528,
+    "innovation_std": 0.7563627126198054,
+    "innovation_lag1": 0.6302666615824493,
+    "forecast_lag1": 0.9469546918390024,
+    "alarm_innovation": {
+      "alarm_count": 2,
+      "alarm_indices": [
+        415,
+        436
+      ],
+      "slots": 573,
+      "observed_slots": 537,
+      "coverage": 0.93717277486911,
+      "calendar_days": 1.9895833333333333,
+      "observed_equivalent_days": 1.8645833333333333,
+      "episodes_per_calendar_day": 1.0052356020942408,
+      "episodes_per_observed_equivalent_day": 1.0726256983240223
+    },
+    "alarm_forecast": {
+      "alarm_count": 4,
+      "alarm_indices": [
+        105,
+        415,
+        419,
+        423
+      ],
+      "slots": 573,
+      "observed_slots": 531,
+      "coverage": 0.9267015706806283,
+      "calendar_days": 1.9895833333333333,
+      "observed_equivalent_days": 1.84375,
+      "episodes_per_calendar_day": 2.0104712041884816,
+      "episodes_per_observed_equivalent_day": 2.169491525423729
+    },
+    "alarm_union_count": 5,
+    "alarm_union_episodes_per_calendar_day": 2.513089005235602,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0007P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 33.34745541669394,
+        "mae": 27.587684101651426,
+        "n_pairs": 923
+      },
+      "persistence": {
+        "rmse": 28.255990169015433,
+        "mae": 21.500060190201033,
+        "n_pairs": 923
+      },
+      "trend": {
+        "rmse": 24.741912210822612,
+        "mae": 17.020759600337065,
+        "n_pairs": 923
+      }
+    },
+    "selected_metrics": {
+      "rmse": 24.741912210822612,
+      "mae": 17.020759600337065,
+      "n_pairs": 923
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 965,
+    "observed_cgm": 965,
+    "innovation_coverage95": 0.9709364908503767,
+    "selected_forecast_coverage95": 0.9837486457204767,
+    "innovation_mean": -0.09556497778248417,
+    "innovation_std": 0.9625193954596675,
+    "innovation_lag1": 0.10994448033704876,
+    "forecast_lag1": 0.8180493357653291,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 965,
+      "observed_slots": 929,
+      "coverage": 0.9626943005181348,
+      "calendar_days": 3.3506944444444446,
+      "observed_equivalent_days": 3.2256944444444446,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 965,
+      "observed_slots": 923,
+      "coverage": 0.9564766839378238,
+      "calendar_days": 3.3506944444444446,
+      "observed_equivalent_days": 3.204861111111111,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 0,
+    "alarm_union_episodes_per_calendar_day": 0.0,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0009P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 5.921527560097016,
+        "mae": 4.161620375199575,
+        "n_pairs": 911
+      },
+      "persistence": {
+        "rmse": 6.2517211097519345,
+        "mae": 3.97129885128516,
+        "n_pairs": 911
+      },
+      "trend": {
+        "rmse": 3.807212760034272,
+        "mae": 2.2205191536302666,
+        "n_pairs": 911
+      }
+    },
+    "selected_metrics": {
+      "rmse": 3.807212760034272,
+      "mae": 2.2205191536302666,
+      "n_pairs": 911
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 953,
+    "observed_cgm": 953,
+    "innovation_coverage95": 0.9792802617230099,
+    "selected_forecast_coverage95": 0.9769484083424808,
+    "innovation_mean": -0.034699835421285144,
+    "innovation_std": 0.766201906082596,
+    "innovation_lag1": 0.608179783302641,
+    "forecast_lag1": 0.972054745964643,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 953,
+      "observed_slots": 917,
+      "coverage": 0.9622245540398741,
+      "calendar_days": 3.3090277777777777,
+      "observed_equivalent_days": 3.1840277777777777,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        838
+      ],
+      "slots": 953,
+      "observed_slots": 911,
+      "coverage": 0.9559286463798531,
+      "calendar_days": 3.3090277777777777,
+      "observed_equivalent_days": 3.1631944444444446,
+      "episodes_per_calendar_day": 0.30220356768100737,
+      "episodes_per_observed_equivalent_day": 0.31613611416026344
+    },
+    "alarm_union_count": 1,
+    "alarm_union_episodes_per_calendar_day": 0.30220356768100737,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0010P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 22.233864875474524,
+        "mae": 15.234893175054651,
+        "n_pairs": 702
+      },
+      "persistence": {
+        "rmse": 20.25706196527928,
+        "mae": 12.37304799323961,
+        "n_pairs": 702
+      },
+      "trend": {
+        "rmse": 18.882083799555776,
+        "mae": 9.57165329159189,
+        "n_pairs": 702
+      }
+    },
+    "selected_metrics": {
+      "rmse": 18.882083799555776,
+      "mae": 9.57165329159189,
+      "n_pairs": 702
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 744,
+    "observed_cgm": 744,
+    "innovation_coverage95": 0.9590395480225988,
+    "selected_forecast_coverage95": 0.9572649572649573,
+    "innovation_mean": -0.015596623808873535,
+    "innovation_std": 0.9956414487971933,
+    "innovation_lag1": 0.4706222418215276,
+    "forecast_lag1": 0.8911872117141276,
+    "alarm_innovation": {
+      "alarm_count": 21,
+      "alarm_indices": [
+        145,
+        148,
+        150,
+        151,
+        261,
+        262,
+        264,
+        266,
+        267,
+        269,
+        272,
+        302,
+        312,
+        438,
+        439,
+        442,
+        444,
+        702,
+        704,
+        705,
+        734
+      ],
+      "slots": 744,
+      "observed_slots": 708,
+      "coverage": 0.9516129032258065,
+      "calendar_days": 2.5833333333333335,
+      "observed_equivalent_days": 2.4583333333333335,
+      "episodes_per_calendar_day": 8.129032258064516,
+      "episodes_per_observed_equivalent_day": 8.542372881355933
+    },
+    "alarm_forecast": {
+      "alarm_count": 14,
+      "alarm_indices": [
+        147,
+        155,
+        264,
+        266,
+        268,
+        273,
+        307,
+        440,
+        442,
+        447,
+        705,
+        725,
+        738,
+        742
+      ],
+      "slots": 744,
+      "observed_slots": 702,
+      "coverage": 0.9435483870967742,
+      "calendar_days": 2.5833333333333335,
+      "observed_equivalent_days": 2.4375,
+      "episodes_per_calendar_day": 5.419354838709677,
+      "episodes_per_observed_equivalent_day": 5.743589743589744
+    },
+    "alarm_union_count": 31,
+    "alarm_union_episodes_per_calendar_day": 12.0,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0011P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 25.773271833540353,
+        "mae": 19.713700224044402,
+        "n_pairs": 918
+      },
+      "persistence": {
+        "rmse": 27.727709779480623,
+        "mae": 20.462236746550474,
+        "n_pairs": 918
+      },
+      "trend": {
+        "rmse": 23.549332480475154,
+        "mae": 16.84041394335512,
+        "n_pairs": 918
+      }
+    },
+    "selected_metrics": {
+      "rmse": 23.549332480475154,
+      "mae": 16.84041394335512,
+      "n_pairs": 918
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 960,
+    "observed_cgm": 960,
+    "innovation_coverage95": 0.974025974025974,
+    "selected_forecast_coverage95": 0.971677559912854,
+    "innovation_mean": -0.0019004818581660294,
+    "innovation_std": 0.7801192047496045,
+    "innovation_lag1": 0.4606664518193568,
+    "forecast_lag1": 0.9236538266409967,
+    "alarm_innovation": {
+      "alarm_count": 2,
+      "alarm_indices": [
+        559,
+        853
+      ],
+      "slots": 960,
+      "observed_slots": 924,
+      "coverage": 0.9625,
+      "calendar_days": 3.3333333333333335,
+      "observed_equivalent_days": 3.2083333333333335,
+      "episodes_per_calendar_day": 0.6,
+      "episodes_per_observed_equivalent_day": 0.6233766233766234
+    },
+    "alarm_forecast": {
+      "alarm_count": 3,
+      "alarm_indices": [
+        250,
+        525,
+        857
+      ],
+      "slots": 960,
+      "observed_slots": 918,
+      "coverage": 0.95625,
+      "calendar_days": 3.3333333333333335,
+      "observed_equivalent_days": 3.1875,
+      "episodes_per_calendar_day": 0.8999999999999999,
+      "episodes_per_observed_equivalent_day": 0.9411764705882353
+    },
+    "alarm_union_count": 5,
+    "alarm_union_episodes_per_calendar_day": 1.5,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0014P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 28.003295427915898,
+        "mae": 21.421388042925688,
+        "n_pairs": 916
+      },
+      "persistence": {
+        "rmse": 22.562942664640097,
+        "mae": 17.235995680142743,
+        "n_pairs": 916
+      },
+      "trend": {
+        "rmse": 16.926968795284825,
+        "mae": 12.21155164504932,
+        "n_pairs": 916
+      }
+    },
+    "selected_metrics": {
+      "rmse": 16.926968795284825,
+      "mae": 12.21155164504932,
+      "n_pairs": 916
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 958,
+    "observed_cgm": 958,
+    "innovation_coverage95": 0.9761388286334056,
+    "selected_forecast_coverage95": 0.9716157205240175,
+    "innovation_mean": 0.026433514632880874,
+    "innovation_std": 0.7151082936804884,
+    "innovation_lag1": 0.6956742354360458,
+    "forecast_lag1": 0.9462576511202585,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 958,
+      "observed_slots": 922,
+      "coverage": 0.9624217118997912,
+      "calendar_days": 3.326388888888889,
+      "observed_equivalent_days": 3.201388888888889,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 958,
+      "observed_slots": 916,
+      "coverage": 0.9561586638830898,
+      "calendar_days": 3.326388888888889,
+      "observed_equivalent_days": 3.1805555555555554,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 0,
+    "alarm_union_episodes_per_calendar_day": 0.0,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0015P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 22.580316149218987,
+        "mae": 16.39163220435784,
+        "n_pairs": 906
+      },
+      "persistence": {
+        "rmse": 27.60339738539606,
+        "mae": 19.699484915378957,
+        "n_pairs": 906
+      },
+      "trend": {
+        "rmse": 20.09844821137377,
+        "mae": 13.915820456217807,
+        "n_pairs": 906
+      }
+    },
+    "selected_metrics": {
+      "rmse": 20.09844821137377,
+      "mae": 13.915820456217807,
+      "n_pairs": 906
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 948,
+    "observed_cgm": 948,
+    "innovation_coverage95": 0.9835526315789473,
+    "selected_forecast_coverage95": 0.9481236203090507,
+    "innovation_mean": 0.01624433931062417,
+    "innovation_std": 0.6213639959688994,
+    "innovation_lag1": 0.455485121695452,
+    "forecast_lag1": 0.9602532737166837,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 948,
+      "observed_slots": 912,
+      "coverage": 0.9620253164556962,
+      "calendar_days": 3.2916666666666665,
+      "observed_equivalent_days": 3.1666666666666665,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 948,
+      "observed_slots": 906,
+      "coverage": 0.9556962025316456,
+      "calendar_days": 3.2916666666666665,
+      "observed_equivalent_days": 3.1458333333333335,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 0,
+    "alarm_union_episodes_per_calendar_day": 0.0,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0016P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 22.35588301748139,
+        "mae": 16.551090264640862,
+        "n_pairs": 917
+      },
+      "persistence": {
+        "rmse": 19.802717879654928,
+        "mae": 14.614093914112535,
+        "n_pairs": 917
+      },
+      "trend": {
+        "rmse": 17.59320719561981,
+        "mae": 11.799892468624018,
+        "n_pairs": 917
+      }
+    },
+    "selected_metrics": {
+      "rmse": 17.59320719561981,
+      "mae": 11.799892468624018,
+      "n_pairs": 917
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 959,
+    "observed_cgm": 959,
+    "innovation_coverage95": 0.9393282773564464,
+    "selected_forecast_coverage95": 0.9443838604143948,
+    "innovation_mean": 0.005726234097872258,
+    "innovation_std": 1.0010724718989608,
+    "innovation_lag1": 0.6816654439051584,
+    "forecast_lag1": 0.9169123484729931,
+    "alarm_innovation": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        834
+      ],
+      "slots": 959,
+      "observed_slots": 923,
+      "coverage": 0.9624608967674662,
+      "calendar_days": 3.329861111111111,
+      "observed_equivalent_days": 3.204861111111111,
+      "episodes_per_calendar_day": 0.30031282586027114,
+      "episodes_per_observed_equivalent_day": 0.3120260021668472
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 959,
+      "observed_slots": 917,
+      "coverage": 0.9562043795620438,
+      "calendar_days": 3.329861111111111,
+      "observed_equivalent_days": 3.1840277777777777,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 1,
+    "alarm_union_episodes_per_calendar_day": 0.30031282586027114,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0017P": {
+    "status": "not_evaluated",
+    "reason": "failed"
+  },
+  "HUPA0018P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 20.44114019244663,
+        "mae": 17.621001569889145,
+        "n_pairs": 932
+      },
+      "persistence": {
+        "rmse": 19.024989213985766,
+        "mae": 12.745994277539342,
+        "n_pairs": 932
+      },
+      "trend": {
+        "rmse": 15.429336673557291,
+        "mae": 10.238948497854079,
+        "n_pairs": 932
+      }
+    },
+    "selected_metrics": {
+      "rmse": 15.429336673557291,
+      "mae": 10.238948497854079,
+      "n_pairs": 932
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 974,
+    "observed_cgm": 974,
+    "innovation_coverage95": 0.9669509594882729,
+    "selected_forecast_coverage95": 0.9774678111587983,
+    "innovation_mean": -0.06473087231822203,
+    "innovation_std": 0.7417387117376191,
+    "innovation_lag1": 0.5419191180166099,
+    "forecast_lag1": 0.918984981248135,
+    "alarm_innovation": {
+      "alarm_count": 2,
+      "alarm_indices": [
+        103,
+        277
+      ],
+      "slots": 974,
+      "observed_slots": 938,
+      "coverage": 0.9630390143737166,
+      "calendar_days": 3.3819444444444446,
+      "observed_equivalent_days": 3.2569444444444446,
+      "episodes_per_calendar_day": 0.5913757700205339,
+      "episodes_per_observed_equivalent_day": 0.6140724946695095
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 974,
+      "observed_slots": 932,
+      "coverage": 0.9568788501026694,
+      "calendar_days": 3.3819444444444446,
+      "observed_equivalent_days": 3.236111111111111,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 2,
+    "alarm_union_episodes_per_calendar_day": 0.5913757700205339,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0019P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 37.417871688430324,
+        "mae": 30.305051573781277,
+        "n_pairs": 886
+      },
+      "persistence": {
+        "rmse": 32.36997973681054,
+        "mae": 24.98081264108352,
+        "n_pairs": 886
+      },
+      "trend": {
+        "rmse": 28.219731870932417,
+        "mae": 21.119149736644093,
+        "n_pairs": 886
+      }
+    },
+    "selected_metrics": {
+      "rmse": 28.219731870932417,
+      "mae": 21.119149736644093,
+      "n_pairs": 886
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 928,
+    "observed_cgm": 928,
+    "innovation_coverage95": 0.9495515695067265,
+    "selected_forecast_coverage95": 0.9582392776523702,
+    "innovation_mean": -0.04279888325807876,
+    "innovation_std": 0.9256260301989309,
+    "innovation_lag1": 0.6803849828866572,
+    "forecast_lag1": 0.9319918713612355,
+    "alarm_innovation": {
+      "alarm_count": 2,
+      "alarm_indices": [
+        153,
+        161
+      ],
+      "slots": 928,
+      "observed_slots": 892,
+      "coverage": 0.9612068965517241,
+      "calendar_days": 3.2222222222222223,
+      "observed_equivalent_days": 3.0972222222222223,
+      "episodes_per_calendar_day": 0.6206896551724138,
+      "episodes_per_observed_equivalent_day": 0.6457399103139013
+    },
+    "alarm_forecast": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        157
+      ],
+      "slots": 928,
+      "observed_slots": 886,
+      "coverage": 0.9547413793103449,
+      "calendar_days": 3.2222222222222223,
+      "observed_equivalent_days": 3.076388888888889,
+      "episodes_per_calendar_day": 0.3103448275862069,
+      "episodes_per_observed_equivalent_day": 0.32505643340857787
+    },
+    "alarm_union_count": 3,
+    "alarm_union_episodes_per_calendar_day": 0.9310344827586207,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0020P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 31.255498645780786,
+        "mae": 23.5131394541404,
+        "n_pairs": 674
+      },
+      "persistence": {
+        "rmse": 26.7735309299497,
+        "mae": 20.265084075173096,
+        "n_pairs": 674
+      },
+      "trend": {
+        "rmse": 20.783664788900175,
+        "mae": 15.346488625123639,
+        "n_pairs": 674
+      }
+    },
+    "selected_metrics": {
+      "rmse": 20.783664788900175,
+      "mae": 15.346488625123639,
+      "n_pairs": 674
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 716,
+    "observed_cgm": 716,
+    "innovation_coverage95": 0.9470588235294117,
+    "selected_forecast_coverage95": 0.9718100890207715,
+    "innovation_mean": 0.03694394788653484,
+    "innovation_std": 0.9174484527994345,
+    "innovation_lag1": 0.7186388288322839,
+    "forecast_lag1": 0.9527747632727518,
+    "alarm_innovation": {
+      "alarm_count": 4,
+      "alarm_indices": [
+        352,
+        366,
+        485,
+        714
+      ],
+      "slots": 716,
+      "observed_slots": 680,
+      "coverage": 0.9497206703910615,
+      "calendar_days": 2.486111111111111,
+      "observed_equivalent_days": 2.361111111111111,
+      "episodes_per_calendar_day": 1.6089385474860334,
+      "episodes_per_observed_equivalent_day": 1.6941176470588235
+    },
+    "alarm_forecast": {
+      "alarm_count": 7,
+      "alarm_indices": [
+        211,
+        323,
+        356,
+        361,
+        371,
+        490,
+        662
+      ],
+      "slots": 716,
+      "observed_slots": 674,
+      "coverage": 0.9413407821229051,
+      "calendar_days": 2.486111111111111,
+      "observed_equivalent_days": 2.3402777777777777,
+      "episodes_per_calendar_day": 2.815642458100559,
+      "episodes_per_observed_equivalent_day": 2.991097922848665
+    },
+    "alarm_union_count": 11,
+    "alarm_union_episodes_per_calendar_day": 4.424581005586592,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0021P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 32.71943233382084,
+        "mae": 21.98076898625676,
+        "n_pairs": 544
+      },
+      "persistence": {
+        "rmse": 30.11937035510927,
+        "mae": 20.63235294117647,
+        "n_pairs": 544
+      },
+      "trend": {
+        "rmse": 26.954540183791075,
+        "mae": 17.852083333333333,
+        "n_pairs": 544
+      }
+    },
+    "selected_metrics": {
+      "rmse": 26.954540183791075,
+      "mae": 17.852083333333333,
+      "n_pairs": 544
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 586,
+    "observed_cgm": 586,
+    "innovation_coverage95": 0.9072727272727272,
+    "selected_forecast_coverage95": 0.9227941176470589,
+    "innovation_mean": 0.04845142426167051,
+    "innovation_std": 1.404534637525207,
+    "innovation_lag1": 0.6791552219199593,
+    "forecast_lag1": 0.9307590576500926,
+    "alarm_innovation": {
+      "alarm_count": 9,
+      "alarm_indices": [
+        46,
+        54,
+        277,
+        295,
+        521,
+        527,
+        540,
+        543,
+        549
+      ],
+      "slots": 586,
+      "observed_slots": 550,
+      "coverage": 0.9385665529010239,
+      "calendar_days": 2.0347222222222223,
+      "observed_equivalent_days": 1.9097222222222223,
+      "episodes_per_calendar_day": 4.42320819112628,
+      "episodes_per_observed_equivalent_day": 4.712727272727273
+    },
+    "alarm_forecast": {
+      "alarm_count": 9,
+      "alarm_indices": [
+        48,
+        51,
+        59,
+        276,
+        299,
+        318,
+        525,
+        542,
+        545
+      ],
+      "slots": 586,
+      "observed_slots": 544,
+      "coverage": 0.9283276450511946,
+      "calendar_days": 2.0347222222222223,
+      "observed_equivalent_days": 1.8888888888888888,
+      "episodes_per_calendar_day": 4.42320819112628,
+      "episodes_per_observed_equivalent_day": 4.764705882352941
+    },
+    "alarm_union_count": 18,
+    "alarm_union_episodes_per_calendar_day": 8.84641638225256,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0022P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "persistence",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 16.055058879991204,
+        "mae": 11.527337834916207,
+        "n_pairs": 964
+      },
+      "persistence": {
+        "rmse": 15.660665841124619,
+        "mae": 10.383817427385893,
+        "n_pairs": 964
+      },
+      "trend": {
+        "rmse": 20.010230324958954,
+        "mae": 11.422856154910097,
+        "n_pairs": 964
+      }
+    },
+    "selected_metrics": {
+      "rmse": 15.660665841124619,
+      "mae": 10.383817427385893,
+      "n_pairs": 964
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 1006,
+    "observed_cgm": 1006,
+    "innovation_coverage95": 0.9288659793814433,
+    "selected_forecast_coverage95": 0.9564315352697096,
+    "innovation_mean": -0.003883127209992154,
+    "innovation_std": 1.3456073566288131,
+    "innovation_lag1": 0.19669722512011126,
+    "forecast_lag1": 0.8388654219501739,
+    "alarm_innovation": {
+      "alarm_count": 4,
+      "alarm_indices": [
+        150,
+        153,
+        516,
+        519
+      ],
+      "slots": 1006,
+      "observed_slots": 970,
+      "coverage": 0.9642147117296223,
+      "calendar_days": 3.4930555555555554,
+      "observed_equivalent_days": 3.3680555555555554,
+      "episodes_per_calendar_day": 1.1451292246520874,
+      "episodes_per_observed_equivalent_day": 1.1876288659793814
+    },
+    "alarm_forecast": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        513
+      ],
+      "slots": 1006,
+      "observed_slots": 964,
+      "coverage": 0.9582504970178927,
+      "calendar_days": 3.4930555555555554,
+      "observed_equivalent_days": 3.3472222222222223,
+      "episodes_per_calendar_day": 0.28628230616302186,
+      "episodes_per_observed_equivalent_day": 0.2987551867219917
+    },
+    "alarm_union_count": 5,
+    "alarm_union_episodes_per_calendar_day": 1.4314115308151094,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0023P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 16.254574865562024,
+        "mae": 12.698286180128635,
+        "n_pairs": 938
+      },
+      "persistence": {
+        "rmse": 14.802150128428773,
+        "mae": 10.250177683013503,
+        "n_pairs": 938
+      },
+      "trend": {
+        "rmse": 12.903080113964528,
+        "mae": 9.164534470504618,
+        "n_pairs": 938
+      }
+    },
+    "selected_metrics": {
+      "rmse": 12.903080113964528,
+      "mae": 9.164534470504618,
+      "n_pairs": 938
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 980,
+    "observed_cgm": 980,
+    "innovation_coverage95": 0.9872881355932204,
+    "selected_forecast_coverage95": 0.9861407249466951,
+    "innovation_mean": -0.026162748976742815,
+    "innovation_std": 0.6360927855392995,
+    "innovation_lag1": 0.6302072090332166,
+    "forecast_lag1": 0.9210899054542654,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 980,
+      "observed_slots": 944,
+      "coverage": 0.963265306122449,
+      "calendar_days": 3.4027777777777777,
+      "observed_equivalent_days": 3.2777777777777777,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 980,
+      "observed_slots": 938,
+      "coverage": 0.9571428571428572,
+      "calendar_days": 3.4027777777777777,
+      "observed_equivalent_days": 3.2569444444444446,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 0,
+    "alarm_union_episodes_per_calendar_day": 0.0,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0024P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 21.45229589604914,
+        "mae": 15.30552379715117,
+        "n_pairs": 684
+      },
+      "persistence": {
+        "rmse": 19.54009057556041,
+        "mae": 13.893762183235866,
+        "n_pairs": 684
+      },
+      "trend": {
+        "rmse": 16.096928875821884,
+        "mae": 10.779191033138403,
+        "n_pairs": 684
+      }
+    },
+    "selected_metrics": {
+      "rmse": 16.096928875821884,
+      "mae": 10.779191033138403,
+      "n_pairs": 684
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 726,
+    "observed_cgm": 726,
+    "innovation_coverage95": 0.9550724637681159,
+    "selected_forecast_coverage95": 0.9546783625730995,
+    "innovation_mean": 0.02894393032647298,
+    "innovation_std": 0.8869028236277315,
+    "innovation_lag1": 0.6167771684704135,
+    "forecast_lag1": 0.9257746911071701,
+    "alarm_innovation": {
+      "alarm_count": 2,
+      "alarm_indices": [
+        543,
+        552
+      ],
+      "slots": 726,
+      "observed_slots": 690,
+      "coverage": 0.9504132231404959,
+      "calendar_days": 2.5208333333333335,
+      "observed_equivalent_days": 2.3958333333333335,
+      "episodes_per_calendar_day": 0.793388429752066,
+      "episodes_per_observed_equivalent_day": 0.8347826086956521
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 726,
+      "observed_slots": 684,
+      "coverage": 0.9421487603305785,
+      "calendar_days": 2.5208333333333335,
+      "observed_equivalent_days": 2.375,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 2,
+    "alarm_union_episodes_per_calendar_day": 0.793388429752066,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0025P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 18.61896978384156,
+        "mae": 14.02875868235344,
+        "n_pairs": 960
+      },
+      "persistence": {
+        "rmse": 15.061893909736192,
+        "mae": 10.149305555555554,
+        "n_pairs": 960
+      },
+      "trend": {
+        "rmse": 12.167668432883623,
+        "mae": 8.112916666666667,
+        "n_pairs": 960
+      }
+    },
+    "selected_metrics": {
+      "rmse": 12.167668432883623,
+      "mae": 8.112916666666667,
+      "n_pairs": 960
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 1002,
+    "observed_cgm": 1002,
+    "innovation_coverage95": 0.9813664596273292,
+    "selected_forecast_coverage95": 0.9677083333333333,
+    "innovation_mean": 0.0022941736960040487,
+    "innovation_std": 0.6280420673792358,
+    "innovation_lag1": 0.7081797593496958,
+    "forecast_lag1": 0.9324966441573708,
+    "alarm_innovation": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        499
+      ],
+      "slots": 1002,
+      "observed_slots": 966,
+      "coverage": 0.9640718562874252,
+      "calendar_days": 3.4791666666666665,
+      "observed_equivalent_days": 3.3541666666666665,
+      "episodes_per_calendar_day": 0.2874251497005988,
+      "episodes_per_observed_equivalent_day": 0.2981366459627329
+    },
+    "alarm_forecast": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        499
+      ],
+      "slots": 1002,
+      "observed_slots": 960,
+      "coverage": 0.9580838323353293,
+      "calendar_days": 3.4791666666666665,
+      "observed_equivalent_days": 3.3333333333333335,
+      "episodes_per_calendar_day": 0.2874251497005988,
+      "episodes_per_observed_equivalent_day": 0.3
+    },
+    "alarm_union_count": 1,
+    "alarm_union_episodes_per_calendar_day": 0.2874251497005988,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0026P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 30.130212706224576,
+        "mae": 21.52252710105746,
+        "n_pairs": 10110
+      },
+      "persistence": {
+        "rmse": 25.802715653406093,
+        "mae": 17.875443612327885,
+        "n_pairs": 10110
+      },
+      "trend": {
+        "rmse": 22.285477553841616,
+        "mae": 14.906524785559897,
+        "n_pairs": 10110
+      }
+    },
+    "selected_metrics": {
+      "rmse": 22.285477553841616,
+      "mae": 14.906524785559897,
+      "n_pairs": 10110
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 10152,
+    "observed_cgm": 10152,
+    "innovation_coverage95": 0.9314946619217082,
+    "selected_forecast_coverage95": 0.9291790306627102,
+    "innovation_mean": -0.002798553248087402,
+    "innovation_std": 1.2197985257018669,
+    "innovation_lag1": 0.5767341431500844,
+    "forecast_lag1": 0.914716667830106,
+    "alarm_innovation": {
+      "alarm_count": 32,
+      "alarm_indices": [
+        465,
+        468,
+        471,
+        504,
+        536,
+        546,
+        555,
+        560,
+        578,
+        630,
+        1116,
+        1224,
+        1227,
+        1230,
+        1234,
+        1350,
+        1493,
+        1812,
+        1815,
+        1826,
+        2271,
+        2289,
+        2760,
+        3444,
+        3468,
+        4258,
+        4284,
+        4294,
+        5151,
+        5172,
+        5238,
+        6384
+      ],
+      "slots": 10152,
+      "observed_slots": 10116,
+      "coverage": 0.9964539007092199,
+      "calendar_days": 35.25,
+      "observed_equivalent_days": 35.125,
+      "episodes_per_calendar_day": 0.9078014184397163,
+      "episodes_per_observed_equivalent_day": 0.9110320284697508
+    },
+    "alarm_forecast": {
+      "alarm_count": 31,
+      "alarm_indices": [
+        474,
+        508,
+        537,
+        556,
+        579,
+        903,
+        1065,
+        1119,
+        1233,
+        1351,
+        1747,
+        1829,
+        2121,
+        2233,
+        2291,
+        2762,
+        3447,
+        3471,
+        4042,
+        4258,
+        4286,
+        4369,
+        5072,
+        5154,
+        5242,
+        6117,
+        7374,
+        8835,
+        9121,
+        9541,
+        10014
+      ],
+      "slots": 10152,
+      "observed_slots": 10110,
+      "coverage": 0.9958628841607565,
+      "calendar_days": 35.25,
+      "observed_equivalent_days": 35.104166666666664,
+      "episodes_per_calendar_day": 0.8794326241134752,
+      "episodes_per_observed_equivalent_day": 0.8830860534124629
+    },
+    "alarm_union_count": 62,
+    "alarm_union_episodes_per_calendar_day": 1.7588652482269505,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0027P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 18.999845708269365,
+        "mae": 13.89791735357483,
+        "n_pairs": 41285
+      },
+      "persistence": {
+        "rmse": 16.48131662734209,
+        "mae": 11.447500269897949,
+        "n_pairs": 41285
+      },
+      "trend": {
+        "rmse": 14.457217538939851,
+        "mae": 9.74962109433747,
+        "n_pairs": 41285
+      }
+    },
+    "selected_metrics": {
+      "rmse": 14.457217538939851,
+      "mae": 9.74962109433747,
+      "n_pairs": 41285
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 41327,
+    "observed_cgm": 41327,
+    "innovation_coverage95": 0.9628248286551548,
+    "selected_forecast_coverage95": 0.9654353881555044,
+    "innovation_mean": -0.008696549520228901,
+    "innovation_std": 0.8266365562056295,
+    "innovation_lag1": 0.6023184913569831,
+    "forecast_lag1": 0.9064656766840385,
+    "alarm_innovation": {
+      "alarm_count": 49,
+      "alarm_indices": [
+        1781,
+        2117,
+        3082,
+        3517,
+        4644,
+        4650,
+        4919,
+        8745,
+        9773,
+        12749,
+        13664,
+        14570,
+        17891,
+        18145,
+        19655,
+        21437,
+        22735,
+        23606,
+        24025,
+        24314,
+        24834,
+        25231,
+        25418,
+        25451,
+        25459,
+        26549,
+        26648,
+        27690,
+        27700,
+        28781,
+        29771,
+        29774,
+        29815,
+        30512,
+        30528,
+        30533,
+        30861,
+        31242,
+        31697,
+        31738,
+        31745,
+        32299,
+        32310,
+        35494,
+        38468,
+        39164,
+        39168,
+        40039,
+        40316
+      ],
+      "slots": 41327,
+      "observed_slots": 41291,
+      "coverage": 0.999128898782878,
+      "calendar_days": 143.49652777777777,
+      "observed_equivalent_days": 143.37152777777777,
+      "episodes_per_calendar_day": 0.34147167711181553,
+      "episodes_per_observed_equivalent_day": 0.34176939284589863
+    },
+    "alarm_forecast": {
+      "alarm_count": 54,
+      "alarm_indices": [
+        999,
+        1561,
+        1773,
+        2120,
+        2157,
+        3087,
+        3490,
+        4647,
+        4658,
+        4694,
+        8703,
+        8750,
+        13654,
+        13666,
+        15270,
+        17894,
+        17986,
+        19657,
+        21439,
+        22738,
+        22872,
+        23167,
+        24026,
+        24317,
+        24837,
+        25234,
+        26652,
+        27681,
+        27694,
+        27705,
+        29771,
+        29784,
+        29816,
+        30240,
+        30864,
+        30911,
+        31194,
+        31274,
+        31700,
+        31740,
+        32030,
+        32050,
+        32302,
+        32314,
+        32636,
+        32669,
+        35186,
+        36635,
+        38462,
+        39165,
+        39517,
+        40643,
+        41263,
+        41307
+      ],
+      "slots": 41327,
+      "observed_slots": 41285,
+      "coverage": 0.998983715246691,
+      "calendar_days": 143.49652777777777,
+      "observed_equivalent_days": 143.35069444444446,
+      "episodes_per_calendar_day": 0.37631572579669464,
+      "episodes_per_observed_equivalent_day": 0.3766985587985951
+    },
+    "alarm_union_count": 102,
+    "alarm_union_episodes_per_calendar_day": 0.7108185931715344,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "HUPA0028P": {
+    "status": "evaluated",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 24.412685338443044,
+        "mae": 18.146970002680543,
+        "n_pairs": 6434
+      },
+      "persistence": {
+        "rmse": 20.371747942060573,
+        "mae": 14.32608999538437,
+        "n_pairs": 6434
+      },
+      "trend": {
+        "rmse": 17.551268700442836,
+        "mae": 12.056507596353729,
+        "n_pairs": 6434
+      }
+    },
+    "selected_metrics": {
+      "rmse": 17.551268700442836,
+      "mae": 12.056507596353729,
+      "n_pairs": 6434
+    },
+    "pair_coverage": 1.0,
+    "n_slots": 6476,
+    "observed_cgm": 6476,
+    "innovation_coverage95": 0.9394409937888198,
+    "selected_forecast_coverage95": 0.9465340379235312,
+    "innovation_mean": 0.03137019673396186,
+    "innovation_std": 0.9930710699831514,
+    "innovation_lag1": 0.6540793605180879,
+    "forecast_lag1": 0.9214657176465939,
+    "alarm_innovation": {
+      "alarm_count": 28,
+      "alarm_indices": [
+        202,
+        220,
+        457,
+        470,
+        1429,
+        1983,
+        1994,
+        2005,
+        2012,
+        2238,
+        2257,
+        2264,
+        3258,
+        3271,
+        4090,
+        4095,
+        4145,
+        4206,
+        4477,
+        4595,
+        4890,
+        5046,
+        5082,
+        5639,
+        5715,
+        5739,
+        6252,
+        6271
+      ],
+      "slots": 6476,
+      "observed_slots": 6440,
+      "coverage": 0.9944410129709698,
+      "calendar_days": 22.48611111111111,
+      "observed_equivalent_days": 22.36111111111111,
+      "episodes_per_calendar_day": 1.2452130945027795,
+      "episodes_per_observed_equivalent_day": 1.2521739130434784
+    },
+    "alarm_forecast": {
+      "alarm_count": 26,
+      "alarm_indices": [
+        203,
+        228,
+        460,
+        475,
+        1430,
+        1986,
+        1998,
+        2017,
+        2242,
+        2269,
+        2496,
+        3261,
+        3277,
+        4099,
+        4149,
+        4203,
+        4477,
+        4535,
+        4598,
+        4850,
+        5050,
+        5086,
+        5646,
+        5716,
+        5741,
+        6254
+      ],
+      "slots": 6476,
+      "observed_slots": 6434,
+      "coverage": 0.993514515132798,
+      "calendar_days": 22.48611111111111,
+      "observed_equivalent_days": 22.34027777777778,
+      "episodes_per_calendar_day": 1.1562693020382953,
+      "episodes_per_observed_equivalent_day": 1.1638172210133664
+    },
+    "alarm_union_count": 53,
+    "alarm_union_episodes_per_calendar_day": 2.357010500308833,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "D1NAMO-001": {
+    "status": "evaluated",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 36.396759814760784,
+        "mae": 25.904923561763212,
+        "n_pairs": 311
+      },
+      "persistence": {
+        "rmse": 27.360695079808433,
+        "mae": 19.698353697749198,
+        "n_pairs": 311
+      },
+      "trend": {
+        "rmse": 23.209902130341025,
+        "mae": 16.28098193569132,
+        "n_pairs": 311
+      }
+    },
+    "selected_metrics": {
+      "rmse": 23.209902130341025,
+      "mae": 16.28098193569132,
+      "n_pairs": 311
+    },
+    "pair_coverage": 0.9967948717948718,
+    "n_slots": 354,
+    "observed_cgm": 353,
+    "innovation_coverage95": 0.861198738170347,
+    "selected_forecast_coverage95": 0.9003215434083601,
+    "innovation_mean": -0.06798542129750791,
+    "innovation_std": 1.47841308686622,
+    "innovation_lag1": 0.7563758935904465,
+    "forecast_lag1": 0.9473928977313734,
+    "alarm_innovation": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        115
+      ],
+      "slots": 354,
+      "observed_slots": 317,
+      "coverage": 0.8954802259887006,
+      "calendar_days": 1.2291666666666667,
+      "observed_equivalent_days": 1.1006944444444444,
+      "episodes_per_calendar_day": 0.8135593220338982,
+      "episodes_per_observed_equivalent_day": 0.9085173501577287
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 354,
+      "observed_slots": 311,
+      "coverage": 0.8785310734463276,
+      "calendar_days": 1.2291666666666667,
+      "observed_equivalent_days": 1.0798611111111112,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 1,
+    "alarm_union_episodes_per_calendar_day": 0.8135593220338982,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "D1NAMO-002": {
+    "status": "evaluated",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 50.90956554204222,
+        "mae": 36.52759399527513,
+        "n_pairs": 222
+      },
+      "persistence": {
+        "rmse": 39.88663585943617,
+        "mae": 29.535238648648644,
+        "n_pairs": 222
+      },
+      "trend": {
+        "rmse": 27.71138373858888,
+        "mae": 18.82457550450451,
+        "n_pairs": 222
+      }
+    },
+    "selected_metrics": {
+      "rmse": 27.71138373858888,
+      "mae": 18.82457550450451,
+      "n_pairs": 222
+    },
+    "pair_coverage": 0.9955156950672646,
+    "n_slots": 265,
+    "observed_cgm": 264,
+    "innovation_coverage95": 0.9649122807017544,
+    "selected_forecast_coverage95": 0.963963963963964,
+    "innovation_mean": -0.0014837230994977435,
+    "innovation_std": 0.7195577281244054,
+    "innovation_lag1": 0.8020752822361926,
+    "forecast_lag1": 0.9697577469481223,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 265,
+      "observed_slots": 228,
+      "coverage": 0.8603773584905661,
+      "calendar_days": 0.9201388888888888,
+      "observed_equivalent_days": 0.7916666666666666,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 265,
+      "observed_slots": 222,
+      "coverage": 0.8377358490566038,
+      "calendar_days": 0.9201388888888888,
+      "observed_equivalent_days": 0.7708333333333334,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 0,
+    "alarm_union_episodes_per_calendar_day": 0.0,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "D1NAMO-003": {
+    "status": "not_evaluated",
+    "reason": "excluded"
+  },
+  "D1NAMO-004": {
+    "status": "evaluated",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 59.07268624659474,
+        "mae": 46.16630501875292,
+        "n_pairs": 200
+      },
+      "persistence": {
+        "rmse": 47.64579033495588,
+        "mae": 31.099413199999994,
+        "n_pairs": 200
+      },
+      "trend": {
+        "rmse": 39.2649297970391,
+        "mae": 26.398910729999994,
+        "n_pairs": 200
+      }
+    },
+    "selected_metrics": {
+      "rmse": 39.2649297970391,
+      "mae": 26.398910729999994,
+      "n_pairs": 200
+    },
+    "pair_coverage": 0.9950248756218906,
+    "n_slots": 243,
+    "observed_cgm": 242,
+    "innovation_coverage95": 0.8786407766990292,
+    "selected_forecast_coverage95": 0.875,
+    "innovation_mean": 0.08437523720027443,
+    "innovation_std": 1.3747609383361101,
+    "innovation_lag1": 0.7615409452599379,
+    "forecast_lag1": 0.9426366077613921,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 243,
+      "observed_slots": 206,
+      "coverage": 0.8477366255144033,
+      "calendar_days": 0.84375,
+      "observed_equivalent_days": 0.7152777777777778,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        129
+      ],
+      "slots": 243,
+      "observed_slots": 200,
+      "coverage": 0.823045267489712,
+      "calendar_days": 0.84375,
+      "observed_equivalent_days": 0.6944444444444444,
+      "episodes_per_calendar_day": 1.1851851851851851,
+      "episodes_per_observed_equivalent_day": 1.44
+    },
+    "alarm_union_count": 1,
+    "alarm_union_episodes_per_calendar_day": 1.1851851851851851,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "D1NAMO-005": {
+    "status": "evaluated",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 30.25081128872506,
+        "mae": 25.93225614145738,
+        "n_pairs": 185
+      },
+      "persistence": {
+        "rmse": 22.928450106571756,
+        "mae": 16.956587135135138,
+        "n_pairs": 185
+      },
+      "trend": {
+        "rmse": 17.325734238723882,
+        "mae": 12.77246890810811,
+        "n_pairs": 185
+      }
+    },
+    "selected_metrics": {
+      "rmse": 17.325734238723882,
+      "mae": 12.77246890810811,
+      "n_pairs": 185
+    },
+    "pair_coverage": 0.9946236559139785,
+    "n_slots": 228,
+    "observed_cgm": 227,
+    "innovation_coverage95": 0.9109947643979057,
+    "selected_forecast_coverage95": 0.9513513513513514,
+    "innovation_mean": 0.0026473675230980222,
+    "innovation_std": 1.121538698230688,
+    "innovation_lag1": 0.7466783021962353,
+    "forecast_lag1": 0.9648315360885095,
+    "alarm_innovation": {
+      "alarm_count": 2,
+      "alarm_indices": [
+        146,
+        161
+      ],
+      "slots": 228,
+      "observed_slots": 191,
+      "coverage": 0.8377192982456141,
+      "calendar_days": 0.7916666666666666,
+      "observed_equivalent_days": 0.6631944444444444,
+      "episodes_per_calendar_day": 2.5263157894736845,
+      "episodes_per_observed_equivalent_day": 3.0157068062827226
+    },
+    "alarm_forecast": {
+      "alarm_count": 4,
+      "alarm_indices": [
+        148,
+        153,
+        169,
+        220
+      ],
+      "slots": 228,
+      "observed_slots": 185,
+      "coverage": 0.8114035087719298,
+      "calendar_days": 0.7916666666666666,
+      "observed_equivalent_days": 0.6423611111111112,
+      "episodes_per_calendar_day": 5.052631578947369,
+      "episodes_per_observed_equivalent_day": 6.2270270270270265
+    },
+    "alarm_union_count": 6,
+    "alarm_union_episodes_per_calendar_day": 7.578947368421053,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "D1NAMO-006": {
+    "status": "evaluated",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 20.964578609654808,
+        "mae": 15.644399045130713,
+        "n_pairs": 278
+      },
+      "persistence": {
+        "rmse": 17.839726642170145,
+        "mae": 12.94977107913669,
+        "n_pairs": 278
+      },
+      "trend": {
+        "rmse": 14.529397969776948,
+        "mae": 9.980008762589925,
+        "n_pairs": 278
+      }
+    },
+    "selected_metrics": {
+      "rmse": 14.529397969776948,
+      "mae": 9.980008762589925,
+      "n_pairs": 278
+    },
+    "pair_coverage": 0.996415770609319,
+    "n_slots": 321,
+    "observed_cgm": 320,
+    "innovation_coverage95": 0.9788732394366197,
+    "selected_forecast_coverage95": 0.9712230215827338,
+    "innovation_mean": -0.005397766737837489,
+    "innovation_std": 0.6627874076561345,
+    "innovation_lag1": 0.6998722250811221,
+    "forecast_lag1": 0.9429659765767586,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 321,
+      "observed_slots": 284,
+      "coverage": 0.8847352024922118,
+      "calendar_days": 1.1145833333333333,
+      "observed_equivalent_days": 0.9861111111111112,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 1,
+      "alarm_indices": [
+        191
+      ],
+      "slots": 321,
+      "observed_slots": 278,
+      "coverage": 0.8660436137071651,
+      "calendar_days": 1.1145833333333333,
+      "observed_equivalent_days": 0.9652777777777778,
+      "episodes_per_calendar_day": 0.8971962616822431,
+      "episodes_per_observed_equivalent_day": 1.0359712230215827
+    },
+    "alarm_union_count": 1,
+    "alarm_union_episodes_per_calendar_day": 0.8971962616822431,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "D1NAMO-007": {
+    "status": "evaluated",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 22.939723915958595,
+        "mae": 18.81131301755719,
+        "n_pairs": 222
+      },
+      "persistence": {
+        "rmse": 19.0663696138155,
+        "mae": 15.45344720720721,
+        "n_pairs": 222
+      },
+      "trend": {
+        "rmse": 15.011033274573066,
+        "mae": 11.401787099099101,
+        "n_pairs": 222
+      }
+    },
+    "selected_metrics": {
+      "rmse": 15.011033274573066,
+      "mae": 11.401787099099101,
+      "n_pairs": 222
+    },
+    "pair_coverage": 0.9955156950672646,
+    "n_slots": 265,
+    "observed_cgm": 264,
+    "innovation_coverage95": 0.8991228070175439,
+    "selected_forecast_coverage95": 0.9369369369369369,
+    "innovation_mean": -0.02470455952801991,
+    "innovation_std": 1.1242456338718294,
+    "innovation_lag1": 0.6825466266760267,
+    "forecast_lag1": 0.9531008043579969,
+    "alarm_innovation": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 265,
+      "observed_slots": 228,
+      "coverage": 0.8603773584905661,
+      "calendar_days": 0.9201388888888888,
+      "observed_equivalent_days": 0.7916666666666666,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_forecast": {
+      "alarm_count": 0,
+      "alarm_indices": [],
+      "slots": 265,
+      "observed_slots": 222,
+      "coverage": 0.8377358490566038,
+      "calendar_days": 0.9201388888888888,
+      "observed_equivalent_days": 0.7708333333333334,
+      "episodes_per_calendar_day": 0.0,
+      "episodes_per_observed_equivalent_day": 0.0
+    },
+    "alarm_union_count": 0,
+    "alarm_union_episodes_per_calendar_day": 0.0,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "D1NAMO-008": {
+    "status": "evaluated",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "selected_policy": "trend",
+    "metrics": {
+      "mechanistic": {
+        "rmse": 26.917581669342596,
+        "mae": 20.02775618548533,
+        "n_pairs": 243
+      },
+      "persistence": {
+        "rmse": 24.416464723381203,
+        "mae": 18.240646913580246,
+        "n_pairs": 243
+      },
+      "trend": {
+        "rmse": 21.362815439479398,
+        "mae": 15.954634131687243,
+        "n_pairs": 243
+      }
+    },
+    "selected_metrics": {
+      "rmse": 21.362815439479398,
+      "mae": 15.954634131687243,
+      "n_pairs": 243
+    },
+    "pair_coverage": 0.9959016393442623,
+    "n_slots": 286,
+    "observed_cgm": 285,
+    "innovation_coverage95": 0.927710843373494,
+    "selected_forecast_coverage95": 0.934156378600823,
+    "innovation_mean": -0.042940038865503995,
+    "innovation_std": 0.9734638828051985,
+    "innovation_lag1": 0.8123364173281324,
+    "forecast_lag1": 0.9493193275680144,
+    "alarm_innovation": {
+      "alarm_count": 2,
+      "alarm_indices": [
+        95,
+        111
+      ],
+      "slots": 286,
+      "observed_slots": 249,
+      "coverage": 0.8706293706293706,
+      "calendar_days": 0.9930555555555556,
+      "observed_equivalent_days": 0.8645833333333334,
+      "episodes_per_calendar_day": 2.0139860139860137,
+      "episodes_per_observed_equivalent_day": 2.3132530120481927
+    },
+    "alarm_forecast": {
+      "alarm_count": 2,
+      "alarm_indices": [
+        90,
+        101
+      ],
+      "slots": 286,
+      "observed_slots": 243,
+      "coverage": 0.8496503496503497,
+      "calendar_days": 0.9930555555555556,
+      "observed_equivalent_days": 0.84375,
+      "episodes_per_calendar_day": 2.0139860139860137,
+      "episodes_per_observed_equivalent_day": 2.3703703703703702
+    },
+    "alarm_union_count": 4,
+    "alarm_union_episodes_per_calendar_day": 4.0279720279720275,
+    "filter_reset_slots": [
+      0
+    ]
+  },
+  "D1NAMO-009": {
+    "status": "not_evaluated",
+    "reason": "excluded"
+  }
+}

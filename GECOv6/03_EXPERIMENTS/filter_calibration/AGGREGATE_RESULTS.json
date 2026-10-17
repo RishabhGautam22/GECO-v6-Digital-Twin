@@ -1,0 +1,76 @@
+{
+  "n_evaluated": 31,
+  "status_counts": {
+    "frozen": 31,
+    "failed": 1,
+    "excluded": 2
+  },
+  "selection_counts": {
+    "trend": 30,
+    "persistence": 1
+  },
+  "all_test_pairs": 77110,
+  "participant_median": {
+    "pair_coverage": 1.0,
+    "test_pairs": 901.0,
+    "innovation_coverage95": 0.9605263157894737,
+    "forecast_coverage95": 0.9582392776523702,
+    "test_alarm_union_per_day": 0.8135593220338982,
+    "tune_alarm_union_per_day": 0.5913757700205339,
+    "inflation": 1.0335493833218237,
+    "rho": 0.958233400855281,
+    "sigma6": 22.798538775510178,
+    "jacobian_condition": 7.480530957881343,
+    "mechanistic_rmse": 25.773271833540353,
+    "mechanistic_tune_rmse": 23.643674211966573,
+    "persistence_rmse": 22.562942664640097,
+    "persistence_tune_rmse": 21.53958623102345,
+    "trend_rmse": 17.83113207791839,
+    "trend_tune_rmse": 17.77024404992295,
+    "selected_rmse": 17.59320719561981,
+    "selected_mae": 12.21155164504932
+  },
+  "paired_rmse_comparisons": {
+    "mechanistic_minus_persistence": {
+      "mean_difference_mgdl": 3.7320023560125657,
+      "participant_bootstrap95": [
+        2.5579130918588233,
+        4.91233026768383
+      ],
+      "better_count": 3,
+      "tie_count": 0,
+      "worse_count": 28
+    },
+    "trend_minus_persistence": {
+      "mean_difference_mgdl": -4.0031546583983,
+      "participant_bootstrap95": [
+        -4.951470772404562,
+        -3.0310810518260096
+      ],
+      "better_count": 30,
+      "tie_count": 0,
+      "worse_count": 1
+    },
+    "selected_minus_persistence": {
+      "mean_difference_mgdl": -4.143463190134892,
+      "participant_bootstrap95": [
+        -5.020886548504836,
+        -3.32781656709992
+      ],
+      "better_count": 30,
+      "tie_count": 1,
+      "worse_count": 0
+    },
+    "selected_minus_mechanistic": {
+      "mean_difference_mgdl": -7.875465546147456,
+      "participant_bootstrap95": [
+        -9.716203140070048,
+        -6.2214040696077095
+      ],
+      "better_count": 31,
+      "tie_count": 0,
+      "worse_count": 0
+    }
+  },
+  "interpretation": "Descriptive participant bootstrap; previously exposed internal tests, not external validation."
+}

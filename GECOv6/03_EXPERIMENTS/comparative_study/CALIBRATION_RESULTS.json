@@ -1,0 +1,425 @@
+{
+  "runs": [
+    {
+      "run_id": "calibration_geco_original_00_1103",
+      "maxima": {
+        "full": 2.9512965097694,
+        "simple": 2.3076692605784945
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_00_1103.json.gz",
+        "sha256": "d64f41b7fdb861f8f8aca55a4d288aa43a403858963ce240bebede717f32cbaa",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_00_2707",
+      "maxima": {
+        "full": 2.8317903182921165,
+        "simple": 2.307669260578408
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_00_2707.json.gz",
+        "sha256": "e273ffd3cf8df7144aa89c3c4319bfe7f61db6c1f441e42fa4a6648009edcd17",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_01_1103",
+      "maxima": {
+        "full": 3.1604901335308564,
+        "simple": 2.1756970423360276
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_01_1103.json.gz",
+        "sha256": "d2057375e5a637de3146a1392e6c717b60446923bef3ca0fa4391a6a48c3cd0b",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_01_2707",
+      "maxima": {
+        "full": 3.5125197828792976,
+        "simple": 2.1756970423360276
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_01_2707.json.gz",
+        "sha256": "0248457cb62137c8f205fc6f1b4ffc29cd782b35588a348d81eae4b2a8801ab6",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_02_1103",
+      "maxima": {
+        "full": 4.20421665499466,
+        "simple": 2.2085078282541035
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_02_1103.json.gz",
+        "sha256": "ce6431fc90f48ba0310cbeaae5ecc925fb17d80e0c71464265ef53c89e8d47cf",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_02_2707",
+      "maxima": {
+        "full": 2.8826394732626635,
+        "simple": 2.2085078282541035
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_02_2707.json.gz",
+        "sha256": "a0b09785149b98ca5d90903ee4d0bccc426f91ac3cb531d26dacebf882896214",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_03_1103",
+      "maxima": {
+        "full": 3.4779234745876964,
+        "simple": 2.307669260578408
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_03_1103.json.gz",
+        "sha256": "a9b3cd162016b7c7772dae680ffddeeceb5f0ed21cc5e550cdb4b1f7dde1a3c2",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_03_2707",
+      "maxima": {
+        "full": 3.3642690080073367,
+        "simple": 2.307669260578408
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_03_2707.json.gz",
+        "sha256": "d60be39f517b5cf0fdb7b02feaa7feee4b897eff99a145a6dbd32cc3f2799f80",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_04_1103",
+      "maxima": {
+        "full": 3.6888119461720574,
+        "simple": 2.2085078282541035
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_04_1103.json.gz",
+        "sha256": "4bce4ee1fc7fb216d5a052dded747064364ea7a66de6c7db3c01ced297e0361d",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_04_2707",
+      "maxima": {
+        "full": 3.4683778801861904,
+        "simple": 2.2085078282541035
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_04_2707.json.gz",
+        "sha256": "ff2ab45d5ebd39e14c9bfd028c748dc56d8b78cbbff51f35fd4fb44bfa51d349",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_05_1103",
+      "maxima": {
+        "full": 3.645372534875279,
+        "simple": 2.307669260578408
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_05_1103.json.gz",
+        "sha256": "3c03d5cc2b4bb2789131e814a90133968f409cd05dfd2c56e84d4a0806500ccd",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_05_2707",
+      "maxima": {
+        "full": 3.3982786248324426,
+        "simple": 2.3076692605784945
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_05_2707.json.gz",
+        "sha256": "29e866d82d5258cc88cbd05ec97b6e4352e5e16da54d53f85ae5556c5961aacc",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_06_1103",
+      "maxima": {
+        "full": 3.704185583372158,
+        "simple": 2.1756970423360276
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_06_1103.json.gz",
+        "sha256": "c62a96831842092c47414f43e764d8d3eba29b2d0c281a3c0c1558648d4effcb",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_06_2707",
+      "maxima": {
+        "full": 3.948151667618637,
+        "simple": 2.1756970423360276
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_06_2707.json.gz",
+        "sha256": "c67d70fef8410f840b107d8793a66a99dc2d8dc48e5c7bd5c6ac4f963c25743c",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_07_1103",
+      "maxima": {
+        "full": 3.2315800097752025,
+        "simple": 2.3076692605784945
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_07_1103.json.gz",
+        "sha256": "b6e73d39fa433cec0a811978c43e3a2c596572a7591ed300740f81f054eba3bd",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_geco_original_07_2707",
+      "maxima": {
+        "full": 3.363367239957048,
+        "simple": 2.307669260578408
+      },
+      "invalid_plant_samples": 0,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_geco_original_07_2707.json.gz",
+        "sha256": "115743931650cf50cc909db94569cea920cf4867f0748b38ebb302d40da2d5ad",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_00_1103",
+      "maxima": {
+        "full": 7.038636478883532,
+        "simple": 2.2748584746604186
+      },
+      "invalid_plant_samples": 194,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_00_1103.json.gz",
+        "sha256": "b6db3e5f77fe8914ecf878b5ec26ec38295fc8f42df3306a3f2c315609c1f17d",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_00_2707",
+      "maxima": {
+        "full": 7.217086964227901,
+        "simple": 2.352918058667949
+      },
+      "invalid_plant_samples": 210,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_00_2707.json.gz",
+        "sha256": "930c1303f34856aae005cb42fcbe71e121fa9be122f7957bdd8792f302484c95",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_01_1103",
+      "maxima": {
+        "full": 6.7544256720552935,
+        "simple": 2.413049698988574
+      },
+      "invalid_plant_samples": 178,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_01_1103.json.gz",
+        "sha256": "f5838a4f280168e428931c3a03e5b8656f2d1616bfc639bc60a947496029b8d2",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_01_2707",
+      "maxima": {
+        "full": 7.1378195453139215,
+        "simple": 2.4279325412196586
+      },
+      "invalid_plant_samples": 194,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_01_2707.json.gz",
+        "sha256": "24275df3fdd560664b25eb607f39db52293700b76ccf73732adea3fd1448cfad",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_02_1103",
+      "maxima": {
+        "full": 7.4494666635605995,
+        "simple": 2.566123765547771
+      },
+      "invalid_plant_samples": 160,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_02_1103.json.gz",
+        "sha256": "1f4f0cbe8deac24c701179a00cf22d8beac07fc6efad6226b197112230bf7285",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_02_2707",
+      "maxima": {
+        "full": 7.4008098726397975,
+        "simple": 2.352918058667949
+      },
+      "invalid_plant_samples": 174,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_02_2707.json.gz",
+        "sha256": "d5da30a9b61e46f3ce59ea8556525d5ea96684d3be9ccf05df0b59e2ce13c246",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_03_1103",
+      "maxima": {
+        "full": 5.9396826500697655,
+        "simple": 2.3529180586679703
+      },
+      "invalid_plant_samples": 107,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_03_1103.json.gz",
+        "sha256": "6be5035924818d53131926a73978a960e58ee3c207d5baa9dbcfd0d383e7e602",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_03_2707",
+      "maxima": {
+        "full": 6.691397675543595,
+        "simple": 2.7316358442786
+      },
+      "invalid_plant_samples": 133,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_03_2707.json.gz",
+        "sha256": "7ac026743d97508bd3733a2731b3674d9f8801e0f86743b48443c894c1f2fb9f",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_04_1103",
+      "maxima": {
+        "full": 4.947586703838543,
+        "simple": 2.4669623332234236
+      },
+      "invalid_plant_samples": 68,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_04_1103.json.gz",
+        "sha256": "e6da5aa4848f33d2cbc2c6ba391d6dce7359ff05220c66336e5b1c0bedf238f4",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_04_2707",
+      "maxima": {
+        "full": 5.475041431355092,
+        "simple": 3.100960719173533
+      },
+      "invalid_plant_samples": 68,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_04_2707.json.gz",
+        "sha256": "eaebad416957bfca693e2cf75e0e8c377ec8d696e2508ea662db191de927c7c0",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_05_1103",
+      "maxima": {
+        "full": 4.730974212172937,
+        "simple": 2.770665636282371
+      },
+      "invalid_plant_samples": 23,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_05_1103.json.gz",
+        "sha256": "820b743c42dc8418b0564956bec616ac4e3b4ce43121b5d63f5ef6fbcd8cde33",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_05_2707",
+      "maxima": {
+        "full": 4.6203691691794875,
+        "simple": 2.505992125227189
+      },
+      "invalid_plant_samples": 30,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_05_2707.json.gz",
+        "sha256": "f93605725fdde6eeb5a8679eabd6a16552b3e1517cf122c8a8d3be5bb1b23b22",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_06_1103",
+      "maxima": {
+        "full": 6.684386093890721,
+        "simple": 2.352918058667949
+      },
+      "invalid_plant_samples": 86,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_06_1103.json.gz",
+        "sha256": "f83c16779c3157b3d9d927ea7926ff7b7efe81dc6da7d02ae0e91e3aad618b87",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_06_2707",
+      "maxima": {
+        "full": 4.867362346543557,
+        "simple": 2.632474411954215
+      },
+      "invalid_plant_samples": 118,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_06_2707.json.gz",
+        "sha256": "5038eda8b9fa64e5b4a17aaf5041559407946b8ff4b651a515fd6dd6862295b5",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_07_1103",
+      "maxima": {
+        "full": 4.032992089715625,
+        "simple": 2.7105339959617463
+      },
+      "invalid_plant_samples": 9,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_07_1103.json.gz",
+        "sha256": "e791befd6cfc60f2b3fd75e6f4430266a4c0c3e0b263da718791bf62868c3fc4",
+        "samples": 576
+      }
+    },
+    {
+      "run_id": "calibration_hovorka_2004_07_2707",
+      "maxima": {
+        "full": 5.6996273922288845,
+        "simple": 2.5122111313128355
+      },
+      "invalid_plant_samples": 21,
+      "trace": {
+        "path": "03_EXPERIMENTS/comparative_study/calibration_traces/calibration_hovorka_2004_07_2707.json.gz",
+        "sha256": "b70e50a8c8485b22a47dbbb6c94fd212c3084b6b1a5db0473851c65113043816",
+        "samples": 576
+      }
+    }
+  ],
+  "empirical_statistical_containment_runs": {
+    "full": 0,
+    "simple": 0
+  },
+  "finite_sample_warning": "32 calibration run maxima do not establish a population false-alarm bound; seeds are repeated within16 parameter units"
+}

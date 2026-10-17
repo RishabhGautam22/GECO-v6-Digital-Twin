@@ -1,0 +1,10 @@
+{
+ "grams_per_unit": 0.1005,
+ "gain": 1.0174462425577535,
+ "offset_g": 0.0011286966029737681,
+ "residual_sigma_g": 0.005143506785294255,
+ "threshold_g": 0.02,
+ "noise_floor_g": 0.01,
+ "unauthorised_flow_g": 0.03,
+ "rel_sigma": 0.02884552589727064
+}

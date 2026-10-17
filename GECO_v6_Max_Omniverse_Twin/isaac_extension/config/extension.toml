@@ -1,0 +1,34 @@
+[package]
+version = "6.1.0"
+category = "Medical Cyber-Physical Digital Twin"
+title = "GECO v6 Max — 6-Room Smart Hospital Ward & 130-Part Metrology Rig Twin"
+description = "NVIDIA Omniverse Isaac Sim 6.1.0 extension for the GECO v6.1+ Multi-Room Smart Hospital ICU Ward, Fluidic Pipe Debris & Occlusion Physics, Battery Brownout Cut-Away, Cyber-MITM Simplex Safe-Basal Clamp, and 130-Part IIT Patna Gravimetric Saline Metrology Rig."
+authors = ["GECO v6 Max Digital Twin Engineering Team"]
+repository = "https://github.com/geco-v6/geco-v6-max-omniverse-twin"
+keywords = [
+    "omniverse",
+    "isaacsim",
+    "openusd",
+    "insulin",
+    "digital-twin",
+    "geco-v6",
+    "cyber-physical",
+    "simplex",
+    "metrology"
+]
+
+[dependencies]
+"omni.kit.uiapp" = {}
+"omni.usd" = {}
+"omni.ui" = {}
+"omni.timeline" = {}
+"omni.kit.viewport.utility" = { optional = true }
+"omni.physx" = { optional = true }
+
+[[python.module]]
+name = "geco_omniverse_ward"
+
+[settings.exts."geco.v6.omniverse.ward"]
+websocket_uri = "ws://127.0.0.1:8766"
+auto_load_ward_stage = true
+update_rate_hz = 20.0

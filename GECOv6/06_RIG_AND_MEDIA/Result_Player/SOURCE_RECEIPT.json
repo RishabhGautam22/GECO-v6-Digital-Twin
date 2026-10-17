@@ -1,0 +1,37 @@
+{
+  "selection": "03_EXPERIMENTS/VIDEO_SELECTION_PROTOCOL.json",
+  "cases": 10,
+  "per_trace_samples": 576,
+  "full_horizon_hours": 48,
+  "data_status": "FROZEN_V6_SIMULATION",
+  "glucose_limit": "Model domain flags retained; no clinical validation",
+  "sources": {
+    "03_EXPERIMENTS/comparative_study/main/references/geco_original_08_1103_clean_reference.json.gz": "9c7b405d12959be94dec187ca21b830113fd6c38e4a0f56bbef3623eeece70e3",
+    "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_clean_full_supervised_one_sample_baseline.json.gz": "a4813cadf44776f8e63809e92868f6924bcb2386b80267b86025ce113e988d59",
+    "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_clean_simple_supervised_one_sample_baseline.json.gz": "32aaa11d626569b76c4f2396a0ed1aa1909f3768dfe6f284c9d9f9f5349191fd",
+    "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_excess_2x_full_supervised_one_sample_baseline.json.gz": "5ea8b0b6d657b2d2b684628b9026b0160bbb54193594515e3fdbe6466dbb508e",
+    "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_excess_2x_simple_supervised_one_sample_baseline.json.gz": "68141727fe3e239efa425ec355c04a753d4567f219f02b8ee0074b9c3bfa5cd2",
+    "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_stuck_on_full_supervised_one_sample_baseline.json.gz": "eb171ee2334e6ae76542ef78b5ce2b5c40f6acee2bab168f16b841175745a7a7",
+    "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_stuck_on_simple_supervised_one_sample_baseline.json.gz": "cef45bce964c3b94eeb3d7210a66c3477ca32642a60ec0e441ad53432636427a",
+    "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_cgm_missing_full_supervised_one_sample_baseline.json.gz": "fa80e953be5a23ac6c96ca1f38ebc09bfae668bc5aa8f47a487e0f0f8e2247fe",
+    "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_cgm_missing_simple_supervised_one_sample_baseline.json.gz": "bcadcaac2eb04c6f3c3f74e3bc1b5e9b8e2481cb092cfa00d757201f83fe5611",
+    "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_excess_bias_report_mask_full_supervised_one_sample_baseline.json.gz": "f1bcc9f9c8e3629b889192e793a8b24dd1e590bde093c4406d5dc76b9bf6295c",
+    "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_excess_bias_report_mask_simple_supervised_one_sample_baseline.json.gz": "2171c999976df7898c3ad5fef160995f689988e7b1ad0568123f21587ff600aa",
+    "03_EXPERIMENTS/comparative_study/main/references/hovorka_2004_08_1103_clean_reference.json.gz": "bac9354914e4bd8d051313abbb68ad01c1057999049acdb9f3c04f54475d074d",
+    "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_clean_full_supervised_one_sample_baseline.json.gz": "1c904df5a1072269f667a4aa744071cd8db954b8ca3c620886e2f649be8ff6ad",
+    "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_clean_simple_supervised_one_sample_baseline.json.gz": "80cc8a4c51109ec565f13b0754ce148c9f95a659cdb00468a1345d3969eec8ef",
+    "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_excess_2x_full_supervised_one_sample_baseline.json.gz": "6866ded7e93e3d8a91cadc7489c41f1c6fb9d4157ed6670bcbe654d5de967a3c",
+    "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_excess_2x_simple_supervised_one_sample_baseline.json.gz": "7a9f522c4985e275b0e66cf9440b23a2abebeda71bde789ae743d5ebd5bb4f3e",
+    "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_stuck_on_full_supervised_one_sample_baseline.json.gz": "732cdd36cc4ae7421190aa45ab5edc255fb480c232f8f7c3c6efd782e5621a84",
+    "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_stuck_on_simple_supervised_one_sample_baseline.json.gz": "0ba313ab1747bddf7163563e63f3f4fc08bb71501f03cfce76ddc5286952f766",
+    "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_cgm_missing_full_supervised_one_sample_baseline.json.gz": "3bc164f6b59f9a48b5d57e11100b99e56a148f6f25beebf445144aaadd753585",
+    "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_cgm_missing_simple_supervised_one_sample_baseline.json.gz": "4ac8b423e752c5fa510860fa5b4e1d22ca4925c8e174a2ceea8c4274ae16c695",
+    "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_excess_bias_report_mask_full_supervised_one_sample_baseline.json.gz": "0c396b444458c31e367227a3344d0bff83501ab64ecfc5b5531e929a7b8a61bc",
+    "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_excess_bias_report_mask_simple_supervised_one_sample_baseline.json.gz": "6a7716a4e08410bc9bbd155a83289e5ada12e3a288fc66a543240ba488f07747"
+  },
+  "axes": {
+    "glucose_min": 0,
+    "glucose_max": 650,
+    "delivery_max": 70
+  }
+}

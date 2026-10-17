@@ -1,0 +1,51 @@
+{
+  "runtime": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 08:22:19) [Clang 14.0.6 ]",
+  "matplotlib": "3.9.2",
+  "numpy": "1.26.4",
+  "source_sha256": "5c30af34d77cfec117dad688c9bfd48c9e927338a777b12133b4a5671e27b321",
+  "input_hashes": {
+    "PARTICIPANT_RESULTS.csv": "493cb814dac0a56a26ab3d6949f6bd63ab724d2e24293def7fa4571c62cc25d3",
+    "TEST_RESULTS.json": "915d343772aefa6366487df10c805ecdb139d12260ec278a41ca7199a1fa64e0",
+    "FROZEN_CALIBRATION.json": "4502e797edecb906981e73db4a8d38cde609eea4bc0d74edfcc7282a9b47b649"
+  },
+  "figure_source_data_sha256": "5d88bf0ba53e1417c33d59851a5f6237b44270a3d1f28d6191f5ba264dcf4689",
+  "selection": "All31 evaluated participants, no performance filtering; fixed participant-id ordering in FIGURE_PARTICIPANT_DATA.csv",
+  "figures": [
+    {
+      "name": "F01_participant_forecast_rmse",
+      "caption": "Participant-specific matched-pair test RMSE. Selected policy is frozen from tune data (30 trend,1 persistence). Previously exposed internal test; not clinical/external validation.",
+      "files": {
+        "svg": "96c3f5054fff7fc3a75d94021d102a40a45bd363113db54e56cb1f81e896294b",
+        "pdf": "497387b423312d1a5ac89b971b11a99dc8b267bd7c29af4b0f5bc91258946645",
+        "png": "dc3c50ee1c0eb43e6665b3a963e0cfc44f212c983d7ae44a236273c92cd7a3c4"
+      }
+    },
+    {
+      "name": "F02_forecast_comparison",
+      "caption": "Lower compared RMSE and negative selected-minus-persistence differences indicate smaller internal-test error. The mechanistic model remains weaker than persistence in28/31 participants; selected fallback is better in30 and ties in1.",
+      "files": {
+        "svg": "66a365b137d15b3607a21f7d5a9609c354d6e941e4a9fa39c3c754c40ca24ae4",
+        "pdf": "cc7f30025c207c02e6bdce09c7161109a2ab4aad75dcdb7908e32a6c75e621ca",
+        "png": "5c765bd4d4f033da28f8dbb279da6c05dc8885b45b5794620b39039cd2492211"
+      }
+    },
+    {
+      "name": "F03_coverage_and_alarm_transfer",
+      "caption": "Empirical \u00b11.96-scale residual coverage and union-of-channel alarm burden on previously exposed internal tests. Nominal95% and1episode/day reference lines are targets/benchmarks, not guarantees.",
+      "files": {
+        "svg": "a611da0a054be711240974356656a3c847b377ef6db88064572262ff3ec8deac",
+        "pdf": "5d7f0c30b5ae8d9eb31f85ebdbbcec9d66ef94bb16cedd53e1d9aa58fb864bf0",
+        "png": "65443ae44f915f94441e29209f7869c93c2d1acf7fa7eb0b21995ca910b9ff98"
+      }
+    },
+    {
+      "name": "F04_eligibility_fit_thresholds",
+      "caption": "All34 participant statuses and frozen-fit diagnostics. One input failure has negative supplied bolus entries; two records fail length/coverage rules.24/31 converged fits approach a parameter bound. Local Jacobian conditioning is not proof of physiological identifiability.",
+      "files": {
+        "svg": "0671c26930888c07facd452a111d9e847a3c343007f1f4d28d46899d82232051",
+        "pdf": "401d2bfd0c93d424ea58795674d90e378432225a98ca34df53d83b81847afbbb",
+        "png": "d9021d2fd4b42137fdee1134858f77dc3aef8c81e2c98c2c8047fe6c81fc20f8"
+      }
+    }
+  ]
+}

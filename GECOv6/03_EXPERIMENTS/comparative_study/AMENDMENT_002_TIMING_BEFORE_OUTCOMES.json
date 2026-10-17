@@ -1,0 +1,13 @@
+{
+  "amendment_id": "002",
+  "timing": "Before clean calibration or locked study outcomes",
+  "review_source": "Coordinator independent source review of interval timing",
+  "changes": [
+    "Trip is observed at interval end. First trip latency equals((first_trip_sample+1)-fault_start_sample)*dt, not a sample-start difference.",
+    "Commanded latch exposure counts state_before_emission==LATCHED intervals and is named total_commanded_latch_exposure_min. End-state latch samples are retained separately without calling them exposure time.",
+    "A commanded latch is distinct from actual flow cessation, especially in additional-power and residual-tail sensitivity arms.",
+    "Post-fault recovery latency is the onset of the first six-interval qualifying window. Explicit onset and confirmation endpoints are retained; confirmation latency equals onset+30minutes for complete windows. The restricted censoring metric uses onset."
+  ],
+  "validation": "New known-answer timing test: trip in fault-start interval yields5min latency, three pre-emission latched intervals yield15min exposure, immediate post-fault qualifying window has0min onset and30min confirmation",
+  "study_design_and_parameter_split_unchanged": true
+}

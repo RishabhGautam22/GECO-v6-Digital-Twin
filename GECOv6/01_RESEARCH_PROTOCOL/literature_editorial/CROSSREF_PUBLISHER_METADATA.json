@@ -1,0 +1,3937 @@
+{
+  "R01": {
+    "status": "success",
+    "request_doi": "10.1145/3745756.3809198",
+    "record": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            29
+          ]
+        ],
+        "date-time": "2026-05-29T13:13:24Z",
+        "timestamp": 1780060404654,
+        "version": "3.54.0"
+      },
+      "publisher-location": "New York, NY, USA",
+      "reference-count": 90,
+      "publisher": "ACM",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                20
+              ]
+            ],
+            "date-time": "2026-06-20T00:00:00Z",
+            "timestamp": 1781913600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "dl.acm.org"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [],
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            6,
+            21
+          ]
+        ]
+      },
+      "DOI": "10.1145/3745756.3809198",
+      "type": "proceedings-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            29
+          ]
+        ],
+        "date-time": "2026-05-29T12:52:21Z",
+        "timestamp": 1780059141000
+      },
+      "page": "185-201",
+      "update-policy": "https://doi.org/10.1145/crossmark-policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 0,
+      "title": [
+        "GlucOS: Security, correctness, and simplicity for automated insulin delivery"
+      ],
+      "prefix": "10.1145",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-7607-7256",
+          "authenticated-orcid": false,
+          "given": "Hari",
+          "family": "Venugopalan",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "UC Davis, Davis, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0004-3908-9935",
+          "authenticated-orcid": false,
+          "given": "Shreyas Madhav Ambattur",
+          "family": "Vijayanand",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "UC Davis, Davis, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-8428-7736",
+          "authenticated-orcid": false,
+          "given": "Caleb",
+          "family": "Stanford",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "UC Davis, Davis, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-9829-6898",
+          "authenticated-orcid": false,
+          "given": "Stephanie",
+          "family": "Crossen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "UC Davis, Davis, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7890-6051",
+          "authenticated-orcid": false,
+          "given": "Samuel T.",
+          "family": "King",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "UC Davis, Davis, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "320",
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            6,
+            20
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_3_2_1_1_1",
+          "unstructured": "[n. d.]. Chatbots May 'Hallucinate' More Often Than Many Realize. https://www.nytimes.com/2023/11/06/technology/chatbots-hallucination-rates.html."
+        },
+        {
+          "key": "e_1_3_2_1_2_1",
+          "unstructured": "[n. d.]. Dexcom G7 Alarms and Alerts. https://www.dexcom.com/faqs/how-doi-customize-dexcom-g7-alert-settings."
+        },
+        {
+          "key": "e_1_3_2_1_3_1",
+          "unstructured": "[n. d.]. Insulet Omnipod 5. https://www.omnipod.com/."
+        },
+        {
+          "key": "e_1_3_2_1_4_1",
+          "unstructured": "[n. d.]. Tandem Control IQ. https://www.tandemdiabetes.com/products/automated-insulin-delivery/control-iq."
+        },
+        {
+          "key": "e_1_3_2_1_5_1",
+          "unstructured": "2022. Time-In-Range and Diabetes. https://www.endocrine.org/patient-engagement/endocrine-library/time-in-range-and-diabetes."
+        },
+        {
+          "key": "e_1_3_2_1_6_1",
+          "unstructured": "2024. simglucose. https://github.com/jxx123/simglucose."
+        },
+        {
+          "key": "e_1_3_2_1_7_1",
+          "volume-title": "Mach: A new kernel foundation for UNIX development.",
+          "author": "Accetta Mike",
+          "year": "1986",
+          "unstructured": "Mike Accetta, Robert Baron, William Bolosky, David Golub, Richard Rashid, Avadis Tevanian, and Michael Young. 1986. Mach: A new kernel foundation for UNIX development. (1986)."
+        },
+        {
+          "key": "e_1_3_2_1_8_1",
+          "volume-title": "Security And Privacy In Computing And Communications/12th IEEE International Conference On Big Data Science And Engineering (TrustCom/BigDataSE)",
+          "author": "Ahmad Usman",
+          "unstructured": "Usman Ahmad, Hong Song, Awais Bilal, Shahzad Saleem, and Asad Ullah. 2018. Securing insulin pump system using deep learning and gesture recognition. In 2018 17th IEEE International Conference On Trust, Security And Privacy In Computing And Communications/12th IEEE International Conference On Big Data Science And Engineering (TrustCom/BigDataSE). IEEE, 1716–1719."
+        },
+        {
+          "key": "e_1_3_2_1_9_1",
+          "doi-asserted-by": "crossref",
+          "unstructured": "James P Anderson et al. 1972. Computer security technology planning study. Technical Report. ESD-TR-73-51.",
+          "DOI": "10.21236/AD0772806"
+        },
+        {
+          "key": "e_1_3_2_1_10_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "532",
+          "DOI": "10.2174/1389201023666220603092433",
+          "article-title": "Multivariate Models of Blood Glucose Prediction in Type1 Diabetes: A Survey of the State-of-the-art",
+          "volume": "24",
+          "author": "Arora Sunny",
+          "year": "2023",
+          "unstructured": "Sunny Arora, Shailender Kumar, and Pardeep Kumar. 2023. Multivariate Models of Blood Glucose Prediction in Type1 Diabetes: A Survey of the State-of-the-art. Current Pharmaceutical Biotechnology 24, 4 (2023), 532–552.",
+          "journal-title": "Current Pharmaceutical Biotechnology"
+        },
+        {
+          "key": "e_1_3_2_1_11_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3613904.3642234"
+        },
+        {
+          "key": "e_1_3_2_1_12_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "362",
+          "DOI": "10.15585/mmwr.mm6712a3",
+          "article-title": "Trends in diabetic ketoacidosis hospitalizations and in-hospital mortality—United States, 2000–2014",
+          "volume": "67",
+          "author": "Benoit Stephen R",
+          "year": "2018",
+          "unstructured": "Stephen R Benoit, Yan Zhang, Linda S Geiss, Edward W Gregg, and Ann Albright. 2018. Trends in diabetic ketoacidosis hospitalizations and in-hospital mortality—United States, 2000–2014. Morbidity and Mortality Weekly Report 67, 12 (2018), 362.",
+          "journal-title": "Morbidity and Mortality Weekly Report"
+        },
+        {
+          "key": "e_1_3_2_1_13_1",
+          "volume-title": "International journal of sports medicine 21, 01",
+          "author": "Borghouts LB",
+          "year": "2000",
+          "unstructured": "LB Borghouts and HA Keizer. 2000. Exercise and insulin sensitivity: a review. International journal of sports medicine 21, 01 (2000), 1–12."
+        },
+        {
+          "key": "e_1_3_2_1_14_1",
+          "unstructured": "Adam Brown. 2022. 42 Factors That Affect Blood Glucose?! A Surprising Update. https://diatribe.org/42-factors-affect-blood-glucose-surprising-update."
+        },
+        {
+          "key": "e_1_3_2_1_15_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1056/NEJMoa1907863"
+        },
+        {
+          "key": "e_1_3_2_1_16_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/2228360.2228364"
+        },
+        {
+          "key": "e_1_3_2_1_17_1",
+          "unstructured": "Tandem Diabetes Care. [n. d.]. Control-IQ+ Technology. https://www.tandemdiabetes.com/products/automated-insulin-delivery/control-iq-plus."
+        },
+        {
+          "key": "e_1_3_2_1_18_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/dc20-1086"
+        },
+        {
+          "key": "e_1_3_2_1_19_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3613904.3642344"
+        },
+        {
+          "key": "e_1_3_2_1_20_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3581791.3596856"
+        },
+        {
+          "key": "e_1_3_2_1_21_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3377813.3381347"
+        },
+        {
+          "key": "e_1_3_2_1_22_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/db11-0654"
+        },
+        {
+          "key": "e_1_3_2_1_23_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "1814",
+          "DOI": "10.2337/dc12-0749",
+          "article-title": "Severe hypoglycemia predicts mortality in diabetes",
+          "volume": "35",
+          "author": "Cryer Philip E",
+          "year": "2012",
+          "unstructured": "Philip E Cryer. 2012. Severe hypoglycemia predicts mortality in diabetes. Diabetes care 35, 9 (2012), 1814–1816.",
+          "journal-title": "Diabetes care"
+        },
+        {
+          "key": "e_1_3_2_1_24_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3290605.3300600"
+        },
+        {
+          "key": "e_1_3_2_1_25_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.chb.2016.03.068"
+        },
+        {
+          "key": "e_1_3_2_1_26_1",
+          "unstructured": "Elvis Dohmatob. 2019. Generalized No Free Lunch Theorem for Adversarial Robustness. arXiv:1810.04065 [stat.ML] https://arxiv.org/abs/1810.04065"
+        },
+        {
+          "key": "e_1_3_2_1_27_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "S97",
+          "DOI": "10.2337/dc23-S006",
+          "article-title": "6. Glycemic Targets: Standards of Care in Diabetes—2023",
+          "volume": "46",
+          "author": "ElSayed Nuha A.",
+          "year": "2022",
+          "unstructured": "Nuha A. ElSayed, Grazia Aleppo, Vanita R. Aroda, Raveendhara R. Bannuru, Florence M. Brown, Dennis Bruemmer, Billy S. Collins, Marisa E. Hilliard, Diana Isaacs, Eric L. Johnson, Scott Kahan, Kamlesh Khunti, Jose Leon, Sarah K. Lyons, Mary Lou Perry, Priya Prahalad, Richard E. Pratley, Jane Jeffrie Seley, Robert C. Stanton, and on behalf of the American Diabetes Association Gabbay, Robert A. 2022. 6. Glycemic Targets: Standards of Care in Diabetes—2023. Diabetes Care 46 (2022), S97–S110.",
+          "journal-title": "Diabetes Care"
+        },
+        {
+          "key": "e_1_3_2_1_28_1",
+          "volume-title": "Feedback control of dynamic systems",
+          "author": "Franklin Gene F",
+          "unstructured": "Gene F Franklin, J David Powell, Abbas Emami-Naeini, and J David Powell. 2002. Feedback control of dynamic systems. Vol. 4. Prentice hall Upper Saddle River."
+        },
+        {
+          "key": "e_1_3_2_1_29_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1361-3723(16)30070-7"
+        },
+        {
+          "key": "e_1_3_2_1_30_1",
+          "volume-title": "John B Welsh, Mark P Christiansen, Andrew K Balo, Sue A Brown, Jennifer L Reid, et al.",
+          "author": "Garg Satish K",
+          "year": "2022",
+          "unstructured": "Satish K Garg, Mark Kipnes, Kristin Castorino, Timothy S Bailey, Halis Kaan Akturk, John B Welsh, Mark P Christiansen, Andrew K Balo, Sue A Brown, Jennifer L Reid, et al. 2022. Accuracy and safety of Dexcom G7 continuous glucose monitoring in adults with diabetes. Diabetes technology & therapeutics 24, 6 (2022), 373–380."
+        },
+        {
+          "key": "e_1_3_2_1_31_1",
+          "unstructured": "Trio GitHub. 2025. Hypo Protect. https://github.com/nightscout/Trio/issues/449."
+        },
+        {
+          "key": "e_1_3_2_1_32_1",
+          "unstructured": "Trio GitHub. 2025. Offer custom BG target when COB=0. https://github.com/nightscout/Trio/issues/631."
+        },
+        {
+          "key": "e_1_3_2_1_33_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S2213-8587(22)00218-2"
+        },
+        {
+          "key": "e_1_3_2_1_34_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/SP.2008.19"
+        },
+        {
+          "key": "e_1_3_2_1_35_1",
+          "volume-title": "Security and privacy for implantable medical devices",
+          "author": "Halperin Daniel",
+          "year": "2008",
+          "unstructured": "Daniel Halperin, Thomas S Heydt-Benjamin, Kevin Fu, Tadayoshi Kohno, and William H Maisel. 2008. Security and privacy for implantable medical devices. IEEE pervasive computing 7, 1 (2008), 30–39."
+        },
+        {
+          "key": "e_1_3_2_1_36_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/269005.266660"
+        },
+        {
+          "key": "e_1_3_2_1_37_1",
+          "unstructured": "UCLA Health. 2025. Diabetes exercise guidelines. https://www.uclahealth.org/medical-services/endocrinology/diabetes/type-1-diabetes/exercise-guidelines."
+        },
+        {
+          "key": "e_1_3_2_1_38_1",
+          "volume-title": "Clinical application of emerging sensor technologies in diabetes management: consensus guidelines for continuous glucose monitoring (CGM). Diabetes technology & therapeutics 10, 4",
+          "author": "Hirsch Irl B",
+          "year": "2008",
+          "unstructured": "Irl B Hirsch, Dana Armstrong, Richard M Bergenstal, Bruce Buckingham, Belinda P Childs, William L Clarke, Anne Peters, and Howard Wolpert. 2008. Clinical application of emerging sensor technologies in diabetes management: consensus guidelines for continuous glucose monitoring (CGM). Diabetes technology & therapeutics 10, 4 (2008), 232–246."
+        },
+        {
+          "key": "e_1_3_2_1_39_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/RBME.2023.3331297"
+        },
+        {
+          "key": "e_1_3_2_1_40_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3498361.3538935"
+        },
+        {
+          "key": "e_1_3_2_1_41_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.12998/wjcc.v11.i13.2890"
+        },
+        {
+          "key": "e_1_3_2_1_42_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3678504"
+        },
+        {
+          "key": "e_1_3_2_1_43_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "1922",
+          "DOI": "10.2337/diacare.27.8.1922",
+          "article-title": "Evaluating the accuracy of continuous glucose-monitoring sensors: continuous glucose-error grid analysis illustrated by TheraSense Freestyle Navigator data",
+          "volume": "27",
+          "author": "Kovatchev Boris P",
+          "year": "2004",
+          "unstructured": "Boris P Kovatchev, Linda A Gonder-Frederick, Daniel J Cox, and William L Clarke. 2004. Evaluating the accuracy of continuous glucose-monitoring sensors: continuous glucose-error grid analysis illustrated by TheraSense Freestyle Navigator data. Diabetes Care 27, 8 (2004), 1922–1928.",
+          "journal-title": "Diabetes Care"
+        },
+        {
+          "key": "e_1_3_2_1_44_1",
+          "volume-title": "2018 ACM/IEEE 9th International Conference on Cyber-Physical Systems (ICCPS). IEEE, 242–252",
+          "author": "Kushner Taisa",
+          "year": "2018",
+          "unstructured": "Taisa Kushner, David Bortz, David M Maahs, and Sriram Sankaranarayanan. 2018. A data-driven approach to artificial pancreas verification and synthesis. In 2018 ACM/IEEE 9th International Conference on Cyber-Physical Systems (ICCPS). IEEE, 242–252."
+        },
+        {
+          "key": "e_1_3_2_1_45_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3613904.3642435"
+        },
+        {
+          "key": "e_1_3_2_1_46_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5555/1939141.1939161"
+        },
+        {
+          "key": "e_1_3_2_1_47_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0925-7535(03)00047-X"
+        },
+        {
+          "key": "e_1_3_2_1_48_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.7551/mitpress/8179.001.0001"
+        },
+        {
+          "key": "e_1_3_2_1_49_1",
+          "volume-title": "Thomas",
+          "author": "Leveson Nancy G.",
+          "year": "2018",
+          "unstructured": "Nancy G. Leveson and John P. Thomas. 2018. STPA Handbook. Technical Report. Massachusetts Institute of Technology. https://psas.scripts.mit.edu/home/get_file.php?name=STPA_handbook.pdf"
+        },
+        {
+          "key": "e_1_3_2_1_50_1",
+          "volume-title": "2011 IEEE 13th international conference on e-health networking, applications and services. IEEE, 150–156",
+          "author": "Li Chunxiao",
+          "year": "2011",
+          "unstructured": "Chunxiao Li, Anand Raghunathan, and Niraj K Jha. 2011. Hijacking an insulin pump: Security attacks and defenses for a diabetes therapy system. In 2011 IEEE 13th international conference on e-health networking, applications and services. IEEE, 150–156."
+        },
+        {
+          "key": "e_1_3_2_1_51_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/1932296820949939"
+        },
+        {
+          "key": "e_1_3_2_1_52_1",
+          "unstructured": "Loop. [n. d.]. An automated insulin delivery app for iOS built on LoopKit. https://github.com/LoopKit/Loop."
+        },
+        {
+          "key": "e_1_3_2_1_53_1",
+          "volume-title": "Blood glucose control algorithms for type 1 diabetic patients: A methodological review. Biomedical signal processing and control 8, 2",
+          "author": "Lunze Katrin",
+          "year": "2013",
+          "unstructured": "Katrin Lunze, Tarunraj Singh, Marian Walter, Mathias D Brendel, and Steffen Leonhardt. 2013. Blood glucose control algorithms for type 1 diabetic patients: A methodological review. Biomedical signal processing and control 8, 2 (2013), 107–119."
+        },
+        {
+          "key": "e_1_3_2_1_54_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/2857705.2857746"
+        },
+        {
+          "key": "e_1_3_2_1_55_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1089/dia.2023.0109"
+        },
+        {
+          "key": "e_1_3_2_1_56_1",
+          "volume-title": "Proceedings of the 2nd ACM international conference on High confidence networked systems. 65–74",
+          "author": "Mohan Sibin",
+          "year": "2013",
+          "unstructured": "Sibin Mohan, Stanley Bak, Emiliano Betti, Heechul Yun, Lui Sha, and Marco Caccamo. 2013. S3A: Secure system simplex architecture for enhanced security and robustness of cyber-physical systems. In Proceedings of the 2nd ACM international conference on High confidence networked systems. 65–74."
+        },
+        {
+          "key": "e_1_3_2_1_57_1",
+          "volume-title": "Wade Hilts, Joseph Leitschuh",
+          "author": "Mosquera-Lopez Clara",
+          "year": "2023",
+          "unstructured": "Clara Mosquera-Lopez, Leah M Wilson, Joseph El Youssef, Wade Hilts, Joseph Leitschuh, Deborah Branigan, Virginia Gabo, Jae H Eom, Jessica R Castle, and Peter G Jacobs. 2023. Enabling fully automated insulin delivery through meal detection and size estimation using Artificial Intelligence. npj Digital Medicine 6, 1 (2023), 39."
+        },
+        {
+          "key": "e_1_3_2_1_58_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "9",
+          "DOI": "10.2337/dc13-2112",
+          "article-title": "The diabetes control and complications trial/epidemiology of diabetes interventions and complications study at 30 years: overview",
+          "volume": "37",
+          "author": "David M Nathan and DCCT/Edic Research Group",
+          "year": "2014",
+          "unstructured": "David M Nathan and DCCT/Edic Research Group. 2014. The diabetes control and complications trial/epidemiology of diabetes interventions and complications study at 30 years: overview. Diabetes care 37, 1 (2014), 9–16.",
+          "journal-title": "Diabetes care"
+        },
+        {
+          "key": "e_1_3_2_1_59_1",
+          "unstructured": "OpenAPS. [n. d.]. The Open Artificial Pancreas System project. https://github.com/openaps."
+        },
+        {
+          "key": "e_1_3_2_1_60_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3487212.3487342"
+        },
+        {
+          "key": "e_1_3_2_1_61_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "1557",
+          "DOI": "10.1177/193229681100500632",
+          "article-title": "A review of the security of insulin pump infusion systems",
+          "volume": "5",
+          "author": "Paul Nathanael",
+          "year": "2011",
+          "unstructured": "Nathanael Paul, Tadayoshi Kohno, and David C Klonoff. 2011. A review of the security of insulin pump infusion systems. Journal of diabetes science and technology 5, 6 (2011), 1557–1562.",
+          "journal-title": "Journal of diabetes science and technology"
+        },
+        {
+          "key": "e_1_3_2_1_62_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3386901.3389032"
+        },
+        {
+          "key": "e_1_3_2_1_63_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.arcontrol.2019.07.004"
+        },
+        {
+          "key": "e_1_3_2_1_64_1",
+          "volume-title": "28th USENIX Security Symposium (USENIX Security 19)",
+          "author": "Reis Charles",
+          "year": "2019",
+          "unstructured": "Charles Reis, Alexander Moshchuk, and Nasko Oskov. 2019. Site isolation: Process separation for web sites within the browser. In 28th USENIX Security Symposium (USENIX Security 19). 1661–1678."
+        },
+        {
+          "key": "e_1_3_2_1_65_1",
+          "volume-title": "2014 IEEE symposium on security and privacy. IEEE, 524–539",
+          "author": "Rushanan Michael",
+          "year": "2014",
+          "unstructured": "Michael Rushanan, Aviel D Rubin, Denis Foo Kune, and Colleen M Swanson. 2014. Sok: Security and privacy in implantable medical devices and body area networks. In 2014 IEEE symposium on security and privacy. IEEE, 524–539."
+        },
+        {
+          "key": "e_1_3_2_1_66_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/MS.2001.936213"
+        },
+        {
+          "key": "e_1_3_2_1_67_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3643832.3661867"
+        },
+        {
+          "key": "e_1_3_2_1_68_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s11229-021-03233-1"
+        },
+        {
+          "key": "e_1_3_2_1_69_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "e0278794",
+          "DOI": "10.1371/journal.pone.0278794",
+          "article-title": "Accelerated absorption of regular insulin administered via a vascularizing permeable microchamber implanted subcutaneously in diabetic Rattus norvegicus",
+          "volume": "18",
+          "author": "Steyn Leah V",
+          "year": "2023",
+          "unstructured": "Leah V Steyn, Delaney Drew, Demetri Vlachos, Barry Huey, Katie Cocchi, Nicholas D Price, Robert Johnson, Charles W Putnam, and Klearchos K Papas. 2023. Accelerated absorption of regular insulin administered via a vascularizing permeable microchamber implanted subcutaneously in diabetic Rattus norvegicus. Plos one 18, 6 (2023), e0278794.",
+          "journal-title": "Plos one"
+        },
+        {
+          "key": "e_1_3_2_1_70_1",
+          "unstructured": "Tandem Diabetes Care. 2024. Accuracy of Dexcom G7. https://www.tandemdiabetes.com/support-center/cgm-sensors/dexcom-g7/article/accuracy-of-dexcom-g7."
+        },
+        {
+          "key": "e_1_3_2_1_71_1",
+          "volume-title": "9th USENIX Symposium on Operating Systems Design and Implementation (OSDI 10)",
+          "author": "Tang Shuo",
+          "year": "2010",
+          "unstructured": "Shuo Tang, Haohui Mai, and Samuel T King. 2010. Trust and protection in the illinois browser operating system. In 9th USENIX Symposium on Operating Systems Design and Implementation (OSDI 10)."
+        },
+        {
+          "key": "e_1_3_2_1_72_1",
+          "unstructured": "Muffy H. Thomas. 1994. The story of the Therac-25 in LOTOS. https://api.semanticscholar.org/CorpusID:2373787"
+        },
+        {
+          "key": "e_1_3_2_1_73_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3386901.3389022"
+        },
+        {
+          "key": "e_1_3_2_1_74_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/s42255-020-0212-y"
+        },
+        {
+          "key": "e_1_3_2_1_75_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/1460458219850682"
+        },
+        {
+          "key": "e_1_3_2_1_76_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/B978-0-12-815655-1.00015-6"
+        },
+        {
+          "key": "e_1_3_2_1_77_1",
+          "volume-title": "USENIX security symposium",
+          "author": "Wang Helen J",
+          "unstructured": "Helen J Wang, Chris Grier, Alexander Moshchuk, Samuel T King, Piali Choudhury, and Herman Venter. 2009. The Multi-Principal OS Construction of the Gazelle Web Browser.. In USENIX security symposium, Vol. 28."
+        },
+        {
+          "key": "e_1_3_2_1_78_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/dc07-1967"
+        },
+        {
+          "key": "e_1_3_2_1_79_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3613904.3642612"
+        },
+        {
+          "key": "e_1_3_2_1_80_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3581791.3596864"
+        },
+        {
+          "key": "e_1_3_2_1_81_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3581791.3596854"
+        },
+        {
+          "key": "e_1_3_2_1_82_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3386901.3389028"
+        },
+        {
+          "key": "e_1_3_2_1_83_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.bspc.2021.102923"
+        },
+        {
+          "key": "e_1_3_2_1_84_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3581791.3596848"
+        },
+        {
+          "key": "e_1_3_2_1_85_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3678550"
+        },
+        {
+          "key": "e_1_3_2_1_86_1",
+          "volume-title": "2021 51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN). IEEE, 484–496",
+          "author": "Zhou Xugui",
+          "year": "2021",
+          "unstructured": "Xugui Zhou, Bulbul Ahmed, James H Aylor, Philip Asare, and Homa Alemzadeh. 2021. Data-driven design of context-aware monitors for hazard prediction in artificial pancreas systems. In 2021 51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN). IEEE, 484–496."
+        },
+        {
+          "key": "e_1_3_2_1_87_1",
+          "volume-title": "KnowSafe: Combined Knowledge and Data Driven Hazard Mitigation in Artificial Pancreas Systems. arXiv preprint arXiv:2311.07460",
+          "author": "Zhou Xugui",
+          "year": "2023",
+          "unstructured": "Xugui Zhou, Maxfield Kouzel, Chloe Smith, and Homa Alemzadeh. 2023. KnowSafe: Combined Knowledge and Data Driven Hazard Mitigation in Artificial Pancreas Systems. arXiv preprint arXiv:2311.07460 (2023)."
+        },
+        {
+          "key": "e_1_3_2_1_88_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/JBHI.2020.3014556"
+        },
+        {
+          "key": "e_1_3_2_1_89_1",
+          "doi-asserted-by": "publisher",
+          "unstructured": "T. Zhu C. Uduku K. Li and et al. 2022. Enhancing self-management in type 1 diabetes with wearables and deep learning. npj Digital Medicine 5 (2022) 78. 10.1038/s41746-022-00626-5",
+          "DOI": "10.1038/s41746-022-00626-5"
+        },
+        {
+          "key": "e_1_3_2_1_90_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681100500627"
+        }
+      ],
+      "event": {
+        "name": "MobiSys '26: 24th Annual International Conference on Mobile Systems, Applications and Services",
+        "location": "University of Cambridge Cambridge United Kingdom",
+        "acronym": "MobiSys '26",
+        "sponsor": [
+          "SIGMOBILE ACM Special Interest Group on Mobility of Systems, Users, Data and Computing",
+          "SIGOPS ACM Special Interest Group on Operating Systems"
+        ]
+      },
+      "container-title": [
+        "Proceedings of the 24th Annual International Conference on Mobile Systems, Applications and Services"
+      ],
+      "original-title": [],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            29
+          ]
+        ],
+        "date-time": "2026-05-29T12:57:10Z",
+        "timestamp": 1780059430000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://dl.acm.org/doi/10.1145/3745756.3809198"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            6,
+            20
+          ]
+        ]
+      },
+      "references-count": 90,
+      "alternative-id": [
+        "10.1145/3745756.3809198",
+        "10.1145/3745756"
+      ],
+      "URL": "https://doi.org/10.1145/3745756.3809198",
+      "relation": {},
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            6,
+            20
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "2026-06-20",
+          "order": 3,
+          "name": "published",
+          "label": "Published",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        }
+      ]
+    }
+  },
+  "R02": {
+    "status": "failed",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  "R03": {
+    "status": "success",
+    "request_doi": "10.1515/bmt-2022-0040",
+    "record": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            4,
+            25
+          ]
+        ],
+        "date-time": "2026-04-25T06:58:42Z",
+        "timestamp": 1777100322696,
+        "version": "3.51.4"
+      },
+      "reference-count": 24,
+      "publisher": "Walter de Gruyter GmbH",
+      "issue": "1",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2022,
+                9,
+                27
+              ]
+            ],
+            "date-time": "2022-09-27T00:00:00Z",
+            "timestamp": 1664236800000
+          },
+          "content-version": "unspecified",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "funder": [
+        {
+          "DOI": "10.13039/100014132",
+          "name": "European Metrology Programme for Innovation and Research",
+          "doi-asserted-by": "crossref",
+          "award": [
+            "18HLT08 MEDDII"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "18HLT08 MEDDII"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100014132",
+              "id-type": "DOI",
+              "asserted-by": "crossref"
+            }
+          ]
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [],
+      "published-print": {
+        "date-parts": [
+          [
+            2023,
+            2,
+            23
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>One application in the medical treatment at very small flow rates is the usage of an Insulin pump that delivers doses of insulin at constant cycle times for a specific basal rate as quasi-continuous insulin delivery, which is an important cornerstone in diabetes management. The calibration of these basal rates are performed by either gravimetric or optical methods, which have been developed within the European Metrology Program for Innovation and Research (EMPIR) Joint Research Project (JRP) 18HLT08 Metrology for drug delivery II (MeDDII). These measurement techniques are described in this paper, and an improved approach of the analytical procedure given in the standard IEC 60601-2-24:2012 for determining the discrete doses and the corresponding basal rates is discussed in detail. These improvements allow detailed follow up of dose cycle time and delivered doses as a function of time to identify some artefacts of the measurement method or malfunctioning of the insulin pump. Moreover, the calibration results of different basal rates and bolus deliveries for the gravimetric and the optical methods are also presented. Some analysis issues that should be addressed to prevent misinterpreting of the calibration results are discussed. One of the main issues is the average over a period of time which is an integer multiple of the cycle time to determine the basal rate with the analytical methods described in this paper.</jats:p>",
+      "DOI": "10.1515/bmt-2022-0040",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2022,
+            9,
+            27
+          ]
+        ],
+        "date-time": "2022-09-27T11:38:34Z",
+        "timestamp": 1664278714000
+      },
+      "page": "67-77",
+      "source": "Crossref",
+      "is-referenced-by-count": 4,
+      "title": [
+        "Calibration of insulin pumps based on discrete doses at given cycle times"
+      ],
+      "prefix": "10.1515",
+      "volume": "68",
+      "author": [
+        {
+          "given": "Hugo",
+          "family": "Bissig",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Physics Department , Federal Institute of Metrology METAS , Bern-Wabern , Switzerland"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-5118-0150",
+          "authenticated-orcid": false,
+          "given": "Oliver",
+          "family": "Büker",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "RISE Research Institutes of Sweden , Borås , Sweden"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Krister",
+          "family": "Stolt",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "RISE Research Institutes of Sweden , Borås , Sweden"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Elsa",
+          "family": "Batista",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Metrology Department , IPQ , Caparica , Portugal"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Joana",
+          "family": "Afonso",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "UNIDEMI, NOVA School of Science and Technology , Caparica , Portugal"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Michele",
+          "family": "Zagnoni",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Electrical and Electronic Engineering , University of Strathclyde (UoS) , Glasgow , UK"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Rozan",
+          "family": "Vroman",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Electrical and Electronic Engineering , University of Strathclyde (UoS) , Glasgow , UK"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Henrik",
+          "family": "Kjeldsen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Danish Technological Institute (DTI) , Aarhus C , Denmark"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Anders",
+          "family": "Niemann",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Danish Technological Institute (DTI) , Aarhus C , Denmark"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Joerg",
+          "family": "Schroeter",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Medical Sensors and Devices Lab , Technische Hochschule Lübeck (THL) , Lübeck , Germany"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "member": "374",
+      "published-online": {
+        "date-parts": [
+          [
+            2022,
+            9,
+            27
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_001",
+          "unstructured": "Thornton, J, Sakhrani, V. How lubricant choice affects dose accuracy in insulin pumps. ONdrugDelivery Magazine 2017;32–6."
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_002",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Jahn, LG, Capurro, JJ, Levy, BL. Comparative dose accuracy of durable and patch insulin infusion pumps. J Diabetes Sci Technol 2013;7:1011–20. https://doi.org/10.1177/193229681300700425.",
+          "DOI": "10.1177/193229681300700425"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_003",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Dumont-Fillon, D, Tahriou, H, Conan, C, Chappel, E. Insulin micropump with embedded pressure sensors for failure detection and delivery of accurate monitoring. Micromachines 2014;5:1161–72. https://doi.org/10.3390/mi5041161.",
+          "DOI": "10.3390/mi5041161"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_004",
+          "unstructured": "IEC 60601-2-24:2012. Medical electrical equipment – part 2-24: particular requirements for the basic safety and essential performance of infusion pumps and controllers; 2012."
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_005",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Bissig, H, Tschannen, M, de Huu, M. Traceability of pulsed flow rates consisting of constant delivered volumes at given time interval. Flow Meas Instrum 2020;73:101729. https://doi.org/10.1016/j.flowmeasinst.2020.101729.",
+          "DOI": "10.1016/j.flowmeasinst.2020.101729"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_006",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Zisser, H, Breton, M, Dassau, E, Markova, K, Bevier, W, Seborg, D, et al.. Novel methodology to determine the accuracy of the OmniPod insulin pump: a key component of the artificial pancreas system. J Diabetes Sci Technol 2011;5:1509–18. https://doi.org/10.1177/193229681100500627.",
+          "DOI": "10.1177/193229681100500627"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_007",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Zisser, H. Insulin pump (dose-to-dose) accuracy: what does it mean and when is it important? J Diabetes Sci Technol 2014;8:1142–4. https://doi.org/10.1177/1932296814548216.",
+          "DOI": "10.1177/1932296814548216"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_008",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Bissig, H, Petter, HT, Lucas, P, Batista, E, Filipe, E, Almeida, N, et al.. Primary standards for measuring flow rates from 100 nl/min to 1 ml/min – gravimetric principle. Biomed Tech 2015;60:301–16. https://doi.org/10.1515/bmt-2014-0145.",
+          "DOI": "10.1515/bmt-2014-0145"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_009",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Ahrens, M, Nestler, B, Klein, S, Lucas, P, Petter, HT, Damiani, C. An experimental setup for traceable measurement and calibration of liquid flow rates down to 5 nl/min. Biomed Tech 2015;60:337–45. https://doi.org/10.1515/bmt-2014-0153.",
+          "DOI": "10.1515/bmt-2014-0153"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_010",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Ahrens, M, Klein, S, Nestler, B, Damiani, C. Design and uncertainty assessment of a setup for calibration of microfluidic devices down to 5 nL min−1. Meas Sci Technol 2014;25:015301. https://doi.org/10.1088/0957-0233/25/1/015301.",
+          "DOI": "10.1088/0957-0233/25/1/015301"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_011",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Ochoa, M, Ziaie, B. Analysis of novel methods to determine the accuracy of the Omnipod insulin pump: a key component of the artificial pancreas system. J Diabetes Sci Technol 2011;5:1519–20. https://doi.org/10.1177/193229681100500628.",
+          "DOI": "10.1177/193229681100500628"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_012",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Oliver, N, Reddy, M, Marriott, C, Walker, T, Heinemann, L. Open source automated insulin delivery: addressing the challenge. NPJ Digit Med 2019;2:124–8. https://doi.org/10.1038/s41746-019-0202-1.",
+          "DOI": "10.1038/s41746-019-0202-1"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_013",
+          "doi-asserted-by": "crossref",
+          "unstructured": "American Diabetes Association. 7 Diabetes technology: standards of medical care in diabetes – 2019. Diabetes Care 2019;42:71–80. https://doi.org/10.2337/dc19-s007.",
+          "DOI": "10.2337/dc19-S007"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_014",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Batista, E, Furtado, A, Pereira, J, Ferreira, M, Bissig, H, Graham, E, et al.. New EMPIR project – Metrology for drug delivery. Flow Meas Instrum 2020;72:101716. https://doi.org/10.1016/j.flowmeasinst.2020.101716.",
+          "DOI": "10.1016/j.flowmeasinst.2020.101716"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_015",
+          "unstructured": "Morgan, J, Graham, E, Gersl, J, Batista, E, Bissig, H, Ogheard, F, et al.. A1.2.5 Calibration methods for measuring the response or delay time of drug delivery devices using Newtonian liquids for flow rates from 5 nL/min to 100 nL/min: EURAMET 18HLT08 MeDDII; 2021. Available from: www.drugmetrology.com."
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_016",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Graham, E, Thiemann, K, Kartmann, S, Batista, E, Bissig, H, Niemann, A, et al.. Ultra-low flow rate measurement techniques. Sensors 2021;18:100279. https://doi.org/10.1016/j.measen.2021.100279.",
+          "DOI": "10.1016/j.measen.2021.100279"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_017",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Bissig, H, Tschannen, M, de Huu, M. Micro-flow facility for traceability in steady and pulsating flow. Flow Meas Instrum 2015;44:34–42. https://doi.org/10.1016/j.flowmeasinst.2014.11.008.",
+          "DOI": "10.1016/j.flowmeasinst.2014.11.008"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_018",
+          "unstructured": "Wright, JD, Schmidt, JW. Reproducibility of liquid micro-flow measurements. In: Proc Flomeko: Lisbon, Portugal; 2019."
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_019",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Batista, E, Alvares, M, Martins, R, Ogheard, F, Gersl, J, Godinho, I. Measurement of internal diameters of capillaries and glass syringes using gravimetric and optical methods for microflow applications. Biomed Eng Biomed Tech 2023;68:29–38.",
+          "DOI": "10.1515/bmt-2022-0033"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_020",
+          "unstructured": "Bissig, H, Tschannen, M, de Huu, M. Recent Innovations in the field of traceable calibration of liquid milli-flow rates with liquids other than water. Sydney, Australia: Proc Flomeko; 2016."
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_021",
+          "unstructured": "JCGM 200:2012. International vocabulary of metrology – Basic and general concepts and associated terms (VIM), 3rd ed; 2012."
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_022",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Freckmann, G, Kamecke, U, Waldenmaier, D, Haug, C, Ziegler, R. Accuracy of bolus and basal rate delivery of different insulin pump systems. Diabetes Technol Therapeut 2019;21:201–8. https://doi.org/10.1089/dia.2018.0376.",
+          "DOI": "10.1089/dia.2018.0376"
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_023",
+          "unstructured": "ISO 4787:2021. Laboratory glass and plastiv ware – Volumetric instruments – Methods for testing of capacity and for use; 2021."
+        },
+        {
+          "key": "2023033113282395266_j_bmt-2022-0040_ref_024",
+          "unstructured": "ISO 8655-9:2022 – Piston-operated volumetric apparatus – Part 9: Manually operated precision laboratory syringes. Under Publication; 2022."
+        }
+      ],
+      "container-title": [
+        "Biomedical Engineering / Biomedizinische Technik"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.degruyter.com/document/doi/10.1515/bmt-2022-0040/xml",
+          "content-type": "application/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://www.degruyter.com/document/doi/10.1515/bmt-2022-0040/pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2023,
+            3,
+            31
+          ]
+        ],
+        "date-time": "2023-03-31T18:24:19Z",
+        "timestamp": 1680287059000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.degruyter.com/document/doi/10.1515/bmt-2022-0040/html"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2022,
+            9,
+            27
+          ]
+        ]
+      },
+      "references-count": 24,
+      "journal-issue": {
+        "issue": "1",
+        "published-online": {
+          "date-parts": [
+            [
+              2022,
+              12,
+              16
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              23
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1515/bmt-2022-0040"
+      ],
+      "URL": "https://doi.org/10.1515/bmt-2022-0040",
+      "relation": {},
+      "ISSN": [
+        "0013-5585",
+        "1862-278X"
+      ],
+      "issn-type": [
+        {
+          "value": "0013-5585",
+          "type": "print"
+        },
+        {
+          "value": "1862-278X",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2022,
+            9,
+            27
+          ]
+        ]
+      }
+    }
+  },
+  "R05": {
+    "status": "success",
+    "request_doi": "10.1088/0967-3334/25/4/010",
+    "record": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            9,
+            4
+          ]
+        ],
+        "date-time": "2026-09-04T01:11:23Z",
+        "timestamp": 1788484283465,
+        "version": "build-2803163510"
+      },
+      "reference-count": 42,
+      "publisher": "IOP Publishing",
+      "issue": "4",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Physiol. Meas."
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2004,
+            8,
+            1
+          ]
+        ]
+      },
+      "DOI": "10.1088/0967-3334/25/4/010",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2004,
+            7,
+            22
+          ]
+        ],
+        "date-time": "2004-07-22T23:13:29Z",
+        "timestamp": 1090538009000
+      },
+      "page": "905-920",
+      "source": "Crossref",
+      "is-referenced-by-count": 1099,
+      "title": [
+        "Nonlinear model predictive control of glucose concentration in subjects with type 1 diabetes"
+      ],
+      "prefix": "10.1088",
+      "volume": "25",
+      "author": [
+        {
+          "given": "Roman",
+          "family": "Hovorka",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Valentina",
+          "family": "Canonico",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ludovic J",
+          "family": "Chassin",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ulrich",
+          "family": "Haueter",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Massimo",
+          "family": "Massi-Benedetti",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Marco Orsini",
+          "family": "Federici",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thomas R",
+          "family": "Pieber",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Helga C",
+          "family": "Schaller",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lukas",
+          "family": "Schaupp",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thomas",
+          "family": "Vering",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Malgorzata E",
+          "family": "Wilinska",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "266",
+      "published-online": {
+        "date-parts": [
+          [
+            2004,
+            7,
+            23
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "1",
+          "doi-asserted-by": "crossref",
+          "first-page": "389",
+          "DOI": "10.2337/diab.23.5.389",
+          "volume": "23",
+          "author": "Albisser A M",
+          "year": "1974",
+          "journal-title": "Diabetes"
+        },
+        {
+          "key": "2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0959-1524(99)00024-4"
+        },
+        {
+          "key": "3",
+          "doi-asserted-by": "crossref",
+          "first-page": "411",
+          "DOI": "10.1002/dmr.5610050501",
+          "volume": "5",
+          "author": "Bergman R N",
+          "year": "1989",
+          "journal-title": "Diabetes/Metab. Rev.",
+          "ISSN": "https://id.crossref.org/issn/0742-4221",
+          "issn-type": "print"
+        },
+        {
+          "key": "4",
+          "doi-asserted-by": "crossref",
+          "first-page": "847",
+          "DOI": "10.2337/diab.30.10.847",
+          "volume": "30",
+          "author": "Best J D",
+          "year": "1981",
+          "journal-title": "Diabetes"
+        },
+        {
+          "key": "5",
+          "doi-asserted-by": "crossref",
+          "first-page": "51",
+          "DOI": "10.1177/039139889301600111",
+          "volume": "16",
+          "author": "Brunetti P",
+          "year": "1993",
+          "journal-title": "Int. J. Artif. Organs",
+          "ISSN": "https://id.crossref.org/issn/0391-3988",
+          "issn-type": "print"
+        },
+        {
+          "key": "6",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1007/978-1-4471-3398-8",
+          "author": "Camacho E F",
+          "year": "1999",
+          "journal-title": "Model Predictive Control"
+        },
+        {
+          "key": "7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/10.284922"
+        },
+        {
+          "key": "8",
+          "author": "Carson E R",
+          "year": "1983",
+          "journal-title": "The Mathematical Modeling of Metabolic and Endocrine Systems"
+        },
+        {
+          "key": "9",
+          "first-page": "221",
+          "volume": "44",
+          "author": "Chassin L J",
+          "year": "2001",
+          "journal-title": "Diabetologia"
+        },
+        {
+          "key": "10",
+          "author": "Chassin L J",
+          "year": "2004",
+          "journal-title": "Artif. Intell. Med."
+        },
+        {
+          "key": "11",
+          "doi-asserted-by": "crossref",
+          "first-page": "622",
+          "DOI": "10.2337/diacare.10.5.622",
+          "volume": "10",
+          "author": "Clarke W L",
+          "year": "1987",
+          "journal-title": "Diabetes Care"
+        },
+        {
+          "key": "12",
+          "first-page": "23",
+          "author": "Clemens A H",
+          "year": "1977",
+          "journal-title": "Horm. Metab. Res.",
+          "ISSN": "https://id.crossref.org/issn/0018-5043",
+          "issn-type": "print"
+        },
+        {
+          "key": "13",
+          "doi-asserted-by": "crossref",
+          "first-page": "840",
+          "DOI": "10.1109/TBME.1985.325499",
+          "volume": "32",
+          "author": "Cobelli C",
+          "year": "1985",
+          "journal-title": "IEEE Trans. Biomed. Eng.",
+          "ISSN": "https://id.crossref.org/issn/0018-9294",
+          "issn-type": "print"
+        },
+        {
+          "key": "14",
+          "first-page": "E1089",
+          "volume": "268",
+          "author": "Del Prato S",
+          "year": "1995",
+          "journal-title": "Am. J. Physiol.",
+          "ISSN": "https://id.crossref.org/issn/0002-9513",
+          "issn-type": "print"
+        },
+        {
+          "key": "15",
+          "doi-asserted-by": "crossref",
+          "first-page": "955",
+          "DOI": "10.2337/diab.39.8.955",
+          "volume": "39",
+          "author": "Edelman S V",
+          "year": "1990",
+          "journal-title": "Diabetes"
+        },
+        {
+          "key": "16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0169-2607(90)90107-K"
+        },
+        {
+          "key": "17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/10.18755"
+        },
+        {
+          "key": "18",
+          "first-page": "482",
+          "volume": "11",
+          "author": "Goriya Y",
+          "year": "1988",
+          "journal-title": "Int. J. Artif. Organs",
+          "ISSN": "https://id.crossref.org/issn/0391-3988",
+          "issn-type": "print"
+        },
+        {
+          "key": "19",
+          "first-page": "E162",
+          "volume": "265",
+          "author": "Hovorka R",
+          "year": "1993",
+          "journal-title": "Am. J. Physiol.",
+          "ISSN": "https://id.crossref.org/issn/0002-9513",
+          "issn-type": "print"
+        },
+        {
+          "key": "20",
+          "first-page": "E992",
+          "volume": "282",
+          "author": "Hovorka R",
+          "year": "2002",
+          "journal-title": "Am. J. Physiol.",
+          "ISSN": "https://id.crossref.org/issn/0002-9513",
+          "issn-type": "print"
+        },
+        {
+          "key": "21",
+          "doi-asserted-by": "crossref",
+          "first-page": "396",
+          "DOI": "10.2337/diab.43.3.396",
+          "volume": "43",
+          "author": "Howey D C",
+          "year": "1994",
+          "journal-title": "Diabetes"
+        },
+        {
+          "key": "22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/10.245631"
+        },
+        {
+          "key": "23",
+          "doi-asserted-by": "crossref",
+          "first-page": "750",
+          "DOI": "10.2337/diab.41.6.750",
+          "volume": "41",
+          "author": "Lee A",
+          "year": "1992",
+          "journal-title": "Diabetes"
+        },
+        {
+          "key": "24",
+          "first-page": "E717",
+          "volume": "275",
+          "author": "Livesey G",
+          "year": "1998",
+          "journal-title": "Am. J. Physiol.",
+          "ISSN": "https://id.crossref.org/issn/0002-9513",
+          "issn-type": "print"
+        },
+        {
+          "key": "25",
+          "doi-asserted-by": "crossref",
+          "first-page": "79",
+          "DOI": "10.1109/NEBC.2001.924729",
+          "author": "Lynch S M Bequette B W",
+          "year": "2001",
+          "journal-title": "Proc. IEEE 27th Annual Northeast Bioengineering Conf."
+        },
+        {
+          "key": "26",
+          "doi-asserted-by": "crossref",
+          "first-page": "431",
+          "DOI": "10.1137/0111030",
+          "volume": "2",
+          "author": "Marquardt D W",
+          "year": "1963",
+          "journal-title": "J. Soc. Ind. Appl. Math.",
+          "ISSN": "https://id.crossref.org/issn/0368-4245",
+          "issn-type": "print"
+        },
+        {
+          "key": "27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s001250050827"
+        },
+        {
+          "key": "28",
+          "doi-asserted-by": "crossref",
+          "first-page": "2503",
+          "DOI": "10.1080/00207178908953512",
+          "volume": "50",
+          "author": "Ollerton R L",
+          "year": "1989",
+          "journal-title": "Int. J. Control",
+          "ISSN": "https://id.crossref.org/issn/0020-7179",
+          "issn-type": "print"
+        },
+        {
+          "key": "29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/10.740877"
+        },
+        {
+          "key": "30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/51.897829"
+        },
+        {
+          "key": "31",
+          "doi-asserted-by": "crossref",
+          "first-page": "339",
+          "DOI": "10.1055/s-0028-1093841",
+          "volume": "6",
+          "author": "Pfeiffer E F",
+          "year": "1974",
+          "journal-title": "Horm. Metab. Res.",
+          "ISSN": "https://id.crossref.org/issn/0018-5043",
+          "issn-type": "print"
+        },
+        {
+          "key": "32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1385-8947(01)00240-6"
+        },
+        {
+          "key": "33",
+          "doi-asserted-by": "crossref",
+          "first-page": "865",
+          "DOI": "10.2337/diacare.22.5.865",
+          "volume": "22",
+          "author": "Rave K",
+          "year": "1999",
+          "journal-title": "Diabetes Care"
+        },
+        {
+          "key": "34",
+          "doi-asserted-by": "crossref",
+          "first-page": "846",
+          "DOI": "10.1109/TBME.1985.325500",
+          "volume": "32",
+          "author": "Salzsieder E",
+          "year": "1985",
+          "journal-title": "IEEE Trans. Biomed. Eng.",
+          "ISSN": "https://id.crossref.org/issn/0018-9294",
+          "issn-type": "print"
+        },
+        {
+          "key": "35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0967-0661(01)00049-1"
+        },
+        {
+          "key": "36",
+          "doi-asserted-by": "crossref",
+          "first-page": "462",
+          "DOI": "10.2337/diabetes.51.2.462",
+          "volume": "51",
+          "author": "Schaller H C",
+          "year": "2002",
+          "journal-title": "Diabetes"
+        },
+        {
+          "key": "37",
+          "doi-asserted-by": "crossref",
+          "first-page": "179",
+          "DOI": "10.1007/BF00250158",
+          "volume": "24",
+          "author": "Shichiri M",
+          "year": "1983",
+          "journal-title": "Diabetologia"
+        },
+        {
+          "key": "38",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1046/j.1525-1594.1998.06043.x"
+        },
+        {
+          "key": "39",
+          "first-page": "197",
+          "volume": "8",
+          "author": "Shimoda S",
+          "year": "1997",
+          "journal-title": "Front. Med. Biol. Eng.",
+          "ISSN": "https://id.crossref.org/issn/0921-3775",
+          "issn-type": "print"
+        },
+        {
+          "key": "40",
+          "doi-asserted-by": "crossref",
+          "first-page": "793",
+          "DOI": "10.1007/BF02465181",
+          "volume": "44",
+          "author": "Swan G W",
+          "year": "1982",
+          "journal-title": "Bull. Math. Biol.",
+          "ISSN": "https://id.crossref.org/issn/0092-8240",
+          "issn-type": "print"
+        },
+        {
+          "key": "41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/10.709556"
+        },
+        {
+          "key": "42",
+          "first-page": "E467",
+          "volume": "262",
+          "author": "Van Cauter E V",
+          "year": "1992",
+          "journal-title": "Am. J. Physiol.",
+          "ISSN": "https://id.crossref.org/issn/0002-9513",
+          "issn-type": "print"
+        }
+      ],
+      "container-title": [
+        "Physiological Measurement"
+      ],
+      "original-title": [],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            4,
+            11
+          ]
+        ],
+        "date-time": "2020-04-11T04:41:33Z",
+        "timestamp": 1586580093000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://iopscience.iop.org/article/10.1088/0967-3334/25/4/010"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2004,
+            7,
+            23
+          ]
+        ]
+      },
+      "references-count": 42,
+      "journal-issue": {
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              2004,
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "S0967-3334(04)80244-2"
+      ],
+      "URL": "https://doi.org/10.1088/0967-3334/25/4/010",
+      "relation": {},
+      "ISSN": [
+        "0967-3334",
+        "1361-6579"
+      ],
+      "issn-type": [
+        {
+          "value": "0967-3334",
+          "type": "print"
+        },
+        {
+          "value": "1361-6579",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2004,
+            7,
+            23
+          ]
+        ]
+      }
+    }
+  },
+  "R06": {
+    "status": "success",
+    "request_doi": "10.1109/JPROC.2003.823141",
+    "record": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            9,
+            4
+          ]
+        ],
+        "date-time": "2026-09-04T02:29:50Z",
+        "timestamp": 1788488990146,
+        "version": "build-2803163510"
+      },
+      "reference-count": 52,
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "issue": "3",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2004,
+                3,
+                1
+              ]
+            ],
+            "date-time": "2004-03-01T00:00:00Z",
+            "timestamp": 1078099200000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Proc. IEEE"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2004,
+            3
+          ]
+        ]
+      },
+      "DOI": "10.1109/jproc.2003.823141",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2004,
+            3,
+            9
+          ]
+        ],
+        "date-time": "2004-03-09T14:14:08Z",
+        "timestamp": 1078841648000
+      },
+      "page": "401-422",
+      "source": "Crossref",
+      "is-referenced-by-count": 5376,
+      "title": [
+        "Unscented Filtering and Nonlinear Estimation"
+      ],
+      "prefix": "10.1109",
+      "volume": "92",
+      "author": [
+        {
+          "given": "S.J.",
+          "family": "Julier",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "J.K.",
+          "family": "Uhlmann",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "263",
+      "reference": [
+        {
+          "key": "ref1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/7.272275"
+        },
+        {
+          "key": "ref2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1049/ip-cta:20000634"
+        },
+        {
+          "key": "ref3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0022-0396(67)90023-X"
+        },
+        {
+          "key": "ref4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TAC.1979.1102177"
+        },
+        {
+          "key": "ref5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TAC.1972.1100034"
+        },
+        {
+          "key": "ref6",
+          "first-page": "499",
+          "article-title": "Rao–Blackwellised particle filters for dynamic Bayesian networks",
+          "volume-title": "Sequential Monte Carlo Estimation in Practice",
+          "author": "Murphy",
+          "year": "2000"
+        },
+        {
+          "key": "ref7",
+          "volume-title": "Stochastic Processes and Filtering Theory",
+          "author": "Jazwinski",
+          "year": "1970"
+        },
+        {
+          "key": "ref8",
+          "volume-title": "Kalman Filtering: Theory and Application IEEE",
+          "author": "Sorenson",
+          "year": "1985"
+        },
+        {
+          "key": "ref9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TAC.1968.1098986"
+        },
+        {
+          "key": "ref10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TAES.1981.309036"
+        },
+        {
+          "key": "ref11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TAC.1971.1099744"
+        },
+        {
+          "key": "ref12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/7.220948"
+        },
+        {
+          "key": "ref13",
+          "volume-title": "Using pseudo Kalman-filters in the presence of constraints application to sensing behaviors",
+          "author": "Viéville",
+          "year": "1992"
+        },
+        {
+          "key": "ref14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0005-1098(82)90012-7"
+        },
+        {
+          "key": "ref15",
+          "first-page": "1",
+          "article-title": "A nonlinear filter for altitude tracking",
+          "volume-title": "Proc. Air Traffic Control Assoc.",
+          "author": "Kastella"
+        },
+        {
+          "key": "ref16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/cbo9780511811685"
+        },
+        {
+          "key": "ref17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2514/6.1997-3732"
+        },
+        {
+          "key": "ref18",
+          "volume-title": "Estimation of ground parameters for the control of a wheeled vehicle",
+          "author": "Dulimov",
+          "year": "1997"
+        },
+        {
+          "key": "ref19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1115/1.3662552"
+        },
+        {
+          "key": "ref20",
+          "volume-title": "Tracking and Data Association",
+          "author": "Bar-Shalom",
+          "year": "1988"
+        },
+        {
+          "key": "ref21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-1-4615-3652-9"
+        },
+        {
+          "key": "ref22",
+          "volume-title": "Stochastic Models, Estimation, and Control",
+          "volume": "1",
+          "author": "Maybeck",
+          "year": "1979"
+        },
+        {
+          "key": "ref23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/7.705921"
+        },
+        {
+          "key": "ref24",
+          "volume-title": "Simultaneous map building and localization for real time applications transfer thesis",
+          "author": "Uhlmann",
+          "year": "1994"
+        },
+        {
+          "key": "ref25",
+          "volume-title": "Numerical Recipes in C: The Art of Scientific Computing",
+          "author": "Press",
+          "year": "1992"
+        },
+        {
+          "key": "ref26",
+          "volume-title": "Methods of Numerical Integration",
+          "author": "Davis",
+          "year": "1975"
+        },
+        {
+          "key": "ref27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TAC.2002.800742"
+        },
+        {
+          "key": "ref28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/cdc.1989.70519"
+        },
+        {
+          "key": "ref29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0005-1098(00)00089-3"
+        },
+        {
+          "key": "ref30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TAC.1967.1098671"
+        },
+        {
+          "key": "ref31",
+          "volume-title": "Hybrid Bayesian networks for reasoning about complex systems",
+          "author": "Lerner",
+          "year": "2002"
+        },
+        {
+          "key": "ref32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ACC.2003.1243441"
+        },
+        {
+          "key": "ref33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ACC.2002.1025369"
+        },
+        {
+          "key": "ref34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/B978-1-4831-6716-9.50011-4"
+        },
+        {
+          "key": "ref35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TAC.1977.1101412"
+        },
+        {
+          "key": "ref36",
+          "volume-title": "Sensor and Data Fusion Concepts and Applications",
+          "author": "Klein",
+          "year": "1965"
+        },
+        {
+          "key": "ref37",
+          "volume-title": "Comprehensive process models for high-speed navigation",
+          "author": "Julier",
+          "year": "1997"
+        },
+        {
+          "key": "ref38",
+          "volume-title": "Autonomous land vehicle navigation using millimeter wave radar",
+          "author": "Clark",
+          "year": "1999"
+        },
+        {
+          "key": "ref39",
+          "volume-title": "Sperimentazione ed affinamento di un localizzatore",
+          "author": "Montobbio",
+          "year": "1998"
+        },
+        {
+          "key": "ref40",
+          "article-title": "What’s better, an ensemble of positive/negative pairs or a centered simplex ensemble?",
+          "volume-title": "EGS-AGU-EUG Meeting",
+          "author": "Wang"
+        },
+        {
+          "key": "ref41",
+          "volume-title": "Navigation of an underwater remote operated vehicle",
+          "author": "Smith",
+          "year": "1995"
+        },
+        {
+          "key": "ref42",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ACC.1995.529219"
+        },
+        {
+          "key": "ref43",
+          "first-page": "240",
+          "article-title": "A new nonlinear iterated filter with applications to target tracking",
+          "volume-title": "Proc. AeroSense: 8th Int. Symp. Aerospace/Defense Sensing, Simulation and Controls",
+          "volume": "2561",
+          "author": "Bellaire"
+        },
+        {
+          "key": "ref44",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.280797"
+        },
+        {
+          "key": "ref45",
+          "first-page": "54",
+          "article-title": "A skewed approach to filtering",
+          "volume-title": "Proc. AeroSense: 12th Int. Symp. Aerospace/Defense Sensing, Simulation and Controls",
+          "volume": "3373",
+          "author": "Julier"
+        },
+        {
+          "key": "ref46",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ICASSP.2001.940586"
+        },
+        {
+          "key": "ref47",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ICASSP.2003.1201778"
+        },
+        {
+          "key": "ref48",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0493(1994)122<2530:SSFADA>2.0.CO;2"
+        },
+        {
+          "key": "ref49",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ACC.2002.1023128"
+        },
+        {
+          "key": "ref50",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ACC.2003.1243439"
+        },
+        {
+          "key": "ref51",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.277178"
+        },
+        {
+          "key": "ref52",
+          "volume-title": "A real time algorithm for simultaneous map building and localization.",
+          "author": "Uhlmann",
+          "year": "1995"
+        }
+      ],
+      "container-title": [
+        "Proceedings of the IEEE"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx5/5/28470/01271397.pdf?arnumber=1271397",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            3,
+            21
+          ]
+        ],
+        "date-time": "2025-03-21T04:58:11Z",
+        "timestamp": 1742533091000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "http://ieeexplore.ieee.org/document/1271397/"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2004,
+            3
+          ]
+        ]
+      },
+      "references-count": 52,
+      "journal-issue": {
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2004,
+              3
+            ]
+          ]
+        }
+      },
+      "URL": "https://doi.org/10.1109/jproc.2003.823141",
+      "relation": {},
+      "ISSN": [
+        "0018-9219"
+      ],
+      "issn-type": [
+        {
+          "value": "0018-9219",
+          "type": "print"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2004,
+            3
+          ]
+        ]
+      }
+    }
+  },
+  "R07": {
+    "status": "success",
+    "request_doi": "10.1177/1932296818763959",
+    "record": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            4,
+            30
+          ]
+        ],
+        "date-time": "2026-04-30T13:33:56Z",
+        "timestamp": 1777556036875,
+        "version": "3.51.4"
+      },
+      "reference-count": 39,
+      "publisher": "SAGE Publications",
+      "issue": "3",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2018,
+                3,
+                23
+              ]
+            ],
+            "date-time": "2018-03-23T00:00:00Z",
+            "timestamp": 1521763200000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+        }
+      ],
+      "funder": [
+        {
+          "DOI": "10.13039/100000062",
+          "name": "National Institute of Diabetes and Digestive and Kidney Diseases",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "DP3 DK101075"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "DP3 DK101075"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000062",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/100000062",
+          "name": "National Institute of Diabetes and Digestive and Kidney Diseases",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "DP3 DK101077"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "DP3 DK101077"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000062",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "journals.sagepub.com"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [
+        "J Diabetes Sci Technol"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2018,
+            5
+          ]
+        ]
+      },
+      "abstract": "<jats:sec>\n                    <jats:title>Background:</jats:title>\n                    <jats:p>The artificial pancreas (AP) system, a technology that automatically administers exogenous insulin in people with type 1 diabetes mellitus (T1DM) to regulate their blood glucose concentrations, necessitates the estimation of the amount of active insulin already present in the body to avoid overdosing.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Method:</jats:title>\n                    <jats:p>An adaptive and personalized plasma insulin concentration (PIC) estimator is designed in this work to accurately quantify the insulin present in the bloodstream. The proposed PIC estimation approach incorporates Hovorka’s glucose-insulin model with the unscented Kalman filtering algorithm. Methods for the personalized initialization of the time-varying model parameters to individual patients for improved estimator convergence are developed. Data from 20 three-days-long closed-loop clinical experiments conducted involving subjects with T1DM are used to evaluate the proposed PIC estimation approach.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results:</jats:title>\n                    <jats:p>The proposed methods are applied to the clinical data containing significant disturbances, such as unannounced meals and exercise, and the results demonstrate the accurate real-time estimation of the PIC with the root mean square error of 7.15 and 9.25 mU/L for the optimization-based fitted parameters and partial least squares regression-based testing parameters, respectively.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusions:</jats:title>\n                    <jats:p>The accurate real-time estimation of PIC will benefit the AP systems by preventing overdelivery of insulin when significant insulin is present in the bloodstream.</jats:p>\n                  </jats:sec>",
+      "DOI": "10.1177/1932296818763959",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2018,
+            3,
+            23
+          ]
+        ],
+        "date-time": "2018-03-23T03:03:49Z",
+        "timestamp": 1521774229000
+      },
+      "page": "639-649",
+      "update-policy": "https://doi.org/10.1177/sage-journals-update-policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 41,
+      "title": [
+        "Adaptive and Personalized Plasma Insulin Concentration Estimation for Artificial Pancreas Systems"
+      ],
+      "prefix": "10.1177",
+      "volume": "12",
+      "author": [
+        {
+          "given": "Iman",
+          "family": "Hajizadeh",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Mudassir",
+          "family": "Rashid",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Sediqeh",
+          "family": "Samadi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Jianyuan",
+          "family": "Feng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Mert",
+          "family": "Sevil",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Biomedical Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Nicole",
+          "family": "Hobbs",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Biomedical Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Caterina",
+          "family": "Lazaro",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Electrical and Computer Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Zacharie",
+          "family": "Maloney",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Biomedical Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Rachel",
+          "family": "Brandt",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Biomedical Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Xia",
+          "family": "Yu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Information Science and Technology, Northeastern University, Shenyang, China"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Kamuran",
+          "family": "Turksoy",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Biomedical Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Elizabeth",
+          "family": "Littlejohn",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Pediatrics and Medicine, Section of Endocrinology, Kovler Diabetes Center, University of Chicago, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Eda",
+          "family": "Cengiz",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Pediatrics, Yale University School of Medicine, New Haven, CT, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Ali",
+          "family": "Cinar",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            },
+            {
+              "name": "Department of Biomedical Engineering, Illinois Institute of Technology, Chicago, IL, USA"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "member": "179",
+      "published-online": {
+        "date-parts": [
+          [
+            2018,
+            3,
+            23
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "bibr1-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/scitranslmed.3000619"
+        },
+        {
+          "key": "bibr2-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/db06-0419"
+        },
+        {
+          "key": "bibr3-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/1932296814524862"
+        },
+        {
+          "key": "bibr4-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.conengprac.2016.01.003"
+        },
+        {
+          "key": "bibr5-1932296818763959",
+          "doi-asserted-by": "crossref",
+          "first-page": "A23",
+          "DOI": "10.1089/dia.2015.0417",
+          "volume": "18",
+          "author": "Cameron F",
+          "year": "2016",
+          "journal-title": "Diabetes Technol Ther"
+        },
+        {
+          "key": "bibr6-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/dc16-0824"
+        },
+        {
+          "key": "bibr7-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/1932296815617968"
+        },
+        {
+          "key": "bibr8-1932296818763959",
+          "unstructured": "Cinar A, Turksoy K, Hajizadeh I. Multivariable artificial pancreas method and system. United States Patent App. 15/171,355, 2016."
+        },
+        {
+          "key": "bibr9-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/dc13-2108"
+        },
+        {
+          "key": "bibr10-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229680900300511"
+        },
+        {
+          "key": "bibr11-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229680900300506"
+        },
+        {
+          "key": "bibr12-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1021/acs.iecr.6b02718"
+        },
+        {
+          "key": "bibr13-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S2213-8587(14)70226-8"
+        },
+        {
+          "key": "bibr14-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681300700607"
+        },
+        {
+          "key": "bibr15-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/dc14-3073"
+        },
+        {
+          "key": "bibr16-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1089/dia.2016.0443"
+        },
+        {
+          "key": "bibr17-1932296818763959",
+          "author": "Chakrabarty A",
+          "journal-title": "IEEE Trans Biomed Eng"
+        },
+        {
+          "key": "bibr18-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229680900300319"
+        },
+        {
+          "key": "bibr19-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681300700415"
+        },
+        {
+          "key": "bibr20-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1210/jc.2010-2578"
+        },
+        {
+          "key": "bibr21-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TBME.2013.2247602"
+        },
+        {
+          "key": "bibr22-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.cmpb.2010.06.007"
+        },
+        {
+          "key": "bibr23-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681200600517"
+        },
+        {
+          "key": "bibr24-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.bspc.2014.10.003"
+        },
+        {
+          "key": "bibr25-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/10255842.2015.1077234"
+        },
+        {
+          "key": "bibr26-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.biosystems.2010.09.012"
+        },
+        {
+          "key": "bibr27-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681200600520"
+        },
+        {
+          "key": "bibr28-1932296818763959",
+          "first-page": "1175",
+          "volume-title": "ASME 2006 International Mechanical Engineering Congress and Exposition",
+          "volume": "2006",
+          "author": "Kiriakidis K"
+        },
+        {
+          "key": "bibr29-1932296818763959",
+          "first-page": "369",
+          "volume-title": "ASME 2010 Dynamic Systems and Control Conference",
+          "volume": "2010",
+          "author": "Kiriakidis K"
+        },
+        {
+          "key": "bibr30-1932296818763959",
+          "first-page": "203",
+          "volume-title": "ASME 2007 International Mechanical Engineering Congress and Exposition",
+          "volume": "2007",
+          "author": "Kiriakidis K"
+        },
+        {
+          "key": "bibr31-1932296818763959",
+          "volume-title": "Paper presented at: AIChE annual meeting",
+          "author": "Hajizadeh I"
+        },
+        {
+          "key": "bibr32-1932296818763959",
+          "first-page": "5193",
+          "volume": "2017",
+          "author": "Hajizadeh I",
+          "year": "2017",
+          "journal-title": "Am Control Conf"
+        },
+        {
+          "key": "bibr33-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1021/acs.iecr.7b01618"
+        },
+        {
+          "key": "bibr34-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0967-3334/25/4/010"
+        },
+        {
+          "key": "bibr35-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1201/9781420020106"
+        },
+        {
+          "key": "bibr36-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0959-1524(03)00026-X"
+        },
+        {
+          "key": "bibr37-1932296818763959",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.compchemeng.2009.01.012"
+        },
+        {
+          "key": "bibr38-1932296818763959",
+          "first-page": "1628",
+          "volume": "3",
+          "author": "Julier SJ",
+          "year": "1995",
+          "journal-title": "Am Control Conf Proc"
+        },
+        {
+          "key": "bibr39-1932296818763959",
+          "volume-title": "Sigma-Point Kalman Filters for Probabilistic Inference in Dynamic State-Space Models",
+          "author": "Van Der Merwe R",
+          "year": "2004"
+        }
+      ],
+      "container-title": [
+        "Journal of Diabetes Science and Technology"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://journals.sagepub.com/doi/pdf/10.1177/1932296818763959",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://journals.sagepub.com/doi/full-xml/10.1177/1932296818763959",
+          "content-type": "application/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://journals.sagepub.com/doi/pdf/10.1177/1932296818763959",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            4,
+            28
+          ]
+        ],
+        "date-time": "2026-04-28T18:13:06Z",
+        "timestamp": 1777399986000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://journals.sagepub.com/doi/10.1177/1932296818763959"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2018,
+            3,
+            23
+          ]
+        ]
+      },
+      "references-count": 39,
+      "journal-issue": {
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2018,
+              5
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1177/1932296818763959"
+      ],
+      "URL": "https://doi.org/10.1177/1932296818763959",
+      "relation": {},
+      "ISSN": [
+        "1932-2968",
+        "1932-2968"
+      ],
+      "issn-type": [
+        {
+          "value": "1932-2968",
+          "type": "print"
+        },
+        {
+          "value": "1932-2968",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2018,
+            3,
+            23
+          ]
+        ]
+      }
+    }
+  },
+  "R08": {
+    "status": "success",
+    "request_doi": "10.1177/1932296813514502",
+    "record": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            9,
+            4
+          ]
+        ],
+        "date-time": "2026-09-04T23:46:36Z",
+        "timestamp": 1788565596746,
+        "version": "build-2803163510"
+      },
+      "reference-count": 28,
+      "publisher": "SAGE Publications",
+      "issue": "1",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2014,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2014-01-01T00:00:00Z",
+            "timestamp": 1388534400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "journals.sagepub.com"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [
+        "J Diabetes Sci Technol"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2014,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:sec>\n                    <jats:title>Objective:</jats:title>\n                    <jats:p>Recent studies have provided new insights into nonlinearities of insulin action in the hypoglycemic range and into glucagon kinetics as it relates to response to hypoglycemia. Based on these data, we developed a new version of the UVA/PADOVA Type 1 Diabetes Simulator, which was submitted to FDA in 2013 (S2013).</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods:</jats:title>\n                    <jats:p>The model of glucose kinetics in hypoglycemia has been improved, implementing the notion that insulin-dependent utilization increases nonlinearly when glucose decreases below a certain threshold. In addition, glucagon kinetics and secretion and action models have been incorporated into the simulator: glucagon kinetics is a single compartment; glucagon secretion is controlled by plasma insulin, plasma glucose below a certain threshold, and glucose rate of change; and plasma glucagon stimulates with some delay endogenous glucose production. A refined statistical strategy for virtual patient generation has been adopted as well. Finally, new rules for determining insulin to carbs ratio (CR) and correction factor (CF) of the virtual patients have been implemented to better comply with clinical definitions.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results:</jats:title>\n                    <jats:p>S2013 shows a better performance in describing hypoglycemic events. In addition, the new virtual subjects span well the real type 1 diabetes mellitus population as demonstrated by good agreement between real and simulated distribution of patient-specific parameters, such as CR and CF.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusions:</jats:title>\n                    <jats:p>S2013 provides a more reliable framework for in silico trials, for testing glucose sensors and insulin augmented pump prediction methods, and for closed-loop single/dual hormone controller design, testing, and validation.</jats:p>\n                  </jats:sec>",
+      "DOI": "10.1177/1932296813514502",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2014,
+            2,
+            11
+          ]
+        ],
+        "date-time": "2014-02-11T11:28:55Z",
+        "timestamp": 1392118135000
+      },
+      "page": "26-34",
+      "update-policy": "https://doi.org/10.1177/sage-journals-update-policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 721,
+      "title": [
+        "The UVA/PADOVA Type 1 Diabetes Simulator"
+      ],
+      "prefix": "10.1177",
+      "volume": "8",
+      "author": [
+        {
+          "given": "Chiara Dalla",
+          "family": "Man",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Information Engineering, University of Padova, Padova, Italy"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Francesco",
+          "family": "Micheletto",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Information Engineering, University of Padova, Padova, Italy"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dayu",
+          "family": "Lv",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Center for Diabetes Technology, University of Virginia, Charlottesville, VA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Marc",
+          "family": "Breton",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Center for Diabetes Technology, University of Virginia, Charlottesville, VA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Boris",
+          "family": "Kovatchev",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Center for Diabetes Technology, University of Virginia, Charlottesville, VA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Claudio",
+          "family": "Cobelli",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Information Engineering, University of Padova, Padova, Italy"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "179",
+      "published-online": {
+        "date-parts": [
+          [
+            2014,
+            1,
+            1
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "bibr1-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/RBME.2009.2036073"
+        },
+        {
+          "key": "bibr2-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/db11-0654"
+        },
+        {
+          "key": "bibr3-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1089/152091504774197990"
+        },
+        {
+          "key": "bibr4-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229680900300106"
+        },
+        {
+          "key": "bibr5-1932296813514502",
+          "unstructured": "Visentin R, Dalla Man C, Kovatchev BP, Cobelli C. Incorporating nonlinear response to hypoglycemia into the type 1 diabetes simulator. Paper presented at: 11th Diabetes Technology Meeting; October 27-29, 2011; San Francisco, CA."
+        },
+        {
+          "key": "bibr6-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681000400416"
+        },
+        {
+          "key": "bibr7-1932296813514502",
+          "unstructured": "Micheletto F, Dalla Man C, Breton MD, Kovatchev BP, Cobelli C. A counter-regulation model in type 1 diabetes. Paper presented at: 11th Diabetes Technology Meeting; October 27-29, 2011; San Francisco, CA."
+        },
+        {
+          "key": "bibr8-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0026-0495(95)90051-9"
+        },
+        {
+          "key": "bibr9-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/10273669908833028"
+        },
+        {
+          "key": "bibr10-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0076-6879(00)21204-4"
+        },
+        {
+          "key": "bibr11-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/10273660008833060"
+        },
+        {
+          "issue": "6",
+          "key": "bibr12-1932296813514502",
+          "first-page": "E667",
+          "volume": "236",
+          "author": "Bergman RN",
+          "year": "1979",
+          "journal-title": "Am J Physiol"
+        },
+        {
+          "key": "bibr13-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/scitranslmed.3000619"
+        },
+        {
+          "key": "bibr14-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1089/dia.2013.0150"
+        },
+        {
+          "key": "bibr15-1932296813514502",
+          "first-page": "467",
+          "volume": "141",
+          "author": "Lorenzi M",
+          "year": "1984",
+          "journal-title": "West J Med"
+        },
+        {
+          "key": "bibr16-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/dc11-2010"
+        },
+        {
+          "key": "bibr17-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1046/j.1365-2796.2002.01043.x"
+        },
+        {
+          "key": "bibr18-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/diacare.28.11.2613"
+        },
+        {
+          "key": "bibr19-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1399-543X.2005.00132.x"
+        },
+        {
+          "key": "bibr20-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/diacare.8.2.114"
+        },
+        {
+          "key": "bibr21-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1056/NEJM198904063201401"
+        },
+        {
+          "key": "bibr22-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/diacare.18.7.1017"
+        },
+        {
+          "key": "bibr23-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/db12-1759"
+        },
+        {
+          "key": "bibr24-1932296813514502",
+          "volume-title": "Practical Carbohydrate Counting: A How-to-Teach Guide for Health Professionals",
+          "author": "Warshaw H",
+          "year": "2001"
+        },
+        {
+          "key": "bibr25-1932296813514502",
+          "first-page": "105",
+          "volume-title": "Pumping Insulin. Everything You Need for Success with an Insulin Pump",
+          "volume": "2000",
+          "author": "Walsh J",
+          "edition": "3"
+        },
+        {
+          "key": "bibr26-1932296813514502",
+          "first-page": "19",
+          "volume-title": "Putting Your Patients on the Pump",
+          "volume": "2002",
+          "author": "Bolderman KM"
+        },
+        {
+          "issue": "2",
+          "key": "bibr27-1932296813514502",
+          "first-page": "237",
+          "volume": "5",
+          "author": "Davidson PC",
+          "year": "2003",
+          "journal-title": "Diabetes Technol Ther"
+        },
+        {
+          "key": "bibr28-1932296813514502",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229680800200414"
+        }
+      ],
+      "container-title": [
+        "Journal of Diabetes Science and Technology"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://journals.sagepub.com/doi/pdf/10.1177/1932296813514502",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://journals.sagepub.com/doi/full-xml/10.1177/1932296813514502",
+          "content-type": "application/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://journals.sagepub.com/doi/pdf/10.1177/1932296813514502",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            4,
+            28
+          ]
+        ],
+        "date-time": "2026-04-28T18:10:36Z",
+        "timestamp": 1777399836000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://journals.sagepub.com/doi/10.1177/1932296813514502"
+        }
+      },
+      "subtitle": [
+        "New Features"
+      ],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2014,
+            1
+          ]
+        ]
+      },
+      "references-count": 28,
+      "journal-issue": {
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2014,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1177/1932296813514502"
+      ],
+      "URL": "https://doi.org/10.1177/1932296813514502",
+      "relation": {},
+      "ISSN": [
+        "1932-2968",
+        "1932-2968"
+      ],
+      "issn-type": [
+        {
+          "value": "1932-2968",
+          "type": "print"
+        },
+        {
+          "value": "1932-2968",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2014,
+            1
+          ]
+        ]
+      }
+    }
+  },
+  "R04": {
+    "status": "success",
+    "request_title": "Kalman Filter-Based Novel Methodology to Assess Insulin Pump Accuracy",
+    "record": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            4,
+            30
+          ]
+        ],
+        "date-time": "2026-04-30T13:57:18Z",
+        "timestamp": 1777557438657,
+        "version": "3.51.4"
+      },
+      "reference-count": 32,
+      "publisher": "SAGE Publications",
+      "issue": "10",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                10,
+                1
+              ]
+            ],
+            "date-time": "2019-10-01T00:00:00Z",
+            "timestamp": 1569888000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.liebertpub.com/nv/resources-tools/text-and-data-mining-policy/121/"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Diabetes Technology &amp; Therapeutics"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2019,
+            10,
+            1
+          ]
+        ]
+      },
+      "DOI": "10.1089/dia.2019.0147",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2019,
+            7,
+            23
+          ]
+        ],
+        "date-time": "2019-07-23T15:04:20Z",
+        "timestamp": 1563894260000
+      },
+      "page": "557-565",
+      "source": "Crossref",
+      "is-referenced-by-count": 7,
+      "title": [
+        "Kalman Filter-Based Novel Methodology to Assess Insulin Pump Accuracy"
+      ],
+      "prefix": "10.1177",
+      "volume": "21",
+      "author": [
+        {
+          "given": "Sylvain",
+          "family": "Girardot",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Air Liquide Healthcare, Explor Center, Gentilly, France."
+            },
+            {
+              "name": "Institut National de la Santé et de la Recherche Médicale (INSERM), UMRS 1138, Paris, France."
+            },
+            {
+              "name": "Université Paris Diderot-Paris VII, Sorbonne Paris Cité, Paris, France."
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Flavien",
+          "family": "Mousin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Air Liquide Healthcare, Explor Center, Gentilly, France."
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Jérémy",
+          "family": "Vezinet",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "ENAC, SIGNAV Research Group, Toulouse, Midi-Pyrénées, France."
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Pauline",
+          "family": "Jacquemier",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Air Liquide Healthcare, Explor Center, Gentilly, France."
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Sébastien",
+          "family": "Hardy",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Air Liquide Healthcare, Explor Center, Gentilly, France."
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Jean-Pierre",
+          "family": "Riveline",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institut National de la Santé et de la Recherche Médicale (INSERM), UMRS 1138, Paris, France."
+            },
+            {
+              "name": "Université Paris Diderot-Paris VII, Sorbonne Paris Cité, Paris, France."
+            },
+            {
+              "name": "Department of Diabetes and Endocrinology, Lariboisière Hospital, APHP, Paris, France."
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "member": "179",
+      "reference": [
+        {
+          "key": "B1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s00125-008-0974-3"
+        },
+        {
+          "key": "B2",
+          "first-page": "CD005103",
+          "author": "Misso ML",
+          "year": "2010",
+          "journal-title": "Cochrane Database Syst Rev"
+        },
+        {
+          "key": "B3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1089/dia.2014.0131"
+        },
+        {
+          "key": "B4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/dme.13816"
+        },
+        {
+          "key": "B5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/dc15-0078"
+        },
+        {
+          "key": "B6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1089/dia.2018.0384"
+        },
+        {
+          "key": "B7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/dc15-0817"
+        },
+        {
+          "key": "B8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681200600509"
+        },
+        {
+          "key": "B10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/diacare.3.2.322"
+        },
+        {
+          "key": "B11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/diab.23.9.732"
+        },
+        {
+          "key": "B12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TBME.1977.326114"
+        },
+        {
+          "key": "B13",
+          "first-page": "516",
+          "volume": "21",
+          "author": "Thomas LJ",
+          "year": "1975",
+          "journal-title": "Trans Am Soc Artif Intern Organs"
+        },
+        {
+          "key": "B14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2337/diacare.3.2.345"
+        },
+        {
+          "key": "B15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681300700425"
+        },
+        {
+          "key": "B16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/1932296814543946"
+        },
+        {
+          "key": "B17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/1932296818788349"
+        },
+        {
+          "key": "B18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1089/dia.2018.0376"
+        },
+        {
+          "key": "B19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.17925/EE.2016.12.02.79"
+        },
+        {
+          "key": "B20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681100500627"
+        },
+        {
+          "key": "B23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/pedi.12491"
+        },
+        {
+          "key": "B25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s00604-004-0278-3"
+        },
+        {
+          "key": "B26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681300700624"
+        },
+        {
+          "key": "B27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0140-6736(18)31947-0"
+        },
+        {
+          "key": "B30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2514/4.102776"
+        },
+        {
+          "key": "B31",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1089/dia.2016.07281.sf"
+        },
+        {
+          "key": "B32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681300700404"
+        },
+        {
+          "key": "B33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/193229681000400112"
+        },
+        {
+          "key": "B34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/1932296818806509"
+        },
+        {
+          "key": "B35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.diabet.2007.10.010"
+        },
+        {
+          "key": "B36",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1115/1.2831195"
+        },
+        {
+          "key": "B37",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1119/1.16860"
+        },
+        {
+          "key": "B38",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-319-12688-3_6"
+        }
+      ],
+      "container-title": [
+        "Diabetes Technology &amp; Therapeutics"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.liebertpub.com/doi/full-xml/10.1089/dia.2019.0147",
+          "content-type": "application/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://www.liebertpub.com/doi/pdf/10.1089/dia.2019.0147",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            4,
+            28
+          ]
+        ],
+        "date-time": "2026-04-28T18:18:15Z",
+        "timestamp": 1777400295000
+      },
+      "score": 61.53116,
+      "resource": {
+        "primary": {
+          "URL": "https://journals.sagepub.com/doi/full/10.1089/dia.2019.0147"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2019,
+            10,
+            1
+          ]
+        ]
+      },
+      "references-count": 32,
+      "journal-issue": {
+        "issue": "10",
+        "published-print": {
+          "date-parts": [
+            [
+              2019,
+              10,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1089/dia.2019.0147"
+      ],
+      "URL": "https://doi.org/10.1089/dia.2019.0147",
+      "ISSN": [
+        "1520-9156",
+        "1557-8593"
+      ],
+      "issn-type": [
+        {
+          "value": "1520-9156",
+          "type": "print"
+        },
+        {
+          "value": "1557-8593",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2019,
+            10,
+            1
+          ]
+        ]
+      }
+    }
+  }
+}

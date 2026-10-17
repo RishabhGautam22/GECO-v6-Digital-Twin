@@ -1,0 +1,25 @@
+# Python byte-compiled / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.hypothesis/
+.venv/
+venv/
+
+# Omniverse / Isaac Sim build & staging caches
+_build/
+cloud_deployment/build/
+*.log
+*.tmp
+
+# Large binary archives & local media caches
+*.zip
+*.tar.gz
+*.mp4
+*.wav
+*.pptx
+
+# OS / Editor metadata
+.DS_Store
+.vscode-server/

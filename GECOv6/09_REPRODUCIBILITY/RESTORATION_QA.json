@@ -1,0 +1,37 @@
+{
+  "generated_utc": "2026-09-07T12:48:39.546794+00:00",
+  "status": "PASS",
+  "script_sha256": "0323f68d81222a8fccb1c7a1b8309d5b3937eeb6f2b58888c77fe27de7398b8e",
+  "checks": [
+    {
+      "study": "primary",
+      "recalibrate": false,
+      "source_guard": "PASS",
+      "calibration_evidence_layout": "PASS",
+      "campaign_executed": false
+    },
+    {
+      "study": "primary",
+      "recalibrate": true,
+      "source_guard": "PASS",
+      "calibration_evidence_layout": "PASS",
+      "campaign_executed": false
+    },
+    {
+      "study": "supplement",
+      "recalibrate": false,
+      "source_guard": "PASS",
+      "calibration_evidence_layout": "PASS",
+      "campaign_executed": false
+    },
+    {
+      "study": "supplement",
+      "recalibrate": true,
+      "source_guard": "PASS",
+      "calibration_evidence_layout": "PASS",
+      "campaign_executed": false
+    }
+  ],
+  "temporary_workspaces_removed": true,
+  "replaces_prior_wrapper_check": "Earlier RESTORATION_QA.json covered source hashes only; this adds four layouts and required calibration ledgers/traces"
+}

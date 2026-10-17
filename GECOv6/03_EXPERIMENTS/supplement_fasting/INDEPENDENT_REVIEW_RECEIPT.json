@@ -1,0 +1,22 @@
+{
+  "recorded_utc": "2026-09-07T12:40:54.484669+00:00",
+  "reviewer": "science_audit agent; shared host, no production helper imports for outcome recomputation",
+  "review_path": "08_REVIEW_AND_QA/filter/supplement_cross_review/TRACE_AUDIT.json",
+  "review_sha256": "28feea6444b7bddcd160177583336593fbe3f14d25a3148e69822ae2ca97fd0b",
+  "status": "PASS",
+  "traces": 2048,
+  "slots": 1179648,
+  "metric_or_integrity_discrepancies": 0,
+  "documents": {
+    "METHODOLOGY.md": "c01cd2499cec866474a658e426b391cc6d0b53eab6dee3c6084a08e9a95d93f0",
+    "RESULTS_RELEASE.md": "c58219c54a0adc70ff162cb1e9378b456194cec346f8c72dd97373bc22238f53",
+    "RESULTS_INTERPRETATION.md": "c70c0638b04e489c5b8ef98bf1ca270d45dc917fe045eff392701cf1c1c62c0e"
+  },
+  "declared_domain_screen_not_physiological_validation": true,
+  "original_action_boundary_slots": 18648,
+  "original_clean_action_boundary_slots": 51,
+  "hovorka_clean_glucose_range_mgdl": [
+    74.02891411494761,
+    203.03058557310953
+  ]
+}

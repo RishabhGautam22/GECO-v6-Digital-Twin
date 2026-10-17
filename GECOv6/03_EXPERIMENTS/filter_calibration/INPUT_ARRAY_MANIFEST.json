@@ -1,0 +1,1479 @@
+[
+  {
+    "participant": "HUPA0001P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "4c364676bf2660279f037088b6863182423a7facee6007c449730c67b9ee1383",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 2048,
+          "slots": 2048,
+          "first_timestamp": "2018-06-13T18:40:00.000000",
+          "last_timestamp": "2018-06-20T21:15:00.000000",
+          "observed_cgm": 2048,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 2006
+        },
+        "tune": {
+          "start_index": 2048,
+          "stop_index_exclusive": 3072,
+          "slots": 1024,
+          "first_timestamp": "2018-06-20T21:20:00.000000",
+          "last_timestamp": "2018-06-24T10:35:00.000000",
+          "observed_cgm": 1024,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 982
+        },
+        "test": {
+          "start_index": 3072,
+          "stop_index_exclusive": 4096,
+          "slots": 1024,
+          "first_timestamp": "2018-06-24T10:40:00.000000",
+          "last_timestamp": "2018-06-27T23:55:00.000000",
+          "observed_cgm": 1024,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 982
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0002P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "07744ecae90e677a3b1932f0599a398c2c8fed76d896cfaf3a13b978878902a9",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1590,
+          "slots": 1590,
+          "first_timestamp": "2018-06-13T22:45:00.000000",
+          "last_timestamp": "2018-06-19T11:10:00.000000",
+          "observed_cgm": 1590,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1548
+        },
+        "tune": {
+          "start_index": 1590,
+          "stop_index_exclusive": 2385,
+          "slots": 795,
+          "first_timestamp": "2018-06-19T11:15:00.000000",
+          "last_timestamp": "2018-06-22T05:25:00.000000",
+          "observed_cgm": 795,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 753
+        },
+        "test": {
+          "start_index": 2385,
+          "stop_index_exclusive": 3181,
+          "slots": 796,
+          "first_timestamp": "2018-06-22T05:30:00.000000",
+          "last_timestamp": "2018-06-24T23:45:00.000000",
+          "observed_cgm": 796,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 754
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0003P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "9763f0b3984e89e8b2e4b9a491d62d3b6759b30fd27951823e1a5a6f4572be0c",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1885,
+          "slots": 1885,
+          "first_timestamp": "2018-06-13T21:40:00.000000",
+          "last_timestamp": "2018-06-20T10:40:00.000000",
+          "observed_cgm": 1885,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1843
+        },
+        "tune": {
+          "start_index": 1885,
+          "stop_index_exclusive": 2827,
+          "slots": 942,
+          "first_timestamp": "2018-06-20T10:45:00.000000",
+          "last_timestamp": "2018-06-23T17:10:00.000000",
+          "observed_cgm": 942,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 900
+        },
+        "test": {
+          "start_index": 2827,
+          "stop_index_exclusive": 3770,
+          "slots": 943,
+          "first_timestamp": "2018-06-23T17:15:00.000000",
+          "last_timestamp": "2018-06-26T23:45:00.000000",
+          "observed_cgm": 943,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 901
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0004P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "a7df5e5e5935b6e50f0de52d98446c0ef8058325b656673c06c1ce6753893a06",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1592,
+          "slots": 1592,
+          "first_timestamp": "2018-07-09T15:30:00.000000",
+          "last_timestamp": "2018-07-15T04:05:00.000000",
+          "observed_cgm": 1592,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1550
+        },
+        "tune": {
+          "start_index": 1592,
+          "stop_index_exclusive": 2388,
+          "slots": 796,
+          "first_timestamp": "2018-07-15T04:10:00.000000",
+          "last_timestamp": "2018-07-17T22:25:00.000000",
+          "observed_cgm": 796,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 754
+        },
+        "test": {
+          "start_index": 2388,
+          "stop_index_exclusive": 3184,
+          "slots": 796,
+          "first_timestamp": "2018-07-17T22:30:00.000000",
+          "last_timestamp": "2018-07-20T16:45:00.000000",
+          "observed_cgm": 796,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 754
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0005P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "78ef60cf36ef831a975bf0a406041065b6896393681453dde4832d3255ef35ef",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1929,
+          "slots": 1929,
+          "first_timestamp": "2018-07-09T14:20:00.000000",
+          "last_timestamp": "2018-07-16T07:00:00.000000",
+          "observed_cgm": 1929,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1887
+        },
+        "tune": {
+          "start_index": 1929,
+          "stop_index_exclusive": 2893,
+          "slots": 964,
+          "first_timestamp": "2018-07-16T07:05:00.000000",
+          "last_timestamp": "2018-07-19T15:20:00.000000",
+          "observed_cgm": 964,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 922
+        },
+        "test": {
+          "start_index": 2893,
+          "stop_index_exclusive": 3858,
+          "slots": 965,
+          "first_timestamp": "2018-07-19T15:25:00.000000",
+          "last_timestamp": "2018-07-22T23:45:00.000000",
+          "observed_cgm": 965,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 923
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0006P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "6e612d8b64879dfab389f44e14c56f5110bc72fbdd5e9af6a8e0980bbd0793df",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1145,
+          "slots": 1145,
+          "first_timestamp": "2018-07-09T15:45:00.000000",
+          "last_timestamp": "2018-07-13T15:05:00.000000",
+          "observed_cgm": 1145,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1103
+        },
+        "tune": {
+          "start_index": 1145,
+          "stop_index_exclusive": 1717,
+          "slots": 572,
+          "first_timestamp": "2018-07-13T15:10:00.000000",
+          "last_timestamp": "2018-07-15T14:45:00.000000",
+          "observed_cgm": 572,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 530
+        },
+        "test": {
+          "start_index": 1717,
+          "stop_index_exclusive": 2290,
+          "slots": 573,
+          "first_timestamp": "2018-07-15T14:50:00.000000",
+          "last_timestamp": "2018-07-17T14:30:00.000000",
+          "observed_cgm": 573,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 531
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0007P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "819f92eda779ba5792dd4817eb97ca000e0a3bf92b237d1ef1829ea9e939f4f6",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1928,
+          "slots": 1928,
+          "first_timestamp": "2018-09-19T14:25:00.000000",
+          "last_timestamp": "2018-09-26T07:00:00.000000",
+          "observed_cgm": 1928,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1886
+        },
+        "tune": {
+          "start_index": 1928,
+          "stop_index_exclusive": 2892,
+          "slots": 964,
+          "first_timestamp": "2018-09-26T07:05:00.000000",
+          "last_timestamp": "2018-09-29T15:20:00.000000",
+          "observed_cgm": 964,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 922
+        },
+        "test": {
+          "start_index": 2892,
+          "stop_index_exclusive": 3857,
+          "slots": 965,
+          "first_timestamp": "2018-09-29T15:25:00.000000",
+          "last_timestamp": "2018-10-02T23:45:00.000000",
+          "observed_cgm": 965,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 923
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0009P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "5d60b9c0eabef7453c5f3d3140de92919513cb4b1d69fcfe148e5dcdd5fd801a",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1906,
+          "slots": 1906,
+          "first_timestamp": "2018-09-19T14:35:00.000000",
+          "last_timestamp": "2018-09-26T05:20:00.000000",
+          "observed_cgm": 1906,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1864
+        },
+        "tune": {
+          "start_index": 1906,
+          "stop_index_exclusive": 2859,
+          "slots": 953,
+          "first_timestamp": "2018-09-26T05:25:00.000000",
+          "last_timestamp": "2018-09-29T12:45:00.000000",
+          "observed_cgm": 953,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 911
+        },
+        "test": {
+          "start_index": 2859,
+          "stop_index_exclusive": 3812,
+          "slots": 953,
+          "first_timestamp": "2018-09-29T12:50:00.000000",
+          "last_timestamp": "2018-10-02T20:10:00.000000",
+          "observed_cgm": 953,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 911
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0010P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "bf58d1d300b54df8fecfa56a2235e54c2983f2455e47fd0c280e69097fdbc63d",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1488,
+          "slots": 1488,
+          "first_timestamp": "2018-11-07T15:35:00.000000",
+          "last_timestamp": "2018-11-12T19:30:00.000000",
+          "observed_cgm": 1488,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1446
+        },
+        "tune": {
+          "start_index": 1488,
+          "stop_index_exclusive": 2232,
+          "slots": 744,
+          "first_timestamp": "2018-11-12T19:35:00.000000",
+          "last_timestamp": "2018-11-15T09:30:00.000000",
+          "observed_cgm": 744,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 702
+        },
+        "test": {
+          "start_index": 2232,
+          "stop_index_exclusive": 2976,
+          "slots": 744,
+          "first_timestamp": "2018-11-15T09:35:00.000000",
+          "last_timestamp": "2018-11-17T23:30:00.000000",
+          "observed_cgm": 744,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 702
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0011P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "15cf58d8613dd6b55090198d7cad236e43520bc7cd48b4a44f35f753c37b6360",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1919,
+          "slots": 1919,
+          "first_timestamp": "2018-11-07T15:55:00.000000",
+          "last_timestamp": "2018-11-14T07:45:00.000000",
+          "observed_cgm": 1919,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1877
+        },
+        "tune": {
+          "start_index": 1919,
+          "stop_index_exclusive": 2879,
+          "slots": 960,
+          "first_timestamp": "2018-11-14T07:50:00.000000",
+          "last_timestamp": "2018-11-17T15:45:00.000000",
+          "observed_cgm": 960,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 918
+        },
+        "test": {
+          "start_index": 2879,
+          "stop_index_exclusive": 3839,
+          "slots": 960,
+          "first_timestamp": "2018-11-17T15:50:00.000000",
+          "last_timestamp": "2018-11-20T23:45:00.000000",
+          "observed_cgm": 960,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 918
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0014P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "298343521eca812818150c5f52ac09ab64f603adbf532a115dd4b8dec7454361",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1914,
+          "slots": 1914,
+          "first_timestamp": "2018-11-07T16:45:00.000000",
+          "last_timestamp": "2018-11-14T08:10:00.000000",
+          "observed_cgm": 1914,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1872
+        },
+        "tune": {
+          "start_index": 1914,
+          "stop_index_exclusive": 2871,
+          "slots": 957,
+          "first_timestamp": "2018-11-14T08:15:00.000000",
+          "last_timestamp": "2018-11-17T15:55:00.000000",
+          "observed_cgm": 957,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 915
+        },
+        "test": {
+          "start_index": 2871,
+          "stop_index_exclusive": 3829,
+          "slots": 958,
+          "first_timestamp": "2018-11-17T16:00:00.000000",
+          "last_timestamp": "2018-11-20T23:45:00.000000",
+          "observed_cgm": 958,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 916
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0015P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "618eac5485e21b6bc9c77f33fb09deb77fbfdf9cf2e43d8be57d55b5f8d6bd85",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1896,
+          "slots": 1896,
+          "first_timestamp": "2019-03-27T16:15:00.000000",
+          "last_timestamp": "2019-04-03T06:10:00.000000",
+          "observed_cgm": 1896,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1854
+        },
+        "tune": {
+          "start_index": 1896,
+          "stop_index_exclusive": 2844,
+          "slots": 948,
+          "first_timestamp": "2019-04-03T06:15:00.000000",
+          "last_timestamp": "2019-04-06T13:10:00.000000",
+          "observed_cgm": 948,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 906
+        },
+        "test": {
+          "start_index": 2844,
+          "stop_index_exclusive": 3792,
+          "slots": 948,
+          "first_timestamp": "2019-04-06T13:15:00.000000",
+          "last_timestamp": "2019-04-09T20:10:00.000000",
+          "observed_cgm": 948,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 906
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0016P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "b61e96454b02671e788a7cf2d67e3c099aa0f0596fd5ccbd902f187493fa5360",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1917,
+          "slots": 1917,
+          "first_timestamp": "2019-03-27T16:15:00.000000",
+          "last_timestamp": "2019-04-03T07:55:00.000000",
+          "observed_cgm": 1917,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1875
+        },
+        "tune": {
+          "start_index": 1917,
+          "stop_index_exclusive": 2876,
+          "slots": 959,
+          "first_timestamp": "2019-04-03T08:00:00.000000",
+          "last_timestamp": "2019-04-06T15:50:00.000000",
+          "observed_cgm": 959,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 917
+        },
+        "test": {
+          "start_index": 2876,
+          "stop_index_exclusive": 3835,
+          "slots": 959,
+          "first_timestamp": "2019-04-06T15:55:00.000000",
+          "last_timestamp": "2019-04-09T23:45:00.000000",
+          "observed_cgm": 959,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 917
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0017P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "c87e3c63009bfcd610982e791b35830236f23d6dcedd7cbd4904f1ef4b2199ca",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1799,
+          "slots": 1799,
+          "first_timestamp": "2019-03-28T12:00:00.000000",
+          "last_timestamp": "2019-04-03T17:50:00.000000",
+          "observed_cgm": 1799,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1757
+        },
+        "tune": {
+          "start_index": 1799,
+          "stop_index_exclusive": 2699,
+          "slots": 900,
+          "first_timestamp": "2019-04-03T17:55:00.000000",
+          "last_timestamp": "2019-04-06T20:50:00.000000",
+          "observed_cgm": 900,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 858
+        },
+        "test": {
+          "start_index": 2699,
+          "stop_index_exclusive": 3599,
+          "slots": 900,
+          "first_timestamp": "2019-04-06T20:55:00.000000",
+          "last_timestamp": "2019-04-09T23:50:00.000000",
+          "observed_cgm": 900,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 858
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0018P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "c562d16f4c4c464de6061873f546d11289acbb652c929b5bc8eb21a15528abc1",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1947,
+          "slots": 1947,
+          "first_timestamp": "2019-07-03T11:15:00.000000",
+          "last_timestamp": "2019-07-10T05:25:00.000000",
+          "observed_cgm": 1947,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1905
+        },
+        "tune": {
+          "start_index": 1947,
+          "stop_index_exclusive": 2921,
+          "slots": 974,
+          "first_timestamp": "2019-07-10T05:30:00.000000",
+          "last_timestamp": "2019-07-13T14:35:00.000000",
+          "observed_cgm": 974,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 932
+        },
+        "test": {
+          "start_index": 2921,
+          "stop_index_exclusive": 3895,
+          "slots": 974,
+          "first_timestamp": "2019-07-13T14:40:00.000000",
+          "last_timestamp": "2019-07-16T23:45:00.000000",
+          "observed_cgm": 974,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 932
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0019P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "6faeb0f9ba29e0ce8862c4dc288ae7138fd5bbc98abf50762e5dddb4dbf424fc",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1855,
+          "slots": 1855,
+          "first_timestamp": "2019-07-03T14:00:00.000000",
+          "last_timestamp": "2019-07-10T00:30:00.000000",
+          "observed_cgm": 1855,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1813
+        },
+        "tune": {
+          "start_index": 1855,
+          "stop_index_exclusive": 2783,
+          "slots": 928,
+          "first_timestamp": "2019-07-10T00:35:00.000000",
+          "last_timestamp": "2019-07-13T05:50:00.000000",
+          "observed_cgm": 928,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 886
+        },
+        "test": {
+          "start_index": 2783,
+          "stop_index_exclusive": 3711,
+          "slots": 928,
+          "first_timestamp": "2019-07-13T05:55:00.000000",
+          "last_timestamp": "2019-07-16T11:10:00.000000",
+          "observed_cgm": 928,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 886
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0020P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "007e1c2062d9707516e1535355fcde6b3f33cb8c8409edaa0d4ac2dcab0604a7",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1431,
+          "slots": 1431,
+          "first_timestamp": "2019-07-03T20:15:00.000000",
+          "last_timestamp": "2019-07-08T19:25:00.000000",
+          "observed_cgm": 1431,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1389
+        },
+        "tune": {
+          "start_index": 1431,
+          "stop_index_exclusive": 2146,
+          "slots": 715,
+          "first_timestamp": "2019-07-08T19:30:00.000000",
+          "last_timestamp": "2019-07-11T07:00:00.000000",
+          "observed_cgm": 715,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 673
+        },
+        "test": {
+          "start_index": 2146,
+          "stop_index_exclusive": 2862,
+          "slots": 716,
+          "first_timestamp": "2019-07-11T07:05:00.000000",
+          "last_timestamp": "2019-07-13T18:40:00.000000",
+          "observed_cgm": 716,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 674
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0021P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "055888c633dbbb7d88dd8d84cda74856712976723c2ed06a70244bc4b29456e8",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1171,
+          "slots": 1171,
+          "first_timestamp": "2019-07-03T12:25:00.000000",
+          "last_timestamp": "2019-07-07T13:55:00.000000",
+          "observed_cgm": 1171,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1129
+        },
+        "tune": {
+          "start_index": 1171,
+          "stop_index_exclusive": 1757,
+          "slots": 586,
+          "first_timestamp": "2019-07-07T14:00:00.000000",
+          "last_timestamp": "2019-07-09T14:45:00.000000",
+          "observed_cgm": 586,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 544
+        },
+        "test": {
+          "start_index": 1757,
+          "stop_index_exclusive": 2343,
+          "slots": 586,
+          "first_timestamp": "2019-07-09T14:50:00.000000",
+          "last_timestamp": "2019-07-11T15:35:00.000000",
+          "observed_cgm": 586,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 544
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0022P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "a5d6fdcdcbc8929e7edf6e9ce1fe3c0a09fe5aaa83c8055460f981fd543d95a3",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 2011,
+          "slots": 2011,
+          "first_timestamp": "2020-01-17T00:35:00.000000",
+          "last_timestamp": "2020-01-24T00:05:00.000000",
+          "observed_cgm": 2011,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1969
+        },
+        "tune": {
+          "start_index": 2011,
+          "stop_index_exclusive": 3017,
+          "slots": 1006,
+          "first_timestamp": "2020-01-24T00:10:00.000000",
+          "last_timestamp": "2020-01-27T11:55:00.000000",
+          "observed_cgm": 1006,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 964
+        },
+        "test": {
+          "start_index": 3017,
+          "stop_index_exclusive": 4023,
+          "slots": 1006,
+          "first_timestamp": "2020-01-27T12:00:00.000000",
+          "last_timestamp": "2020-01-30T23:45:00.000000",
+          "observed_cgm": 1006,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 964
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0023P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "42a03ae43ad2ea0c5d56cc0761744aa5224d8bf2054ab295a800af2de343e982",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1959,
+          "slots": 1959,
+          "first_timestamp": "2020-01-17T00:00:00.000000",
+          "last_timestamp": "2020-01-23T19:10:00.000000",
+          "observed_cgm": 1959,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1917
+        },
+        "tune": {
+          "start_index": 1959,
+          "stop_index_exclusive": 2939,
+          "slots": 980,
+          "first_timestamp": "2020-01-23T19:15:00.000000",
+          "last_timestamp": "2020-01-27T04:50:00.000000",
+          "observed_cgm": 980,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 938
+        },
+        "test": {
+          "start_index": 2939,
+          "stop_index_exclusive": 3919,
+          "slots": 980,
+          "first_timestamp": "2020-01-27T04:55:00.000000",
+          "last_timestamp": "2020-01-30T14:30:00.000000",
+          "observed_cgm": 980,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 938
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0024P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "8fd6013085ec09f5a8c579cd85a082c5d57a1cccf1990b041ae3a939d0573346",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 1451,
+          "slots": 1451,
+          "first_timestamp": "2020-01-20T11:30:00.000000",
+          "last_timestamp": "2020-01-25T12:20:00.000000",
+          "observed_cgm": 1451,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1409
+        },
+        "tune": {
+          "start_index": 1451,
+          "stop_index_exclusive": 2176,
+          "slots": 725,
+          "first_timestamp": "2020-01-25T12:25:00.000000",
+          "last_timestamp": "2020-01-28T00:45:00.000000",
+          "observed_cgm": 725,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 683
+        },
+        "test": {
+          "start_index": 2176,
+          "stop_index_exclusive": 2902,
+          "slots": 726,
+          "first_timestamp": "2020-01-28T00:50:00.000000",
+          "last_timestamp": "2020-01-30T13:15:00.000000",
+          "observed_cgm": 726,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 684
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0025P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "e5a4fdf79571fe472033d85b3bde908318247120a3f8e1fa073fd875c60df96f",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 2003,
+          "slots": 2003,
+          "first_timestamp": "2020-01-16T13:45:00.000000",
+          "last_timestamp": "2020-01-23T12:35:00.000000",
+          "observed_cgm": 2003,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 1961
+        },
+        "tune": {
+          "start_index": 2003,
+          "stop_index_exclusive": 3004,
+          "slots": 1001,
+          "first_timestamp": "2020-01-23T12:40:00.000000",
+          "last_timestamp": "2020-01-27T00:00:00.000000",
+          "observed_cgm": 1001,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 959
+        },
+        "test": {
+          "start_index": 3004,
+          "stop_index_exclusive": 4006,
+          "slots": 1002,
+          "first_timestamp": "2020-01-27T00:05:00.000000",
+          "last_timestamp": "2020-01-30T11:30:00.000000",
+          "observed_cgm": 1002,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 960
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0026P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "1464988f77a70a9a803667ccf096d86d2c47bf37488187336e163b86b99f0ca3",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 20302,
+          "slots": 20302,
+          "first_timestamp": "2020-05-23T00:15:00.000000",
+          "last_timestamp": "2020-08-01T12:00:00.000000",
+          "observed_cgm": 20302,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 20260
+        },
+        "tune": {
+          "start_index": 20302,
+          "stop_index_exclusive": 30453,
+          "slots": 10151,
+          "first_timestamp": "2020-08-01T12:05:00.000000",
+          "last_timestamp": "2020-09-05T17:55:00.000000",
+          "observed_cgm": 10151,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 10109
+        },
+        "test": {
+          "start_index": 30453,
+          "stop_index_exclusive": 40605,
+          "slots": 10152,
+          "first_timestamp": "2020-09-05T18:00:00.000000",
+          "last_timestamp": "2020-10-10T23:55:00.000000",
+          "observed_cgm": 10152,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 10110
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0027P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "0a98c4068fe4ba585dbfa7dad9cb5b0108e46ffb5867d4a94b0718bd7f7037ed",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 82653,
+          "slots": 82653,
+          "first_timestamp": "2020-06-26T22:15:00.000000",
+          "last_timestamp": "2021-04-09T21:55:00.000000",
+          "observed_cgm": 82653,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 82611
+        },
+        "tune": {
+          "start_index": 82653,
+          "stop_index_exclusive": 123979,
+          "slots": 41326,
+          "first_timestamp": "2021-04-09T22:00:00.000000",
+          "last_timestamp": "2021-08-31T09:45:00.000000",
+          "observed_cgm": 41326,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 41284
+        },
+        "test": {
+          "start_index": 123979,
+          "stop_index_exclusive": 165306,
+          "slots": 41327,
+          "first_timestamp": "2021-08-31T09:50:00.000000",
+          "last_timestamp": "2022-01-21T21:40:00.000000",
+          "observed_cgm": 41327,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 41285
+        }
+      }
+    }
+  },
+  {
+    "participant": "HUPA0028P",
+    "source": "HUPA-UCM v1 (Mendeley 10.17632/3hbcscwz44.1)",
+    "array_sha256": "e477d7d1c4c3b12a197ebc8e34b388f9e01f9f75f3e94fc9a9face538458a7cb",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 12951,
+          "slots": 12951,
+          "first_timestamp": "2022-02-17T13:50:00.000000",
+          "last_timestamp": "2022-04-03T13:00:00.000000",
+          "observed_cgm": 12951,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 12909
+        },
+        "tune": {
+          "start_index": 12951,
+          "stop_index_exclusive": 19426,
+          "slots": 6475,
+          "first_timestamp": "2022-04-03T13:05:00.000000",
+          "last_timestamp": "2022-04-26T00:35:00.000000",
+          "observed_cgm": 6475,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 6433
+        },
+        "test": {
+          "start_index": 19426,
+          "stop_index_exclusive": 25902,
+          "slots": 6476,
+          "first_timestamp": "2022-04-26T00:40:00.000000",
+          "last_timestamp": "2022-05-18T12:15:00.000000",
+          "observed_cgm": 6476,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 6434
+        }
+      }
+    }
+  },
+  {
+    "participant": "D1NAMO-001",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "array_sha256": "8bbe2faaaec677cb0dad63b1722fd9d08408cd4573e35f4da5470210dbc01b16",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 707,
+          "slots": 707,
+          "first_timestamp": "2014-10-01T19:10:00.000000",
+          "last_timestamp": "2014-10-04T06:00:00.000000",
+          "observed_cgm": 707,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 665
+        },
+        "tune": {
+          "start_index": 707,
+          "stop_index_exclusive": 1060,
+          "slots": 353,
+          "first_timestamp": "2014-10-04T06:05:00.000000",
+          "last_timestamp": "2014-10-05T11:25:00.000000",
+          "observed_cgm": 353,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 311
+        },
+        "test": {
+          "start_index": 1060,
+          "stop_index_exclusive": 1414,
+          "slots": 354,
+          "first_timestamp": "2014-10-05T11:30:00.000000",
+          "last_timestamp": "2014-10-06T16:55:00.000000",
+          "observed_cgm": 353,
+          "cgm_coverage": 0.9971751412429378,
+          "eligible_forecast_pairs": 311
+        }
+      }
+    }
+  },
+  {
+    "participant": "D1NAMO-002",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "array_sha256": "58b67e60ce9d75b0676491ecf74ac76bc7e2ad9e6ffb7ef090ae513033c49c48",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 528,
+          "slots": 528,
+          "first_timestamp": "2014-10-01T19:20:00.000000",
+          "last_timestamp": "2014-10-03T15:15:00.000000",
+          "observed_cgm": 528,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 486
+        },
+        "tune": {
+          "start_index": 528,
+          "stop_index_exclusive": 792,
+          "slots": 264,
+          "first_timestamp": "2014-10-03T15:20:00.000000",
+          "last_timestamp": "2014-10-04T13:15:00.000000",
+          "observed_cgm": 264,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 222
+        },
+        "test": {
+          "start_index": 792,
+          "stop_index_exclusive": 1057,
+          "slots": 265,
+          "first_timestamp": "2014-10-04T13:20:00.000000",
+          "last_timestamp": "2014-10-05T11:20:00.000000",
+          "observed_cgm": 264,
+          "cgm_coverage": 0.9962264150943396,
+          "eligible_forecast_pairs": 222
+        }
+      }
+    }
+  },
+  {
+    "participant": "D1NAMO-003",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "array_sha256": "cdf8df6e2aca831a55a9b80b6d30096d6f3302aaaeb28e0887f3dff068d5469e",
+    "eligible": false,
+    "reasons": [
+      "fit:too_short",
+      "tune:too_short",
+      "tune:fewer_than_50_forecast_pairs",
+      "test:too_short",
+      "test:fewer_than_50_forecast_pairs"
+    ],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 92,
+          "slots": 92,
+          "first_timestamp": "2014-10-01T08:50:00.000000",
+          "last_timestamp": "2014-10-01T16:25:00.000000",
+          "observed_cgm": 92,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 50
+        },
+        "tune": {
+          "start_index": 92,
+          "stop_index_exclusive": 138,
+          "slots": 46,
+          "first_timestamp": "2014-10-01T16:30:00.000000",
+          "last_timestamp": "2014-10-01T20:15:00.000000",
+          "observed_cgm": 46,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 4
+        },
+        "test": {
+          "start_index": 138,
+          "stop_index_exclusive": 184,
+          "slots": 46,
+          "first_timestamp": "2014-10-01T20:20:00.000000",
+          "last_timestamp": "2014-10-02T00:05:00.000000",
+          "observed_cgm": 45,
+          "cgm_coverage": 0.9782608695652174,
+          "eligible_forecast_pairs": 3
+        }
+      }
+    }
+  },
+  {
+    "participant": "D1NAMO-004",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "array_sha256": "d2e9d50cffe91a6802a8f8fc4ba121afb9b68359e192fb4ea8358b1d837722aa",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 485,
+          "slots": 485,
+          "first_timestamp": "2014-10-01T08:20:00.000000",
+          "last_timestamp": "2014-10-03T00:40:00.000000",
+          "observed_cgm": 485,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 443
+        },
+        "tune": {
+          "start_index": 485,
+          "stop_index_exclusive": 727,
+          "slots": 242,
+          "first_timestamp": "2014-10-03T00:45:00.000000",
+          "last_timestamp": "2014-10-03T20:50:00.000000",
+          "observed_cgm": 242,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 200
+        },
+        "test": {
+          "start_index": 727,
+          "stop_index_exclusive": 970,
+          "slots": 243,
+          "first_timestamp": "2014-10-03T20:55:00.000000",
+          "last_timestamp": "2014-10-04T17:05:00.000000",
+          "observed_cgm": 242,
+          "cgm_coverage": 0.9958847736625515,
+          "eligible_forecast_pairs": 200
+        }
+      }
+    }
+  },
+  {
+    "participant": "D1NAMO-005",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "array_sha256": "d541e71d48fa67f9a47f144d1099e35bf1325069149f1be0e427851805e61d27",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 455,
+          "slots": 455,
+          "first_timestamp": "2014-10-01T11:30:00.000000",
+          "last_timestamp": "2014-10-03T01:20:00.000000",
+          "observed_cgm": 455,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 413
+        },
+        "tune": {
+          "start_index": 455,
+          "stop_index_exclusive": 682,
+          "slots": 227,
+          "first_timestamp": "2014-10-03T01:25:00.000000",
+          "last_timestamp": "2014-10-03T20:15:00.000000",
+          "observed_cgm": 227,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 185
+        },
+        "test": {
+          "start_index": 682,
+          "stop_index_exclusive": 910,
+          "slots": 228,
+          "first_timestamp": "2014-10-03T20:20:00.000000",
+          "last_timestamp": "2014-10-04T15:15:00.000000",
+          "observed_cgm": 227,
+          "cgm_coverage": 0.9956140350877193,
+          "eligible_forecast_pairs": 185
+        }
+      }
+    }
+  },
+  {
+    "participant": "D1NAMO-006",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "array_sha256": "24c770f56ad4acf43fb3ad23278d32e19d839e08643f00647ba72f38617ab5be",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 640,
+          "slots": 640,
+          "first_timestamp": "2014-10-01T21:50:00.000000",
+          "last_timestamp": "2014-10-04T03:05:00.000000",
+          "observed_cgm": 640,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 598
+        },
+        "tune": {
+          "start_index": 640,
+          "stop_index_exclusive": 960,
+          "slots": 320,
+          "first_timestamp": "2014-10-04T03:10:00.000000",
+          "last_timestamp": "2014-10-05T05:45:00.000000",
+          "observed_cgm": 320,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 278
+        },
+        "test": {
+          "start_index": 960,
+          "stop_index_exclusive": 1281,
+          "slots": 321,
+          "first_timestamp": "2014-10-05T05:50:00.000000",
+          "last_timestamp": "2014-10-06T08:30:00.000000",
+          "observed_cgm": 320,
+          "cgm_coverage": 0.9968847352024922,
+          "eligible_forecast_pairs": 278
+        }
+      }
+    }
+  },
+  {
+    "participant": "D1NAMO-007",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "array_sha256": "4df1a36565744ede4386e5c4ee018f8382635f433d3e6a0418f719ba5e632604",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 528,
+          "slots": 528,
+          "first_timestamp": "2014-10-01T11:45:00.000000",
+          "last_timestamp": "2014-10-03T07:40:00.000000",
+          "observed_cgm": 527,
+          "cgm_coverage": 0.9981060606060606,
+          "eligible_forecast_pairs": 484
+        },
+        "tune": {
+          "start_index": 528,
+          "stop_index_exclusive": 792,
+          "slots": 264,
+          "first_timestamp": "2014-10-03T07:45:00.000000",
+          "last_timestamp": "2014-10-04T05:40:00.000000",
+          "observed_cgm": 197,
+          "cgm_coverage": 0.7462121212121212,
+          "eligible_forecast_pairs": 149
+        },
+        "test": {
+          "start_index": 792,
+          "stop_index_exclusive": 1057,
+          "slots": 265,
+          "first_timestamp": "2014-10-04T05:45:00.000000",
+          "last_timestamp": "2014-10-05T03:45:00.000000",
+          "observed_cgm": 264,
+          "cgm_coverage": 0.9962264150943396,
+          "eligible_forecast_pairs": 222
+        }
+      }
+    }
+  },
+  {
+    "participant": "D1NAMO-008",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "array_sha256": "2e89b37386b301f67801a1469d29ebe7740d4a218aba03b73ff740bd92f38a2d",
+    "eligible": true,
+    "reasons": [],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 570,
+          "slots": 570,
+          "first_timestamp": "2014-09-30T10:05:00.000000",
+          "last_timestamp": "2014-10-02T09:30:00.000000",
+          "observed_cgm": 570,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 528
+        },
+        "tune": {
+          "start_index": 570,
+          "stop_index_exclusive": 855,
+          "slots": 285,
+          "first_timestamp": "2014-10-02T09:35:00.000000",
+          "last_timestamp": "2014-10-03T09:15:00.000000",
+          "observed_cgm": 285,
+          "cgm_coverage": 1.0,
+          "eligible_forecast_pairs": 243
+        },
+        "test": {
+          "start_index": 855,
+          "stop_index_exclusive": 1141,
+          "slots": 286,
+          "first_timestamp": "2014-10-03T09:20:00.000000",
+          "last_timestamp": "2014-10-04T09:05:00.000000",
+          "observed_cgm": 285,
+          "cgm_coverage": 0.9965034965034965,
+          "eligible_forecast_pairs": 243
+        }
+      }
+    }
+  },
+  {
+    "participant": "D1NAMO-009",
+    "source": "D1NAMO v1.2.0 (Zenodo 5651217)",
+    "array_sha256": "4112c0350861d8edb83fae6300aecd96748acc8e3de095b94efb89cf887aff6a",
+    "eligible": false,
+    "reasons": [
+      "fit:too_short",
+      "fit:observed_cgm_below_50pct",
+      "fit:fewer_than_50_forecast_pairs",
+      "tune:too_short",
+      "tune:observed_cgm_below_50pct",
+      "tune:fewer_than_50_forecast_pairs",
+      "test:too_short",
+      "test:fewer_than_50_forecast_pairs"
+    ],
+    "split_provenance": {
+      "rule": "floor(0.50N),floor(0.75N); disjoint chronological windows",
+      "holdout_status": "previously exposed internal test; not external",
+      "windows": {
+        "fit": {
+          "start_index": 0,
+          "stop_index_exclusive": 184,
+          "slots": 184,
+          "first_timestamp": "2014-10-02T06:10:00.000000",
+          "last_timestamp": "2014-10-02T21:25:00.000000",
+          "observed_cgm": 64,
+          "cgm_coverage": 0.34782608695652173,
+          "eligible_forecast_pairs": 22
+        },
+        "tune": {
+          "start_index": 184,
+          "stop_index_exclusive": 276,
+          "slots": 92,
+          "first_timestamp": "2014-10-02T21:30:00.000000",
+          "last_timestamp": "2014-10-03T05:05:00.000000",
+          "observed_cgm": 0,
+          "cgm_coverage": 0.0,
+          "eligible_forecast_pairs": 0
+        },
+        "test": {
+          "start_index": 276,
+          "stop_index_exclusive": 368,
+          "slots": 92,
+          "first_timestamp": "2014-10-03T05:10:00.000000",
+          "last_timestamp": "2014-10-03T12:45:00.000000",
+          "observed_cgm": 53,
+          "cgm_coverage": 0.5760869565217391,
+          "eligible_forecast_pairs": 47
+        }
+      }
+    }
+  }
+]

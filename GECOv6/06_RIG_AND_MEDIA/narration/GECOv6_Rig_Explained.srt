@@ -1,0 +1,303 @@
+1
+00:00:00,000 --> 00:00:03,929
+This is the proposed GECO water and saline research bench.
+
+2
+00:00:03,929 --> 00:00:13,750
+Its purpose is to compare a permitted pump command with evidence of fluid reaching a defined outlet, then study what happens when the monitor intervenes.
+
+3
+00:00:13,750 --> 00:00:19,250
+The animation explains the planned arrangement; it is not footage of a completed experiment.
+
+4
+00:00:19,250 --> 00:00:22,785
+Every component shown still needs final selection and verification.
+
+5
+00:00:22,785 --> 00:00:31,035
+The amber labels identify physical measurements that the IIT Patna team must collect before any hardware performance claim can be made.
+
+6
+00:00:31,708 --> 00:00:33,786
+Begin with the data path.
+
+7
+00:00:33,786 --> 00:00:38,358
+A glucose observation enters a physiological model and a control policy.
+
+8
+00:00:38,358 --> 00:00:46,670
+The policy proposes an amount, the authorization layer permits or rejects it, and the pump endpoint records what it accepted.
+
+9
+00:00:46,670 --> 00:00:48,748
+These records describe digital decisions.
+
+10
+00:00:48,748 --> 00:00:51,241
+They do not measure fluid delivery.
+
+11
+00:00:51,241 --> 00:00:57,890
+GECO keeps the emitted fluid, the balance indication and the received measurement report as separate quantities.
+
+12
+00:00:57,890 --> 00:01:06,202
+Timestamps connect the forward command path with the returning evidence path, so discrepancies can be compared over the same interval.
+
+13
+00:01:06,875 --> 00:01:15,002
+The gateway coordinates messages, records authorized commands and supplies the monitor with the information its policy is allowed to use.
+
+14
+00:01:15,002 --> 00:01:19,472
+Authentication can establish the source and integrity of defined message bytes.
+
+15
+00:01:19,472 --> 00:01:25,567
+It cannot prove that a credentialed request is appropriate or that an actuator obeyed it.
+
+16
+00:01:25,567 --> 00:01:32,068
+The experiment must therefore state which device, message, clock or firmware an injected fault can change.
+
+17
+00:01:32,068 --> 00:01:38,976
+It must also name the evidence that remains available and the authority available to each comparison method.
+
+18
+00:01:39,667 --> 00:01:46,034
+The drive illustration contains a motor, a coupling, a lead screw and a moving carriage.
+
+19
+00:01:46,034 --> 00:01:50,279
+Rotation is intended to translate the carriage along the rails.
+
+20
+00:01:50,279 --> 00:01:54,523
+This is a mechanical proposal, not proof of travel accuracy.
+
+21
+00:01:54,523 --> 00:02:00,466
+Backlash, compliance, misalignment and missed motion can make commanded displacement differ from actual displacement.
+
+22
+00:02:00,466 --> 00:02:07,258
+The team must record the chosen parts, travel limits and assembly dimensions, then characterize their behavior.
+
+23
+00:02:07,258 --> 00:02:16,172
+The named components show how the proposed drive works, while part selection and measured performance remain for the team to establish.
+
+24
+00:02:16,833 --> 00:02:25,106
+The carriage pushes a syringe plunger, and the syringe connects to tubing and the proposed stop mechanism before the receiving outlet.
+
+25
+00:02:25,106 --> 00:02:28,652
+Plunger motion is not identical to immediate outlet flow.
+
+26
+00:02:28,652 --> 00:02:35,349
+Fluid storage in compliant tubing, trapped air, hydraulic resistance and the outlet height can change the timing.
+
+27
+00:02:35,349 --> 00:02:40,864
+The selected syringe bore, usable stroke, tubing dimensions and fluid preparation must be recorded.
+
+28
+00:02:40,864 --> 00:02:49,924
+This work uses water or saline as a research fluid; the illustrated conversion to a virtual model is not a clinical insulin dose.
+
+29
+00:02:50,583 --> 00:02:53,415
+The receiving vessel rests on a balance.
+
+30
+00:02:53,415 --> 00:02:59,077
+The instrument reports an indication affected by its calibration, resolution, noise, drift and environment.
+
+31
+00:02:59,077 --> 00:03:05,144
+Tubing or a temperature probe touching the receiver can add forces that look like mass.
+
+32
+00:03:05,144 --> 00:03:12,020
+The outlet and tubing therefore need a tested support arrangement, with contact, wetting and settling effects documented.
+
+33
+00:03:12,020 --> 00:03:18,087
+We preserve the raw signed balance readings rather than treating each upward change as delivery.
+
+34
+00:03:18,087 --> 00:03:23,345
+The receiver, outlet definition and blank-run conditions must stay consistent across matched trials.
+
+35
+00:03:24,000 --> 00:03:27,431
+The reference-mass tray represents the planned calibration resources.
+
+36
+00:03:27,431 --> 00:03:35,149
+Showing reference masses does not establish traceability; the actual identifiers, certificates, dates and uncertainty must accompany the experiment.
+
+37
+00:03:35,149 --> 00:03:44,155
+The balance should be checked over the working range for repeatability and response, with before-and-after checks as defined by the protocol.
+
+38
+00:03:44,155 --> 00:03:49,729
+The resulting uncertainty budget will combine the relevant measurement contributions and their correlations.
+
+39
+00:03:49,729 --> 00:03:59,163
+This process determines what size of discrepancy the bench can resolve; it does not itself validate the monitor or the stop action.
+
+40
+00:03:59,833 --> 00:04:07,237
+The separate sample vial holds the temperature measurement so that the probe does not load the balance receiver.
+
+41
+00:04:07,237 --> 00:04:14,230
+The team must establish whether this temperature represents the delivered fluid and record its timing and uncertainty.
+
+42
+00:04:14,230 --> 00:04:19,988
+A mass-to-volume calculation also requires fluid identity and an appropriate density relation or measurement.
+
+43
+00:04:19,988 --> 00:04:24,924
+Temperature changes, evaporation and buoyancy may matter at the intended flow scale.
+
+44
+00:04:24,924 --> 00:04:32,739
+These corrections and their uncertainty belong in the recorded method, not in an unexplained constant hidden inside the visualization.
+
+45
+00:04:33,417 --> 00:04:40,088
+The logger screen brings together command events, endpoint acknowledgments, balance samples, monitor decisions and stop commands.
+
+46
+00:04:40,088 --> 00:04:46,759
+A proposed camera and visible time marker help inspect the physical sequence and align independent records.
+
+47
+00:04:46,759 --> 00:04:52,179
+Neither the camera nor the logger becomes ground truth merely by recording it.
+
+48
+00:04:52,179 --> 00:04:57,599
+Clock offsets, drift, frame timing, lost messages and acquisition latency must be measured.
+
+49
+00:04:57,599 --> 00:05:06,355
+Keep the original sample times and raw files so that another researcher can reconstruct the sequence and understand the timing uncertainty.
+
+50
+00:05:07,042 --> 00:05:15,648
+In a simulation, the program can expose the true emitted mass and keep it separate from a noisy or forged balance report.
+
+51
+00:05:15,648 --> 00:05:20,733
+A physical rig has no such hidden truth variable available to the experimenter.
+
+52
+00:05:20,733 --> 00:05:30,122
+Before its output drives a virtual patient, the team must select and validate a reconstruction method against an appropriate reference, including uncertainty and delay.
+
+53
+00:05:30,122 --> 00:05:34,816
+Accumulating only positive noisy increments can create apparent delivery during zero flow.
+
+54
+00:05:34,816 --> 00:05:39,119
+Blank and low-flow validation are therefore essential parts of this handoff.
+
+55
+00:05:39,792 --> 00:05:47,856
+The monitor compares authorized delivery with the available delivery evidence using a stated interval, uncertainty allowance and missing-data policy.
+
+56
+00:05:47,856 --> 00:05:55,071
+If its rule requests a stop, a dedicated path is proposed to act on the fluid system.
+
+57
+00:05:55,071 --> 00:06:01,862
+The team must measure the complete sequence from deviation to decision, electrical command and flow cessation.
+
+58
+00:06:01,862 --> 00:06:04,408
+Residual flow after the command matters.
+
+59
+00:06:04,408 --> 00:06:11,199
+Power, firmware, clock and calibration dependencies must also be tested before describing the path as independent.
+
+60
+00:06:11,199 --> 00:06:15,019
+The animation shows the intended path, not successful containment.
+
+61
+00:06:15,708 --> 00:06:19,014
+A stopped pump also withholds subsequent intended delivery.
+
+62
+00:06:19,014 --> 00:06:27,692
+A fair experiment follows the system through that period and through re-enabling, rather than ending the trace at the first alarm.
+
+63
+00:06:27,692 --> 00:06:35,543
+Who may restart, what happens to outstanding commands and how power or communication restoration is handled must be specified.
+
+64
+00:06:35,543 --> 00:06:40,502
+Record both excess and deficit, and report nuisance stops and missed deviations.
+
+65
+00:06:40,502 --> 00:06:49,179
+A monitor that stops sooner may still have a worse overall outcome if its recovery behavior or false-stop burden is unacceptable.
+
+66
+00:06:49,833 --> 00:06:57,810
+The software study asks whether a more complex monitor improves on a simpler one with the same response authority.
+
+67
+00:06:57,810 --> 00:07:03,688
+Established physiological models provide the experimental setting; they are not new inventions of GECO.
+
+68
+00:07:03,688 --> 00:07:08,307
+Hold the available inputs, tuning opportunities, disturbances and follow-up rules constant.
+
+69
+00:07:08,307 --> 00:07:11,665
+Read excess together with deficit, interruption and recovery.
+
+70
+00:07:11,665 --> 00:07:15,444
+Report failures and uncertainty as well as average effects.
+
+71
+00:07:15,444 --> 00:07:18,383
+The rig diagram explains this experimental logic.
+
+72
+00:07:18,383 --> 00:07:23,421
+It does not predict that the full method will outperform its comparators.
+
+73
+00:07:24,083 --> 00:07:37,654
+The immediate handoff is a measurement plan: select the actual components, validate the reference method, establish calibration and synchronized acquisition, test zero-flow reconstruction, then measure delivery, stopping and recovery across repeated trials.
+
+74
+00:07:37,654 --> 00:07:44,015
+Each amber field will be replaced only by a traceable record and an uncertainty statement.
+
+75
+00:07:44,015 --> 00:07:50,801
+Until then, the rig remains conceptual and the demonstrated results remain within their stated simulation scope.
+
+76
+00:07:50,801 --> 00:07:59,282
+The video uses disclosed synthetic narration; the team can replace it with a recorded explanation without changing the scientific claims.

@@ -1,0 +1,23 @@
+graph 1 16.261 2.7636
+node request 0.97896 0.77778 1.9579 0.555 "Requested amount\nr_k (research U / interval)" filled box #334E61 white
+node auth 3.4108 0.77778 1.9892 0.555 "Authorization + recovery\na_k (research U / interval)" filled box #334E61 white
+node act 5.7125 1.6806 1.6975 0.555 "Virtual actuator\nemitted mass m_k (g)" filled box #334E61 white
+node plant 9.5524 1.7361 1.9475 0.555 "Physiological plant\noriginal family or Hovorka" filled box #334E61 white
+node sensor 12.12 1.625 1.3017 0.555 "Reported CGM\nobservation y_k" filled box #334E61 white
+node balance 9.5524 0.77778 1.8433 0.555 "Local balance indication\nsigned increment (g)" filled box #334E61 white
+node report 12.12 0.76389 2.2704 0.555 "Received mass report\nmay differ from local indication" filled box #334E61 white
+node monitor 15.517 0.76389 1.4892 0.555 "Monitoring policy\nfull / simple / sham" filled box #334E61 #E8F3F3
+node metric 12.12 2.4861 1.7808 0.555 "Evaluator only\nexcess, deficit, glucose" filled box #334E61 #F4F4F4
+edge request auth 4 1.9638 0.77778 2.0754 0.77778 2.1897 0.77778 2.3028 0.77778 solid #38596A
+edge auth act 4 4.138 1.0609 4.3739 1.1546 4.6382 1.2595 4.8813 1.3561 solid #38596A
+edge act plant 4 6.5677 1.6928 7.1271 1.701 7.8666 1.7117 8.4679 1.7205 "latent emission / conversion\nsimulation only" 7.5699 1.864 solid #38596A
+edge act balance 4 6.5677 1.4813 7.1427 1.3451 7.9081 1.1639 8.518 1.0195 "measurement model" 7.5699 1.4867 solid #38596A
+edge act metric 7 6.3828 1.964 6.5135 2.0109 6.6512 2.0538 6.7835 2.0833 8.2677 2.4149 10.036 2.4869 11.115 2.4958 dashed #38596A
+edge plant sensor 4 10.53 1.6939 10.804 1.682 11.098 1.6691 11.357 1.6578 solid #38596A
+edge plant metric 4 10.526 2.0197 10.721 2.0772 10.927 2.1379 11.122 2.1957 dashed #38596A
+edge sensor monitor 4 12.775 1.461 13.311 1.3241 14.078 1.1279 14.663 0.97855 "causal observation" 14.014 1.3445 solid #38596A
+edge balance auth 4 8.6285 0.77778 7.5309 0.77778 5.6874 0.77778 4.5148 0.77778 "common local budget" 5.7125 0.85069 solid #AF642F
+edge balance report 4 10.479 0.77278 10.606 0.77209 10.738 0.77137 10.869 0.77065 solid #38596A
+edge report monitor 4 13.26 0.76389 13.717 0.76389 14.235 0.76389 14.658 0.76389 solid #38596A
+edge monitor auth 10 14.771 0.49886 14.096 0.27823 13.06 9.8686e-17 12.134 0 5.6986 0 5.6986 0 5.6986 0 5.111 9.8686e-17 4.4816 0.23544 4.0344 0.44724 "trip / verification" 9.5524 0.072917 solid #AF642F
+stop

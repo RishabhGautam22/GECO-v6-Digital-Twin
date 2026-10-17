@@ -1,0 +1,293 @@
+{
+  "schema": "columnar json.gz;576samples; t_min is sample-start and end_t_min end-state time; true_glucose_mgdl is end-state; requested/auth/emitted values refer to the interval",
+  "traces": [
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "cgm_bias_40",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_cgm_bias_40_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "903c8f9a0dd6cd64410304bbb61f540d11083ad067eb84d3783f38b9da1384f2",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "cgm_bias_40",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_cgm_bias_40_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "f476e3c41974c14b51cccac6044f293079129fd8baf4b6c24e263ff36b9ce90c",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "cgm_missing",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_cgm_missing_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "fa80e953be5a23ac6c96ca1f38ebc09bfae668bc5aa8f47a487e0f0f8e2247fe",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "cgm_missing",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_cgm_missing_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "bcadcaac2eb04c6f3c3f74e3bc1b5e9b8e2481cb092cfa00d757201f83fe5611",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "clean",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_clean_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "a4813cadf44776f8e63809e92868f6924bcb2386b80267b86025ce113e988d59",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "clean",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_clean_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "32aaa11d626569b76c4f2396a0ed1aa1909f3768dfe6f284c9d9f9f5349191fd",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "excess_2x",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_excess_2x_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "5ea8b0b6d657b2d2b684628b9026b0160bbb54193594515e3fdbe6466dbb508e",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "excess_2x",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_excess_2x_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "68141727fe3e239efa425ec355c04a753d4567f219f02b8ee0074b9c3bfa5cd2",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "excess_bias_25",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_excess_bias_25_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "d83801e052cd51782bc203998bf33933b4b67339d9dc932e89d3cf1f4d6f1965",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "excess_bias_25",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_excess_bias_25_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "259123a74c3c5d81336afeb63fe7c1f9726173311f6689ffbb26fd155573a4ec",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "excess_bias_report_mask",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_excess_bias_report_mask_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "f1bcc9f9c8e3629b889192e793a8b24dd1e590bde093c4406d5dc76b9bf6295c",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "excess_bias_report_mask",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_excess_bias_report_mask_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "2171c999976df7898c3ad5fef160995f689988e7b1ad0568123f21587ff600aa",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "occlusion",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_occlusion_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "cd5a69ffc90c7168d643a9651b6d17b257724bcd29879d47bd99b2766011acad",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "occlusion",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_occlusion_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "4ba8ed24f2b576c6741bbe8c354da84da29c9cf9f9abfd9288eead2e23685929",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "stuck_on",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_stuck_on_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "eb171ee2334e6ae76542ef78b5ce2b5c40f6acee2bab168f16b841175745a7a7",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "geco_original",
+      "condition": "stuck_on",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/geco_original_08_1103_stuck_on_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "cef45bce964c3b94eeb3d7210a66c3477ca32642a60ec0e441ad53432636427a",
+      "invalid_physiology_samples": 0
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "cgm_bias_40",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_cgm_bias_40_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "d590a6d6edc8d13a5cf478f3f5ac8ee9500b2cacd43070b89b96955803ab849a",
+      "invalid_physiology_samples": 22
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "cgm_bias_40",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_cgm_bias_40_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "0e6d9e84df2f7c185572af2951391782639007e24b02a54ce60aec6038202969",
+      "invalid_physiology_samples": 22
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "cgm_missing",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_cgm_missing_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "3bc164f6b59f9a48b5d57e11100b99e56a148f6f25beebf445144aaadd753585",
+      "invalid_physiology_samples": 22
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "cgm_missing",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_cgm_missing_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "4ac8b423e752c5fa510860fa5b4e1d22ca4925c8e174a2ceea8c4274ae16c695",
+      "invalid_physiology_samples": 22
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "clean",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_clean_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "1c904df5a1072269f667a4aa744071cd8db954b8ca3c620886e2f649be8ff6ad",
+      "invalid_physiology_samples": 22
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "clean",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_clean_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "80cc8a4c51109ec565f13b0754ce148c9f95a659cdb00468a1345d3969eec8ef",
+      "invalid_physiology_samples": 22
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "excess_2x",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_excess_2x_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "6866ded7e93e3d8a91cadc7489c41f1c6fb9d4157ed6670bcbe654d5de967a3c",
+      "invalid_physiology_samples": 20
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "excess_2x",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_excess_2x_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "7a9f522c4985e275b0e66cf9440b23a2abebeda71bde789ae743d5ebd5bb4f3e",
+      "invalid_physiology_samples": 20
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "excess_bias_25",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_excess_bias_25_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "b7cdf0c1b1e0e745bd4145ddb5b2feaeda9194f194dd957567454fd8cf9b6775",
+      "invalid_physiology_samples": 20
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "excess_bias_25",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_excess_bias_25_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "1d7d4e5200bec10dfe6df99e0d54c2f6f36bc433e1fe35ec9677a3722837b3ff",
+      "invalid_physiology_samples": 20
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "excess_bias_report_mask",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_excess_bias_report_mask_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "0c396b444458c31e367227a3344d0bff83501ab64ecfc5b5531e929a7b8a61bc",
+      "invalid_physiology_samples": 20
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "excess_bias_report_mask",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_excess_bias_report_mask_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "6a7716a4e08410bc9bbd155a83289e5ada12e3a288fc66a543240ba488f07747",
+      "invalid_physiology_samples": 20
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "occlusion",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_occlusion_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "77e95411362f77096e24f3784b800148e5f70866bb2078002de8275a8d0bcad2",
+      "invalid_physiology_samples": 20
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "occlusion",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_occlusion_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "3f763363e8996c7f17df85c8f4ce01dc80812b6f7e07c8845bde1e2f5a268dc0",
+      "invalid_physiology_samples": 22
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "stuck_on",
+      "arm": "full_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_stuck_on_full_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "732cdd36cc4ae7421190aa45ab5edc255fb480c232f8f7c3c6efd782e5621a84",
+      "invalid_physiology_samples": 22
+    },
+    {
+      "selection": "First locked parameter unit, first preregistered seed; not outcome selected",
+      "family": "hovorka_2004",
+      "condition": "stuck_on",
+      "arm": "simple_supervised",
+      "trace_path": "03_EXPERIMENTS/comparative_study/main/traces/hovorka_2004_08_1103_stuck_on_simple_supervised_one_sample_baseline.json.gz",
+      "trace_sha256": "0ba313ab1747bddf7163563e63f3f4fc08bb71501f03cfce76ddc5286952f766",
+      "invalid_physiology_samples": 17
+    }
+  ]
+}
