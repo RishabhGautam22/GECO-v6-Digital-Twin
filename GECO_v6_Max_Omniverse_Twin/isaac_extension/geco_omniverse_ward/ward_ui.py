@@ -95,7 +95,7 @@ class WardControlPanelUI:
     def _build_window(self) -> None:
         self._window = ui.Window(
             self.WINDOW_TITLE,
-            width=690,
+            width=860,
             height=1180,
             position_x=2035,
             position_y=60,

@@ -1217,8 +1217,8 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
 {indent}    doc = "3D Rooftop Floating Room & Scenario Identification Sign Above {room_id}"
 {indent})
 {indent}{{
-{indent}    double3 xformOp:translate = (0.0, 1.55, 3.38)
-{indent}    float3 xformOp:rotateXYZ = (-34.0, 0.0, 0.0)
+{indent}    double3 xformOp:translate = (0.0, 1.25, 3.52)
+{indent}    float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
 {indent}    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    custom string geco:sign_title = "{meta['short_title']}"
 {indent}    custom string geco:sign_subtitle = "{meta['short_sub']}"
@@ -1228,7 +1228,7 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
 {indent}    )
 {indent}    {{
 {indent}        double size = 1.0
-{indent}        float3 xformOp:scale = (4.95, 0.07, 1.15)
+{indent}        float3 xformOp:scale = (5.05, 0.06, 1.18)
 {indent}        uniform token[] xformOpOrder = ["xformOp:scale"]
 {indent}        rel material:binding = </World/Looks/Mat_MatteDark>
 {indent}    }}
@@ -1237,8 +1237,39 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
 {indent}    )
 {indent}    {{
 {indent}        double size = 1.0
-{indent}        double3 xformOp:translate = (0.0, -0.042, 0.50)
-{indent}        float3 xformOp:scale = (4.88, 0.02, 0.11)
+{indent}        double3 xformOp:translate = (0.0, -0.042, 0.51)
+{indent}        float3 xformOp:scale = (4.96, 0.02, 0.11)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+{indent}        rel material:binding = </World/Looks/{meta['mat']}>
+{indent}    }}
+{roof_title_mesh}
+{roof_sub_mesh}
+{indent}}}
+
+{indent}def Xform "FloatingRoofTopBanner_3D" (
+{indent}    doc = "Horizontal Top-Down 3D Rooftop Identification Banner Above {room_id}"
+{indent})
+{indent}{{
+{indent}    double3 xformOp:translate = (0.0, -1.55, 3.04)
+{indent}    float3 xformOp:rotateXYZ = (-90.0, 0.0, 0.0)
+{indent}    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+{indent}    def Cube "TopBannerBacking" (
+{indent}        prepend apiSchemas = ["MaterialBindingAPI"]
+{indent}    )
+{indent}    {{
+{indent}        double size = 1.0
+{indent}        float3 xformOp:scale = (5.05, 0.05, 1.08)
+{indent}        uniform token[] xformOpOrder = ["xformOp:scale"]
+{indent}        rel material:binding = </World/Looks/Mat_MatteDark>
+{indent}    }}
+{indent}    def Cube "TopBannerStripe" (
+{indent}        prepend apiSchemas = ["MaterialBindingAPI"]
+{indent}    )
+{indent}    {{
+{indent}        double size = 1.0
+{indent}        double3 xformOp:translate = (0.0, -0.036, 0.46)
+{indent}        float3 xformOp:scale = (4.96, 0.02, 0.10)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
 {indent}        rel material:binding = </World/Looks/{meta['mat']}>
 {indent}    }}

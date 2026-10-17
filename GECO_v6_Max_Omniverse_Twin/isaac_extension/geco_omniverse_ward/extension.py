@@ -143,6 +143,31 @@ class GecoOmniverseWardExtension(BaseExt):
                 omni.usd.get_context().get_selection().clear_selected_prim_paths()
             except Exception:
                 pass
+
+        if self._frame_count % 10 == 0 and os.path.exists("/tmp/geco_viewport_cmd.txt"):
+            try:
+                with open("/tmp/geco_viewport_cmd.txt", "r", encoding="utf-8") as f:
+                    vcmd = f.read().strip()
+                os.remove("/tmp/geco_viewport_cmd.txt")
+                if vcmd == "RELOAD":
+                    self.controller.load_ward_stage()
+                elif vcmd == "FRAME_WARD":
+                    from omni.kit.viewport.utility import get_active_viewport, frame_viewport_selection
+                    usd_ctx = omni.usd.get_context()
+                    vp = get_active_viewport()
+                    if vp is not None:
+                        vp.camera_path = "/OmniverseKit_Persp"
+                        usd_ctx.get_selection().set_selected_prim_paths(["/World/Ward"], True)
+                        frame_viewport_selection(vp)
+                        usd_ctx.get_selection().clear_selected_prim_paths()
+                elif vcmd.startswith("JUMP:"):
+                    parts = vcmd.split(":")
+                    if len(parts) == 3 and self.ui_panel is not None:
+                        self.ui_panel._jump_room_viewport(parts[1], parts[2])
+                    elif len(parts) == 2 and self.ui_panel is not None:
+                        self.ui_panel._select_bay(parts[1])
+            except Exception:
+                pass
         latest: Optional[Dict[str, Any]] = None
         while not self._incoming_queue.empty():
             try:
