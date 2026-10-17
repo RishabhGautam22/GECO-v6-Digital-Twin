@@ -1,4 +1,4 @@
-# GECOv6 implementation — authoritative entry point
+# GECOv6 implementation  -  authoritative entry point
 
 This README describes the current GECOv6 research release. `ARCHIVED_V5_README.md` (renamed with its bytes preserved), `requirements-runtime.txt`, `frozen_v4/`, copied publication scripts and the legacy `geco_v4.__version__` string are retained historical compatibility material. Their 53-test count and statement that covariance repair is still open describe v5, not the current numerical implementation. The import name remains `geco_v4`; identify GECOv6 by its release files and exact source hashes rather than that inherited version string.
 

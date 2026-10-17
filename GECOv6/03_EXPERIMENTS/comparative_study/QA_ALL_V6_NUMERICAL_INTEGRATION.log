@@ -1,0 +1,47 @@
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+test_analytic_jacobian_centered_difference (test_v6_filter_calibration.FilterCalibrationV6.test_analytic_jacobian_centered_difference) ... ok
+test_current_event_not_retroactively_assimilated (test_v6_filter_calibration.FilterCalibrationV6.test_current_event_not_retroactively_assimilated) ... ok
+test_empty_bad_arrays_and_fit_rejected (test_v6_filter_calibration.FilterCalibrationV6.test_empty_bad_arrays_and_fit_rejected) ... ok
+test_future_suffix_does_not_change_prefix (test_v6_filter_calibration.FilterCalibrationV6.test_future_suffix_does_not_change_prefix) ... ok
+test_inflation_changes_only_normalization (test_v6_filter_calibration.FilterCalibrationV6.test_inflation_changes_only_normalization) ... ok
+test_joseph_known_answer (test_v6_filter_calibration.FilterCalibrationV6.test_joseph_known_answer) ... ok
+test_long_missing_gap_and_subunit_inflation_sc017 (test_v6_filter_calibration.FilterCalibrationV6.test_long_missing_gap_and_subunit_inflation_sc017) ... ok
+test_material_covariance_failure_guard (test_v6_filter_calibration.FilterCalibrationV6.test_material_covariance_failure_guard) ... ok
+test_reset_flushes_due_residual_and_ar_history (test_v6_filter_calibration.FilterCalibrationV6.test_reset_flushes_due_residual_and_ar_history) ... ok
+test_selection_tie_is_persistence (test_v6_filter_calibration.FilterCalibrationV6.test_selection_tie_is_persistence) ... ok
+test_shared_masks_and_trend_known_answer (test_v6_filter_calibration.FilterCalibrationV6.test_shared_masks_and_trend_known_answer) ... ok
+test_short_split_no_empty_windows (test_v6_filter_calibration.FilterCalibrationV6.test_short_split_no_empty_windows) ... ok
+test_streaming_batch_and_due_match_all_policies (test_v6_filter_calibration.FilterCalibrationV6.test_streaming_batch_and_due_match_all_policies) ... ok
+test_threshold_failure_and_coverage_honest (test_v6_filter_calibration.FilterCalibrationV6.test_threshold_failure_and_coverage_honest) ... ok
+test_loader_preserves_v6_exact_split_and_skips_failed_records (test_v6_production_integration.BenignRuntimeIntegration.test_loader_preserves_v6_exact_split_and_skips_failed_records) ... ok
+test_runtime_rejects_infeasible_or_inconsistent_threshold (test_v6_production_integration.BenignRuntimeIntegration.test_runtime_rejects_infeasible_or_inconsistent_threshold) ... ok
+test_study_executes_corrected_production_filter (test_v6_production_integration.BenignRuntimeIntegration.test_study_executes_corrected_production_filter) ... ok
+test_validation_reaches_runtime_and_selected_forecast (test_v6_production_integration.BenignRuntimeIntegration.test_validation_reaches_runtime_and_selected_forecast) ... ok
+test_all_policy_streaming_batch_and_gap_equivalence (test_v6_production_integration.IndependentFilterReview.test_all_policy_streaming_batch_and_gap_equivalence) ... ok
+test_future_suffix_cannot_change_past_forecasts (test_v6_production_integration.IndependentFilterReview.test_future_suffix_cannot_change_past_forecasts) ... ok
+test_infeasible_threshold_is_explicit (test_v6_production_integration.IndependentFilterReview.test_infeasible_threshold_is_explicit) ... ok
+test_invalid_covariance_reset_flushes_evidence (test_v6_production_integration.IndependentFilterReview.test_invalid_covariance_reset_flushes_evidence) ... ok
+test_normalization_does_not_change_state_or_covariance (test_v6_production_integration.IndependentFilterReview.test_normalization_does_not_change_state_or_covariance) ... ok
+test_selected_forecast_equals_series_endpoint (test_v6_production_integration.IndependentFilterReview.test_selected_forecast_equals_series_endpoint) ... ok
+test_direction_and_conversion (test_v6_study.HovorkaNumerics.test_direction_and_conversion) ... ok
+test_equilibrium_and_rate_units (test_v6_study.HovorkaNumerics.test_equilibrium_and_rate_units) ... ok
+test_gut_chain_matches_impulse_solution (test_v6_study.HovorkaNumerics.test_gut_chain_matches_impulse_solution) ... ok
+test_input_validation (test_v6_study.HovorkaNumerics.test_input_validation) ... ok
+test_rk4_step_refinement (test_v6_study.HovorkaNumerics.test_rk4_step_refinement) ... ok
+test_fault_end_not_used_by_recovery_on_identical_observations (test_v6_study.MeasurementAndAuthority.test_fault_end_not_used_by_recovery_on_identical_observations) ... ok
+test_identical_reference_has_zero_paired_delivery_effect (test_v6_study.MeasurementAndAuthority.test_identical_reference_has_zero_paired_delivery_effect) ... ok
+test_local_cutoff_retained_with_report_mask (test_v6_study.MeasurementAndAuthority.test_local_cutoff_retained_with_report_mask) ... ok
+test_missing_physiology_cannot_corroborate_current_mass (test_v6_study.MeasurementAndAuthority.test_missing_physiology_cannot_corroborate_current_mass) ... ok
+test_missing_sensor_uses_common_quality_latch (test_v6_study.MeasurementAndAuthority.test_missing_sensor_uses_common_quality_latch) ... ok
+test_recovery_only_at_shared_operator_slots (test_v6_study.MeasurementAndAuthority.test_recovery_only_at_shared_operator_slots) ... ok
+test_stop_delay_and_residual_tail_are_visible (test_v6_study.MeasurementAndAuthority.test_stop_delay_and_residual_tail_are_visible) ... ok
+test_true_mass_drives_plant_despite_report_mask (test_v6_study.MeasurementAndAuthority.test_true_mass_drives_plant_despite_report_mask) ... ok
+test_zero_command_noise_does_not_emit_mass (test_v6_study.MeasurementAndAuthority.test_zero_command_noise_does_not_emit_mass) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 5.377s
+
+OK

@@ -1,6 +1,6 @@
 # GECO: Delivery-Evidence Monitoring for Insulin-Pump Research
 
-Working IEEE methods-paper narrative; author names and affiliations pending the team. This is a content draft, not a final submission or a report of completed physical experiments. Use the venue-specific IEEE template when the venue is selected. Reference labels R01–R12 are provisional stable keys, to be numbered by final citation order.
+Working IEEE methods-paper narrative; author names and affiliations pending the team. This is a content draft, not a final submission or a report of completed physical experiments. Use the venue-specific IEEE template when the venue is selected. Reference labels R01-R12 are provisional stable keys, to be numbered by final citation order.
 
 ## Central question and contribution
 
@@ -16,7 +16,7 @@ Automated insulin-delivery systems coordinate glucose sensing, dose computation 
 
 The final abstract must be rewritten from completed results, remain self-contained and follow the chosen IEEE venue's length limit. It should not contain bracketed references or an implied institutional endorsement.
 
-## I. Introduction — why delivery evidence matters
+## I. Introduction  -  why delivery evidence matters
 
 An automated insulin-delivery loop turns an observation of glucose into a command for a pump. Each step answers a different question. The controller selects an intended action; an authorization policy decides whether that action is permitted; the endpoint accepts a message; the actuator moves fluid; and a measurement system estimates what reached a defined outlet. Treating these quantities as interchangeable obscures both accidental faults and attacks. GECO therefore treats delivery evidence as a separate observation with a stated measurement model.
 
@@ -26,9 +26,9 @@ The surrounding ideas are established. GlucOS develops a reference-monitor archi
 
 End the introduction with three concrete, outcome-neutral contributions: (1) a signal/authority model; (2) matched evidence and mitigation experiments, naming which actually completed; (3) a measurement protocol with explicit pending physical work. Keep source-audit details in supplementary provenance, except where a repaired assumption directly motivates the method.
 
-## II. Related work — three close comparisons
+## II. Related work  -  three close comparisons
 
-Use three short subsections: runtime authorization and hazard mitigation [R01,R02]; pump delivery metrology [R03,R04,R09]; physiological models and state estimation [R05–R08]. Compare what each observes, what it can change and what was evaluated. Do not present absence of physical HIL in a software work as an error if it was outside that work's claim. A compact table should have columns: prior method, observation, mitigation authority, evaluation setting and remaining GECO question. Restrict rows to works needed for the argument.
+Use three short subsections: runtime authorization and hazard mitigation [R01,R02]; pump delivery metrology [R03,R04,R09]; physiological models and state estimation [R05-R08]. Compare what each observes, what it can change and what was evaluated. Do not present absence of physical HIL in a software work as an error if it was outside that work's claim. A compact table should have columns: prior method, observation, mitigation authority, evaluation setting and remaining GECO question. Restrict rows to works needed for the argument.
 
 ## III. System model and threat boundaries
 
@@ -68,11 +68,11 @@ Specify independent experimental units and pair comparisons at that level. Disti
 
 ### D. Proposed physical study
 
-**[AMBER BLOCK — IIT Patna measurement pending]** The physical water/saline study has not yet established delivery accuracy, reconstruction accuracy, stop latency, residual flow or hardware independence. Component selection, reference method validation, traceable calibration and synchronized records are pending. Simulated emitted mass is unavailable to the rig; the virtual-patient input will require a validated physical reconstruction with uncertainty and a demonstrated zero-flow behavior. A balance or camera is not automatically ground truth. **[/AMBER BLOCK]**
+**[AMBER BLOCK  -  IIT Patna measurement pending]** The physical water/saline study has not yet established delivery accuracy, reconstruction accuracy, stop latency, residual flow or hardware independence. Component selection, reference method validation, traceable calibration and synchronized records are pending. Simulated emitted mass is unavailable to the rig; the virtual-patient input will require a validated physical reconstruction with uncertainty and a demonstrated zero-flow behavior. A balance or camera is not automatically ground truth. **[/AMBER BLOCK]**
 
 Figure 1: signal and authority architecture. Figure 2: component/dataflow diagram. Figure 3: proposed measurement rig with separate temperature vial, balance receiver, reference-mass tray, camera/time marker and logger. Each physical figure should carry “Conceptual rig; component selection and IIT Patna measurements pending.” Use `IIT_PATNA_PENDING_MEASUREMENTS.md` for the required fields.
 
-## VI. Results — fill only from frozen GECOv6 tables
+## VI. Results  -  fill only from frozen GECOv6 tables
 
 Table III: primary matched comparison, with unit, run count and uncertainty. Figure 4: effect across model families and failure classes, including negative results. Figure 5: representative full-follow-up traces with event markers and separate excess/deficit. Table IV: false stops, underdelivery and recovery. Table V: ablations and failed/unsupported cases. Table VI: physical measurement results, all entries explicitly pending until acquired.
 

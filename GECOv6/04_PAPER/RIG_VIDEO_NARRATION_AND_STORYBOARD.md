@@ -2,7 +2,7 @@
 
 Working text: 1137 spoken words; estimated 7.8 minutes at 150 words/minute plus short chapter pauses. Actual rendered duration must be measured. Fourteen chapters; add a results chapter only after GECOv6 results freeze.
 
-All hardware is conceptual, component selection is pending, and no physical numbers have been supplied. Preserve the amber **IIT Patna measurement pending** label, explicit synthetic-narration disclosure and subtitles. Sources R01–R12 are in the literature source ledger; M01–M16 are the pending laboratory fields.
+All hardware is conceptual, component selection is pending, and no physical numbers have been supplied. Preserve the amber **IIT Patna measurement pending** label, explicit synthetic-narration disclosure and subtitles. Sources R01-R12 are in the literature source ledger; M01-M16 are the pending laboratory fields.
 
 ## C01. What this bench is meant to establish
 
@@ -142,7 +142,7 @@ The immediate handoff is a measurement plan: select the actual components, valid
 
 On-screen lines: Complete the pending measurement matrix / Replace fields only with verified records / Physical and clinical claims remain separate.
 
-Measured quantity / future field: All M01–M16 fields remain unmeasured. Sources/fields: R09, M01, M07, M08, M16.
+Measured quantity / future field: All M01-M16 fields remain unmeasured. Sources/fields: R09, M01, M07, M08, M16.
 
 ## Voice and edit handoff
 

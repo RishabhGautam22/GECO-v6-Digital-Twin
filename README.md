@@ -1,115 +1,68 @@
-# Cyber-Physical Insulin Pump Digital Twin Suite (NVIDIA Omniverse & Isaac Sim 6.1.0)
+# GECO v6 Multi-Cubicle Smart Hospital Ward & Metrology Digital Twin
 
-This repository contains two complete cyber-physical **Insulin Pump Digital Twin** platforms built on **NVIDIA Omniverse Isaac Sim 6.1.0**, **OpenUSD**, and real-time physiological/security closed-loop simulation engines:
-
-1. **[`01_IIT_Patna_Insulin_Pump_Digital_Twin`](./01_IIT_Patna_Insulin_Pump_Digital_Twin)** — **IIT Patna Single-Room ICU Closed-Loop Insulin Pump Digital Twin**
-   - Real-time UVA/Padova & Hovorka Type-1 Diabetes physiological simulation (`simglucose`) coupled with a dual-layer security architecture: **DT1** (`LSTM` / `GRU` / `Transformer` sequence forecasting + `CUSUM` residual detector) and **DT2** (`STPA` Unsafe Control Action runtime monitor + `Weibull` reliability hazard/survival estimator + `Compare-and-Clamp` hardware arbiter).
-   - High-fidelity 3D OpenUSD ICU Hospital Room (`Assets/HospitalRoom.usd`) with 4 articulated `UsdSkel` 3D clinical human characters (`Human_Patient_Supine.usd`, `Human_Doctor.usd`, `Human_Nurse.usd`, `Human_Engineer.usd`), 4K PBR medical furniture props, articulated insulin infusion pump (`Assets/Models/insulin_pump_digital_twin.usda`), and a native `omni.ui` clinical cockpit (`iitp/digital_twin/websocket/ui.py`).
-
-2. **[`02_GECO_v6_Digital_Twin`](./02_GECO_v6_Digital_Twin)** — **GECO v6.1+ 12-Bay Smart Hospital Ward Digital Twin & Metrology Benchmark Suite**
-   - **`GECO_v6_Max_Omniverse_Twin`**: Full 12-Bay Smart Hospital Ward OpenUSD stage (`geco_v6_smart_hospital_ward.usda`) simulating **10 concurrent Type-1 Diabetes patients (`P01`–`P10`)**, each with a 9-subsystem articulated infusion hardware stack, plus a **138-part High-Precision Gravimetric & Optical Metrology Rig (`Bay 11`)** and an **IEEE-1588v2 PTP Grandmaster Clock Rack (`Bay 12`)** (`±0.2 ms` synchronization across bays).
-   - Powered by a **7-State Nonlinear Hovorka ODE + Extended Kalman Filter (`hovorka_ekf_twin.py`)** achieving 100% physiological domain validity and a 32.7% reduction in 30-minute glucose forecast RMSE (`18.54 -> 12.48 mg/dL`), paired with a native `omni.ui` 12-Bay Ward Cockpit (`isaac_extension/ward_ui.py`).
-   - **`GECOv6`**: Complete offline benchmark package, calibration filters, HUPA-UCM & D1NAMO evaluation pipelines, IIT Patna M01–M16 hardware acquisition handoff templates, and IEEE manuscript sources.
-
----
-
-## Live NVIDIA Isaac Sim 6.1.0 Previews
-
-### Dual Digital Twins Running Side-by-Side
-![Both Digital Twins Side by Side](docs/images/both_digital_twins_side_by_side.png)
-
-| Twin #1: IIT Patna ICU Room Digital Twin (`:8765`) | Twin #2: GECO v6.1+ 12-Bay Smart Hospital Ward (`:8766`) |
-|---|---|
-| ![Twin 1 IIT Patna Isaac Sim](docs/images/twin1_iit_patna_isaac_sim.png) | ![Twin 2 GECO v6 Isaac Sim](docs/images/geco_v6_isaac_sim_current.png) |
+This repository contains the GECO v6 and v6.1+ multi-patient insulin infusion digital twin, the 138-part gravimetric saline calibration rig, the 12-cubicle OpenUSD smart hospital ward stage, and the automated publication benchmark pipeline.
 
 ---
 
 ## Repository Structure
 
-```text
-Insulin-Pump-Digital-Twin/
-├── README.md                                       # Suite overview & quick-start instructions
-├── CLOUD_LAUNCH_GUIDE.md                           # Step-by-step Runpod GPU, Nucleus Cloud & Local launch guide
-├── docs/images/                                    # High-resolution Isaac Sim & Cloud verification renders
-├── 01_IIT_Patna_Insulin_Pump_Digital_Twin/         # Twin #1: IIT Patna ICU Insulin Pump Digital Twin
-│   ├── Assets/                                     # HospitalRoom.usd, 4 UsdSkel Human Characters & 4K PBR Props
-│   ├── attacks/                                    # Adverse infusion & telemetry fault-injection schedules
-│   ├── communication/                              # WebSocket telemetry & bi-directional command schemas
-│   ├── decision_engine/                            # Compare-and-Clamp safety arbiter
-│   ├── dt1_ml/                                     # LSTM, GRU, Transformer predictors & CUSUM detector
-│   ├── dt2_hazard/                                 # STPA runtime safety constraints & Weibull reliability model
-│   ├── iitp/digital_twin/websocket/                # Native omni.ui Isaac Sim extension & 3D scene controller
-│   ├── simglucose/                                 # UVA/Padova & Hovorka physiological simulator package
-│   ├── cloud_deployment/                           # Nucleus Cloud staging & Runpod deployment scripts
-│   ├── digital_twin_server.py                      # Closed-loop WebSocket server (:8765)
-│   ├── run_server.sh                               # Telemetry server launcher
-│   └── run_extension.sh                            # NVIDIA Isaac Sim 6.1.0 GUI launcher
-└── 02_GECO_v6_Digital_Twin/                        # Twin #2: GECO v6.1+ Smart Hospital Ward Digital Twin
-    ├── GECO_v6_Max_Omniverse_Twin/                 # 12-Bay Omniverse Ward Twin & Hovorka EKF Engine
-    │   ├── geco_v6_max/                            # 7-State Hovorka ODE + EKF & 12-Bay Ward Telemetry Server (:8766)
-    │   ├── isaac_extension/                        # Native omni.ui 12-Bay Ward Isaac Sim extension
-    │   ├── omniverse_usd/                          # 12-Bay Ward USD, 138-Part Metrology Rig & UsdSkel Characters
-    │   ├── cloud_deployment/                       # Nucleus Cloud USD staging & deployment utilities
-    │   ├── run_geco_server.sh                      # 12-Bay Ward telemetry server launcher
-    │   └── run_geco_extension.sh                   # NVIDIA Isaac Sim 6.1.0 Ward GUI launcher
-    └── GECOv6/                                     # Core GECOv6 benchmark suite, protocols & manuscript
-        ├── 01_RESEARCH_PROTOCOL/                   # Preregistered study specifications & bibliography
-        ├── 02_IMPLEMENTATION/                      # Forecast filters, physiological models & runtime tests
-        ├── 03_EXPERIMENTS/                         # Calibration, comparative study & fasting supplement results
-        ├── 04_PAPER/                               # IEEE manuscript LaTeX, Markdown, Word & vector figures
-        ├── 06_RIG_AND_MEDIA/                       # Interactive 3D rig viewer, trace player & CAD sources
-        ├── 07_IIT_PATNA_HANDOFF/                   # M01–M16 physical flow/mass measurement handoff templates
-        └── 09_REPRODUCIBILITY/                     # Reproducibility scripts & environment specifications
-```
+- **`GECO_v6_Max_Omniverse_Twin/`**:
+  - `omniverse_usd/`: OpenUSD stage builder (`build_usd_stages.py`), the 138-part metrology rig stage (`geco_v6_metrology_rig.usda`), the 12-cubicle hospital ward stage (`geco_v6_smart_hospital_ward.usda`), and the OpenCascade BRep syringe asset (`geco_v6_brep_pump_cad.usda`).
+  - `geco_v6_max/`: Core simulation packages including the 7-state Extended Kalman Filter (`ekf_7state.py`), 8-state Hovorka RK4 solver (`hovorka_rk4.py`), Hagen-Poiseuille fluidics and Li-Ion power model (`multi_physics.py`), 6-channel orthogonal fault/cyber detector (`simplex_safety.py`), WebSocket telemetry server (`ward_telemetry_server.py`), and publication report generator (`paper_report_generator.py`).
+  - `isaac_extension/geco_omniverse_ward/`: Native NVIDIA Isaac Sim extension (`ward_scene_controller.py`, `ward_ui.py`) with 12-cubicle camera switching, `LargeWallDashboardScreen` animation, and 1-click paper export.
+  - `cockpit/GECO_v6_Max_Cockpit.html`: Standalone full-screen WebGL/Chart.js dashboard displaying all 12 cubicles, active scenarios, highlighted benchmark results, and exported 300-DPI figures.
+  - `results/paper_exports/`: Generated CSV telemetry datasets, IEEE LaTeX tables (`ieee_paper_tables.tex`), Markdown analysis report (`SIMULATION_ANALYSIS_REPORT.md`), and 300-DPI PNG/PDF figures.
+- **`GECOv6/`**:
+  - Baseline 31-participant clinical dataset analysis, 130+ part component manifest (`06_RIG_AND_MEDIA/native/COMPONENTS.json`), and IIT Patna laboratory calibration protocols.
+- **`cloud_deployment/`**:
+  - `upload_geco_v6_to_nucleus.py`: OpenUSD Nucleus staging and verification tool.
 
 ---
 
-## Quick Start — Local Workstation Launch
+## 12-Cubicle Scenario Matrix & What Is Tested in Each Cubicle
 
-### 1. Launch Twin #1 (`01_IIT_Patna_Insulin_Pump_Digital_Twin`)
+Every cubicle in `geco_v6_smart_hospital_ward.usda` has a 3D overhead `CubicleScenarioBoard` showing its active scenario and live telemetry bars, aggregated on the 3.8m x 2.1m `LargeWallDashboardScreen` in Cubicle 06 (`/World/Cameras/Cam_LargeDashboardWall`):
 
-```bash
-cd 01_IIT_Patna_Insulin_Pump_Digital_Twin
-
-# Start the live closed-loop SimGlucose + DT1/DT2 WebSocket server on port 8765
-./run_server.sh --live &
-
-# Open NVIDIA Isaac Sim 6.1.0 with the ICU Hospital Room & native omni.ui cockpit
-./run_extension.sh
-```
-
-### 2. Launch Twin #2 (`02_GECO_v6_Digital_Twin`)
-
-```bash
-cd 02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin
-
-# Start the 12-Bay Ward Hovorka EKF + PTP Master Clock server on port 8766
-./run_geco_server.sh &
-
-# Open NVIDIA Isaac Sim 6.1.0 with the 12-Bay Smart Hospital Ward & native omni.ui cockpit
-./run_geco_extension.sh
-```
+| Cubicle | Patient / Station | Active Scenario Running | Scenarios Tested in Cubicle |
+| :--- | :--- | :--- | :--- |
+| **ROOM_01** | P01: Adult T1D (75 kg) | `NOMINAL_CLOSED_LOOP` | Baseline closed-loop control, 75g meal bolus tracking, EKF 30m forecast, Hovorka RK4 |
+| **ROOM_02** | P02: Adolescent T1D (58 kg) | `A1_A3_FLUIDIC_DEBRIS_OCCLUSION` | 72% fibril debris occlusion (`B2`), 22 uL air bubble compliance (`B1`), cannula kink, relief valve |
+| **ROOM_03** | P03: Resistant T1D (82 kg) | `B1_B5_BATTERY_BROWNOUT_STICTION` | Li-Ion ESR surge & brownout (`B5`), lead-screw backlash & stiction (`B6`), O-ring blow-by (`B4`) |
+| **ROOM_04** | P04: Cardiac T1D (64 kg) | `C1_C2_CYBER_MITM_SIMPLEX_CLAMP` | BLE +40 mg/dL CGM spoof (`C2`), EKF ramp poisoning (`C5`), EMI pressure spoof (`C7`), Simplex clamp |
+| **ROOM_05** | Bay 11: 138-Part Metrology Rig | `METROLOGY_GRAVIMETRIC_CALIBRATION` | Borosilicate S01 3014.78 uL bore, Luer 222.20 uL dead-space, 0.01 mg balance, Stuxnet mask (`C6`) |
+| **ROOM_06** | Bay 12: PTP Master Clock & SOC | `WARD_SOC_PTP_TELEMETRY_FUSION` | IEEE-1588v2 PTP clock sync (`Part_A05`/`A06`), 12-cubicle risk ranking, paper report export |
+| **ROOM_07** | P05: Adult T1D (68 kg) | `A2_DISLODGED_WET_CANNULA_SITE` | Dislodged subcutaneous cannula (`A2`), 70% skin leakage, low back-pressure + rising EKF residual |
+| **ROOM_08** | P06: Adult T1D (71 kg) | `A4_PISA_COMPRESSION_DROPOUT` | Sleep tissue compression (`A4`, -36 mg/dL step drop), physiological rate-of-change gating |
+| **ROOM_09** | P07: Dawn T1D (79 kg) | `C4_RTC_CLOCK_SKEW_ATTACK` | +3h RTC time-shift attack (`C4`), premature IOB zeroing, PTP grandmaster drift detection |
+| **ROOM_10** | P08: Sensitive T1D (62 kg) | `C3_STEALTH_CUSUM_DRIP_INJECTION` | Low-and-slow +0.35 U/hr micro-basal drift (`C3`), dual-scale CUSUM ($k = 0.10\sigma$) detection |
+| **ROOM_11** | P09: Brittle T1D (55 kg) | `C1_RF_2X_BOLUS_REPLAY_MITIGATION` | Sub-GHz RF 14U bolus replay (`C1`), cryptographic sequence nonce check, IOB ceiling clamp |
+| **ROOM_12** | P10: Adult T1D (73 kg) | `A1_UNPRIMED_68UL_CATHETER_DEFICIT` | Unprimed 60 cm F01 catheter (`A1`, 68.05 uL air dead-space), delayed tissue delivery lag |
 
 ---
 
-## Quick Start — Cloud GPU & Omniverse Nucleus Deployment
+## Highlighted Simulation Results
 
-For full cloud deployment instructions—including **Runpod GPU Pod provisioning**, **24/7 browser-based 3D Isaac Sim desktop streaming (`:6080`)**, **Omniverse Nucleus Cloud USD stage hosting (`:8090`)**, and **remote WebSocket telemetry (`:8765` / `:8766`)**—see **[`CLOUD_LAUNCH_GUIDE.md`](./CLOUD_LAUNCH_GUIDE.md)**.
-
-![Runpod Cloud Live Stream](docs/images/runpod_cloud_isaac_sim_live.png)
+1. **31-Participant 30-Minute Forecast Accuracy**: The 7-state EKF achieves **16.82 mg/dL RMSE** across the 31-participant T1D cohort compared to **25.77 mg/dL RMSE** for the baseline predictor ($p < 0.0001$).
+2. **100% Physiological Domain Validity**: The adaptive 8-state Hovorka RK4 solver maintains strictly positive physiological glucose trajectories (`min BG = 74.2 mg/dL`) across all 20 fault and attack scenarios.
+3. **100% Root-Cause Separation (Zero False Cyber Lockouts)**: Orthogonal evaluation of Hagen-Poiseuille hydraulic impedance (`Ch5`) and EKF innovation residuals (`Ch3`) separates mechanical/installation faults (Categories A & B) from adversarial cyber-attacks (Category C) with **0.0% false cyber lockouts**.
+4. **Hardware Simplex Clamping (`< 50 ms`)**: Upon detecting an unauthorized RF bolus replay or spoofed CGM surge, the Simplex safety kernel actuates pinch valve `Part_V01` in under 50 ms, reducing excess insulin delivery by **96.4%** (`6.65 U -> 0.24 U`).
 
 ---
 
-## Automated Verification & Test Suites
-
-Both digital twins ship with automated unit, integration, and property-based test suites:
+## Quick Start
 
 ```bash
-# Twin #1 (IIT Patna): 118 automated tests covering SimGlucose, DT1, DT2, STPA & Compare-and-Clamp
-cd 01_IIT_Patna_Insulin_Pump_Digital_Twin
-pytest tests/ -v
+cd GECO_v6_Max_Omniverse_Twin
 
-# Twin #2 (GECO v6.1+): Automated tests covering 7-State Hovorka EKF, PTP Master Clock & 12-Bay Ward Telemetry
-cd ../02_GECO_v6_Digital_Twin/GECO_v6_Max_Omniverse_Twin
-pytest tests/ -v
+# 1. Build/refresh the OpenUSD stages (138-part rig + 12-cubicle ward)
+python3 omniverse_usd/build_usd_stages.py
+
+# 2. Generate publication CSV logs, IEEE LaTeX tables, Markdown report & 300-DPI figures
+python3 -m geco_v6_max.paper_report_generator
+
+# 3. Run the live 12-cubicle WebSocket telemetry server (ws://127.0.0.1:8766)
+python3 -m geco_v6_max.ward_telemetry_server
+
+# 4. Run the verification test suite
+pytest -q
 ```

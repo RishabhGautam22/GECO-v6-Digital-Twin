@@ -1,0 +1,288 @@
+{
+  "checked_utc": "2026-09-07T12:03:46.971438+00:00",
+  "scope": "Bounded editorial/methods update; not systematic; carry-forward and new access distinguished",
+  "sources": [
+    {
+      "id": "R01",
+      "authors": "Venugopalan et al.",
+      "title": "GlucOS: Security, correctness, and simplicity for automated insulin delivery",
+      "date": "2026",
+      "doi": "10.1145/3745756.3809198",
+      "url": "https://doi.org/10.1145/3745756.3809198",
+      "locator": "Supplied published paper selected sections, pp.185–201, especially2.3,3,7,9–10; GECOv5 S001; fresh Crossref publisher-deposited metadata",
+      "access": "Selected full-text sections carried forward; ACM web403 in v6",
+      "supported_use": "BioKernel reference monitor and layered safeguards are prior work; do not claim reference-monitor novelty.",
+      "limit": "Hardware beyond standard errors is outside stated failure model; no new physical validation implied.",
+      "verified_citation": {
+        "title": "GlucOS: Security, correctness, and simplicity for automated insulin delivery",
+        "author": "Venugopalan, Hari and Vijayanand, Shreyas Madhav Ambattur and Stanford, Caleb and Crossen, Stephanie and King, Samuel T.",
+        "doi": "10.1145/3745756.3809198",
+        "url": "https://doi.org/10.1145/3745756.3809198",
+        "booktitle": "Proceedings of the 24th Annual International Conference on Mobile Systems, Applications and Services",
+        "year": "2026",
+        "pages": "185-201"
+      }
+    },
+    {
+      "id": "R02",
+      "authors": "Zhou et al.",
+      "title": "KnowSafe: Combined Knowledge and Data Driven Hazard Mitigation in Artificial Pancreas Systems",
+      "date": "2025",
+      "doi": "10.1109/TDSC.2025.3584870",
+      "url": "https://arxiv.org/html/2311.07460v2",
+      "locator": "GECOv5 S002 selected full-text sectionsII-C,IV-H,TableIX,IV-I/J; current arXivv2 record",
+      "access": "Selected full-text sections carried forward; abstract/version checked v6",
+      "supported_use": "Hazard mitigation and unintended intervention are established study topics.",
+      "limit": "Simulated APS with specific trusted components; do not turn selected success results into universal safety."
+    },
+    {
+      "id": "R03",
+      "authors": "Bissig et al.",
+      "title": "Calibration of insulin pumps based on discrete doses at given cycle times",
+      "date": "2022 online; 2023 issue",
+      "doi": "10.1515/bmt-2022-0040",
+      "url": "https://doi.org/10.1515/bmt-2022-0040",
+      "locator": "GECOv5 S005 visible gravimetric/front-tracking methods; fresh Crossref metadata volume68 issue1 pp67–77",
+      "access": "Partial publisher methods carried forward; metadata checked v6",
+      "supported_use": "Discrete dose timing and environmental corrections matter in pump metrology.",
+      "limit": "No complete article or borrowed accuracy benchmark is claimed.",
+      "verified_citation": {
+        "title": "Calibration of insulin pumps based on discrete doses at given cycle times",
+        "author": "Bissig, Hugo and Büker, Oliver and Stolt, Krister and Batista, Elsa and Afonso, Joana and Zagnoni, Michele and Vroman, Rozan and Kjeldsen, Henrik and Niemann, Anders and Schroeter, Joerg",
+        "doi": "10.1515/bmt-2022-0040",
+        "url": "https://doi.org/10.1515/bmt-2022-0040",
+        "journal": "Biomedical Engineering / Biomedizinische Technik",
+        "year": "2023",
+        "volume": "68",
+        "number": "1",
+        "pages": "67-77"
+      }
+    },
+    {
+      "id": "R04",
+      "authors": "Girardot et al.",
+      "title": "Kalman Filter-Based Novel Methodology to Assess Insulin Pump Accuracy",
+      "date": "2019",
+      "doi": "10.1089/dia.2019.0147",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31335164/",
+      "locator": "GECOv5 S007 PubMed abstract: mass-flow meter plus timestamped microgravimetric bench; fresh publisher-deposited Crossref bibliographic identity verified",
+      "access": "Abstract-only carried forward; current direct PubMed browser challenge; Crossref metadata verified",
+      "supported_use": "Kalman-assisted pump measurement predates GECO.",
+      "limit": "No full-text performance or independent-stop-path claim.",
+      "verified_citation": {
+        "title": "Kalman Filter-Based Novel Methodology to Assess Insulin Pump Accuracy",
+        "author": "Girardot, Sylvain and Mousin, Flavien and Vezinet, Jérémy and Jacquemier, Pauline and Hardy, Sébastien and Riveline, Jean-Pierre",
+        "doi": "10.1089/dia.2019.0147",
+        "url": "https://doi.org/10.1089/dia.2019.0147",
+        "journal": "Diabetes Technology &amp; Therapeutics",
+        "year": "2019",
+        "volume": "21",
+        "number": "10",
+        "pages": "557-565"
+      }
+    },
+    {
+      "id": "R05",
+      "authors": "Hovorka et al.",
+      "title": "Nonlinear model predictive control of glucose concentration in subjects with type 1 diabetes",
+      "date": "2004",
+      "doi": "10.1088/0967-3334/25/4/010",
+      "url": "https://doi.org/10.1088/0967-3334/25/4/010",
+      "locator": "Supplied originalPDF pp905–920; Table1–2 printed909 visually inspected at full resolution in v6; PubMed15382830 metadata",
+      "access": "Selected full text; original table visually checked; Yale publicPDF502",
+      "supported_use": "Exact original parameter means/units and compartment-model lineage.",
+      "limit": "Fasting-control study does not validate a derived security simulator; every conversion or model change must be recorded.",
+      "verified_citation": {
+        "title": "Nonlinear model predictive control of glucose concentration in subjects with type 1 diabetes",
+        "author": "Hovorka, Roman and Canonico, Valentina and Chassin, Ludovic J and Haueter, Ulrich and Massi-Benedetti, Massimo and Federici, Marco Orsini and Pieber, Thomas R and Schaller, Helga C and Schaupp, Lukas and Vering, Thomas and Wilinska, Malgorzata E",
+        "doi": "10.1088/0967-3334/25/4/010",
+        "url": "https://doi.org/10.1088/0967-3334/25/4/010",
+        "journal": "Physiological Measurement",
+        "year": "2004",
+        "volume": "25",
+        "number": "4",
+        "pages": "905-920"
+      }
+    },
+    {
+      "id": "R06",
+      "authors": "S. J. Julier and J. K. Uhlmann",
+      "title": "Unscented Filtering and Nonlinear Estimation",
+      "date": "2004",
+      "doi": "10.1109/JPROC.2003.823141",
+      "url": "https://doi.org/10.1109/JPROC.2003.823141",
+      "locator": "Crossref publisher-deposited metadata: Proceedings of the IEEE92(3),401–422",
+      "access": "Metadata verified; IEEE challenge and institutionalPDF fetch failure; no new full-text review",
+      "supported_use": "Foundational journal reference for UKF; not a novelty or superiority claim.",
+      "limit": "Detailed filter properties should be checked against full paper before derivation-level claims.",
+      "verified_citation": {
+        "title": "Unscented Filtering and Nonlinear Estimation",
+        "author": "Julier, S.J. and Uhlmann, J.K.",
+        "doi": "10.1109/jproc.2003.823141",
+        "url": "https://doi.org/10.1109/jproc.2003.823141",
+        "journal": "Proceedings of the IEEE",
+        "year": "2004",
+        "volume": "92",
+        "number": "3",
+        "pages": "401-422"
+      }
+    },
+    {
+      "id": "R07",
+      "authors": "Hajizadeh et al.",
+      "title": "Adaptive and Personalized Plasma Insulin Concentration Estimation for Artificial Pancreas Systems",
+      "date": "2018",
+      "doi": "10.1177/1932296818763959",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6154239/",
+      "locator": "Abstract, Introduction and Methods; Journal of Diabetes Science and Technology12(3),639–649; Crossref metadata",
+      "access": "Selected full-text sections newly read; later follow-up hit challenge",
+      "supported_use": "UKF with Hovorka dynamics and individualized insulin estimation evaluated on clinical datasets.",
+      "limit": "This validates that work under its conditions, not GECO or universal UKF advantage.",
+      "verified_citation": {
+        "title": "Adaptive and Personalized Plasma Insulin Concentration Estimation for Artificial Pancreas Systems",
+        "author": "Hajizadeh, Iman and Rashid, Mudassir and Samadi, Sediqeh and Feng, Jianyuan and Sevil, Mert and Hobbs, Nicole and Lazaro, Caterina and Maloney, Zacharie and Brandt, Rachel and Yu, Xia and Turksoy, Kamuran and Littlejohn, Elizabeth and Cengiz, Eda and Cinar, Ali",
+        "doi": "10.1177/1932296818763959",
+        "url": "https://doi.org/10.1177/1932296818763959",
+        "journal": "Journal of Diabetes Science and Technology",
+        "year": "2018",
+        "volume": "12",
+        "number": "3",
+        "pages": "639-649"
+      }
+    },
+    {
+      "id": "R08",
+      "authors": "Dalla Man et al.",
+      "title": "The UVA/PADOVA Type 1 Diabetes Simulator: New Features",
+      "date": "2014",
+      "doi": "10.1177/1932296813514502",
+      "url": "https://doi.org/10.1177/1932296813514502",
+      "locator": "GECOv5 S032 supplied article: abstract, model refinements, conclusions",
+      "access": "Selected full-text review carried forward; attempted PMC route challenged in v6",
+      "supported_use": "Simulator editions differ; model lineage must be explicit.",
+      "limit": "Regulatory history of an original simulator does not transfer to a derivative implementation.",
+      "verified_citation": {
+        "title": "The UVA/PADOVA Type 1 Diabetes Simulator",
+        "author": "Man, Chiara Dalla and Micheletto, Francesco and Lv, Dayu and Breton, Marc and Kovatchev, Boris and Cobelli, Claudio",
+        "doi": "10.1177/1932296813514502",
+        "url": "https://doi.org/10.1177/1932296813514502",
+        "journal": "Journal of Diabetes Science and Technology",
+        "year": "2014",
+        "volume": "8",
+        "number": "1",
+        "pages": "26-34"
+      }
+    },
+    {
+      "id": "R09",
+      "authors": "Joint Committee for Guides in Metrology",
+      "title": "Evaluation of measurement data — Guide to the expression of uncertainty in measurement",
+      "date": "2008, corrected2010",
+      "doi": "",
+      "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+      "locator": "JCGM100:2008, Introduction0.1–0.7; sections4–7 as framework; AnnexD conceptual distinction",
+      "access": "OfficialPDF retrieved; selected opening/framework material reviewed",
+      "supported_use": "Define measurand and report uncertainty; corrections do not remove uncertainty.",
+      "limit": "Not a bench certification, compliance assessment or numeric uncertainty budget."
+    },
+    {
+      "id": "R10",
+      "authors": "IEEE",
+      "title": "Submission and Peer Review Policies — AI-Generated Content",
+      "date": "current checked2026-09-07",
+      "doi": "",
+      "url": "https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/submission-and-peer-review-policies/",
+      "locator": "Use by Authors, generated content; source viewed lines73–83",
+      "access": "Official policy text read",
+      "supported_use": "Disclose AI system, affected sections and extent; editing-only exception is narrower than our work.",
+      "limit": "Final venue requirements must be checked at submission; no authors approval asserted."
+    },
+    {
+      "id": "R11",
+      "authors": "IEEE",
+      "title": "Ethical Requirements — Definition of Authorship",
+      "date": "current checked2026-09-07",
+      "doi": "",
+      "url": "https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/ethical-requirements/",
+      "locator": "Authorship criteria and corresponding-author responsibilities",
+      "access": "Official author-center text read",
+      "supported_use": "Team must supply eligible authors and final approvals; sample names are not transferable.",
+      "limit": "No author list or approval has been inferred."
+    },
+    {
+      "id": "R12",
+      "authors": "IEEE",
+      "title": "IEEE Article Templates; Structure Your Article",
+      "date": "current checked2026-09-07",
+      "doi": "",
+      "url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/tools-for-ieee-authors/ieee-article-templates/",
+      "locator": "Official template selector guidance; structure page https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-the-text-of-your-article/structure-your-article/",
+      "access": "Official template and structure guidance read",
+      "supported_use": "Use official venue-specific template and concise method/results organization.",
+      "limit": "IEEE style is not acceptance, journal fit certification or institutional endorsement."
+    },
+    {
+      "id": "R13",
+      "authors": "Toshio Michael Chin",
+      "title": "Square-Root Formulas for Kalman Filter, Information Filter, and RTS Smoother: Links via Boomerang Prediction Residual",
+      "date": "2023-05-15",
+      "doi": "",
+      "url": "https://ipnpr.jpl.nasa.gov/progress_report/42-233/42-233A-orig.pdf",
+      "locator": "IPN42-233, sectionIII.A, p4, Eq14",
+      "access": "Primary PDF selected text newly checked",
+      "supported_use": "Joseph covariance formula and independence/error-decomposition context",
+      "limit": "No claim of new covariance theory or full report review."
+    },
+    {
+      "id": "R14",
+      "authors": "J. Ignacio Hidalgo; Jorge Alvarado; Marta Botella; Aranzazu Aramendi; J. Manuel Velasco; Oscar Garnica",
+      "title": "HUPA-UCM Diabetes Dataset",
+      "date": "2024-04-25",
+      "doi": "10.17632/3hbcscwz44.1",
+      "url": "https://data.mendeley.com/datasets/3hbcscwz44/1",
+      "locator": "Repository title/version/contributors/description/licence",
+      "access": "Primary repository text newly checked",
+      "supported_use": "Dataset identity, version1,25 source participants,CC BY4.0",
+      "limit": "This record is not validation of the supplied preprocessed subset; no new participant data downloaded."
+    },
+    {
+      "id": "R15",
+      "authors": "Fabien Dubosson; Jean-Eudes Ranvier; Stefano Bromuri; Jean-Paul Calbimonte; Juan Ruiz; Michael Schumacher",
+      "title": "The open D1NAMO dataset: A multi-modal dataset for research on non-invasive type1 diabetes management",
+      "date": "2018-10-19",
+      "doi": "10.5281/zenodo.5651217",
+      "url": "https://doi.org/10.5281/zenodo.5651217",
+      "locator": "DataCite publisher-deposited record: creators,title,publicationYear,dates,version,rightsList",
+      "access": "Direct Zenodo429; exact DataCite DOI metadata checked and saved; alternate primary Zenodo latest URL in search",
+      "supported_use": "Dataset identity,version1.2.0,CC BY-SA4.0; issued2018,recordcreated2021",
+      "limit": "No new clinical data download or archive integrity comparison; loader proxies remain study-specific."
+    }
+  ],
+  "tool_metadata": {
+    "tools": [
+      "web__run",
+      "exec_command via Python urllib Crossref read-only",
+      "view_image(detail=original)"
+    ],
+    "current_model_exact_runtime_id": "unavailable",
+    "complete_search_counts": "not claimed",
+    "external_uploads": false,
+    "proprietary_similarity_services_used": false,
+    "crossref_dois_newly_checked": [
+      "10.1109/JPROC.2003.823141",
+      "10.1177/1932296818763959",
+      "10.1145/3745756.3809198",
+      "10.1515/bmt-2022-0040"
+    ],
+    "crossref_dois_requested_in_persisted_followup": [
+      "10.1145/3745756.3809198",
+      "10.1109/TDSC.2025.3584870",
+      "10.1515/bmt-2022-0040",
+      "10.1088/0967-3334/25/4/010",
+      "10.1109/JPROC.2003.823141",
+      "10.1177/1932296818763959",
+      "10.1177/1932296813514502"
+    ],
+    "crossref_followup_limit": "R02 request failed; prior GECOv5 verified metadata and current arXiv version used; full failure response in CROSSREF_PUBLISHER_METADATA.json."
+  }
+}

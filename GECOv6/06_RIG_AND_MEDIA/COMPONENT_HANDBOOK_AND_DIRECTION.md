@@ -1,6 +1,6 @@
 # Rig components and direction for the presentation
 
-All physical components are conceptual. **IIT Patna measurement pending.** Part IDs in the 3D scene (for example mechanical part M03) and measurement-task IDs M01–M16 are separate namespaces: a part label is not a completed measurement task.
+All physical components are conceptual. **IIT Patna measurement pending.** Part IDs in the 3D scene (for example mechanical part M03) and measurement-task IDs M01-M16 are separate namespaces: a part label is not a completed measurement task.
 
 The mechanism begins with a motor, coupling and lead screw. The carriage and rails guide the illustrated pusher toward the syringe plunger. The syringe barrel, plunger, outlet connector and tubing define a proposed fluid path through a proposed stop element to a receiver. The drawing does not establish an achievable pressure, displacement, flow, capacity or stop time.
 
@@ -176,4 +176,4 @@ Dimensions and positions are illustrative and available in COMPONENTS.json. The 
 | C11 | 05:39 | Detection and the proposed stop path | Detection delay, stop latency and post-stop flow; pending |
 | C12 | 06:15 | Recovery belongs in the experiment | Withheld delivery, restart delay, nuisance stops and overshoot; pending |
 | C13 | 06:49 | Compare methods under the same conditions | Matched excess, deficit, interruption and recovery in simulation |
-| C14 | 07:24 | The next evidence comes from the laboratory | All M01–M16 fields remain unmeasured |
+| C14 | 07:24 | The next evidence comes from the laboratory | All M01-M16 fields remain unmeasured |

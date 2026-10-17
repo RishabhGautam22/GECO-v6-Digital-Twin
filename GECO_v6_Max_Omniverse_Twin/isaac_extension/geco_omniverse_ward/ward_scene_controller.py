@@ -24,6 +24,7 @@ except ImportError:
 
 CAMERA_PRIM_PATHS: Dict[str, str] = {
     "OVERVIEW": "/World/Cameras/Cam_Ward_Overview",
+    "DASHBOARD": "/World/Cameras/Cam_LargeDashboardWall",
     "ROOM_01": "/World/Cameras/Cam_Room01_Nominal",
     "ROOM_02": "/World/Cameras/Cam_Room02_PipeDebris",
     "ROOM_03": "/World/Cameras/Cam_Room03_BatteryBrownout",
@@ -220,6 +221,18 @@ class WardSceneController:
         stack_base = f"{base}/{pat_prim}/CompleteHardwareStack"
         self._set_rotate_xyz(f"{stack_base}/Part_M05_LeadScrew", (phase * 45.0 * flow_u_hr) % 360.0, 0.0, 0.0)
 
+        # Animate 3D Overhead CubicleScenarioBoard bars in each cubicle
+        board_base = f"{base}/CubicleScenarioBoard"
+        press_kpa = float(data.get("line_pressure_kpa", 14.2) or 14.2)
+        bg_ratio = max(0.08, min(1.0, bg / 260.0))
+        p_ratio = max(0.08, min(1.0, press_kpa / 100.0))
+        self._set_scale(f"{board_base}/Bar_BG", 0.28, 0.015, 0.28 * bg_ratio)
+        self._set_scale(f"{board_base}/Bar_Pressure", 0.28, 0.015, 0.28 * p_ratio)
+        cinfo = data.get("cubicle_info") or {}
+        if cinfo:
+            self._set_custom_attr(board_base, "geco:active_scenario_code", str(cinfo.get("active_scenario_code", "")))
+            self._set_custom_attr(board_base, "geco:active_scenario_name", str(cinfo.get("active_scenario_name", "")))
+
     def _animate_room_01_nominal(self, data: Dict[str, Any], phase: float) -> None:
         base = "/World/Ward/Room_01_Nominal_Adult"
         bg = float(data.get("bg_mg_dl", data.get("true_glucose_mgdl", 114.0)) or 114.0)
@@ -378,6 +391,7 @@ class WardSceneController:
 
     def _animate_room_06_soc_center(self, rooms: Dict[str, Any], ptp_clock: Dict[str, Any], phase: float) -> None:
         soc_base = "/World/Ward/Room_06_SOC_Command_Center"
+        room_dicts = [r for r in rooms.values() if isinstance(r, dict)]
         any_alarm = any(
             bool(
                 r.get("alarm_active", False)
@@ -385,17 +399,40 @@ class WardSceneController:
                 or r.get("brownout_tripped", False)
                 or (r.get("root_cause_attribution") or {}).get("category", "NOMINAL") != "NOMINAL"
             )
-            for r in rooms.values()
-            if isinstance(r, dict)
+            for r in room_dicts
         )
         state_str = "ALARM_SIMPLEX_CLAMP" if any_alarm else "NORMAL"
         self._set_custom_attr(f"{soc_base}/MasterAlarmBeacon", "geco:ward_alarm_state", state_str)
         beacon_rot = (phase * 120.0) % 360.0 if any_alarm else 0.0
         self._set_rotate_xyz(f"{soc_base}/MasterAlarmBeacon", 0.0, 0.0, beacon_rot)
 
+        # Animate LargeWallDashboardScreen 3D bars with live ward aggregates
+        dash_base = f"{soc_base}/LargeWallDashboardScreen"
+        bgs = [float(r.get("true_glucose_mgdl", r.get("bg_mg_dl", 118.0)) or 118.0) for r in room_dicts] or [118.0]
+        mean_bg = sum(bgs) / max(1, len(bgs))
+        in_range = sum(1 for b in bgs if 70.0 <= b <= 180.0) / max(1, len(bgs))
+        max_p = max([float(r.get("line_pressure_kpa", 14.2) or 14.2) for r in room_dicts] or [14.2])
+        min_v = min([float(r.get("battery_terminal_v", r.get("battery_v_term", 3.98)) or 3.98) for r in room_dicts] or [3.98])
+        max_cusum = max([float((r.get("detector") or {}).get("cusum_fast", 0.35) or 0.35) for r in room_dicts] or [0.35])
+        alarm_cnt = sum(1 for r in room_dicts if r.get("alarm_active") or r.get("attack_active"))
+
+        bars = [
+            ("Bar_WardMeanBG", -1.35, max(0.08, min(1.0, mean_bg / 250.0))),
+            ("Bar_WardTIR", -0.81, max(0.08, min(1.0, in_range))),
+            ("Bar_MaxLinePressure", -0.27, max(0.08, min(1.0, max_p / 110.0))),
+            ("Bar_MinBatteryV", 0.27, max(0.08, min(1.0, (min_v - 2.5) / 1.7))),
+            ("Bar_MaxCUSUM", 0.81, max(0.08, min(1.0, max_cusum / 10.0))),
+            ("Bar_ActiveAlarms", 1.35, max(0.08, min(1.0, alarm_cnt / 8.0))),
+        ]
+        for b_name, bx, ratio in bars:
+            bh = 0.88 * ratio
+            bz = -0.68 + 0.5 * bh
+            self._set_scale(f"{dash_base}/{b_name}", 0.34, 0.02, bh)
+            self._set_translate(f"{dash_base}/{b_name}", bx, -0.045, bz)
+
         # Pulse Optical Sync Beacon Part_A06 at 10Hz phase
-        ptp_base = f"{soc_base}/MasterClock_PTP_Grandmaster_Rack"
+        ptp_base = f"{soc_base}/MasterClock_PTP_Hub"
         if ptp_clock:
             self._set_custom_attr(ptp_base, "geco:monotonic_tick", int(ptp_clock.get("monotonic_tick", 0)))
         strobe_scale = 1.0 + 0.18 * abs(math.sin(phase * 4.0))
-        self._set_scale(f"{ptp_base}/Part_A06_Optical_Sync_Beacon", strobe_scale, strobe_scale, strobe_scale)
+        self._set_scale(f"{ptp_base}/Part_A06_Optical_Sync_Strobe", strobe_scale, strobe_scale, strobe_scale)

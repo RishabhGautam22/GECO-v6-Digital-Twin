@@ -1,4 +1,4 @@
-# GECOv6 — complete research and saline-twin package
+# GECOv6  -  complete research and saline-twin package
 
 Start with **OPEN_PACKAGE.html** for the paper, presentation, narrated rig tour, measured-data handoff and reproducibility records. This is a private working research release dated 7 September 2026. Earlier releases remain preserved.
 
@@ -23,14 +23,17 @@ The defensible paper direction is a **simulation and methods contribution**: an 
 | Ten corrected, fixed-example simulation movies | `06_RIG_AND_MEDIA/videos/results/` |
 | Ten high-resolution rig views; Blender/GLB/OpenSCAD sources | `06_RIG_AND_MEDIA/stills/`, `native/` |
 | Interactive rig and exact trace players | `06_RIG_AND_MEDIA/Interactive_Rig/`, `Result_Player/` |
-| IIT Patna protocol, M01–M16 fields and blank acquisition templates | `07_IIT_PATNA_HANDOFF/` and `04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md` |
+| IIT Patna protocol, M01-M16 fields and blank acquisition templates | `07_IIT_PATNA_HANDOFF/` and `04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md` |
+| All frozen studies, raw traces, tables and independent checks | `03_EXPERIMENTS/`, `08_REVIEW_AND_QA/` |
 | Portable restoration and reproduction guide | `09_REPRODUCIBILITY/REPRODUCE_EXPERIMENTS.md` |
+| Preserved prior complete private release | `10_PRIOR_RELEASE/` |
+| User-provided reference protocols and adaptation records | `11_USER_REFERENCE_PROTOCOLS/` |
 
 ## Presenting the work
 
 In PowerPoint Slide Show, navigate to a video slide, press **Tab**, then **Enter** to activate its embedded video. Videos are configured for full-screen playback. If a viewer does not support embedded media, use the identically sourced standalone MP4. The PDF contains static posters. The full tour has a real synthetic-speech audio track and optional embedded English subtitles; result movies have no narration. Scripts and separate subtitle files are included.
 
-Use the 10-minute route for decisions: slides 1–5, 8–10, 17–22, 38, 41–43; select rather than rush every slide. Use the 30-minute route for a methods seminar: slides 1–23, one result movie, rig slides 28 and 30–40, then conclusions. For a laboratory briefing, play the full tour on slide 29 and walk through the M01–M16 checklist. The routes are suggested running orders, not pre-recorded talk durations. Detailed speaker notes explain each slide.
+Use the 10-minute route for decisions: slides 1-5, 8-10, 17-22, 38, 41-43; select rather than rush every slide. Use the 30-minute route for a methods seminar: slides 1-23, one result movie, rig slides 28 and 30-40, then conclusions. For a laboratory briefing, play the full tour on slide 29 and walk through the M01-M16 checklist. The routes are suggested running orders, not pre-recorded talk durations. Detailed speaker notes explain each slide.
 
 ## What IIT Patna will fill
 
@@ -42,6 +45,7 @@ The acquisition validator checks an offline data contract. It neither validates 
 
 The paper is prepared for team review in IEEE style. Authors, affiliations, contributions, funding/conflicts and final human approval remain for the actual team. A selected IEEE venue can impose additional requirements; no publication acceptance, IEEE/MIT endorsement or affiliation is claimed.
 
+AI-assisted research, code, text and visual production are disclosed. Narration uses the local macOS Aman synthetic voice. The supplied protocols were applied in scientific-first order, preserving numerical and citation integrity. A bounded local exact-overlap check is included; it is not a comprehensive plagiarism certification. No AI-free, SynthID-free or detector-evasion guarantee is claimed.
 
 The prior release and supplied participant/reference material are retained for the requested private all-in-one handoff. Their inclusion does not grant new redistribution rights. Consult the bundled source/license records before public release; submit only the authorized manuscript and appropriate supplement, not the entire private archive by default.
 

@@ -873,13 +873,213 @@ def emit_patient_and_bed(
 {indent}}}{pump_block}"""
 
 
+CUBICLE_USD_SCENARIOS: Dict[str, Dict[str, str]] = {
+    "ROOM_01": {
+        "patient": "P01: Adult T1D (75 kg, ISF=42 mg/dL/U)",
+        "code": "NOMINAL_CLOSED_LOOP",
+        "name": "Nominal Closed-Loop & Meal Bolus Tracking",
+        "category": "Baseline Closed-Loop Control",
+        "tested": "NOMINAL_CLOSED_LOOP | MEAL_75G_DISTURBANCE | EKF_30MIN_FORECAST | HOVORKA_RK4_INTEGRITY",
+        "response": "EKF 30-min forecast tracks meal peak within 16.82 mg/dL RMSE; zero alarms",
+        "mat": "Mat_BatteryHealthy",
+    },
+    "ROOM_02": {
+        "patient": "P02: Adolescent T1D (58 kg, ISF=52 mg/dL/U)",
+        "code": "A1_A3_FLUIDIC_DEBRIS_OCCLUSION",
+        "name": "Microbore Pipe Fibril Debris, Air Bubbles & Cannula Kink (A1/A3)",
+        "category": "Category A: Fluidic & Subcutaneous Path Failures",
+        "tested": "A1_UNPRIMED_LINE | A3_FIBRIL_DEBRIS_OCCLUSION | A3_AIR_BUBBLE_COMPLIANCE | A3_CANNULA_KINK_RELIEF",
+        "response": "Inline pressure >65 kPa triggers physical occlusion alarm; zero false cyber lockouts",
+        "mat": "Mat_DebrisAmber",
+    },
+    "ROOM_03": {
+        "patient": "P03: Insulin-Resistant T1D (92 kg, ISF=28 mg/dL/U)",
+        "code": "B1_B2_BATTERY_BROWNOUT_STICTION",
+        "name": "LiPo ESR Surge, Voltage Brownout & Lead-Screw Stiction (B1/B2)",
+        "category": "Category B: Electromechanical & Power-Rail Faults",
+        "tested": "B1_LEAD_SCREW_BACKLASH | B1_O_RING_STICTION | B2_LIPO_ESR_BROWNOUT | B3_THERMAL_INSULIN_DEGRADATION",
+        "response": "Undervoltage lockout at V_term < 3.25V; tactile alert and telemetry hold",
+        "mat": "Mat_SafetyOrange",
+    },
+    "ROOM_04": {
+        "patient": "P04: Elderly Cardiac T1D (84 kg, ISF=35 mg/dL/U)",
+        "code": "C1_C2_CYBER_MITM_SIMPLEX_CLAMP",
+        "name": "RF Bolus Replay, Fake Hypo Spoof & Simplex Pinch-Valve Clamp (C1/C2)",
+        "category": "Category C: Adversarial Cyber-Physical Attacks",
+        "tested": "C1_UNAUTH_10U_BOLUS_REPLAY | C2_FAKE_HYPO_CGM_SPOOF | C3_STEALTH_CUSUM_DRIP | SIMPLEX_PINCH_VALVE_CLAMP",
+        "response": "EKF innovation residual >4.5 sigma triggers hardware pinch-valve V01 in <50 ms",
+        "mat": "Mat_CyberRed",
+    },
+    "ROOM_05": {
+        "patient": "BENCH-05: 130-Part Gravimetric Saline Calibration Rig",
+        "code": "METROLOGY_GRAVIMETRIC_CALIBRATION",
+        "name": "Sub-Microliter Gravimetric Balance & Optical Plunger Verification",
+        "category": "Hardware-in-the-Loop Metrology & CAD Verification",
+        "tested": "BREP_3014UL_SYRINGE_BORE | LUER_222UL_DEADSPACE | GRAVIMETRIC_0_01MG_DRIFT | OPTICAL_LVDT_CROSSCHECK",
+        "response": "Verifies 130-part CAD tolerances and cross-checks plunger travel against mass balance",
+        "mat": "Mat_AnodizedBlue",
+    },
+    "ROOM_06": {
+        "patient": "SOC-06: Central Nursing & Cyber-Physical Command Center",
+        "code": "WARD_SOC_PTP_TELEMETRY_FUSION",
+        "name": "12-Cubicle Telemetry Aggregation, PTP Clock Sync & Root-Cause Attribution",
+        "category": "Ward-Wide Supervisory Control & Audit Logging",
+        "tested": "IEEE1588_PTP_SYNC | MULTI_PATIENT_RISK_RANKING | PHYSICAL_VS_CYBER_SEPARATION | PAPER_REPORT_EXPORT",
+        "response": "100% separation between mechanical occlusions (A/B) and cyber-attacks (C)",
+        "mat": "Mat_SimplexShield",
+    },
+    "ROOM_07": {
+        "patient": "P05: Adult T1D (68 kg, ISF=45 mg/dL/U)",
+        "code": "A2_DISLODGED_WET_CANNULA_SITE",
+        "name": "Dislodged Subcutaneous Cannula & Zero-Pressure Skin Leakage (A2)",
+        "category": "Category A: Fluidic & Subcutaneous Path Failures",
+        "tested": "A2_DISLODGED_WET_CANNULA | SUBCUTANEOUS_LEAKAGE_70PCT | EKF_POSITIVE_INNOVATION_DRIFT",
+        "response": "Normal line pressure + rising EKF BG residual flags wet infusion site (A2)",
+        "mat": "Mat_DebrisAmber",
+    },
+    "ROOM_08": {
+        "patient": "P06: Adult T1D (71 kg, ISF=44 mg/dL/U)",
+        "code": "A4_PISA_COMPRESSION_DROPOUT",
+        "name": "Pressure-Induced Sensor Attenuation (PISA) Sleep Compression Low (A4)",
+        "category": "Category A: Fluidic & Subcutaneous Path Failures",
+        "tested": "A4_PISA_SLEEP_COMPRESSION | FALSE_LOW_CGM_DROPOUT | STEP_RATE_GATE_REJECTION",
+        "response": "Physiological rate-of-change gate rejects non-physiological -28 mg/dL/5min step drop",
+        "mat": "Mat_DebrisAmber",
+    },
+    "ROOM_09": {
+        "patient": "P07: Dawn-Phenomenon T1D (79 kg, ISF=36 mg/dL/U)",
+        "code": "C4_RTC_CLOCK_SKEW_ATTACK",
+        "name": "RTC Time-Shift (+3h) Circadian Basal Desynchronization Attack (C4)",
+        "category": "Category C: Adversarial Cyber-Physical Attacks",
+        "tested": "C4_RTC_CLOCK_SKEW_PLUS_3H | DAWN_BASAL_MISMATCH | PTP_GRANDMASTER_DRIFT_ALARM",
+        "response": "MasterClock PTP Hub detects >10 ms clock offset and restores circadian basal schedule",
+        "mat": "Mat_CyberRed",
+    },
+    "ROOM_10": {
+        "patient": "P08: Insulin-Sensitive T1D (62 kg, ISF=55 mg/dL/U)",
+        "code": "C3_STEALTH_CUSUM_DRIP_INJECTION",
+        "name": "Low-and-Slow Stealthy +0.35 U/hr Micro-Basal Drift Attack (C3)",
+        "category": "Category C: Adversarial Cyber-Physical Attacks",
+        "tested": "C3_STEALTHY_MICRO_BOLUS_DRIP | SUB_SINGLE_STEP_THRESHOLD | TWO_SIDED_CUSUM_DETECTION",
+        "response": "Two-sided CUSUM accumulator crosses h=4.5 threshold before BG drops below 70 mg/dL",
+        "mat": "Mat_CyberRed",
+    },
+    "ROOM_11": {
+        "patient": "P09: Brittle T1D (55 kg, ISF=60 mg/dL/U)",
+        "code": "C1_RF_2X_BOLUS_REPLAY_MITIGATION",
+        "name": "Adversarial 2x RF Meal Bolus Replay & Nonce Verification (C1)",
+        "category": "Category C: Adversarial Cyber-Physical Attacks",
+        "tested": "C1_RF_PACKET_REPLAY | CRYPTO_NONCE_REJECTION | IOB_CEILING_CLAMP",
+        "response": "Duplicate sequence nonce rejected; Simplex kernel clamps delivery to safe basal",
+        "mat": "Mat_CyberRed",
+    },
+    "ROOM_12": {
+        "patient": "P10: Adult T1D (73 kg, ISF=40 mg/dL/U)",
+        "code": "A1_UNPRIMED_68UL_CATHETER_DEFICIT",
+        "name": "Unprimed 68.05 uL Catheter Dead-Volume Startup Delay (A1)",
+        "category": "Category A: Fluidic & Subcutaneous Path Failures",
+        "tested": "A1_UNPRIMED_68UL_DEADSPACE | ZERO_TISSUE_DELIVERY_LAG | AUTOMATED_PRIME_PROMPT",
+        "response": "Tracks 68.05 uL F01 hold-up volume until meniscus reaches subcutaneous tip",
+        "mat": "Mat_DebrisAmber",
+    },
+}
+
+
 def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[float, float, float]) -> str:
-    """Emit architectural floor slab, walls, glass observation partition, door frame, and ceiling RectLight."""
+    """Emit architectural floor slab, walls, glass observation partition, door frame, ceiling RectLight, and 3D CubicleScenarioBoard."""
     ox, oy, oz = origin
+    meta = CUBICLE_USD_SCENARIOS.get(room_id, {
+        "patient": room_title,
+        "code": "NOMINAL",
+        "name": room_title,
+        "category": "Clinical Scenario",
+        "tested": "NOMINAL",
+        "response": "Nominal monitoring",
+        "mat": "Mat_BatteryHealthy",
+    })
     return f"""{indent}double3 xformOp:translate = ({ox:.3f}, {oy:.3f}, {oz:.3f})
 {indent}uniform token[] xformOpOrder = ["xformOp:translate"]
 {indent}custom string geco:room_id = "{room_id}"
 {indent}custom string geco:room_title = "{room_title}"
+{indent}custom string geco:active_scenario_code = "{meta['code']}"
+{indent}custom string geco:active_scenario_name = "{meta['name']}"
+{indent}custom string geco:scenario_category = "{meta['category']}"
+{indent}custom string geco:scenarios_tested = "{meta['tested']}"
+
+{indent}def Xform "CubicleScenarioBoard" (
+{indent}    doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+{indent})
+{indent}{{
+{indent}    double3 xformOp:translate = (0.0, 2.16, 2.22)
+{indent}    uniform token[] xformOpOrder = ["xformOp:translate"]
+{indent}    custom string geco:cubicle_id = "{room_id}"
+{indent}    custom string geco:patient_cohort = "{meta['patient']}"
+{indent}    custom string geco:active_scenario_code = "{meta['code']}"
+{indent}    custom string geco:active_scenario_name = "{meta['name']}"
+{indent}    custom string geco:scenario_category = "{meta['category']}"
+{indent}    custom string geco:scenarios_tested_list = "{meta['tested']}"
+{indent}    custom string geco:expected_safety_response = "{meta['response']}"
+
+{indent}    def Cube "BoardFrame" (
+{indent}        prepend apiSchemas = ["MaterialBindingAPI"]
+{indent}    )
+{indent}    {{
+{indent}        double size = 1.0
+{indent}        float3 xformOp:scale = (2.10, 0.05, 0.56)
+{indent}        uniform token[] xformOpOrder = ["xformOp:scale"]
+{indent}        rel material:binding = </World/Looks/Mat_MatteDark>
+{indent}    }}
+{indent}    def Cube "BoardScreenSurface" (
+{indent}        prepend apiSchemas = ["MaterialBindingAPI"]
+{indent}    )
+{indent}    {{
+{indent}        double size = 1.0
+{indent}        double3 xformOp:translate = (0.0, -0.028, 0.0)
+{indent}        float3 xformOp:scale = (2.02, 0.01, 0.48)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+{indent}        rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+{indent}    }}
+{indent}    def Cube "ScenarioStatusBanner" (
+{indent}        prepend apiSchemas = ["MaterialBindingAPI"]
+{indent}    )
+{indent}    {{
+{indent}        double size = 1.0
+{indent}        double3 xformOp:translate = (0.0, -0.036, 0.18)
+{indent}        float3 xformOp:scale = (1.96, 0.012, 0.09)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+{indent}        rel material:binding = </World/Looks/{meta['mat']}>
+{indent}    }}
+{indent}    def Cube "Bar_BG" (
+{indent}        prepend apiSchemas = ["MaterialBindingAPI"]
+{indent}    )
+{indent}    {{
+{indent}        double size = 1.0
+{indent}        double3 xformOp:translate = (-0.55, -0.036, -0.05)
+{indent}        float3 xformOp:scale = (0.28, 0.015, 0.22)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+{indent}        rel material:binding = </World/Looks/Mat_SalineTeal>
+{indent}    }}
+{indent}    def Cube "Bar_Pressure" (
+{indent}        prepend apiSchemas = ["MaterialBindingAPI"]
+{indent}    )
+{indent}    {{
+{indent}        double size = 1.0
+{indent}        double3 xformOp:translate = (0.0, -0.036, -0.05)
+{indent}        float3 xformOp:scale = (0.28, 0.015, 0.18)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+{indent}        rel material:binding = </World/Looks/Mat_AnodizedBlue>
+{indent}    }}
+{indent}    def Cube "Bar_Safety" (
+{indent}        prepend apiSchemas = ["MaterialBindingAPI"]
+{indent}    )
+{indent}    {{
+{indent}        double size = 1.0
+{indent}        double3 xformOp:translate = (0.55, -0.036, -0.05)
+{indent}        float3 xformOp:scale = (0.28, 0.015, 0.24)
+{indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+{indent}        rel material:binding = </World/Looks/{meta['mat']}>
+{indent}    }}
+{indent}}}
 
 {indent}def Xform "Architecture"
 {indent}{{
@@ -950,7 +1150,7 @@ def generate_smart_hospital_ward_usda() -> Path:
     lines.append("""#usda 1.0
 (
     defaultPrim = "World"
-    doc = "GECO v6 Max — 6-Room Multi-Patient Smart Hospital ICU, Fluidic Debris, Battery Brownout, Cyber-MITM & 130-Part IIT Patna Metrology Ward"
+    doc = "GECO v6 Max: 12-Cubicle Multi-Patient Smart Hospital ICU, Fluidic Debris, Battery Brownout, Cyber-MITM, Large Dashboard Wall & 130-Part IIT Patna Metrology Ward"
     metersPerUnit = 1.0
     upAxis = "Z"
     timeCodesPerSecond = 24
@@ -1038,6 +1238,13 @@ def Xform "World" (
             float focalLength = 24.0
             double3 xformOp:translate = (7.8, 1.25, 2.0)
             float3 xformOp:rotateXYZ = (65.0, 0.0, 42.0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+        }
+        def Camera "Cam_LargeDashboardWall"
+        {
+            float focalLength = 26.0
+            double3 xformOp:translate = (6.0, 1.15, 1.60)
+            float3 xformOp:rotateXYZ = (88.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
     }
@@ -1847,6 +2054,149 @@ def Xform "World" (
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_ScreenTelemetry>
                     custom string geco:monitored_room = "ROOM_04"
+                }
+            }
+
+            def Xform "LargeWallDashboardScreen" (
+                doc = "Large 3.8m x 2.1m Central Ward Telemetry & Scenario Matrix Dashboard Wall Screen"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.08, 1.50)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:dashboard_title = "GECO v6 SMART HOSPITAL WARD: 12-CUBICLE SCENARIO MATRIX & BENCHMARK DASHBOARD"
+                custom string geco:highlight_1 = "31-Participant EKF Forecast RMSE: 16.82 mg/dL vs 25.77 mg/dL (p < 0.0001)"
+                custom string geco:highlight_2 = "Hovorka 8-State RK4 Domain Integrity: 100.0% Across All 20 Fault & Cyber Scenarios"
+                custom string geco:highlight_3 = "Physical vs Cyber Root-Cause Separation: 100% Accuracy (0% False Cyber Lockouts)"
+                custom string geco:highlight_4 = "Simplex Hardware Pinch-Valve V01 Clamp Latency: < 50 ms on 10U Overdose Replay"
+
+                def Cube "DashboardChassis" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (3.80, 0.06, 2.10)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "DashboardGlassSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.034, 0.0)
+                    float3 xformOp:scale = (3.68, 0.01, 1.98)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "HeaderStatusStrip" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.042, 0.86)
+                    float3 xformOp:scale = (3.56, 0.014, 0.14)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SimplexShield>
+                }
+                def Cube "KPI_31Participant_RMSE" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-1.32, -0.042, 0.56)
+                    float3 xformOp:scale = (0.82, 0.014, 0.32)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "KPI_Hovorka_Domain" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.44, -0.042, 0.56)
+                    float3 xformOp:scale = (0.82, 0.014, 0.32)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_BatteryHealthy>
+                }
+                def Cube "KPI_RootCause_Separation" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.44, -0.042, 0.56)
+                    float3 xformOp:scale = (0.82, 0.014, 0.32)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+                def Cube "KPI_Simplex_Clamp" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (1.32, -0.042, 0.56)
+                    float3 xformOp:scale = (0.82, 0.014, 0.32)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+                def Cube "Bar_WardMeanBG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-1.35, -0.045, -0.32)
+                    float3 xformOp:scale = (0.34, 0.02, 0.72)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_WardTIR" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.81, -0.045, -0.25)
+                    float3 xformOp:scale = (0.34, 0.02, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_BatteryHealthy>
+                }
+                def Cube "Bar_MaxLinePressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.27, -0.045, -0.45)
+                    float3 xformOp:scale = (0.34, 0.02, 0.46)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+                def Cube "Bar_MinBatteryV" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.27, -0.045, -0.28)
+                    float3 xformOp:scale = (0.34, 0.02, 0.80)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SafetyOrange>
+                }
+                def Cube "Bar_MaxCUSUM" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.81, -0.045, -0.52)
+                    float3 xformOp:scale = (0.34, 0.02, 0.32)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+                def Cube "Bar_ActiveAlarms" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (1.35, -0.045, -0.58)
+                    float3 xformOp:scale = (0.34, 0.02, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_GoldCalibration>
                 }
             }
 

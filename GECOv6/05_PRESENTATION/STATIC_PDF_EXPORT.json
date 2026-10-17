@@ -1,0 +1,86 @@
+{
+  "source_base_sha256": "30920c844ada20bdd43233e829500053d7d608b53292f4dc4f7eb1ce9138d6b1",
+  "static_pptx_sha256": "acc9d4ce560b0fa4a1dad6fa86306e710e42539354d102992c6ab4657b11487d",
+  "pdf_sha256": "c3a18ff53eea4ba2148cb08ed4bdb4e22fc388aabda065c39659433811f4eba1",
+  "slides": 49,
+  "changes": [
+    {
+      "part": "ppt/slides/slide24.xml",
+      "before": "PLAY: TAB, THEN ENTER",
+      "after": "VIDEO IN POWERPOINT"
+    },
+    {
+      "part": "ppt/slides/slide24.xml",
+      "before": "Play with Tab, then Enter. Numerical playback only; all displayed quantities come from the frozen trace.",
+      "after": "Static poster; video in PowerPoint. Numerical playback only; all displayed quantities come from the frozen trace."
+    },
+    {
+      "part": "ppt/slides/slide25.xml",
+      "before": "PLAY: TAB, THEN ENTER",
+      "after": "VIDEO IN POWERPOINT"
+    },
+    {
+      "part": "ppt/slides/slide25.xml",
+      "before": "Play with Tab, then Enter. Numerical playback only; all displayed quantities come from the frozen trace.",
+      "after": "Static poster; video in PowerPoint. Numerical playback only; all displayed quantities come from the frozen trace."
+    },
+    {
+      "part": "ppt/slides/slide26.xml",
+      "before": "PLAY: TAB, THEN ENTER",
+      "after": "VIDEO IN POWERPOINT"
+    },
+    {
+      "part": "ppt/slides/slide26.xml",
+      "before": "Play with Tab, then Enter. Numerical playback only; all displayed quantities come from the frozen trace.",
+      "after": "Static poster; video in PowerPoint. Numerical playback only; all displayed quantities come from the frozen trace."
+    },
+    {
+      "part": "ppt/slides/slide27.xml",
+      "before": "PLAY: TAB, THEN ENTER",
+      "after": "VIDEO IN POWERPOINT"
+    },
+    {
+      "part": "ppt/slides/slide27.xml",
+      "before": "Play with Tab, then Enter. Numerical playback only; all displayed quantities come from the frozen trace.",
+      "after": "Static poster; video in PowerPoint. Numerical playback only; all displayed quantities come from the frozen trace."
+    },
+    {
+      "part": "ppt/slides/slide29.xml",
+      "before": "PLAY: TAB, THEN ENTER",
+      "after": "VIDEO IN POWERPOINT"
+    },
+    {
+      "part": "ppt/slides/slide30.xml",
+      "before": "PLAY: TAB, THEN ENTER",
+      "after": "VIDEO IN POWERPOINT"
+    },
+    {
+      "part": "ppt/slides/slide31.xml",
+      "before": "PLAY: TAB, THEN ENTER",
+      "after": "VIDEO IN POWERPOINT"
+    },
+    {
+      "part": "ppt/slides/slide32.xml",
+      "before": "PLAY: TAB, THEN ENTER",
+      "after": "VIDEO IN POWERPOINT"
+    },
+    {
+      "part": "ppt/slides/slide33.xml",
+      "before": "PLAY: TAB, THEN ENTER",
+      "after": "VIDEO IN POWERPOINT"
+    }
+  ],
+  "scope": "Static edition retains source-linked poster images. Media playback remains in the primary PPTX.",
+  "initial_export_issue": "LibreOffice omitted video-bearing picture regions from the primary media-embedded PPTX. Initial export withdrawn; static source used for corrected PDF.",
+  "command": [
+    "/Users/rgpro/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+    "-env:UserInstallation=file:///Users/rgpro/Desktop/GeCo%20GPT/GECOv6/.work/lo_ppt_static",
+    "--headless",
+    "--convert-to",
+    "pdf",
+    "--outdir",
+    "/Users/rgpro/Desktop/GeCo GPT/GECOv6/05_PRESENTATION",
+    "/Users/rgpro/Desktop/GeCo GPT/GECOv6/05_PRESENTATION/GECOv6_Research_Seminar_Static.pptx"
+  ],
+  "exit_code": 0
+}

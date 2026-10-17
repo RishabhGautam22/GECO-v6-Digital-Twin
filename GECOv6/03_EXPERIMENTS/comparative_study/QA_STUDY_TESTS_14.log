@@ -1,0 +1,19 @@
+test_direction_and_conversion (tests.test_v6_study.HovorkaNumerics.test_direction_and_conversion) ... ok
+test_equilibrium_and_rate_units (tests.test_v6_study.HovorkaNumerics.test_equilibrium_and_rate_units) ... ok
+test_gut_chain_matches_impulse_solution (tests.test_v6_study.HovorkaNumerics.test_gut_chain_matches_impulse_solution) ... ok
+test_input_validation (tests.test_v6_study.HovorkaNumerics.test_input_validation) ... ok
+test_rk4_step_refinement (tests.test_v6_study.HovorkaNumerics.test_rk4_step_refinement) ... ok
+test_fault_end_not_used_by_recovery_on_identical_observations (tests.test_v6_study.MeasurementAndAuthority.test_fault_end_not_used_by_recovery_on_identical_observations) ... ok
+test_identical_reference_has_zero_paired_delivery_effect (tests.test_v6_study.MeasurementAndAuthority.test_identical_reference_has_zero_paired_delivery_effect) ... ok
+test_local_cutoff_retained_with_report_mask (tests.test_v6_study.MeasurementAndAuthority.test_local_cutoff_retained_with_report_mask) ... ok
+test_missing_physiology_cannot_corroborate_current_mass (tests.test_v6_study.MeasurementAndAuthority.test_missing_physiology_cannot_corroborate_current_mass) ... ok
+test_missing_sensor_uses_common_quality_latch (tests.test_v6_study.MeasurementAndAuthority.test_missing_sensor_uses_common_quality_latch) ... ok
+test_recovery_only_at_shared_operator_slots (tests.test_v6_study.MeasurementAndAuthority.test_recovery_only_at_shared_operator_slots) ... ok
+test_stop_delay_and_residual_tail_are_visible (tests.test_v6_study.MeasurementAndAuthority.test_stop_delay_and_residual_tail_are_visible) ... ok
+test_true_mass_drives_plant_despite_report_mask (tests.test_v6_study.MeasurementAndAuthority.test_true_mass_drives_plant_despite_report_mask) ... ok
+test_zero_command_noise_does_not_emit_mass (tests.test_v6_study.MeasurementAndAuthority.test_zero_command_noise_does_not_emit_mass) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.103s
+
+OK

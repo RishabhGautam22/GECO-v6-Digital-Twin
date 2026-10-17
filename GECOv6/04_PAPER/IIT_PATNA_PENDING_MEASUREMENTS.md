@@ -1,4 +1,4 @@
-# IIT Patna measurement pending — paper and presentation field specification
+# IIT Patna measurement pending  -  paper and presentation field specification
 
 Every row is prospective. There are no team-measured values in this document. Use visible text plus amber/yellow background in paper and PPT; color alone is insufficient. Recommended visual style: pale amber fill `#FFF2CC`, dark amber border `#BF9000`, dark text, heading **IIT Patna measurement pending**. Keep the block beside the affected claim/table, not only in a closing limitations slide.
 
@@ -29,7 +29,7 @@ The cross-references below apply to the final three-figure manuscript (Markdown 
 
 These measurements do not establish clinical safety or drug-delivery suitability. Use water/saline research language and document the virtual conversion convention separately from clinical insulin units. Do not show a fabricated dose, accuracy, latency or uncertainty to make an empty table look complete.
 
-## Pending endpoints in the final paper — Table IV
+## Pending endpoints in the final paper  -  Table IV
 
 | Endpoint | Reference / unit | Value | Uncertainty or interval | Evidence |
 |---|---|---|---|---|
@@ -40,4 +40,4 @@ These measurements do not establish clinical safety or drug-delivery suitability
 | False-stop exposure | Benign trials / episodes per hour | Pending measurement | Pending measurement | IIT Patna measurement pending |
 | Recovery deficit | Reference reconstruction / g or mL | Pending measurement | Pending measurement | IIT Patna measurement pending |
 
-Use the same M01–M16 field identifiers in the lab handoff, figure captions, paper table and video. Once measured, replace a pending row only with a link to the raw record, method/version, uncertainty calculation and verification status.
+Use the same M01-M16 field identifiers in the lab handoff, figure captions, paper table and video. Once measured, replace a pending row only with a link to the raw record, method/version, uncertainty calculation and verification status.

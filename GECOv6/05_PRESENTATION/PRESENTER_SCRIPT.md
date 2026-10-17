@@ -52,7 +52,7 @@ Evidence: SIMULATION / METHODS. Sources: 03_EXPERIMENTS/filter_calibration/AGGRE
 
 ## 9. Prediction findings and limits
 
-Bootstrap intervals describe variation across these participants, not an external population guarantee. The median empirical 95% forecast coverage was 95.82%, ranging 87.50–98.92%. Good median coverage conceals poor coverage for individual participants.24/31 fits approached parameter bounds; do not infer physiological identifiability.
+Bootstrap intervals describe variation across these participants, not an external population guarantee. The median empirical 95% forecast coverage was 95.82%, ranging 87.50-98.92%. Good median coverage conceals poor coverage for individual participants.24/31 fits approached parameter bounds; do not infer physiological identifiability.
 
 Evidence: SIMULATION / METHODS. Sources: 03_EXPERIMENTS/filter_calibration/AGGREGATE_RESULTS.json; 04_PAPER/GECOv6_MANUSCRIPT.md
 
@@ -230,13 +230,13 @@ These are measurement tasks, not numbers to be estimated by the writing team. Do
 
 Evidence: PHYSICAL PROTOCOL. Sources: 04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md; 07_IIT_PATNA_HANDOFF/ACQUISITION_AND_MEASUREMENT_PROTOCOL.md
 
-## 39. M01–M08: apparatus and metrology
+## 39. M01-M08: apparatus and metrology
 
-Use the exact M01–M16 checklist in the manuscript companion; this slide groups work for planning. Confirm each identifier against the authoritative table before assigning tasks. The presentation does not authorize an unsupervised medical experiment.
+Use the exact M01-M16 checklist in the manuscript companion; this slide groups work for planning. Confirm each identifier against the authoritative table before assigning tasks. The presentation does not authorize an unsupervised medical experiment.
 
 Evidence: PHYSICAL PROTOCOL. Sources: 04_PAPER/IIT_PATNA_PENDING_MEASUREMENTS.md
 
-## 40. M09–M16: interruption and transfer
+## 40. M09-M16: interruption and transfer
 
 These are grouped labels; the exact evidence requirements and manuscript insertion locations are in the M matrix. A safe-looking animation supplies none of these measurements.
 

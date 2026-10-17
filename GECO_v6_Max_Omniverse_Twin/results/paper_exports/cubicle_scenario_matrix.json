@@ -1,0 +1,177 @@
+{
+  "generated_at_utc": "2026-10-17T08:17:18.244137+00:00",
+  "total_cubicles": 12,
+  "cubicles": [
+    {
+      "cubicle_id": "ROOM_01",
+      "room_prim": "Room_01_Nominal_Adult",
+      "cubicle_name": "Cubicle 01 - Adult Baseline & Site Absorption",
+      "patient_profile": "Patient P01 (Adult, 75 kg, ISF 42 mg/dL/U)",
+      "default_scenario_code": "clean",
+      "default_scenario_title": "Nominal Closed-Loop 7-State EKF Control",
+      "scenario_category": "NOMINAL_BASELINE",
+      "scenarios_tested": [
+        "clean (24h Nominal Closed-Loop)",
+        "lipohypertrophy_site (A3: Scar-Tissue Delayed Absorption, tau=135 min)"
+      ],
+      "expected_response": "Maintain 70-180 mg/dL normoglycemia; adapt IOB decay horizon for lipohypertrophy without false cyber alarm."
+    },
+    {
+      "cubicle_id": "ROOM_02",
+      "room_prim": "Room_02_Fluidic_Debris_And_Occlusion",
+      "cubicle_name": "Cubicle 02 - Microbore Fluidics & Occlusion Physics",
+      "patient_profile": "Patient P02 (Adolescent, 58 kg, ISF 50 mg/dL/U)",
+      "default_scenario_code": "pipe_debris",
+      "default_scenario_title": "B2: Insulin Fibril Debris & Micro-Occlusion (72%)",
+      "scenario_category": "FLUIDIC_FAULT",
+      "scenarios_tested": [
+        "pipe_debris (B2: 72% Fibril Lumen Restriction & Air Bubble Compliance)",
+        "silent_basal_micro_occlusion (B0: Basal Micro-Pulse Stiffness Rise)",
+        "aircraft_depressurization_siphon (B1: Barometric Expansion Siphon)",
+        "wrong_concentration_or_denatured (A5: U-40 or Thermally Degraded Reservoir)",
+        "compound_meal_plus_debris (D1: 65g Meal Bolus + Concurrent Fibril Occlusion)"
+      ],
+      "expected_response": "Detect Hagen-Poiseuille dP/dV impedance rise within 15-20 min; open relief valve and alert nursing staff."
+    },
+    {
+      "cubicle_id": "ROOM_03",
+      "room_prim": "Room_03_Battery_Brownout_And_Malfunction",
+      "cubicle_name": "Cubicle 03 - Power Rail & Electromechanical Cut-Away",
+      "patient_profile": "Patient P03 (Elderly, 82 kg, ISF 36 mg/dL/U)",
+      "default_scenario_code": "battery_brownout",
+      "default_scenario_title": "B5: High-Impedance Li-Ion Passivation & Bolus Brownout",
+      "scenario_category": "ELECTROMECHANICAL_FAULT",
+      "scenarios_tested": [
+        "battery_brownout (B5: SOC 7%, R_int 1.85 Ohm Voltage Sag under Bolus Load)",
+        "motor_malfunction (B6: Stepper Motor Stiction & Lead-Screw Backlash)",
+        "plunger_oring_blowby (B4: Elastomeric Plunger Seal Internal Reflux)",
+        "stuck_on (B3: H-Bridge MOSFET Short-Circuit / Capacitive Ghost Bolus)",
+        "compound_pisa_plus_brownout (D2: Sleep PISA Low + Battery Sag)"
+      ],
+      "expected_response": "Pre-trip brownout guard at 3.05 V, pace basal steps from 1.5 F supercapacitor hold-up rail, and open relay on stuck MOSFET."
+    },
+    {
+      "cubicle_id": "ROOM_04",
+      "room_prim": "Room_04_Cyber_MITM_And_Simplex_Clamp",
+      "cubicle_name": "Cubicle 04 - Wireless MITM Spoofing & Simplex Defense",
+      "patient_profile": "Patient P04 (Brittle T1D, 64 kg, ISF 55 mg/dL/U)",
+      "default_scenario_code": "cgm_bias_40",
+      "default_scenario_title": "C2: BLE Man-in-the-Middle +40 mg/dL CGM Spoofing",
+      "scenario_category": "CYBER_ATTACK",
+      "scenarios_tested": [
+        "cgm_bias_40 (C2: BLE MITM +40 mg/dL False Hyperglycemia Injection)",
+        "ekf_ramp_poisoning (C5: Slow +1.25 mg/dL/step Kalman Filter Ramp Poisoning)",
+        "emi_false_occlusion_dos (C7: Resonant EMI 95 kPa False-Occlusion DoS)",
+        "electrochemical_interferent (A6: Hydroxyurea / Ascorbate Electrode Oxidation)"
+      ],
+      "expected_response": "Reject spoofed CGM innovation, freeze EKF gain, and clamp pump to Simplex Safe-Basal rate (0.00 U overdose)."
+    },
+    {
+      "cubicle_id": "ROOM_05",
+      "room_prim": "Room_05_IITP_Metrology_Lab",
+      "cubicle_name": "Cubicle 05 - 138-Part Gravimetric Saline Metrology Rig",
+      "patient_profile": "Hardware-in-the-Loop Gravimetric Balance & Optical Truth Node T04",
+      "default_scenario_code": "excess_bias_report_mask",
+      "default_scenario_title": "C6: Coordinated Actuator 2x Overdose + Telemetry Masking",
+      "scenario_category": "METROLOGY_VERIFICATION",
+      "scenarios_tested": [
+        "excess_bias_report_mask (C6: Stuxnet-Style Dual Actuator Overdose + Network Report Mask)",
+        "M01-M16 Gravimetric Saline Mass Reconstruction & Pinch-Valve V01 Latency Protocol"
+      ],
+      "expected_response": "Unmask falsified network delivery reports via out-of-band gravimetric balance T04 in 1 step and actuate pinch valve V01 (<50 ms)."
+    },
+    {
+      "cubicle_id": "ROOM_06",
+      "room_prim": "Room_06_SOC_Command_Center",
+      "cubicle_name": "Cubicle 06 - Central Nursing & Cyber SOC Command Wall",
+      "patient_profile": "12-Bay Ward Aggregator & IEEE-1588v2 PTP Grandmaster Clock (Part A05/A06)",
+      "default_scenario_code": "soc_monitoring",
+      "default_scenario_title": "Ward-Wide Root-Cause Disambiguation & Large Telemetry Dashboard",
+      "scenario_category": "SOC_COMMAND_HUB",
+      "scenarios_tested": [
+        "Cross-Ward Root-Cause Attribution (Installation Error vs Hardware Fault vs Cyber Attack)",
+        "IEEE-1588v2 PTP Monotonic Clock Sync Verification across Cubicles 01-12"
+      ],
+      "expected_response": "Display all 12 cubicle trajectories on the large wall screen; maintain 0% false cyber lockouts on clinical site faults."
+    },
+    {
+      "cubicle_id": "ROOM_07",
+      "room_prim": "Room_07_Wet_Site_Adult_P05",
+      "cubicle_name": "Cubicle 07 - Cannula Dislodgement ('Wet Site' Leak)",
+      "patient_profile": "Patient P05 (Adult, 68 kg, ISF 44 mg/dL/U)",
+      "default_scenario_code": "cannula_dislodgement_leak",
+      "default_scenario_title": "A2: Pulled-Out Subcutaneous Cannula ('Wet Site' Patch Leak)",
+      "scenario_category": "INSTALLATION_FAULT",
+      "scenarios_tested": [
+        "cannula_dislodgement_leak (A2: Line Pressure Drop Below 1.5 kPa Tissue Turgor + Patch Moisture)"
+      ],
+      "expected_response": "Classify sub-turgor pressure drop (0.14 kPa) + rising glucose as SITE_INSTALLATION_FAULT; alert nurse to replace infusion set."
+    },
+    {
+      "cubicle_id": "ROOM_08",
+      "room_prim": "Room_08_PISA_Compression_P06",
+      "cubicle_name": "Cubicle 08 - Sleep PISA Sensor Compression Artifact",
+      "patient_profile": "Patient P06 (Adult, 71 kg, ISF 40 mg/dL/U)",
+      "default_scenario_code": "pisa_compression_low",
+      "default_scenario_title": "A4: Pressure-Induced Sensor Attenuation (PISA -36 mg/dL Drop)",
+      "scenario_category": "INSTALLATION_FAULT",
+      "scenarios_tested": [
+        "pisa_compression_low (A4: Supine Tissue Compression Inducing Sharp Negative CGM Artifact)"
+      ],
+      "expected_response": "Recognize supine posture + zero active IOB surge; apply brief 15-min basal pause and suppress false cyber spoofing alarm."
+    },
+    {
+      "cubicle_id": "ROOM_09",
+      "room_prim": "Room_09_Clock_Skew_Dawn_P07",
+      "cubicle_name": "Cubicle 09 - RTC Timestamp Manipulation Defense",
+      "patient_profile": "Patient P07 (Dawn Phenomenon T1D, 79 kg, ISF 38 mg/dL/U)",
+      "default_scenario_code": "clock_skew_iob_attack",
+      "default_scenario_title": "C4: +3.5h RTC Clock-Skew IOB Zeroing Attack",
+      "scenario_category": "CYBER_ATTACK",
+      "scenarios_tested": [
+        "clock_skew_iob_attack (C4: BLE Current Time Service +215 min Forward Jump to Zero Active IOB)"
+      ],
+      "expected_response": "Detect mismatch between RTC wall-clock delta and PTP Grandmaster A05 monotonic crystal counter; block bolus stacking."
+    },
+    {
+      "cubicle_id": "ROOM_10",
+      "room_prim": "Room_10_Stealth_CUSUM_P08",
+      "cubicle_name": "Cubicle 10 - Zero-Dynamics Sub-Threshold Drip Defense",
+      "patient_profile": "Patient P08 (Insulin-Sensitive T1D, 62 kg, ISF 52 mg/dL/U)",
+      "default_scenario_code": "stealthy_cusum_drip",
+      "default_scenario_title": "C3: Stealthy Sub-Threshold (+0.42 sigma) CUSUM Drip Attack",
+      "scenario_category": "CYBER_ATTACK",
+      "scenarios_tested": [
+        "stealthy_cusum_drip (C3: Micro-Overdose Tuned Below Standard k=0.50 sigma CUSUM Reference)"
+      ],
+      "expected_response": "Catch sub-threshold micro-overdose within 9 steps using multi-scale CUSUM bank (k=0.10 sigma) and 2h mass integrator."
+    },
+    {
+      "cubicle_id": "ROOM_11",
+      "room_prim": "Room_11_Brittle_Variable_P09",
+      "cubicle_name": "Cubicle 11 - Sub-GHz RF Replay Overdose Interlock",
+      "patient_profile": "Patient P09 (Brittle T1D, 55 kg, ISF 60 mg/dL/U)",
+      "default_scenario_code": "excess_2x",
+      "default_scenario_title": "C1: Unauthenticated RF Replay 2x Bolus Injection (CVE-2019-10964)",
+      "scenario_category": "CYBER_ATTACK",
+      "scenarios_tested": [
+        "excess_2x (C1: Captured RF Frame Replay Commanding 2x Over-Delivery)",
+        "param_table_ram_corruption (C8: Unauthorized BLE Therapy Parameter RAM Modification)"
+      ],
+      "expected_response": "Trip intra-step optical encoder comparator and close fail-safe hardware pinch valve V01 in <50 ms (<0.01 U excess)."
+    },
+    {
+      "cubicle_id": "ROOM_12",
+      "room_prim": "Room_12_Unprimed_Line_P10",
+      "cubicle_name": "Cubicle 12 - Unprimed Catheter Dead-Space Detection",
+      "patient_profile": "Patient P10 (Adult T1D, 73 kg, ISF 43 mg/dL/U)",
+      "default_scenario_code": "unprimed_tubing_install",
+      "default_scenario_title": "A1: Unprimed 60 cm Infusion Tubing (68.05 uL Air Dead-Space)",
+      "scenario_category": "INSTALLATION_FAULT",
+      "scenarios_tested": [
+        "unprimed_tubing_install (A1: Cartridge Reset + Low Air-Viscosity Back-Pressure 0.08 kPa)"
+      ],
+      "expected_response": "Identify post-reset air-viscosity back-pressure (0.08 kPa vs 1.8 kPa nominal) and prompt clinician to prime tubing."
+    }
+  ]
+}

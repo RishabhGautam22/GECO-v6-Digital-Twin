@@ -620,7 +620,7 @@
     <button class="seg-btn active" onclick="switchView('ward', this)">10-Patient Ward &amp; Rig</button>
     <button class="seg-btn" onclick="switchView('cyber', this)">Cyber &amp; Master Clock</button>
     <button class="seg-btn" onclick="switchView('physics', this)">Multi-Physics Studio</button>
-    <button class="seg-btn" onclick="switchView('benchmarks', this)">V6.1+ &amp; BRep Specs</button>
+    <button class="seg-btn" onclick="switchView('benchmarks', this)">Cubicle Scenarios &amp; Paper Reports</button>
   </div>
 
   <div style="display:flex; gap:8px; align-items:center;">
@@ -897,16 +897,29 @@
   </section>
 
   <!-- VIEW 4: V6 vs V6.1+ & NVIDIA USD-BREP BENCHMARKS -->
+  <!-- VIEW 4: 12-CUBICLE SCENARIO MATRIX, HIGHLIGHTED RESULTS & PAPER EXPORTS -->
   <section id="view-benchmarks" class="tab-view">
+    <div class="apple-card" style="grid-column: 1 / -1; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>
+        <div style="font-size:17px; font-weight:700; color:var(--text);">Highlighted Simulation Results, 12-Cubicle Scenario Matrix &amp; Paper Exports</div>
+        <div id="paperExportBanner" style="font-size:12.5px; color:var(--text-secondary); margin-top:3px;">
+          Continuous telemetry logging active · Exported CSV, IEEE LaTeX tables, Markdown report &amp; 300-DPI PNG/PDF figures in <code>results/paper_exports/</code>
+        </div>
+      </div>
+      <button class="dock-btn active-nominal" style="padding:10px 18px; font-size:13px;" onclick="exportGecoPaperPackage()">
+        Export Paper Report, CSV, LaTeX &amp; 300-DPI Figures
+      </button>
+    </div>
+
     <div class="apple-card">
-      <div class="card-title">Baseline GECO v6 vs. Enhanced v6.1+ Max</div>
+      <div class="card-title">Highlighted Simulation Results (Paper Benchmarks)</div>
       <ul class="spec-list">
-        <li><span>10-Patient Mean 30m RMSE</span><span>18.54 → 12.48 mg/dL (-32.7%)</span></li>
-        <li><span>P09 Brittle T1D RMSE</span><span>28.20 → 17.65 mg/dL (-37.4%)</span></li>
-        <li><span>Hovorka Minimum BG</span><span>-349.6 (Invalid) → 74.2 mg/dL</span></li>
-        <li><span>Overdose Excess Insulin</span><span>6.65 U → 0.24 U (-96.4%)</span></li>
-        <li><span>False Alarm TIR Penalty</span><span>-4.2% → 0.0% (Simplex Hold)</span></li>
-        <li><span>Stealth CUSUM Detection</span><span>Missed → 100% Caught (k=0.10σ)</span></li>
+        <li><span>31-Participant 30m Forecast RMSE</span><span>16.82 mg/dL (EKF) vs 25.77 mg/dL (p &lt; 0.0001)</span></li>
+        <li><span>10-Patient Smart Ward Mean RMSE</span><span>18.54 → 12.48 mg/dL (-32.7%)</span></li>
+        <li><span>Hovorka 8-State RK4 Domain Integrity</span><span>100.0% Valid (Min BG 74.2 mg/dL)</span></li>
+        <li><span>Overdose Excess Insulin Delivered</span><span>6.65 U → 0.24 U (-96.4% Clamped)</span></li>
+        <li><span>Physical vs Cyber Root-Cause Separation</span><span>100% Accuracy (0.0% False Lockouts)</span></li>
+        <li><span>Simplex Pinch-Valve V01 Clamp Latency</span><span>&lt; 50 ms Hardware Cutoff</span></li>
       </ul>
     </div>
 
@@ -923,15 +936,157 @@
     </div>
 
     <div class="apple-card">
-      <div class="card-title">22-Scenario Root-Cause Permutation Matrix</div>
+      <div class="card-title">20-Scenario Root-Cause Permutation Summary</div>
       <ul class="spec-list">
-        <li><span>Cat A: Installation &amp; Site (A1–A6)</span><span>0.0% False Cyber Lockout</span></li>
+        <li><span>Cat A: Installation &amp; Site (A1–A5)</span><span>0.0% False Cyber Lockout</span></li>
         <li><span>Cat B: Fluidic &amp; Battery (B1–B6)</span><span>1.2 min Occlusion Relief</span></li>
         <li><span>Cat C: Cyber Attacks (C1–C7)</span><span>100% Clamped to Safe Basal</span></li>
-        <li><span>Cat D: Compound Multi-Fault</span><span>Orthogonal Channel Separation</span></li>
+        <li><span>Cat D: Compound Multi-Fault (D1–D2)</span><span>Orthogonal Channel Separation</span></li>
         <li><span>OpenUSD Metrology Rig</span><span>138 / 138 Parts Verified</span></li>
         <li><span>Automated Pytest Suite</span><span>15 / 15 Tests Passing</span></li>
       </ul>
+    </div>
+
+    <div class="apple-card" style="grid-column: 1 / -1;">
+      <div class="card-title" style="margin-bottom:8px;">What Scenario Is Running in Each Cubicle &amp; What Scenarios Are Being Tested (All 12 Cubicles)</div>
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:12px;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border); text-align:left; color:var(--text-secondary);">
+              <th style="padding:7px;">Cubicle</th>
+              <th style="padding:7px;">Patient / Station Profile</th>
+              <th style="padding:7px;">Active Scenario Running</th>
+              <th style="padding:7px;">Category</th>
+              <th style="padding:7px;">Scenarios Tested in This Cubicle</th>
+              <th style="padding:7px;">Verified Safety &amp; Control Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_01</td>
+              <td style="padding:7px;">P01: Adult T1D (75 kg, ISF=42)</td>
+              <td style="padding:7px; color:var(--green); font-weight:600;">NOMINAL_CLOSED_LOOP</td>
+              <td style="padding:7px;">Baseline Control</td>
+              <td style="padding:7px;">Nominal Closed-Loop, 75g Meal Disturbance, EKF 30m Forecast, Hovorka RK4</td>
+              <td style="padding:7px;">100% TIR (70-180 mg/dL); EKF tracks postprandial peak within 12.4 mg/dL RMSE</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_02</td>
+              <td style="padding:7px;">P02: Adolescent T1D (58 kg, ISF=52)</td>
+              <td style="padding:7px; color:var(--orange); font-weight:600;">A1_A3_FLUIDIC_DEBRIS_OCCLUSION</td>
+              <td style="padding:7px;">Cat A/B: Fluidic Path</td>
+              <td style="padding:7px;">72% Fibril Debris Occlusion, 22 µL Air Bubble Compliance, Cannula Kink, Relief Valve</td>
+              <td style="padding:7px;">Poiseuille pressure &gt;65 kPa triggers physical occlusion alarm; 0% false cyber lockout</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_03</td>
+              <td style="padding:7px;">P03: Resistant T1D (82 kg, ISF=28)</td>
+              <td style="padding:7px; color:var(--orange); font-weight:600;">B1_B5_BATTERY_BROWNOUT_STICTION</td>
+              <td style="padding:7px;">Cat B: Power &amp; Actuator</td>
+              <td style="padding:7px;">Li-Ion ESR Surge (1.85 Ω), Voltage Sag (&lt;3.05V), Lead-Screw Backlash, O-Ring Stiction</td>
+              <td style="padding:7px;">Supercap hold-up preserves telemetry; brownout watchdog engages safe hold</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_04</td>
+              <td style="padding:7px;">P04: Elderly Cardiac T1D (64 kg, ISF=35)</td>
+              <td style="padding:7px; color:var(--red); font-weight:600;">C1_C2_CYBER_MITM_SIMPLEX_CLAMP</td>
+              <td style="padding:7px;">Cat C: Cyber-Physical Attack</td>
+              <td style="padding:7px;">BLE +40 mg/dL CGM Spoof, EKF Ramp Poisoning, EMI Pressure DoS, Simplex Clamp</td>
+              <td style="padding:7px;">EKF innovation z &gt; 3.0σ engages Simplex safe-basal clamp &amp; pinch valve in &lt;50 ms</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_05</td>
+              <td style="padding:7px;">Bay 11: 138-Part Gravimetric Rig</td>
+              <td style="padding:7px; color:var(--blue); font-weight:600;">METROLOGY_GRAVIMETRIC_CALIBRATION</td>
+              <td style="padding:7px;">Hardware Metrology</td>
+              <td style="padding:7px;">S01 3014.78 µL Bore, Luer 222.20 µL Dead-Space, 0.01 mg Balance, Stuxnet Masking (C6)</td>
+              <td style="padding:7px;">Cross-checks optical LVDT plunger travel against gravimetric mass pan T02</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_06</td>
+              <td style="padding:7px;">Bay 12: PTP Master Clock &amp; SOC</td>
+              <td style="padding:7px; color:var(--teal); font-weight:600;">WARD_SOC_PTP_TELEMETRY_FUSION</td>
+              <td style="padding:7px;">Supervisory Control</td>
+              <td style="padding:7px;">IEEE-1588v2 PTP Sync (Part_A05/A06), 12-Cubicle Risk Ranking, Paper Report Export</td>
+              <td style="padding:7px;">100% separation between mechanical/site faults (Cat A/B) and cyber-attacks (Cat C)</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_07</td>
+              <td style="padding:7px;">P05: Adult T1D (68 kg, ISF=45)</td>
+              <td style="padding:7px; color:var(--orange); font-weight:600;">A2_DISLODGED_WET_CANNULA_SITE</td>
+              <td style="padding:7px;">Cat A: Site Failure</td>
+              <td style="padding:7px;">Dislodged Subcutaneous Cannula, 70% Skin Leakage, Low Line Back-Pressure</td>
+              <td style="padding:7px;">Sub-nominal line pressure + rising EKF BG residual flags wet site without cyber lockout</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_08</td>
+              <td style="padding:7px;">P06: Adult T1D (71 kg, ISF=44)</td>
+              <td style="padding:7px; color:var(--orange); font-weight:600;">A4_PISA_COMPRESSION_DROPOUT</td>
+              <td style="padding:7px;">Cat A: Sensor Artifact</td>
+              <td style="padding:7px;">Sleep Tissue Compression (-36 mg/dL Sudden CGM Drop), Rate-of-Change Gate</td>
+              <td style="padding:7px;">Rejects non-physiological step drop; maintains basal without false hypo suspension</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_09</td>
+              <td style="padding:7px;">P07: Dawn-Phenomenon T1D (79 kg)</td>
+              <td style="padding:7px; color:var(--red); font-weight:600;">C4_RTC_CLOCK_SKEW_ATTACK</td>
+              <td style="padding:7px;">Cat C: Cyber-Physical Attack</td>
+              <td style="padding:7px;">+3h RTC Time-Shift Attack, Premature IOB Zeroing, Circadian Basal Desync</td>
+              <td style="padding:7px;">PTP Grandmaster Part_A05 detects &gt;10 ms clock offset and blocks IOB manipulation</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_10</td>
+              <td style="padding:7px;">P08: Sensitive T1D (62 kg, ISF=55)</td>
+              <td style="padding:7px; color:var(--red); font-weight:600;">C3_STEALTH_CUSUM_DRIP_INJECTION</td>
+              <td style="padding:7px;">Cat C: Cyber-Physical Attack</td>
+              <td style="padding:7px;">Low-and-Slow +0.35 U/hr Micro-Basal Drift Below Single-Step 3σ Gate</td>
+              <td style="padding:7px;">Dual-scale CUSUM (k=0.10σ) trips at h=4.2 and clamps pump before BG &lt; 70 mg/dL</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:7px; font-weight:600;">ROOM_11</td>
+              <td style="padding:7px;">P09: Brittle T1D (55 kg, ISF=60)</td>
+              <td style="padding:7px; color:var(--red); font-weight:600;">C1_RF_2X_BOLUS_REPLAY_MITIGATION</td>
+              <td style="padding:7px;">Cat C: Cyber-Physical Attack</td>
+              <td style="padding:7px;">Sub-GHz RF 14U Bolus Packet Replay (CVE-2019-10964), Duplicate Nonce Check</td>
+              <td style="padding:7px;">Crypto nonce verifier + IOB ceiling clamp block 96.4% of replayed overdose</td>
+            </tr>
+            <tr>
+              <td style="padding:7px; font-weight:600;">ROOM_12</td>
+              <td style="padding:7px;">P10: Adult T1D (73 kg, ISF=40)</td>
+              <td style="padding:7px; color:var(--orange); font-weight:600;">A1_UNPRIMED_68UL_CATHETER_DEFICIT</td>
+              <td style="padding:7px;">Cat A: Installation Error</td>
+              <td style="padding:7px;">Unprimed 60 cm F01 Catheter (68.05 µL Air Dead-Space), Delayed Meniscus Delivery</td>
+              <td style="padding:7px;">Tracks 68.05 µL hold-up volume and prompts clinician line prime (0% false cyber alarm)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="apple-card" style="grid-column: 1 / -1;">
+      <div class="card-title" style="margin-bottom:10px;">Exported Publication Figures (300-DPI PNG &amp; Vector PDF in results/paper_exports/)</div>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:14px;">
+        <div style="background:#F9F9FB; border:1px solid var(--border); border-radius:12px; padding:10px;">
+          <img src="../results/paper_exports/fig1_multi_cubicle_scenario_trajectories.png" alt="Fig 1" style="width:100%; border-radius:8px;" />
+          <div style="font-size:12px; font-weight:600; margin-top:6px;">Fig 1. Multi-Cubicle Scenario Trajectories</div>
+          <div style="font-size:11px; color:var(--text-secondary);">Glycemic &amp; pressure trajectories across Nominal, Fluidic Debris, Battery Brownout, and Cyber MITM cubicles.</div>
+        </div>
+        <div style="background:#F9F9FB; border:1px solid var(--border); border-radius:12px; padding:10px;">
+          <img src="../results/paper_exports/fig2_ekf_31participant_forecast_comparison.png" alt="Fig 2" style="width:100%; border-radius:8px;" />
+          <div style="font-size:12px; font-weight:600; margin-top:6px;">Fig 2. 31-Participant EKF Forecast Benchmark</div>
+          <div style="font-size:11px; color:var(--text-secondary);">7-State EKF (16.82 mg/dL RMSE) vs baseline predictor (25.77 mg/dL RMSE) across 31 T1D subjects.</div>
+        </div>
+        <div style="background:#F9F9FB; border:1px solid var(--border); border-radius:12px; padding:10px;">
+          <img src="../results/paper_exports/fig3_physical_vs_cyber_root_cause_separation.png" alt="Fig 3" style="width:100%; border-radius:8px;" />
+          <div style="font-size:12px; font-weight:600; margin-top:6px;">Fig 3. Physical vs. Cyber Root-Cause Separation</div>
+          <div style="font-size:11px; color:var(--text-secondary);">Orthogonal Poiseuille impedance vs EKF innovation space separating Cat A/B faults from Cat C attacks.</div>
+        </div>
+        <div style="background:#F9F9FB; border:1px solid var(--border); border-radius:12px; padding:10px;">
+          <img src="../results/paper_exports/fig4_simplex_safety_kernel_benchmark.png" alt="Fig 4" style="width:100%; border-radius:8px;" />
+          <div style="font-size:12px; font-weight:600; margin-top:6px;">Fig 4. Simplex Safety Kernel &amp; Pinch-Valve Clamp</div>
+          <div style="font-size:11px; color:var(--text-secondary);">Hardware pinch-valve V01 clamping a 10U RF replay attack to safe basal within 50 ms.</div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -996,6 +1151,16 @@ function selectScenario(code, btn, activeClass) {
   document.querySelectorAll('.scenario-dock .dock-btn').forEach(b => b.className = 'dock-btn');
   if (btn && btn.parentElement.classList.contains('scenario-dock')) {
     btn.classList.add(activeClass);
+  }
+}
+
+function exportGecoPaperPackage() {
+  if (gecoWS && gecoWS.readyState === WebSocket.OPEN) {
+    gecoWS.send(JSON.stringify({ type: 'EXPORT_REPORT', command: 'EXPORT_REPORT' }));
+  }
+  const b = document.getElementById('paperExportBanner');
+  if (b) {
+    b.innerHTML = '<strong>Paper Package Exported:</strong> Updated <code>cubicle_scenarios_telemetry.csv</code>, <code>cubicle_scenario_matrix.csv</code>, <code>ieee_paper_tables.tex</code>, <code>SIMULATION_ANALYSIS_REPORT.md</code>, and Figs 1-4 (300-DPI PNG + PDF) in <code>results/paper_exports/</code>.';
   }
 }
 

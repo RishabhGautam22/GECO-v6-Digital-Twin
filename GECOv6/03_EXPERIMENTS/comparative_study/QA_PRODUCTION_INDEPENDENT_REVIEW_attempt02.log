@@ -1,0 +1,18 @@
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+test_loader_preserves_v6_exact_split_and_skips_failed_records (test_v6_production_integration.BenignRuntimeIntegration.test_loader_preserves_v6_exact_split_and_skips_failed_records) ... ok
+test_runtime_rejects_infeasible_or_inconsistent_threshold (test_v6_production_integration.BenignRuntimeIntegration.test_runtime_rejects_infeasible_or_inconsistent_threshold) ... ok
+test_validation_reaches_runtime_and_selected_forecast (test_v6_production_integration.BenignRuntimeIntegration.test_validation_reaches_runtime_and_selected_forecast) ... ok
+test_all_policy_streaming_batch_and_gap_equivalence (test_v6_production_integration.IndependentFilterReview.test_all_policy_streaming_batch_and_gap_equivalence) ... ok
+test_future_suffix_cannot_change_past_forecasts (test_v6_production_integration.IndependentFilterReview.test_future_suffix_cannot_change_past_forecasts) ... ok
+test_infeasible_threshold_is_explicit (test_v6_production_integration.IndependentFilterReview.test_infeasible_threshold_is_explicit) ... ok
+test_invalid_covariance_reset_flushes_evidence (test_v6_production_integration.IndependentFilterReview.test_invalid_covariance_reset_flushes_evidence) ... ok
+test_normalization_does_not_change_state_or_covariance (test_v6_production_integration.IndependentFilterReview.test_normalization_does_not_change_state_or_covariance) ... ok
+test_selected_forecast_equals_series_endpoint (test_v6_production_integration.IndependentFilterReview.test_selected_forecast_equals_series_endpoint) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.227s
+
+OK

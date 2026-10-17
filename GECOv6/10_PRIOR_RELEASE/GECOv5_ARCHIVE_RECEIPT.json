@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-09-06T20:31:49.898820+00:00",
+  "archive": "GECOv5_All_In_One_Private.zip",
+  "sha256": "33ddc95142a56e94bd095cf651dc3a0a35119e26e42c41a3430ef23a4e297242",
+  "archive_bytes": 2121564802,
+  "stored_entries": 5276,
+  "manifest_payload_files": 5275,
+  "manifest_sha256": "76ab916f103efdb684579b8988c089e9b2c6091396b37b159d768e257158e64b",
+  "all_entries_fully_decompressed_crc_checked": true,
+  "all_entries_sha256_and_size_match": true,
+  "duplicate_archive_entries": 0,
+  "frozen_baseline_files": 627,
+  "verification": "Every ZIP entry streamed to EOF (zipfile CRC check) and independently SHA256/size compared with manifest; manifest itself separately hashed. This is a local assembly/integrity check, not a clean-machine numerical rebuild."
+}

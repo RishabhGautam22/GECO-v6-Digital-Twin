@@ -1,0 +1,229 @@
+{
+  "data": {
+    "id": "10.5281/zenodo.5651217",
+    "type": "dois",
+    "attributes": {
+      "doi": "10.5281/zenodo.5651217",
+      "prefix": "10.5281",
+      "suffix": "zenodo.5651217",
+      "identifiers": [],
+      "alternateIdentifiers": [],
+      "creators": [
+        {
+          "name": "Dubosson, Fabien",
+          "nameType": "Personal",
+          "givenName": "Fabien",
+          "familyName": "Dubosson",
+          "affiliation": [
+            "University of Applied Sciences and Arts Western Switzerland, Sierre, Switzerland"
+          ],
+          "nameIdentifiers": [
+            {
+              "schemeUri": "https://orcid.org",
+              "nameIdentifier": "https://orcid.org/0000-0001-6242-8449",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ]
+        },
+        {
+          "name": "Jean-Eudes Ranvier",
+          "affiliation": [
+            "EPFL, Lausanne, Switzerland"
+          ],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Bromuri, Stefano",
+          "nameType": "Personal",
+          "givenName": "Stefano",
+          "familyName": "Bromuri",
+          "affiliation": [
+            "Open University of the Netherlands, Heerlen, Netherlands"
+          ],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Calbimonte, Jean-Paul",
+          "nameType": "Personal",
+          "givenName": "Jean-Paul",
+          "familyName": "Calbimonte",
+          "affiliation": [
+            "University of Applied Sciences and Arts Western Switzerland, Sierre, Switzerland"
+          ],
+          "nameIdentifiers": [
+            {
+              "schemeUri": "https://orcid.org",
+              "nameIdentifier": "https://orcid.org/0000-0002-0364-6945",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ]
+        },
+        {
+          "name": "Ruiz, Juan",
+          "nameType": "Personal",
+          "givenName": "Juan",
+          "familyName": "Ruiz",
+          "affiliation": [
+            "H\u00f4pital Riviera-Chablais, Vevey, Switzerland"
+          ],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Schumacher, Michael",
+          "nameType": "Personal",
+          "givenName": "Michael",
+          "familyName": "Schumacher",
+          "affiliation": [
+            "University of Applied Sciences and Arts Western Switzerland, Sierre, Switzerland"
+          ],
+          "nameIdentifiers": []
+        }
+      ],
+      "titles": [
+        {
+          "title": "The open D1NAMO dataset: A multi-modal dataset for research on non-invasive type 1 diabetes management"
+        }
+      ],
+      "publisher": "Zenodo",
+      "container": {},
+      "publicationYear": 2018,
+      "subjects": [
+        {
+          "subject": "ECG"
+        },
+        {
+          "subject": "Diabetes"
+        },
+        {
+          "subject": "Machine Learning"
+        },
+        {
+          "subject": "Hypoglycaemia"
+        }
+      ],
+      "contributors": [],
+      "dates": [
+        {
+          "date": "2018-10-19",
+          "dateType": "Issued"
+        }
+      ],
+      "language": "en",
+      "types": {
+        "ris": "DATA",
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "schemaOrg": "Dataset",
+        "resourceTypeGeneral": "Dataset"
+      },
+      "relatedIdentifiers": [
+        {
+          "relationType": "IsDocumentedBy",
+          "relatedIdentifier": "10.1016/j.imu.2018.09.003",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "IsVersionOf",
+          "relatedIdentifier": "10.5281/zenodo.1421615",
+          "relatedIdentifierType": "DOI"
+        }
+      ],
+      "relatedItems": [],
+      "sizes": [],
+      "formats": [],
+      "version": "1.2.0",
+      "rightsList": [
+        {
+          "rights": "Creative Commons Attribution Share Alike 4.0 International",
+          "rightsUri": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/",
+          "rightsIdentifier": "cc-by-sa-4.0",
+          "rightsIdentifierScheme": "SPDX"
+        },
+        {
+          "rights": "Open Access",
+          "rightsUri": "info:eu-repo/semantics/openAccess"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The description of the dataset is available at https://doi.org/10.1016/j.imu.2018.09.003 The usage of wearable devices has gained popularity in the latest years, especially for health-care and well being. Recently there has been an increasing interest in using these devices to improve the management of chronic diseases such as diabetes. The quality of data acquired through wearable sensors is generally lower than what medical-grade devices provide, and existing datasets have mainly been acquired in highly controlled clinical conditions. In the context of the <em>D1NAMO</em> project \u2014 aiming to detect glycemic events through non-invasive ECG pattern analysis \u2014 we elaborated a dataset that can be used to help developing health-care systems based on wearable devices in non-clinical conditions. This paper describes this dataset, which was acquired on 20 healthy subjects and 9 patients with type-1 diabetes. The acquisition has been made in real-life conditions with the <em>Zephyr BioHarness 3</em> wearable device. The dataset consists of <em>ECG</em>, <em>breathing</em>, and <em>accelerometer</em> signals, as well as <em>glucose</em> measurements and annotated <em>food pictures</em>. We open this dataset to the scientific community in order to allow the development and evaluation of diabetes management algorithms.",
+          "descriptionType": "Abstract"
+        },
+        {
+          "description": "{\"references\": [\"https://doi.org/10.1016/j.imu.2018.09.003\"]}",
+          "descriptionType": "Other"
+        }
+      ],
+      "geoLocations": [],
+      "fundingReferences": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MjgxL1pFTk9ETy41NjUxMjE3PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RmFiaWVuIER1Ym9zc29uPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyI+MDAwMC0wMDAxLTYyNDItODQ0OTwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbj5Vbml2ZXJzaXR5IG9mIEFwcGxpZWQgU2NpZW5jZXMgYW5kIEFydHMgV2VzdGVybiBTd2l0emVybGFuZCwgU2llcnJlLCBTd2l0emVybGFuZDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkplYW4tRXVkZXMgUmFudmllcjwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5FUEZMLCBMYXVzYW5uZSwgU3dpdHplcmxhbmQ8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5TdGVmYW5vIEJyb211cmk8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+T3BlbiBVbml2ZXJzaXR5IG9mIHRoZSBOZXRoZXJsYW5kcywgSGVlcmxlbiwgTmV0aGVybGFuZHM8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5KZWFuLVBhdWwgQ2FsYmltb250ZTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iPjAwMDAtMDAwMi0wMzY0LTY5NDU8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24+VW5pdmVyc2l0eSBvZiBBcHBsaWVkIFNjaWVuY2VzIGFuZCBBcnRzIFdlc3Rlcm4gU3dpdHplcmxhbmQsIFNpZXJyZSwgU3dpdHplcmxhbmQ8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5KdWFuIFJ1aXo8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+SMO0cGl0YWwgUml2aWVyYS1DaGFibGFpcywgVmV2ZXksIFN3aXR6ZXJsYW5kPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+TWljaGFlbCBTY2h1bWFjaGVyPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVuaXZlcnNpdHkgb2YgQXBwbGllZCBTY2llbmNlcyBhbmQgQXJ0cyBXZXN0ZXJuIFN3aXR6ZXJsYW5kLCBTaWVycmUsIFN3aXR6ZXJsYW5kPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+VGhlIG9wZW4gRDFOQU1PIGRhdGFzZXQ6IEEgbXVsdGktbW9kYWwgZGF0YXNldCBmb3IgcmVzZWFyY2ggb24gbm9uLWludmFzaXZlIHR5cGUgMSBkaWFiZXRlcyBtYW5hZ2VtZW50PC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlplbm9kbzwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAxODwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PkVDRzwvc3ViamVjdD4KICAgIDxzdWJqZWN0PkRpYWJldGVzPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+TWFjaGluZSBMZWFybmluZzwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pkh5cG9nbHljYWVtaWE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE4LTEwLTE5PC9kYXRlPgogIDwvZGF0ZXM+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiLz4KICA8YWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0idXJsIj5odHRwczovL3plbm9kby5vcmcvcmVjb3JkLzU2NTEyMTc8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzRG9jdW1lbnRlZEJ5Ij4xMC4xMDE2L2ouaW11LjIwMTguMDkuMDAzPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1ZlcnNpb25PZiI+MTAuNTI4MS96ZW5vZG8uMTQyMTYxNTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24+MS4yLjA8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LXNhLzQuMC9sZWdhbGNvZGUiPkNyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb24gU2hhcmUgQWxpa2UgNC4wIEludGVybmF0aW9uYWw8L3JpZ2h0cz4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJpbmZvOmV1LXJlcG8vc2VtYW50aWNzL29wZW5BY2Nlc3MiPk9wZW4gQWNjZXNzPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+Jmx0O3AmZ3Q7VGhlIGRlc2NyaXB0aW9uIG9mIHRoZSBkYXRhc2V0IGlzIGF2YWlsYWJsZSBhdCAmbHQ7YSBocmVmPSJodHRwczovL2RvaS5vcmcvMTAuMTAxNi9qLmltdS4yMDE4LjA5LjAwMyImZ3Q7aHR0cHM6Ly9kb2kub3JnLzEwLjEwMTYvai5pbXUuMjAxOC4wOS4wMDMmbHQ7L2EmZ3Q7Jmx0Oy9wJmd0OwoKJmx0O3AmZ3Q7VGhlIHVzYWdlIG9mIHdlYXJhYmxlIGRldmljZXMgaGFzIGdhaW5lZCBwb3B1bGFyaXR5IGluIHRoZSBsYXRlc3QgeWVhcnMsIGVzcGVjaWFsbHkgZm9yIGhlYWx0aC1jYXJlIGFuZCB3ZWxsIGJlaW5nLiBSZWNlbnRseSB0aGVyZSBoYXMgYmVlbiBhbiBpbmNyZWFzaW5nIGludGVyZXN0IGluIHVzaW5nIHRoZXNlIGRldmljZXMgdG8gaW1wcm92ZSB0aGUgbWFuYWdlbWVudCBvZiBjaHJvbmljIGRpc2Vhc2VzIHN1Y2ggYXMgZGlhYmV0ZXMuIFRoZSBxdWFsaXR5IG9mIGRhdGEgYWNxdWlyZWQgdGhyb3VnaCZhbXA7bmJzcDsmbHQ7YSBocmVmPSJodHRwczovL3d3dy5zY2llbmNlZGlyZWN0LmNvbS90b3BpY3MvbWVkaWNpbmUtYW5kLWRlbnRpc3RyeS93ZWFyYWJsZS1zZW5zb3IiJmd0O3dlYXJhYmxlIHNlbnNvcnMmbHQ7L2EmZ3Q7JmFtcDtuYnNwO2lzIGdlbmVyYWxseSBsb3dlciB0aGFuIHdoYXQgbWVkaWNhbC1ncmFkZSBkZXZpY2VzIHByb3ZpZGUsIGFuZCBleGlzdGluZyBkYXRhc2V0cyBoYXZlIG1haW5seSBiZWVuIGFjcXVpcmVkIGluIGhpZ2hseSBjb250cm9sbGVkIGNsaW5pY2FsIGNvbmRpdGlvbnMuIEluIHRoZSBjb250ZXh0IG9mIHRoZSZhbXA7bmJzcDsmbHQ7ZW0mZ3Q7RDFOQU1PJmx0Oy9lbSZndDsmYW1wO25ic3A7cHJvamVjdCAmYW1wO21kYXNoOyBhaW1pbmcgdG8gZGV0ZWN0JmFtcDtuYnNwOyZsdDthIGhyZWY9Imh0dHBzOi8vd3d3LnNjaWVuY2VkaXJlY3QuY29tL3RvcGljcy9tZWRpY2luZS1hbmQtZGVudGlzdHJ5L2dseWNlbWljIiZndDtnbHljZW1pYyZsdDsvYSZndDsmYW1wO25ic3A7ZXZlbnRzIHRocm91Z2ggbm9uLWludmFzaXZlJmFtcDtuYnNwOyZsdDthIGhyZWY9Imh0dHBzOi8vd3d3LnNjaWVuY2VkaXJlY3QuY29tL3RvcGljcy9tZWRpY2luZS1hbmQtZGVudGlzdHJ5L2VjZy1hYm5vcm1hbGl0eSImZ3Q7RUNHIHBhdHRlcm4mbHQ7L2EmZ3Q7JmFtcDtuYnNwO2FuYWx5c2lzICZhbXA7bWRhc2g7IHdlIGVsYWJvcmF0ZWQgYSBkYXRhc2V0IHRoYXQgY2FuIGJlIHVzZWQgdG8gaGVscCBkZXZlbG9waW5nIGhlYWx0aC1jYXJlIHN5c3RlbXMgYmFzZWQgb24gd2VhcmFibGUgZGV2aWNlcyBpbiBub24tY2xpbmljYWwgY29uZGl0aW9ucy4gVGhpcyBwYXBlciBkZXNjcmliZXMgdGhpcyBkYXRhc2V0LCB3aGljaCB3YXMgYWNxdWlyZWQgb24gMjAgaGVhbHRoeSBzdWJqZWN0cyBhbmQgOSBwYXRpZW50cyB3aXRoIHR5cGUtMSBkaWFiZXRlcy4gVGhlIGFjcXVpc2l0aW9uIGhhcyBiZWVuIG1hZGUgaW4gcmVhbC1saWZlIGNvbmRpdGlvbnMgd2l0aCB0aGUmYW1wO25ic3A7Jmx0O2VtJmd0O1plcGh5ciBCaW9IYXJuZXNzIDMmbHQ7L2VtJmd0OyZhbXA7bmJzcDt3ZWFyYWJsZSBkZXZpY2UuIFRoZSBkYXRhc2V0IGNvbnNpc3RzIG9mJmFtcDtuYnNwOyZsdDtlbSZndDtFQ0cmbHQ7L2VtJmd0OywmYW1wO25ic3A7Jmx0O2VtJmd0O2JyZWF0aGluZyZsdDsvZW0mZ3Q7LCBhbmQmYW1wO25ic3A7Jmx0O2VtJmd0OyZsdDthIGhyZWY9Imh0dHBzOi8vd3d3LnNjaWVuY2VkaXJlY3QuY29tL3RvcGljcy9tZWRpY2luZS1hbmQtZGVudGlzdHJ5L2FjY2VsZXJvbWV0ZXIiJmd0O2FjY2VsZXJvbWV0ZXImbHQ7L2EmZ3Q7Jmx0Oy9lbSZndDsmYW1wO25ic3A7c2lnbmFscywgYXMgd2VsbCBhcyZhbXA7bmJzcDsmbHQ7ZW0mZ3Q7Z2x1Y29zZSZsdDsvZW0mZ3Q7JmFtcDtuYnNwO21lYXN1cmVtZW50cyBhbmQgYW5ub3RhdGVkJmFtcDtuYnNwOyZsdDtlbSZndDtmb29kIHBpY3R1cmVzJmx0Oy9lbSZndDsuIFdlIG9wZW4gdGhpcyBkYXRhc2V0IHRvIHRoZSBzY2llbnRpZmljIGNvbW11bml0eSBpbiBvcmRlciB0byBhbGxvdyB0aGUgZGV2ZWxvcG1lbnQgYW5kIGV2YWx1YXRpb24gb2YgZGlhYmV0ZXMgbWFuYWdlbWVudCBhbGdvcml0aG1zLiZsdDsvcCZndDs8L2Rlc2NyaXB0aW9uPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iT3RoZXIiPnsicmVmZXJlbmNlcyI6IFsiaHR0cHM6Ly9kb2kub3JnLzEwLjEwMTYvai5pbXUuMjAxOC4wOS4wMDMiXX08L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg==",
+      "url": "https://zenodo.org/record/5651217",
+      "contentUrl": null,
+      "metadataVersion": 0,
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "source": "mds",
+      "isActive": true,
+      "state": "findable",
+      "reason": null,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "referenceCount": 0,
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "partCount": 0,
+      "partOfCount": 0,
+      "versionCount": 0,
+      "versionOfCount": 1,
+      "created": "2021-11-10T11:00:52.000Z",
+      "registered": "2021-11-10T11:00:53.000Z",
+      "published": "2018",
+      "updated": "2021-11-10T11:00:53.000Z"
+    },
+    "relationships": {
+      "client": {
+        "data": {
+          "id": "cern.zenodo",
+          "type": "clients"
+        }
+      },
+      "provider": {
+        "data": {
+          "id": "cern",
+          "type": "providers"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.5281/zenodo.5651217",
+          "type": "media"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "citations": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "partOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      },
+      "versionOf": {
+        "data": [
+          {
+            "id": "10.5281/zenodo.1421615",
+            "type": "dois"
+          }
+        ]
+      }
+    }
+  }
+}

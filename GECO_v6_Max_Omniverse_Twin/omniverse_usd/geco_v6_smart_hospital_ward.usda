@@ -1,7 +1,7 @@
 #usda 1.0
 (
     defaultPrim = "World"
-    doc = "GECO v6 Max — 6-Room Multi-Patient Smart Hospital ICU, Fluidic Debris, Battery Brownout, Cyber-MITM & 130-Part IIT Patna Metrology Ward"
+    doc = "GECO v6 Max: 12-Cubicle Multi-Patient Smart Hospital ICU, Fluidic Debris, Battery Brownout, Cyber-MITM, Large Dashboard Wall & 130-Part IIT Patna Metrology Ward"
     metersPerUnit = 1.0
     upAxis = "Z"
     timeCodesPerSecond = 24
@@ -420,6 +420,13 @@ def Xform "World" (
             float3 xformOp:rotateXYZ = (65.0, 0.0, 42.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
+        def Camera "Cam_LargeDashboardWall"
+        {
+            float focalLength = 26.0
+            double3 xformOp:translate = (6.0, 1.15, 1.60)
+            float3 xformOp:rotateXYZ = (88.0, 0.0, 0.0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+        }
     }
 
     def Xform "Ward" (
@@ -434,6 +441,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_01"
             custom string geco:room_title = "Room 01 — Nominal Adult ICU (75 kg)"
+            custom string geco:active_scenario_code = "NOMINAL_CLOSED_LOOP"
+            custom string geco:active_scenario_name = "Nominal Closed-Loop & Meal Bolus Tracking"
+            custom string geco:scenario_category = "Baseline Closed-Loop Control"
+            custom string geco:scenarios_tested = "NOMINAL_CLOSED_LOOP | MEAL_75G_DISTURBANCE | EKF_30MIN_FORECAST | HOVORKA_RK4_INTEGRITY"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_01"
+                custom string geco:patient_cohort = "P01: Adult T1D (75 kg, ISF=42 mg/dL/U)"
+                custom string geco:active_scenario_code = "NOMINAL_CLOSED_LOOP"
+                custom string geco:active_scenario_name = "Nominal Closed-Loop & Meal Bolus Tracking"
+                custom string geco:scenario_category = "Baseline Closed-Loop Control"
+                custom string geco:scenarios_tested_list = "NOMINAL_CLOSED_LOOP | MEAL_75G_DISTURBANCE | EKF_30MIN_FORECAST | HOVORKA_RK4_INTEGRITY"
+                custom string geco:expected_safety_response = "EKF 30-min forecast tracks meal peak within 16.82 mg/dL RMSE; zero alarms"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_BatteryHealthy>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_BatteryHealthy>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -974,6 +1060,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_02"
             custom string geco:room_title = "Room 02 — Fluidic Debris, Air Bubble & Occlusion Physics"
+            custom string geco:active_scenario_code = "A1_A3_FLUIDIC_DEBRIS_OCCLUSION"
+            custom string geco:active_scenario_name = "Microbore Pipe Fibril Debris, Air Bubbles & Cannula Kink (A1/A3)"
+            custom string geco:scenario_category = "Category A: Fluidic & Subcutaneous Path Failures"
+            custom string geco:scenarios_tested = "A1_UNPRIMED_LINE | A3_FIBRIL_DEBRIS_OCCLUSION | A3_AIR_BUBBLE_COMPLIANCE | A3_CANNULA_KINK_RELIEF"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_02"
+                custom string geco:patient_cohort = "P02: Adolescent T1D (58 kg, ISF=52 mg/dL/U)"
+                custom string geco:active_scenario_code = "A1_A3_FLUIDIC_DEBRIS_OCCLUSION"
+                custom string geco:active_scenario_name = "Microbore Pipe Fibril Debris, Air Bubbles & Cannula Kink (A1/A3)"
+                custom string geco:scenario_category = "Category A: Fluidic & Subcutaneous Path Failures"
+                custom string geco:scenarios_tested_list = "A1_UNPRIMED_LINE | A3_FIBRIL_DEBRIS_OCCLUSION | A3_AIR_BUBBLE_COMPLIANCE | A3_CANNULA_KINK_RELIEF"
+                custom string geco:expected_safety_response = "Inline pressure >65 kPa triggers physical occlusion alarm; zero false cyber lockouts"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -1675,6 +1840,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_03"
             custom string geco:room_title = "Room 03 — Li-Ion Battery Brownout, Supercap Holdup & Actuator Stiction"
+            custom string geco:active_scenario_code = "B1_B2_BATTERY_BROWNOUT_STICTION"
+            custom string geco:active_scenario_name = "LiPo ESR Surge, Voltage Brownout & Lead-Screw Stiction (B1/B2)"
+            custom string geco:scenario_category = "Category B: Electromechanical & Power-Rail Faults"
+            custom string geco:scenarios_tested = "B1_LEAD_SCREW_BACKLASH | B1_O_RING_STICTION | B2_LIPO_ESR_BROWNOUT | B3_THERMAL_INSULIN_DEGRADATION"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_03"
+                custom string geco:patient_cohort = "P03: Insulin-Resistant T1D (92 kg, ISF=28 mg/dL/U)"
+                custom string geco:active_scenario_code = "B1_B2_BATTERY_BROWNOUT_STICTION"
+                custom string geco:active_scenario_name = "LiPo ESR Surge, Voltage Brownout & Lead-Screw Stiction (B1/B2)"
+                custom string geco:scenario_category = "Category B: Electromechanical & Power-Rail Faults"
+                custom string geco:scenarios_tested_list = "B1_LEAD_SCREW_BACKLASH | B1_O_RING_STICTION | B2_LIPO_ESR_BROWNOUT | B3_THERMAL_INSULIN_DEGRADATION"
+                custom string geco:expected_safety_response = "Undervoltage lockout at V_term < 3.25V; tactile alert and telemetry hold"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SafetyOrange>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SafetyOrange>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -2196,6 +2440,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_04"
             custom string geco:room_title = "Room 04 — Cyber-Physical MITM Spoofing & GECO v6.1+ Simplex Safe-Basal Clamp"
+            custom string geco:active_scenario_code = "C1_C2_CYBER_MITM_SIMPLEX_CLAMP"
+            custom string geco:active_scenario_name = "RF Bolus Replay, Fake Hypo Spoof & Simplex Pinch-Valve Clamp (C1/C2)"
+            custom string geco:scenario_category = "Category C: Adversarial Cyber-Physical Attacks"
+            custom string geco:scenarios_tested = "C1_UNAUTH_10U_BOLUS_REPLAY | C2_FAKE_HYPO_CGM_SPOOF | C3_STEALTH_CUSUM_DRIP | SIMPLEX_PINCH_VALVE_CLAMP"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_04"
+                custom string geco:patient_cohort = "P04: Elderly Cardiac T1D (84 kg, ISF=35 mg/dL/U)"
+                custom string geco:active_scenario_code = "C1_C2_CYBER_MITM_SIMPLEX_CLAMP"
+                custom string geco:active_scenario_name = "RF Bolus Replay, Fake Hypo Spoof & Simplex Pinch-Valve Clamp (C1/C2)"
+                custom string geco:scenario_category = "Category C: Adversarial Cyber-Physical Attacks"
+                custom string geco:scenarios_tested_list = "C1_UNAUTH_10U_BOLUS_REPLAY | C2_FAKE_HYPO_CGM_SPOOF | C3_STEALTH_CUSUM_DRIP | SIMPLEX_PINCH_VALVE_CLAMP"
+                custom string geco:expected_safety_response = "EKF innovation residual >4.5 sigma triggers hardware pinch-valve V01 in <50 ms"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -2870,6 +3193,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_05"
             custom string geco:room_title = "Room 05 — IIT Patna 130-Part Gravimetric Saline Metrology Lab"
+            custom string geco:active_scenario_code = "METROLOGY_GRAVIMETRIC_CALIBRATION"
+            custom string geco:active_scenario_name = "Sub-Microliter Gravimetric Balance & Optical Plunger Verification"
+            custom string geco:scenario_category = "Hardware-in-the-Loop Metrology & CAD Verification"
+            custom string geco:scenarios_tested = "BREP_3014UL_SYRINGE_BORE | LUER_222UL_DEADSPACE | GRAVIMETRIC_0_01MG_DRIFT | OPTICAL_LVDT_CROSSCHECK"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_05"
+                custom string geco:patient_cohort = "BENCH-05: 130-Part Gravimetric Saline Calibration Rig"
+                custom string geco:active_scenario_code = "METROLOGY_GRAVIMETRIC_CALIBRATION"
+                custom string geco:active_scenario_name = "Sub-Microliter Gravimetric Balance & Optical Plunger Verification"
+                custom string geco:scenario_category = "Hardware-in-the-Loop Metrology & CAD Verification"
+                custom string geco:scenarios_tested_list = "BREP_3014UL_SYRINGE_BORE | LUER_222UL_DEADSPACE | GRAVIMETRIC_0_01MG_DRIFT | OPTICAL_LVDT_CROSSCHECK"
+                custom string geco:expected_safety_response = "Verifies 130-part CAD tolerances and cross-checks plunger travel against mass balance"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -3036,6 +3438,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_06"
             custom string geco:room_title = "Room 06 — Central Nursing & Cyber-Physical SOC Command Center"
+            custom string geco:active_scenario_code = "WARD_SOC_PTP_TELEMETRY_FUSION"
+            custom string geco:active_scenario_name = "12-Cubicle Telemetry Aggregation, PTP Clock Sync & Root-Cause Attribution"
+            custom string geco:scenario_category = "Ward-Wide Supervisory Control & Audit Logging"
+            custom string geco:scenarios_tested = "IEEE1588_PTP_SYNC | MULTI_PATIENT_RISK_RANKING | PHYSICAL_VS_CYBER_SEPARATION | PAPER_REPORT_EXPORT"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_06"
+                custom string geco:patient_cohort = "SOC-06: Central Nursing & Cyber-Physical Command Center"
+                custom string geco:active_scenario_code = "WARD_SOC_PTP_TELEMETRY_FUSION"
+                custom string geco:active_scenario_name = "12-Cubicle Telemetry Aggregation, PTP Clock Sync & Root-Cause Attribution"
+                custom string geco:scenario_category = "Ward-Wide Supervisory Control & Audit Logging"
+                custom string geco:scenarios_tested_list = "IEEE1588_PTP_SYNC | MULTI_PATIENT_RISK_RANKING | PHYSICAL_VS_CYBER_SEPARATION | PAPER_REPORT_EXPORT"
+                custom string geco:expected_safety_response = "100% separation between mechanical occlusions (A/B) and cyber-attacks (C)"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SimplexShield>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SimplexShield>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -3227,6 +3708,149 @@ def Xform "World" (
                 }
             }
 
+            def Xform "LargeWallDashboardScreen" (
+                doc = "Large 3.8m x 2.1m Central Ward Telemetry & Scenario Matrix Dashboard Wall Screen"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.08, 1.50)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:dashboard_title = "GECO v6 SMART HOSPITAL WARD: 12-CUBICLE SCENARIO MATRIX & BENCHMARK DASHBOARD"
+                custom string geco:highlight_1 = "31-Participant EKF Forecast RMSE: 16.82 mg/dL vs 25.77 mg/dL (p < 0.0001)"
+                custom string geco:highlight_2 = "Hovorka 8-State RK4 Domain Integrity: 100.0% Across All 20 Fault & Cyber Scenarios"
+                custom string geco:highlight_3 = "Physical vs Cyber Root-Cause Separation: 100% Accuracy (0% False Cyber Lockouts)"
+                custom string geco:highlight_4 = "Simplex Hardware Pinch-Valve V01 Clamp Latency: < 50 ms on 10U Overdose Replay"
+
+                def Cube "DashboardChassis" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (3.80, 0.06, 2.10)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "DashboardGlassSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.034, 0.0)
+                    float3 xformOp:scale = (3.68, 0.01, 1.98)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "HeaderStatusStrip" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.042, 0.86)
+                    float3 xformOp:scale = (3.56, 0.014, 0.14)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SimplexShield>
+                }
+                def Cube "KPI_31Participant_RMSE" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-1.32, -0.042, 0.56)
+                    float3 xformOp:scale = (0.82, 0.014, 0.32)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "KPI_Hovorka_Domain" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.44, -0.042, 0.56)
+                    float3 xformOp:scale = (0.82, 0.014, 0.32)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_BatteryHealthy>
+                }
+                def Cube "KPI_RootCause_Separation" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.44, -0.042, 0.56)
+                    float3 xformOp:scale = (0.82, 0.014, 0.32)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+                def Cube "KPI_Simplex_Clamp" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (1.32, -0.042, 0.56)
+                    float3 xformOp:scale = (0.82, 0.014, 0.32)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+                def Cube "Bar_WardMeanBG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-1.35, -0.045, -0.32)
+                    float3 xformOp:scale = (0.34, 0.02, 0.72)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_WardTIR" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.81, -0.045, -0.25)
+                    float3 xformOp:scale = (0.34, 0.02, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_BatteryHealthy>
+                }
+                def Cube "Bar_MaxLinePressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.27, -0.045, -0.45)
+                    float3 xformOp:scale = (0.34, 0.02, 0.46)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+                def Cube "Bar_MinBatteryV" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.27, -0.045, -0.28)
+                    float3 xformOp:scale = (0.34, 0.02, 0.80)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SafetyOrange>
+                }
+                def Cube "Bar_MaxCUSUM" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.81, -0.045, -0.52)
+                    float3 xformOp:scale = (0.34, 0.02, 0.32)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+                def Cube "Bar_ActiveAlarms" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (1.35, -0.045, -0.58)
+                    float3 xformOp:scale = (0.34, 0.02, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_GoldCalibration>
+                }
+            }
+
             def Cylinder "MasterAlarmBeacon" (
                 prepend apiSchemas = ["MaterialBindingAPI"]
             )
@@ -3292,6 +3916,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_07"
             custom string geco:room_title = "Room 07 — Patient P05 (68kg Adult, Dislodged Wet Cannula Site A2)"
+            custom string geco:active_scenario_code = "A2_DISLODGED_WET_CANNULA_SITE"
+            custom string geco:active_scenario_name = "Dislodged Subcutaneous Cannula & Zero-Pressure Skin Leakage (A2)"
+            custom string geco:scenario_category = "Category A: Fluidic & Subcutaneous Path Failures"
+            custom string geco:scenarios_tested = "A2_DISLODGED_WET_CANNULA | SUBCUTANEOUS_LEAKAGE_70PCT | EKF_POSITIVE_INNOVATION_DRIFT"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_07"
+                custom string geco:patient_cohort = "P05: Adult T1D (68 kg, ISF=45 mg/dL/U)"
+                custom string geco:active_scenario_code = "A2_DISLODGED_WET_CANNULA_SITE"
+                custom string geco:active_scenario_name = "Dislodged Subcutaneous Cannula & Zero-Pressure Skin Leakage (A2)"
+                custom string geco:scenario_category = "Category A: Fluidic & Subcutaneous Path Failures"
+                custom string geco:scenarios_tested_list = "A2_DISLODGED_WET_CANNULA | SUBCUTANEOUS_LEAKAGE_70PCT | EKF_POSITIVE_INNOVATION_DRIFT"
+                custom string geco:expected_safety_response = "Normal line pressure + rising EKF BG residual flags wet infusion site (A2)"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -3822,6 +4525,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_08"
             custom string geco:room_title = "Room 08 — Patient P06 (71kg Adult, PISA Sleep Compression Low A4)"
+            custom string geco:active_scenario_code = "A4_PISA_COMPRESSION_DROPOUT"
+            custom string geco:active_scenario_name = "Pressure-Induced Sensor Attenuation (PISA) Sleep Compression Low (A4)"
+            custom string geco:scenario_category = "Category A: Fluidic & Subcutaneous Path Failures"
+            custom string geco:scenarios_tested = "A4_PISA_SLEEP_COMPRESSION | FALSE_LOW_CGM_DROPOUT | STEP_RATE_GATE_REJECTION"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_08"
+                custom string geco:patient_cohort = "P06: Adult T1D (71 kg, ISF=44 mg/dL/U)"
+                custom string geco:active_scenario_code = "A4_PISA_COMPRESSION_DROPOUT"
+                custom string geco:active_scenario_name = "Pressure-Induced Sensor Attenuation (PISA) Sleep Compression Low (A4)"
+                custom string geco:scenario_category = "Category A: Fluidic & Subcutaneous Path Failures"
+                custom string geco:scenarios_tested_list = "A4_PISA_SLEEP_COMPRESSION | FALSE_LOW_CGM_DROPOUT | STEP_RATE_GATE_REJECTION"
+                custom string geco:expected_safety_response = "Physiological rate-of-change gate rejects non-physiological -28 mg/dL/5min step drop"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -4352,6 +5134,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_09"
             custom string geco:room_title = "Room 09 — Patient P07 (79kg Dawn T1D, +3h RTC Clock-Skew Attack C4)"
+            custom string geco:active_scenario_code = "C4_RTC_CLOCK_SKEW_ATTACK"
+            custom string geco:active_scenario_name = "RTC Time-Shift (+3h) Circadian Basal Desynchronization Attack (C4)"
+            custom string geco:scenario_category = "Category C: Adversarial Cyber-Physical Attacks"
+            custom string geco:scenarios_tested = "C4_RTC_CLOCK_SKEW_PLUS_3H | DAWN_BASAL_MISMATCH | PTP_GRANDMASTER_DRIFT_ALARM"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_09"
+                custom string geco:patient_cohort = "P07: Dawn-Phenomenon T1D (79 kg, ISF=36 mg/dL/U)"
+                custom string geco:active_scenario_code = "C4_RTC_CLOCK_SKEW_ATTACK"
+                custom string geco:active_scenario_name = "RTC Time-Shift (+3h) Circadian Basal Desynchronization Attack (C4)"
+                custom string geco:scenario_category = "Category C: Adversarial Cyber-Physical Attacks"
+                custom string geco:scenarios_tested_list = "C4_RTC_CLOCK_SKEW_PLUS_3H | DAWN_BASAL_MISMATCH | PTP_GRANDMASTER_DRIFT_ALARM"
+                custom string geco:expected_safety_response = "MasterClock PTP Hub detects >10 ms clock offset and restores circadian basal schedule"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -4892,6 +5753,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_10"
             custom string geco:room_title = "Room 10 — Patient P08 (62kg Sensitive, Stealthy CUSUM Drip C3)"
+            custom string geco:active_scenario_code = "C3_STEALTH_CUSUM_DRIP_INJECTION"
+            custom string geco:active_scenario_name = "Low-and-Slow Stealthy +0.35 U/hr Micro-Basal Drift Attack (C3)"
+            custom string geco:scenario_category = "Category C: Adversarial Cyber-Physical Attacks"
+            custom string geco:scenarios_tested = "C3_STEALTHY_MICRO_BOLUS_DRIP | SUB_SINGLE_STEP_THRESHOLD | TWO_SIDED_CUSUM_DETECTION"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_10"
+                custom string geco:patient_cohort = "P08: Insulin-Sensitive T1D (62 kg, ISF=55 mg/dL/U)"
+                custom string geco:active_scenario_code = "C3_STEALTH_CUSUM_DRIP_INJECTION"
+                custom string geco:active_scenario_name = "Low-and-Slow Stealthy +0.35 U/hr Micro-Basal Drift Attack (C3)"
+                custom string geco:scenario_category = "Category C: Adversarial Cyber-Physical Attacks"
+                custom string geco:scenarios_tested_list = "C3_STEALTHY_MICRO_BOLUS_DRIP | SUB_SINGLE_STEP_THRESHOLD | TWO_SIDED_CUSUM_DETECTION"
+                custom string geco:expected_safety_response = "Two-sided CUSUM accumulator crosses h=4.5 threshold before BG drops below 70 mg/dL"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -5422,6 +6362,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_11"
             custom string geco:room_title = "Room 11 — Patient P09 (55kg Brittle T1D, RF 2x Overdose Replay C1)"
+            custom string geco:active_scenario_code = "C1_RF_2X_BOLUS_REPLAY_MITIGATION"
+            custom string geco:active_scenario_name = "Adversarial 2x RF Meal Bolus Replay & Nonce Verification (C1)"
+            custom string geco:scenario_category = "Category C: Adversarial Cyber-Physical Attacks"
+            custom string geco:scenarios_tested = "C1_RF_PACKET_REPLAY | CRYPTO_NONCE_REJECTION | IOB_CEILING_CLAMP"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_11"
+                custom string geco:patient_cohort = "P09: Brittle T1D (55 kg, ISF=60 mg/dL/U)"
+                custom string geco:active_scenario_code = "C1_RF_2X_BOLUS_REPLAY_MITIGATION"
+                custom string geco:active_scenario_name = "Adversarial 2x RF Meal Bolus Replay & Nonce Verification (C1)"
+                custom string geco:scenario_category = "Category C: Adversarial Cyber-Physical Attacks"
+                custom string geco:scenarios_tested_list = "C1_RF_PACKET_REPLAY | CRYPTO_NONCE_REJECTION | IOB_CEILING_CLAMP"
+                custom string geco:expected_safety_response = "Duplicate sequence nonce rejected; Simplex kernel clamps delivery to safe basal"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_CyberRed>
+                }
+            }
 
             def Xform "Architecture"
             {
@@ -5962,6 +6981,85 @@ def Xform "World" (
             uniform token[] xformOpOrder = ["xformOp:translate"]
             custom string geco:room_id = "ROOM_12"
             custom string geco:room_title = "Room 12 — Patient P10 (73kg Adult, Unprimed 68uL Catheter Deficit A1)"
+            custom string geco:active_scenario_code = "A1_UNPRIMED_68UL_CATHETER_DEFICIT"
+            custom string geco:active_scenario_name = "Unprimed 68.05 uL Catheter Dead-Volume Startup Delay (A1)"
+            custom string geco:scenario_category = "Category A: Fluidic & Subcutaneous Path Failures"
+            custom string geco:scenarios_tested = "A1_UNPRIMED_68UL_DEADSPACE | ZERO_TISSUE_DELIVERY_LAG | AUTOMATED_PRIME_PROMPT"
+
+            def Xform "CubicleScenarioBoard" (
+                doc = "3D Overhead Cubicle Scenario & Telemetry Signage Board Showing Active Scenario and Test Matrix"
+            )
+            {
+                double3 xformOp:translate = (0.0, 2.16, 2.22)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+                custom string geco:cubicle_id = "ROOM_12"
+                custom string geco:patient_cohort = "P10: Adult T1D (73 kg, ISF=40 mg/dL/U)"
+                custom string geco:active_scenario_code = "A1_UNPRIMED_68UL_CATHETER_DEFICIT"
+                custom string geco:active_scenario_name = "Unprimed 68.05 uL Catheter Dead-Volume Startup Delay (A1)"
+                custom string geco:scenario_category = "Category A: Fluidic & Subcutaneous Path Failures"
+                custom string geco:scenarios_tested_list = "A1_UNPRIMED_68UL_DEADSPACE | ZERO_TISSUE_DELIVERY_LAG | AUTOMATED_PRIME_PROMPT"
+                custom string geco:expected_safety_response = "Tracks 68.05 uL F01 hold-up volume until meniscus reaches subcutaneous tip"
+
+                def Cube "BoardFrame" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    float3 xformOp:scale = (2.10, 0.05, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_MatteDark>
+                }
+                def Cube "BoardScreenSurface" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.028, 0.0)
+                    float3 xformOp:scale = (2.02, 0.01, 0.48)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_ScreenTelemetry>
+                }
+                def Cube "ScenarioStatusBanner" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, 0.18)
+                    float3 xformOp:scale = (1.96, 0.012, 0.09)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+                def Cube "Bar_BG" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (-0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.22)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_SalineTeal>
+                }
+                def Cube "Bar_Pressure" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.0, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.18)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_AnodizedBlue>
+                }
+                def Cube "Bar_Safety" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    double size = 1.0
+                    double3 xformOp:translate = (0.55, -0.036, -0.05)
+                    float3 xformOp:scale = (0.28, 0.015, 0.24)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                    rel material:binding = </World/Looks/Mat_DebrisAmber>
+                }
+            }
 
             def Xform "Architecture"
             {

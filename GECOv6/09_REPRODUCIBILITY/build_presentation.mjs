@@ -3,7 +3,7 @@ import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {Presentation,PresentationFile} from '@oai/artifact-tool';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const skill=process.env.GECO_PRESENTATION_SKILL_DIR??'./tools/presentations';
+const skill=process.env.GECO_PRESENTATION_SKILL_DIR??'/Users/rgpro/.codex/plugins/cache/openai-primary-runtime/presentations/26.905.11957/skills/presentations';
 const {applyPresentationChartFont,finalizePresentation}=await import(pathToFileURL(path.join(skill,'container_tools/artifact_tool_utils.mjs')).href);
 const out=path.join(root,'05_PRESENTATION');const work=path.join(root,'.work/presentation');await fs.mkdir(work,{recursive:true});
 const specs=JSON.parse(await fs.readFile(path.join(out,'SLIDE_CONTENT.json'),'utf8'));
@@ -63,7 +63,7 @@ await fs.writeFile(path.join(work,'requirements.json'),JSON.stringify({slides:sp
 const finalPath=path.join(out,'GECOv6_Research_Seminar_base.pptx');
 await fs.rm(finalPath,{force:true});
 try {await fs.rename(path.join(work,'finalization.json'),path.join(work,'finalization-'+Date.now()+'.json'));} catch(e){if(e.code!=='ENOENT')throw e;}
-const result=await finalizePresentation({workspaceDir:root,candidatePath:candidate,finalPath,pythonExecutable:'/usr/bin/python3',integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit',...nativeTables.flatMap(n=>['--require-native-table-slide',String(n)])],explicitTotalSlideCount:specs.length,requiredNativeTableOwnerSlides:nativeTables,requiredNativeChartOwnerSlides:nativeCharts,materializeLiteralChartWorkbooks:true,fontPolicy:{basis:'design',families:['Arial']},verifyArtifactToolImport:true,receiptPath:path.join(work,'finalization.json')});
+const result=await finalizePresentation({workspaceDir:root,candidatePath:candidate,finalPath,pythonExecutable:'/Users/rgpro/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3',integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit',...nativeTables.flatMap(n=>['--require-native-table-slide',String(n)])],explicitTotalSlideCount:specs.length,requiredNativeTableOwnerSlides:nativeTables,requiredNativeChartOwnerSlides:nativeCharts,materializeLiteralChartWorkbooks:true,fontPolicy:{basis:'design',families:['Arial']},verifyArtifactToolImport:true,receiptPath:path.join(work,'finalization.json')});
 console.log(JSON.stringify(result));
 // Export native diagrams independently for reuse and visual inspection.
 await fs.mkdir(path.join(work,'previews'),{recursive:true});
