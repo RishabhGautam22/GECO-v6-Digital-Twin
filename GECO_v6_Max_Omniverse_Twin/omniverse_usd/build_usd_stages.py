@@ -124,9 +124,10 @@ def emit_pbr_materials(indent: str = "    ", root_prim: str = "/World") -> str:
         ("Mat_CyberRed", (0.92, 0.12, 0.16), 0.20, 0.22, 0.88, (0.35, 0.02, 0.04), 1.5),
         ("Mat_SimplexShield", (0.06, 0.82, 0.64), 0.15, 0.15, 0.38, (0.02, 0.30, 0.22), 1.45),
         ("Mat_ScreenTelemetry", (0.04, 0.12, 0.20), 0.10, 0.12, 1.0, (0.04, 0.26, 0.38), 1.5),
-        ("Mat_NeonWhiteText", (0.98, 0.99, 1.00), 0.10, 0.14, 1.0, (0.72, 0.80, 0.90), 1.5),
-        ("Mat_NeonCyanText", (0.18, 0.94, 1.00), 0.10, 0.14, 1.0, (0.12, 0.82, 0.98), 1.5),
-        ("Mat_NeonGoldText", (1.00, 0.86, 0.24), 0.15, 0.16, 1.0, (0.82, 0.58, 0.08), 1.5),
+        ("Mat_SignObsidian", (0.012, 0.016, 0.024), 0.0, 0.98, 1.0, (0.0, 0.0, 0.0), 1.5),
+        ("Mat_NeonWhiteText", (0.98, 0.99, 1.00), 0.0, 0.65, 1.0, (0.28, 0.34, 0.42), 1.5),
+        ("Mat_NeonCyanText", (0.12, 0.92, 1.00), 0.0, 0.65, 1.0, (0.06, 0.38, 0.48), 1.5),
+        ("Mat_NeonGoldText", (1.00, 0.82, 0.12), 0.0, 0.65, 1.0, (0.42, 0.28, 0.02), 1.5),
     ]
     lines = [f'{indent}def Scope "Looks" (', f'{indent}    doc = "PBR UsdPreviewSurface Material Library for GECO v6 Max"', f'{indent}) {{']
     for name, diff, met, rough, op, em, ior in mats:
@@ -1217,8 +1218,8 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
 {indent}    doc = "3D Rooftop Floating Room & Scenario Identification Sign Above {room_id}"
 {indent})
 {indent}{{
-{indent}    double3 xformOp:translate = (0.0, 1.25, 3.52)
-{indent}    float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+{indent}    double3 xformOp:translate = (0.0, 1.25, 3.55)
+{indent}    float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
 {indent}    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    custom string geco:sign_title = "{meta['short_title']}"
 {indent}    custom string geco:sign_subtitle = "{meta['short_sub']}"
@@ -1228,17 +1229,17 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
 {indent}    )
 {indent}    {{
 {indent}        double size = 1.0
-{indent}        float3 xformOp:scale = (5.05, 0.06, 1.18)
+{indent}        float3 xformOp:scale = (5.15, 0.06, 1.22)
 {indent}        uniform token[] xformOpOrder = ["xformOp:scale"]
-{indent}        rel material:binding = </World/Looks/Mat_MatteDark>
+{indent}        rel material:binding = </World/Looks/Mat_SignObsidian>
 {indent}    }}
 {indent}    def Cube "SignCategoryStripe" (
 {indent}        prepend apiSchemas = ["MaterialBindingAPI"]
 {indent}    )
 {indent}    {{
 {indent}        double size = 1.0
-{indent}        double3 xformOp:translate = (0.0, -0.042, 0.51)
-{indent}        float3 xformOp:scale = (4.96, 0.02, 0.11)
+{indent}        double3 xformOp:translate = (0.0, -0.042, 0.52)
+{indent}        float3 xformOp:scale = (5.05, 0.02, 0.12)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
 {indent}        rel material:binding = </World/Looks/{meta['mat']}>
 {indent}    }}
@@ -1259,17 +1260,17 @@ def emit_room_shell(indent: str, room_id: str, room_title: str, origin: Tuple[fl
 {indent}    )
 {indent}    {{
 {indent}        double size = 1.0
-{indent}        float3 xformOp:scale = (5.05, 0.05, 1.08)
+{indent}        float3 xformOp:scale = (5.15, 0.05, 1.12)
 {indent}        uniform token[] xformOpOrder = ["xformOp:scale"]
-{indent}        rel material:binding = </World/Looks/Mat_MatteDark>
+{indent}        rel material:binding = </World/Looks/Mat_SignObsidian>
 {indent}    }}
 {indent}    def Cube "TopBannerStripe" (
 {indent}        prepend apiSchemas = ["MaterialBindingAPI"]
 {indent}    )
 {indent}    {{
 {indent}        double size = 1.0
-{indent}        double3 xformOp:translate = (0.0, -0.036, 0.46)
-{indent}        float3 xformOp:scale = (4.96, 0.02, 0.10)
+{indent}        double3 xformOp:translate = (0.0, -0.036, 0.48)
+{indent}        float3 xformOp:scale = (5.05, 0.02, 0.10)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
 {indent}        rel material:binding = </World/Looks/{meta['mat']}>
 {indent}    }}
@@ -1424,45 +1425,45 @@ def emit_all_ward_cameras(indent: str = "    ") -> str:
         f"{indent}{{",
         f"""{indent}    def Camera "Cam_Ward_Overview"
 {indent}    {{
-{indent}        float focalLength = 17.5
-{indent}        double3 xformOp:translate = (8.2, -13.8, 12.6)
-{indent}        float3 xformOp:rotateXYZ = (52.0, 0.0, 18.0)
+{indent}        float focalLength = 15.5
+{indent}        double3 xformOp:translate = (4.2, -16.2, 14.8)
+{indent}        float3 xformOp:rotateXYZ = (52.0, 0.0, -7.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_Ward_Top"
 {indent}    {{
-{indent}        float focalLength = 16.0
-{indent}        double3 xformOp:translate = (3.8, 5.8, 26.5)
+{indent}        float focalLength = 15.0
+{indent}        double3 xformOp:translate = (5.5, 6.0, 27.5)
 {indent}        float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_Ward_Ortho_Top"
 {indent}    {{
 {indent}        uniform token projection = "orthographic"
-{indent}        float horizontalAperture = 330.0
+{indent}        float horizontalAperture = 360.0
 {indent}        float verticalAperture = 240.0
-{indent}        double3 xformOp:translate = (3.8, 5.8, 25.0)
+{indent}        double3 xformOp:translate = (5.5, 6.0, 25.0)
 {indent}        float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_Ward_Side"
 {indent}    {{
-{indent}        float focalLength = 18.0
-{indent}        double3 xformOp:translate = (19.5, 4.2, 7.8)
-{indent}        float3 xformOp:rotateXYZ = (68.0, 0.0, 90.0)
+{indent}        float focalLength = 16.5
+{indent}        double3 xformOp:translate = (20.5, 8.5, 9.2)
+{indent}        float3 xformOp:rotateXYZ = (64.0, 0.0, 90.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_Ward_Front"
 {indent}    {{
-{indent}        float focalLength = 17.0
-{indent}        double3 xformOp:translate = (3.2, -13.5, 6.4)
-{indent}        float3 xformOp:rotateXYZ = (70.0, 0.0, 6.0)
+{indent}        float focalLength = 15.5
+{indent}        double3 xformOp:translate = (4.8, -15.5, 6.8)
+{indent}        float3 xformOp:rotateXYZ = (72.0, 0.0, 0.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_LargeDashboardWall"
 {indent}    {{
 {indent}        float focalLength = 14.0
-{indent}        double3 xformOp:translate = (7.6, 0.55, 1.55)
+{indent}        double3 xformOp:translate = (7.4, 0.55, 1.55)
 {indent}        float3 xformOp:rotateXYZ = (88.0, 0.0, 0.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}""",
@@ -1488,61 +1489,61 @@ def emit_all_ward_cameras(indent: str = "    ") -> str:
         cam_lines.append(f"""{indent}    def Camera "{leg_name}"
 {indent}    {{
 {indent}        float focalLength = 15.0
-{indent}        double3 xformOp:translate = ({ox + 2.65:.2f}, {oy - 2.25:.2f}, 1.92)
-{indent}        float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+{indent}        double3 xformOp:translate = ({ox + 2.35:.2f}, {oy - 2.65:.2f}, 2.15)
+{indent}        float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_{r_id}_PERSP"
 {indent}    {{
 {indent}        float focalLength = 15.0
-{indent}        double3 xformOp:translate = ({ox + 2.65:.2f}, {oy - 2.25:.2f}, 1.92)
-{indent}        float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+{indent}        double3 xformOp:translate = ({ox + 2.35:.2f}, {oy - 2.65:.2f}, 2.15)
+{indent}        float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_{r_id}_TOP"
 {indent}    {{
-{indent}        float focalLength = 18.0
-{indent}        double3 xformOp:translate = ({ox + 0.85:.2f}, {oy + 0.15:.2f}, 6.60)
+{indent}        float focalLength = 17.5
+{indent}        double3 xformOp:translate = ({ox + 1.15:.2f}, {oy - 0.15:.2f}, 6.20)
 {indent}        float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_{r_id}_SIDE"
 {indent}    {{
-{indent}        float focalLength = 17.0
-{indent}        double3 xformOp:translate = ({ox + 3.25:.2f}, {oy - 0.35:.2f}, 1.48)
-{indent}        float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+{indent}        float focalLength = 16.0
+{indent}        double3 xformOp:translate = ({ox + 3.30:.2f}, {oy + 0.85:.2f}, 1.55)
+{indent}        float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_{r_id}_FRONT"
 {indent}    {{
 {indent}        float focalLength = 15.5
-{indent}        double3 xformOp:translate = ({ox + 0.65:.2f}, {oy - 3.10:.2f}, 1.68)
-{indent}        float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+{indent}        double3 xformOp:translate = ({ox + 0.85:.2f}, {oy - 3.35:.2f}, 1.75)
+{indent}        float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_{r_id}_ORTHO_TOP"
 {indent}    {{
 {indent}        uniform token projection = "orthographic"
-{indent}        float horizontalAperture = 82.0
-{indent}        float verticalAperture = 54.0
-{indent}        double3 xformOp:translate = ({ox + 0.95:.2f}, {oy + 0.15:.2f}, 8.00)
+{indent}        float horizontalAperture = 88.0
+{indent}        float verticalAperture = 56.0
+{indent}        double3 xformOp:translate = ({ox + 1.15:.2f}, {oy - 0.15:.2f}, 7.50)
 {indent}        float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_{r_id}_ORTHO_SIDE"
 {indent}    {{
 {indent}        uniform token projection = "orthographic"
-{indent}        float horizontalAperture = 68.0
-{indent}        float verticalAperture = 42.0
-{indent}        double3 xformOp:translate = ({ox + 3.80:.2f}, {oy - 0.25:.2f}, 1.65)
+{indent}        float horizontalAperture = 76.0
+{indent}        float verticalAperture = 46.0
+{indent}        double3 xformOp:translate = ({ox + 3.80:.2f}, {oy + 0.85:.2f}, 1.55)
 {indent}        float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}
 {indent}    def Camera "Cam_{r_id}_MACRO"
 {indent}    {{
-{indent}        float focalLength = 26.0
-{indent}        double3 xformOp:translate = ({ox + 1.15:.2f}, {oy - 0.95:.2f}, 1.30)
-{indent}        float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+{indent}        float focalLength = 24.0
+{indent}        double3 xformOp:translate = ({ox + 1.05:.2f}, {oy - 1.15:.2f}, 1.38)
+{indent}        float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
 {indent}        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
 {indent}    }}""")
     cam_lines.append(f"{indent}}}")

@@ -367,6 +367,21 @@ def Xform "World" (
                 token outputs:surface
             }
         }
+        def Material "Mat_SignObsidian"
+        {
+            token outputs:surface.connect = </World/Looks/Mat_SignObsidian/PreviewShader.outputs:surface>
+            def Shader "PreviewShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.012, 0.016, 0.024)
+                color3f inputs:emissiveColor = (0.000, 0.000, 0.000)
+                float inputs:metallic = 0.000
+                float inputs:roughness = 0.980
+                float inputs:opacity = 1.000
+                float inputs:ior = 1.500
+                token outputs:surface
+            }
+        }
         def Material "Mat_NeonWhiteText"
         {
             token outputs:surface.connect = </World/Looks/Mat_NeonWhiteText/PreviewShader.outputs:surface>
@@ -374,9 +389,9 @@ def Xform "World" (
             {
                 uniform token info:id = "UsdPreviewSurface"
                 color3f inputs:diffuseColor = (0.980, 0.990, 1.000)
-                color3f inputs:emissiveColor = (0.720, 0.800, 0.900)
-                float inputs:metallic = 0.100
-                float inputs:roughness = 0.140
+                color3f inputs:emissiveColor = (0.280, 0.340, 0.420)
+                float inputs:metallic = 0.000
+                float inputs:roughness = 0.650
                 float inputs:opacity = 1.000
                 float inputs:ior = 1.500
                 token outputs:surface
@@ -388,10 +403,10 @@ def Xform "World" (
             def Shader "PreviewShader"
             {
                 uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (0.180, 0.940, 1.000)
-                color3f inputs:emissiveColor = (0.120, 0.820, 0.980)
-                float inputs:metallic = 0.100
-                float inputs:roughness = 0.140
+                color3f inputs:diffuseColor = (0.120, 0.920, 1.000)
+                color3f inputs:emissiveColor = (0.060, 0.380, 0.480)
+                float inputs:metallic = 0.000
+                float inputs:roughness = 0.650
                 float inputs:opacity = 1.000
                 float inputs:ior = 1.500
                 token outputs:surface
@@ -403,10 +418,10 @@ def Xform "World" (
             def Shader "PreviewShader"
             {
                 uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (1.000, 0.860, 0.240)
-                color3f inputs:emissiveColor = (0.820, 0.580, 0.080)
-                float inputs:metallic = 0.150
-                float inputs:roughness = 0.160
+                color3f inputs:diffuseColor = (1.000, 0.820, 0.120)
+                color3f inputs:emissiveColor = (0.420, 0.280, 0.020)
+                float inputs:metallic = 0.000
+                float inputs:roughness = 0.650
                 float inputs:opacity = 1.000
                 float inputs:ior = 1.500
                 token outputs:surface
@@ -418,766 +433,766 @@ def Xform "World" (
     {
         def Camera "Cam_Ward_Overview"
         {
-            float focalLength = 17.5
-            double3 xformOp:translate = (8.2, -13.8, 12.6)
-            float3 xformOp:rotateXYZ = (52.0, 0.0, 18.0)
+            float focalLength = 15.5
+            double3 xformOp:translate = (4.2, -16.2, 14.8)
+            float3 xformOp:rotateXYZ = (52.0, 0.0, -7.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Ward_Top"
         {
-            float focalLength = 16.0
-            double3 xformOp:translate = (3.8, 5.8, 26.5)
+            float focalLength = 15.0
+            double3 xformOp:translate = (5.5, 6.0, 27.5)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Ward_Ortho_Top"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 330.0
+            float horizontalAperture = 360.0
             float verticalAperture = 240.0
-            double3 xformOp:translate = (3.8, 5.8, 25.0)
+            double3 xformOp:translate = (5.5, 6.0, 25.0)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Ward_Side"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (19.5, 4.2, 7.8)
-            float3 xformOp:rotateXYZ = (68.0, 0.0, 90.0)
+            float focalLength = 16.5
+            double3 xformOp:translate = (20.5, 8.5, 9.2)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Ward_Front"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (3.2, -13.5, 6.4)
-            float3 xformOp:rotateXYZ = (70.0, 0.0, 6.0)
+            float focalLength = 15.5
+            double3 xformOp:translate = (4.8, -15.5, 6.8)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_LargeDashboardWall"
         {
             float focalLength = 14.0
-            double3 xformOp:translate = (7.6, 0.55, 1.55)
+            double3 xformOp:translate = (7.4, 0.55, 1.55)
             float3 xformOp:rotateXYZ = (88.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room01_Nominal"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (-3.35, -5.25, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (-3.65, -5.65, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_01_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (-3.35, -5.25, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (-3.65, -5.65, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_01_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (-5.15, -2.85, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (-4.85, -3.15, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_01_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (-2.75, -3.35, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (-2.70, -2.15, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_01_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (-5.35, -6.10, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (-5.15, -6.35, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_01_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (-5.05, -2.85, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (-4.85, -3.15, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_01_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (-2.20, -3.25, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (-2.20, -2.15, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_01_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (-4.85, -3.95, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (-4.95, -4.15, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room02_PipeDebris"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (2.65, -5.25, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (2.35, -5.65, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_02_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (2.65, -5.25, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (2.35, -5.65, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_02_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (0.85, -2.85, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (1.15, -3.15, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_02_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (3.25, -3.35, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (3.30, -2.15, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_02_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (0.65, -6.10, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (0.85, -6.35, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_02_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (0.95, -2.85, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (1.15, -3.15, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_02_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (3.80, -3.25, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (3.80, -2.15, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_02_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (1.15, -3.95, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (1.05, -4.15, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room03_BatteryBrownout"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (8.65, -5.25, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (8.35, -5.65, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_03_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (8.65, -5.25, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (8.35, -5.65, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_03_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (6.85, -2.85, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (7.15, -3.15, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_03_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (9.25, -3.35, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (9.30, -2.15, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_03_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (6.65, -6.10, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (6.85, -6.35, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_03_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (6.95, -2.85, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (7.15, -3.15, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_03_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (9.80, -3.25, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (9.80, -2.15, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_03_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (7.15, -3.95, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (7.05, -4.15, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room04_CyberMITM"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (-3.35, 0.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (-3.65, 0.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_04_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (-3.35, 0.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (-3.65, 0.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_04_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (-5.15, 3.15, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (-4.85, 2.85, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_04_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (-2.75, 2.65, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (-2.70, 3.85, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_04_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (-5.35, -0.10, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (-5.15, -0.35, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_04_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (-5.05, 3.15, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (-4.85, 2.85, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_04_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (-2.20, 2.75, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (-2.20, 3.85, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_04_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (-4.85, 2.05, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (-4.95, 1.85, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room05_MetrologyRig"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (2.65, 0.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (2.35, 0.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_05_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (2.65, 0.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (2.35, 0.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_05_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (0.85, 3.15, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (1.15, 2.85, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_05_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (3.25, 2.65, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (3.30, 3.85, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_05_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (0.65, -0.10, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (0.85, -0.35, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_05_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (0.95, 3.15, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (1.15, 2.85, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_05_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (3.80, 2.75, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (3.80, 3.85, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_05_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (1.15, 2.05, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (1.05, 1.85, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room06_SOC"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (8.65, 0.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (8.35, 0.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_06_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (8.65, 0.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (8.35, 0.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_06_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (6.85, 3.15, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (7.15, 2.85, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_06_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (9.25, 2.65, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (9.30, 3.85, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_06_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (6.65, -0.10, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (6.85, -0.35, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_06_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (6.95, 3.15, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (7.15, 2.85, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_06_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (9.80, 2.75, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (9.80, 3.85, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_06_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (7.15, 2.05, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (7.05, 1.85, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room07_WetSite"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (-3.35, 6.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (-3.65, 6.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_07_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (-3.35, 6.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (-3.65, 6.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_07_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (-5.15, 9.15, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (-4.85, 8.85, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_07_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (-2.75, 8.65, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (-2.70, 9.85, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_07_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (-5.35, 5.90, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (-5.15, 5.65, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_07_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (-5.05, 9.15, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (-4.85, 8.85, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_07_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (-2.20, 8.75, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (-2.20, 9.85, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_07_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (-4.85, 8.05, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (-4.95, 7.85, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room08_PISA"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (2.65, 6.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (2.35, 6.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_08_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (2.65, 6.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (2.35, 6.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_08_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (0.85, 9.15, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (1.15, 8.85, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_08_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (3.25, 8.65, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (3.30, 9.85, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_08_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (0.65, 5.90, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (0.85, 5.65, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_08_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (0.95, 9.15, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (1.15, 8.85, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_08_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (3.80, 8.75, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (3.80, 9.85, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_08_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (1.15, 8.05, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (1.05, 7.85, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room09_ClockSkew"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (8.65, 6.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (8.35, 6.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_09_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (8.65, 6.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (8.35, 6.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_09_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (6.85, 9.15, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (7.15, 8.85, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_09_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (9.25, 8.65, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (9.30, 9.85, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_09_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (6.65, 5.90, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (6.85, 5.65, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_09_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (6.95, 9.15, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (7.15, 8.85, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_09_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (9.80, 8.75, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (9.80, 9.85, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_09_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (7.15, 8.05, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (7.05, 7.85, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room10_StealthCUSUM"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (-3.35, 12.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (-3.65, 12.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_10_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (-3.35, 12.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (-3.65, 12.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_10_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (-5.15, 15.15, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (-4.85, 14.85, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_10_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (-2.75, 14.65, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (-2.70, 15.85, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_10_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (-5.35, 11.90, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (-5.15, 11.65, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_10_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (-5.05, 15.15, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (-4.85, 14.85, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_10_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (-2.20, 14.75, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (-2.20, 15.85, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_10_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (-4.85, 14.05, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (-4.95, 13.85, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room11_BrittleReplay"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (2.65, 12.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (2.35, 12.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_11_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (2.65, 12.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (2.35, 12.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_11_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (0.85, 15.15, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (1.15, 14.85, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_11_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (3.25, 14.65, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (3.30, 15.85, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_11_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (0.65, 11.90, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (0.85, 11.65, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_11_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (0.95, 15.15, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (1.15, 14.85, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_11_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (3.80, 14.75, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (3.80, 15.85, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_11_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (1.15, 14.05, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (1.05, 13.85, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_Room12_Unprimed"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (8.65, 12.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (8.35, 12.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_12_PERSP"
         {
             float focalLength = 15.0
-            double3 xformOp:translate = (8.65, 12.75, 1.92)
-            float3 xformOp:rotateXYZ = (72.0, 0.0, 34.0)
+            double3 xformOp:translate = (8.35, 12.35, 2.15)
+            float3 xformOp:rotateXYZ = (64.0, 0.0, 22.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_12_TOP"
         {
-            float focalLength = 18.0
-            double3 xformOp:translate = (6.85, 15.15, 6.60)
+            float focalLength = 17.5
+            double3 xformOp:translate = (7.15, 14.85, 6.20)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_12_SIDE"
         {
-            float focalLength = 17.0
-            double3 xformOp:translate = (9.25, 14.65, 1.48)
-            float3 xformOp:rotateXYZ = (84.0, 0.0, 90.0)
+            float focalLength = 16.0
+            double3 xformOp:translate = (9.30, 15.85, 1.55)
+            float3 xformOp:rotateXYZ = (82.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_12_FRONT"
         {
             float focalLength = 15.5
-            double3 xformOp:translate = (6.65, 11.90, 1.68)
-            float3 xformOp:rotateXYZ = (82.0, 0.0, 0.0)
+            double3 xformOp:translate = (6.85, 11.65, 1.75)
+            float3 xformOp:rotateXYZ = (80.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_12_ORTHO_TOP"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 82.0
-            float verticalAperture = 54.0
-            double3 xformOp:translate = (6.95, 15.15, 8.00)
+            float horizontalAperture = 88.0
+            float verticalAperture = 56.0
+            double3 xformOp:translate = (7.15, 14.85, 7.50)
             float3 xformOp:rotateXYZ = (0.0, 0.0, 0.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_12_ORTHO_SIDE"
         {
             uniform token projection = "orthographic"
-            float horizontalAperture = 68.0
-            float verticalAperture = 42.0
-            double3 xformOp:translate = (9.80, 14.75, 1.65)
+            float horizontalAperture = 76.0
+            float verticalAperture = 46.0
+            double3 xformOp:translate = (9.80, 15.85, 1.55)
             float3 xformOp:rotateXYZ = (90.0, 0.0, 90.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
         def Camera "Cam_ROOM_12_MACRO"
         {
-            float focalLength = 26.0
-            double3 xformOp:translate = (7.15, 14.05, 1.30)
-            float3 xformOp:rotateXYZ = (75.0, 0.0, 38.0)
+            float focalLength = 24.0
+            double3 xformOp:translate = (7.05, 13.85, 1.38)
+            float3 xformOp:rotateXYZ = (72.0, 0.0, 26.0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
         }
     }
@@ -1203,8 +1218,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_01"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R01: NOMINAL T1D"
                 custom string geco:sign_subtitle = "100% TIR CLOSED-LOOP"
@@ -1214,17 +1229,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_BatteryHealthy>
                 }
@@ -1263,17 +1278,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_BatteryHealthy>
                 }
@@ -1932,8 +1947,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_02"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R02: PIPE DEBRIS"
                 custom string geco:sign_subtitle = "B2: 72% FIBRIL OCCL"
@@ -1943,17 +1958,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_DebrisAmber>
                 }
@@ -1992,17 +2007,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_DebrisAmber>
                 }
@@ -2822,8 +2837,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_03"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R03: BATT BROWNOUT"
                 custom string geco:sign_subtitle = "B5: 3.05V SUPERCAP"
@@ -2833,17 +2848,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_SafetyOrange>
                 }
@@ -2882,17 +2897,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_SafetyOrange>
                 }
@@ -3532,8 +3547,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_04"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R04: CYBER MITM +40"
                 custom string geco:sign_subtitle = "C2: SIMPLEX CLAMP"
@@ -3543,17 +3558,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_CyberRed>
                 }
@@ -3592,17 +3607,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_CyberRed>
                 }
@@ -4395,8 +4410,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_05"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R05: 138-PART RIG"
                 custom string geco:sign_subtitle = "IITP METROLOGY LAB"
@@ -4406,17 +4421,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_AnodizedBlue>
                 }
@@ -4455,17 +4470,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_AnodizedBlue>
                 }
@@ -4750,8 +4765,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_06"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R06: SOC + PTP GM"
                 custom string geco:sign_subtitle = "IEEE-1588 + WALL"
@@ -4761,17 +4776,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_SimplexShield>
                 }
@@ -4810,17 +4825,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_SimplexShield>
                 }
@@ -5338,8 +5353,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_07"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R07: WET SITE LEAK"
                 custom string geco:sign_subtitle = "A2: 0.14KPA CANNULA"
@@ -5349,17 +5364,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_DebrisAmber>
                 }
@@ -5398,17 +5413,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_DebrisAmber>
                 }
@@ -6057,8 +6072,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_08"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R08: PISA SLEEP LOW"
                 custom string geco:sign_subtitle = "A4: COMP ARTIFACT"
@@ -6068,17 +6083,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_DebrisAmber>
                 }
@@ -6117,17 +6132,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_DebrisAmber>
                 }
@@ -6776,8 +6791,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_09"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R09: CLOCK SKEW +3H"
                 custom string geco:sign_subtitle = "C4: PTP DRIFT BLOCK"
@@ -6787,17 +6802,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_CyberRed>
                 }
@@ -6836,17 +6851,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_CyberRed>
                 }
@@ -7505,8 +7520,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_10"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R10: CUSUM DRIP"
                 custom string geco:sign_subtitle = "C3: STEALTH ATTACK"
@@ -7516,17 +7531,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_CyberRed>
                 }
@@ -7565,17 +7580,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_CyberRed>
                 }
@@ -8224,8 +8239,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_11"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R11: 2X RF REPLAY"
                 custom string geco:sign_subtitle = "C1: NONCE REJECTED"
@@ -8235,17 +8250,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_CyberRed>
                 }
@@ -8284,17 +8299,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_CyberRed>
                 }
@@ -8953,8 +8968,8 @@ def Xform "World" (
                 doc = "3D Rooftop Floating Room & Scenario Identification Sign Above ROOM_12"
             )
             {
-                double3 xformOp:translate = (0.0, 1.25, 3.52)
-                float3 xformOp:rotateXYZ = (-36.0, 0.0, 135.0)
+                double3 xformOp:translate = (0.0, 1.25, 3.55)
+                float3 xformOp:rotateXYZ = (-32.0, 0.0, 0.0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
                 custom string geco:sign_title = "R12: UNPRIMED 68UL"
                 custom string geco:sign_subtitle = "A1: DEADSPACE LAG"
@@ -8964,17 +8979,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.06, 1.18)
+                    float3 xformOp:scale = (5.15, 0.06, 1.22)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "SignCategoryStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.042, 0.51)
-                    float3 xformOp:scale = (4.96, 0.02, 0.11)
+                    double3 xformOp:translate = (0.0, -0.042, 0.52)
+                    float3 xformOp:scale = (5.05, 0.02, 0.12)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_DebrisAmber>
                 }
@@ -9013,17 +9028,17 @@ def Xform "World" (
                 )
                 {
                     double size = 1.0
-                    float3 xformOp:scale = (5.05, 0.05, 1.08)
+                    float3 xformOp:scale = (5.15, 0.05, 1.12)
                     uniform token[] xformOpOrder = ["xformOp:scale"]
-                    rel material:binding = </World/Looks/Mat_MatteDark>
+                    rel material:binding = </World/Looks/Mat_SignObsidian>
                 }
                 def Cube "TopBannerStripe" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
                 {
                     double size = 1.0
-                    double3 xformOp:translate = (0.0, -0.036, 0.46)
-                    float3 xformOp:scale = (4.96, 0.02, 0.10)
+                    double3 xformOp:translate = (0.0, -0.036, 0.48)
+                    float3 xformOp:scale = (5.05, 0.02, 0.10)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
                     rel material:binding = </World/Looks/Mat_DebrisAmber>
                 }

@@ -112,14 +112,7 @@ class WardSceneController:
                     self.load_ward_stage()
                 vp = vp_util.get_active_viewport()
                 if vp is not None:
-                    if key_u == "OVERVIEW":
-                        vp.camera_path = "/OmniverseKit_Persp"
-                        usd_ctx = omni.usd.get_context()
-                        usd_ctx.get_selection().set_selected_prim_paths(["/World/Ward"], True)
-                        vp_util.frame_viewport_selection(vp)
-                        usd_ctx.get_selection().clear_selected_prim_paths()
-                    else:
-                        vp.camera_path = cam_path
+                    vp.camera_path = cam_path
             except Exception:
                 pass
         return cam_path
